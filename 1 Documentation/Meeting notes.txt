@@ -1,0 +1,47 @@
+go over format
+
+Unity 5 for game 
+
+xml for levels
+
+public levels folder for save data/user made levels
+
+team
+
+	- roles and who will do what after the group nails what we'll be making
+
+
+deadlines
+	- overall is 1st may
+	- group deadlines?
+		start with a base line to discuss in our first meet?
+
+communication
+
+	- general chat over facebook for ease
+	- also skype
+
+meetings
+
+	- 1st general meet on sunday	
+	
+	- format
+		current progress
+		todo list
+		deadlines
+		discussion topics put forward day before
+		end on tasks to do per person
+
+	[per week]
+	- 1 group meet to discuss deisgn/progress
+	- 1 merge meet for a few hours to help with problems, improve code, discuss things, maybe code in small polished bits
+
+when to start work on this?
+
+documents
+	main
+	game > design pages
+	(google doc) task list > make into a excel sheet
+	
+scripts
+	have a comment block explaining the script before the script

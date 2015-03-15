@@ -1,0 +1,1478 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="DigDes Game UI.svg">
+  <defs
+     id="defs4">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4256-8-9-8">
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Franklin Gothic Medium;-inkscape-font-specification:Franklin Gothic Medium"
+         x="2729.2573"
+         y="-1861.9673"
+         id="text4258-7-4-9"
+         sodipodi:linespacing="125%"
+         mask="none"><tspan
+           sodipodi:role="line"
+           id="tspan4260-4-8-2"
+           x="2729.2573"
+           y="-1861.9673">DIGITAL</tspan><tspan
+           id="tspan4262-2-8-7"
+           sodipodi:role="line"
+           x="2729.2573"
+           y="-1811.9673">DESPERADO</tspan></text>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3924">
+      <text
+         xml:space="preserve"
+         style="font-size:66.53794098px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF"
+         x="-2126.4868"
+         y="-9103.6914"
+         id="text3926"
+         sodipodi:linespacing="125%"
+         mask="none"><tspan
+           style="stroke-width:1"
+           sodipodi:role="line"
+           id="tspan3928"
+           x="-2126.4868"
+           y="-9103.6914">DIGITAL</tspan><tspan
+           style="stroke-width:1"
+           id="tspan3930"
+           sodipodi:role="line"
+           x="-2126.4868"
+           y="-9020.5186">DESPERADO</tspan></text>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3985">
+      <rect
+         style="opacity:0.5;color:#000000;fill:#d35f5f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect3987"
+         width="178.98639"
+         height="23.771122"
+         x="-1318.0912"
+         y="-7224.6714" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4005">
+      <rect
+         style="opacity:0.5;color:#000000;fill:#ffd5d5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect4007"
+         width="244.72522"
+         height="60.154854"
+         x="-1365.5999"
+         y="-8310.5928" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4091">
+      <rect
+         y="-8329.8301"
+         x="-1347.3782"
+         height="77.892227"
+         width="244.72522"
+         id="rect4093"
+         style="opacity:0.5;color:#000000;fill:#ffd5d5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4091-1">
+      <rect
+         y="-8329.8301"
+         x="-1347.3782"
+         height="77.892227"
+         width="244.72522"
+         id="rect4093-5"
+         style="opacity:0.5;color:#000000;fill:#ffd5d5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3985-2">
+      <rect
+         style="opacity:0.5;color:#000000;fill:#d35f5f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect3987-7"
+         width="178.98639"
+         height="23.771122"
+         x="-1318.0912"
+         y="-7224.6714" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5720">
+      <rect
+         style="opacity:0.5;color:#000000;fill:#d35f5f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect5722"
+         width="178.98639"
+         height="23.771122"
+         x="-1318.0912"
+         y="-7224.6714" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5724">
+      <rect
+         style="opacity:0.5;color:#000000;fill:#d35f5f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect5726"
+         width="178.98639"
+         height="23.771122"
+         x="-1318.0912"
+         y="-7224.6714" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5080">
+      <rect
+         y="-6943.1313"
+         x="-388.3367"
+         height="26.021122"
+         width="178.98639"
+         id="rect5082"
+         style="opacity:0.5;color:#000000;fill:#d35f5f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5084">
+      <rect
+         style="opacity:0.5;color:#000000;fill:#d35f5f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect5086"
+         width="178.98639"
+         height="26.021122"
+         x="-625.92462"
+         y="-6943.1313" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5088">
+      <rect
+         y="-6943.1313"
+         x="-863.51251"
+         height="26.021122"
+         width="178.98639"
+         id="rect5090"
+         style="opacity:0.5;color:#000000;fill:#d35f5f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5098">
+      <rect
+         style="opacity:0.5;color:#000000;fill:#ffd5d5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect5100"
+         width="289.72522"
+         height="117.89223"
+         x="-153.34789"
+         y="-7183.165" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4915">
+      <rect
+         style="opacity:0.5;color:#000000;fill:#ffd5d5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect4917"
+         width="289.72522"
+         height="71.93029"
+         x="1692.4583"
+         y="-7046.2969" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4925">
+      <rect
+         y="-7262.062"
+         x="1638.356"
+         height="15.768074"
+         width="178.98639"
+         id="rect4927"
+         style="opacity:0.5;color:#000000;fill:#d35f5f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5304">
+      <rect
+         y="-7016.6743"
+         x="2588.3345"
+         height="66.27343"
+         width="473.57297"
+         id="rect5306"
+         style="opacity:0.5;color:#000000;fill:#ffd5d5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4915-6">
+      <rect
+         style="opacity:0.5;color:#000000;fill:#ffd5d5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect4917-1"
+         width="289.72522"
+         height="71.93029"
+         x="1692.4583"
+         y="-7046.2969" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4925-6">
+      <rect
+         y="-7262.062"
+         x="1638.356"
+         height="15.768074"
+         width="178.98639"
+         id="rect4927-3"
+         style="opacity:0.5;color:#000000;fill:#d35f5f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3985-5">
+      <rect
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.5;fill:#d35f5f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;enable-background:accumulate"
+         id="rect3987-9"
+         width="178.98639"
+         height="23.771122"
+         x="-1318.0912"
+         y="-7224.6714" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4091-0">
+      <rect
+         y="-8329.8301"
+         x="-1347.3782"
+         height="77.892227"
+         width="244.72522"
+         id="rect4093-0"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.5;fill:#ffd5d5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;enable-background:accumulate" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="4827.6533"
+     inkscape:cy="9330.486"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="false"
+     inkscape:window-width="752"
+     inkscape:window-height="798"
+     inkscape:window-x="768"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-grids="true"
+     inkscape:snap-nodes="true"
+     inkscape:snap-to-guides="false" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="color:#000000;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3122"
+       width="1600"
+       height="900"
+       x="-4865.1362"
+       y="-10513.352" />
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       id="g3817-5"
+       transform="matrix(1.0000388,0,0,1.0000388,-3217.6633,-10197.838)" />
+    <g
+       id="g5102"
+       transform="translate(-4768,-1560)">
+      <text
+         xml:space="preserve"
+         style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Syncopate;-inkscape-font-specification:Syncopate Light"
+         x="464.33044"
+         y="-6784.4297"
+         id="text3114"
+         sodipodi:linespacing="75%"><tspan
+           sodipodi:role="line"
+           id="tspan3116"
+           x="464.33044"
+           y="-6784.4297">Digital Desperado is a target-shooter First Person Shooter</tspan></text>
+      <g
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="C:\Users\Peter\Desktop\5 DigDes\Digital Desperado Postmortem\font tests\fonts v2.png"
+         id="g4689">
+        <text
+           xml:space="preserve"
+           style="font-size:84.11008453px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="401.22617"
+           y="-7734.4312"
+           id="text2985-1"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan2987-7"
+             x="401.22617"
+             y="-7734.4312">Font</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text3064"
+           y="-7642.2979"
+           x="501.83044"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-7642.2979"
+             x="501.83044"
+             id="tspan3066"
+             sodipodi:role="line">Digital Desperado is a target-shooter First Person Shooter</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:LilyUPC;-inkscape-font-specification:LilyUPC"
+           x="501.83044"
+           y="-7571.562"
+           id="text3068"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan3070"
+             x="501.83044"
+             y="-7571.562">Digital Desperado is a target-shooter First Person Shooter</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text3072"
+           y="-7493.2861"
+           x="501.83044"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Aharoni;-inkscape-font-specification:Aharoni Bold"
+           xml:space="preserve"><tspan
+             y="-7493.2861"
+             x="501.83044"
+             id="tspan3074"
+             sodipodi:role="line">Digital Desperado is a target-shooter First Person Shooter</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Impact;-inkscape-font-specification:Impact"
+           x="501.83044"
+           y="-7408.6807"
+           id="text3076"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan3078"
+             x="501.83044"
+             y="-7408.6807">Digital Desperado is a target-shooter First Person Shooter</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text3080"
+           y="-7334.585"
+           x="501.83044"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:ISOCPEUR;-inkscape-font-specification:ISOCPEUR"
+           xml:space="preserve"><tspan
+             y="-7334.585"
+             x="501.83044"
+             id="tspan3084"
+             sodipodi:role="line">Digital Desperado is a target-shooter First Person Shooter</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Junction Bold;-inkscape-font-specification:'Junction Bold, Bold'"
+           x="501.83044"
+           y="-7250.8184"
+           id="text3086"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan3088"
+             x="501.83044"
+             y="-7250.8184">Digital Desperado is a target-shooter First Person Shooter</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Narkisim;-inkscape-font-specification:Narkisim"
+           x="501.83044"
+           y="-7096.5205"
+           id="text3094"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan3096"
+             x="501.83044"
+             y="-7096.5205">Digital Desperado is a target-shooter First Person Shooter</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text3098"
+           y="-7016.1421"
+           x="501.83044"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Orbitron;-inkscape-font-specification:Orbitron"
+           xml:space="preserve"><tspan
+             y="-7016.1421"
+             x="501.83044"
+             id="tspan3100"
+             sodipodi:role="line">Digital Desperado is a target-shooter First Person Shooter</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text3106"
+           y="-6863.0171"
+           x="501.83044"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Ostrich Sans Black;-inkscape-font-specification:'Ostrich Sans Black, Heavy'"
+           xml:space="preserve"><tspan
+             y="-6863.0171"
+             x="501.83044"
+             id="tspan3108"
+             sodipodi:role="line">Digital Desperado is a target-shooter First Person Shooter</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Verdana;-inkscape-font-specification:Verdana"
+           x="501.83044"
+           y="-6713.1533"
+           id="text3118"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan3120"
+             x="501.83044"
+             y="-6713.1533">Digital Desperado is a target-shooter First Person Shooter</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text3752"
+           y="-6633.4058"
+           x="501.83044"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Aldo;-inkscape-font-specification:Aldo"
+           xml:space="preserve"><tspan
+             y="-6633.4058"
+             x="501.83044"
+             id="tspan3754"
+             sodipodi:role="line">Digital Desperado is a target-shooter First Person Shooter</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:DayPosterBlack;-inkscape-font-specification:DayPosterBlack"
+           x="501.83044"
+           y="-6549.8032"
+           id="text3756"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan3758"
+             x="501.83044"
+             y="-6549.8032">Digital Desperado is a target-shooter First Person Shooter</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text3760"
+           y="-6471.6572"
+           x="501.83044"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF"
+           xml:space="preserve"><tspan
+             y="-6471.6572"
+             x="501.83044"
+             id="tspan3762"
+             sodipodi:role="line">Digital Desperado is a target-shooter First Person Shooter</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:MinstrelPosterWHG;-inkscape-font-specification:MinstrelPosterWHG"
+           x="501.83044"
+           y="-6397.0098"
+           id="text3764"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan3766"
+             x="501.83044"
+             y="-6397.0098">Digital Desperado is a target-shooter First Person Shooter</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text3768"
+           y="-6322.1372"
+           x="501.83044"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Molot;-inkscape-font-specification:Molot"
+           xml:space="preserve"><tspan
+             y="-6322.1372"
+             x="501.83044"
+             id="tspan3770"
+             sodipodi:role="line">Digital Desperado is a target-shooter First Person Shooter</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="417.47818"
+           y="-7642.6084"
+           id="text4373"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan4375"
+             x="417.47818"
+             y="-7642.6084">1</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text4377"
+           y="-7564.3833"
+           x="417.47818"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-7564.3833"
+             x="417.47818"
+             id="tspan4379"
+             sodipodi:role="line">2</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text4381"
+           y="-7489.2676"
+           x="417.47818"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-7489.2676"
+             x="417.47818"
+             id="tspan4383"
+             sodipodi:role="line">3</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="417.47818"
+           y="-7408.0942"
+           id="text4385"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan4387"
+             x="417.47818"
+             y="-7408.0942">4</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text4389"
+           y="-7331.1812"
+           x="417.47818"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-7331.1812"
+             x="417.47818"
+             id="tspan4391"
+             sodipodi:role="line">5</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="417.47818"
+           y="-7252.9561"
+           id="text4393"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan4395"
+             x="417.47818"
+             y="-7252.9561">6</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text4401"
+           y="-7096.667"
+           x="417.47818"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-7096.667"
+             x="417.47818"
+             id="tspan4403"
+             sodipodi:role="line">8</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="417.47818"
+           y="-7017.459"
+           id="text4428"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan4430"
+             x="417.47818"
+             y="-7017.459">9</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text4436"
+           y="-6864.1182"
+           x="417.47818"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-6864.1182"
+             x="417.47818"
+             id="tspan4438"
+             sodipodi:role="line">11</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="417.47818"
+           y="-6782.9453"
+           id="text4440"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan4442"
+             x="417.47818"
+             y="-6782.9453">12</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text4446"
+           y="-6714.0854"
+           x="417.47818"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-6714.0854"
+             x="417.47818"
+             id="tspan4448"
+             sodipodi:role="line">13</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="417.47818"
+           y="-6635.8604"
+           id="text4450"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan4452"
+             x="417.47818"
+             y="-6635.8604">14</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="417.47818"
+           y="-6560.7446"
+           id="text4454"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan4456"
+             x="417.47818"
+             y="-6560.7446">15</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text4458"
+           y="-6479.5713"
+           x="417.47818"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-6479.5713"
+             x="417.47818"
+             id="tspan4460"
+             sodipodi:role="line">16</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text4494"
+           y="-6398.3647"
+           x="417.47818"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-6398.3647"
+             x="417.47818"
+             id="tspan4496"
+             sodipodi:role="line">17</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="417.47818"
+           y="-6317.1914"
+           id="text4498"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan4500"
+             x="417.47818"
+             y="-6317.1914">18</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text4559"
+           y="-7642.6084"
+           x="367.75974"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-7642.6084"
+             x="367.75974"
+             id="tspan4561"
+             sodipodi:role="line">League Gothic</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="367.75974"
+           y="-7564.0825"
+           id="text4563"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan4565"
+             x="367.75974"
+             y="-7564.0825">LilyUPC</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="367.75974"
+           y="-7488.6563"
+           id="text4567"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan4569"
+             x="367.75974"
+             y="-7488.6563">Aharoni</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text4571"
+           y="-7408.0942"
+           x="367.75974"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-7408.0942"
+             x="367.75974"
+             id="tspan4573"
+             sodipodi:role="line">Impact</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="367.75974"
+           y="-7330.8804"
+           id="text4575"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan4577"
+             x="367.75974"
+             y="-7330.8804">ISCOPEUR</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text4579"
+           y="-7252.354"
+           x="367.75974"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-7252.354"
+             x="367.75974"
+             id="tspan4581"
+             sodipodi:role="line">Junction Bold</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="367.75974"
+           y="-7096.0649"
+           id="text4583"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan4585"
+             x="367.75974"
+             y="-7096.0649">Narkism</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text4587"
+           y="-7016.8569"
+           x="367.75974"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-7016.8569"
+             x="367.75974"
+             id="tspan4589"
+             sodipodi:role="line">Orbitron</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="367.75974"
+           y="-6864.1182"
+           id="text4591"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan4593"
+             x="367.75974"
+             y="-6864.1182">Ostrich Sans Black</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text4595"
+           y="-6782.6445"
+           x="367.75974"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-6782.6445"
+             x="367.75974"
+             id="tspan4597"
+             sodipodi:role="line">Syncopate</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="367.75974"
+           y="-6713.4741"
+           id="text4599"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan4601"
+             x="367.75974"
+             y="-6713.4741">Verdana</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text4603"
+           y="-6635.8604"
+           x="367.75974"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-6635.8604"
+             x="367.75974"
+             id="tspan4605"
+             sodipodi:role="line">Aldo</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text4607"
+           y="-6560.4438"
+           x="367.75974"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-6560.4438"
+             x="367.75974"
+             id="tspan4609"
+             sodipodi:role="line">DayPosterBlack</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="367.75974"
+           y="-6478.9692"
+           id="text4611"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan4613"
+             x="367.75974"
+             y="-6478.9692">GreatLakesNF</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           x="367.75974"
+           y="-6398.3647"
+           id="text4615"
+           sodipodi:linespacing="75%"><tspan
+             sodipodi:role="line"
+             id="tspan4617"
+             x="367.75974"
+             y="-6398.3647">MinstrelPosterWHG</tspan></text>
+        <text
+           sodipodi:linespacing="75%"
+           id="text4619"
+           y="-6316.5894"
+           x="367.75974"
+           style="font-size:37.62736511px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+           xml:space="preserve"><tspan
+             y="-6316.5894"
+             x="367.75974"
+             id="tspan4621"
+             sodipodi:role="line">Molot</tspan></text>
+      </g>
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path4996"
+       d="m -351.36048,-8225.5168 6.1765,-115.1868 174.4361,-11.5776 320.3751,137.8982 -220.251401,156.3614 -177.344099,29.7178 z"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+    <path
+       sodipodi:nodetypes="cccccc"
+       inkscape:connector-curvature="0"
+       id="path4998"
+       d="m -352.49998,-8224.8395 7.3813,-114.1135 2.1593,0.1144 168.581,273.6622 -72.832,38.1838 z"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       d="m -351.36048,-9465.8151 6.1765,-115.1868 174.4361,-11.5776 320.3751,137.8982 -220.251401,156.3614 -177.344099,29.7178 z"
+       id="path4992"
+       inkscape:connector-curvature="0" />
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       d="m -352.49998,-9465.1378 7.3813,-114.1135 2.1593,0.1144 168.581,273.6622 -72.832,38.1838 z"
+       id="path4994"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <rect
+       y="-10312.455"
+       x="-1582.4424"
+       height="900"
+       width="1600.001"
+       id="rect4037"
+       style="fill:none;stroke:#000000;stroke-width:1.5" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3947-1-6"
+       y="-9849.29"
+       x="-746.3291"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke:none"
+         y="-9849.29"
+         x="-746.3291"
+         sodipodi:role="line"
+         id="tspan3949-7-1">TIME</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="-870.78906"
+       y="-9849.29"
+       id="text4172"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4174"
+         sodipodi:role="line"
+         x="-870.78906"
+         y="-9849.29"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke:none">TARGETS</tspan></text>
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:2;marker:none;enable-background:accumulate"
+       id="rect4039"
+       width="28.509666"
+       height="28.509666"
+       x="-796.69727"
+       y="-9876.71" />
+    <path
+       sodipodi:nodetypes="cccccccccccc"
+       inkscape:connector-curvature="0"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;stroke:none;stroke-width:1.5;marker:none;enable-background:accumulate"
+       d="m -688.58248,-9846.8824 -57.5313,0.031 -14.0625,-11.375 14.0625,36.6563 54.75,0 2.7813,-25.3125 z m 5.5,0 -2.7813,25.3438 58.1563,0 0,-25.3438 z"
+       id="rect4128" />
+    <path
+       sodipodi:nodetypes="cccccccccccc"
+       id="path4187"
+       d="m -872.80128,-9846.8824 54.0313,0.031 14.0625,-11.375 -14.0625,36.6563 -51.25,0 -2.7813,-25.3125 z m -5.5,0 2.7813,25.3438 -55.6563,0 0,-25.3438 z"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;stroke:none;stroke-width:1.5;marker:none;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="-746.3291"
+       y="-9807.5527"
+       id="text4197"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4200"
+         sodipodi:role="line"
+         x="-746.3291"
+         y="-9807.5527"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke:none">FRAMES</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4202"
+       y="-9807.5527"
+       x="-897.36914"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke:none"
+         y="-9807.5527"
+         x="-897.36914"
+         sodipodi:role="line"
+         id="tspan4204">LEFT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="-837.2124"
+       y="-9807.5527"
+       id="text4206"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4208"
+         sodipodi:role="line"
+         x="-837.2124"
+         y="-9807.5527"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke:none">HIT</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4212"
+       y="-9807.5527"
+       x="-687.875"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke:none"
+         y="-9807.5527"
+         x="-687.875"
+         sodipodi:role="line"
+         id="tspan4214">SECS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       x="-782.44043"
+       y="-9468.8828"
+       id="text4172-4"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4174-2"
+         sodipodi:role="line"
+         x="-782.44043"
+         y="-9468.8828"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke:none">BULLETS SHOT</tspan></text>
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;marker:none;enable-background:accumulate"
+       id="rect4241"
+       width="212"
+       height="53"
+       x="-888.44189"
+       y="-9464.7051" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;marker:none;enable-background:accumulate"
+       id="rect4245"
+       width="175.36247"
+       height="91.923874"
+       x="-870.12305"
+       y="-10313.205" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4247"
+       y="-10189.646"
+       x="-782.44043"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke:none"
+         y="-10189.646"
+         x="-782.44043"
+         sodipodi:role="line"
+         id="tspan4249">END LOCATION</tspan></text>
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;marker:none;enable-background:accumulate"
+       id="rect4255"
+       width="57.22971"
+       height="57.22971"
+       x="-7841.9224"
+       y="-6735.3823"
+       transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)" />
+    <path
+       sodipodi:nodetypes="cccccccccccccccccc"
+       inkscape:connector-curvature="0"
+       id="path5354-2"
+       d="m -71.003881,-10313.205 0,89.979 16.2595,0 7.7654,-14.261 4.601,-8.453 -5.1423,0 -1.3324,-4.788 11.2421,-12.325 11.263,-12.345 11.2629,12.345 11.263,12.325 -1.3324,4.788 -5.1423,0 4.601,8.453 7.7654,14.261 16.2386,0 0,-89.979 z"
+       style="fill:#000000;fill-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.7673645px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       x="-76.857407"
+       y="-10272.804"
+       id="text5356-1"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan5358-6"
+         sodipodi:role="line"
+         x="-76.857407"
+         y="-10272.804"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.7673645px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000">EXIT</tspan><tspan
+         sodipodi:role="line"
+         x="-76.857407"
+         y="-10244.345"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.7673645px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+         id="tspan4345">LEVEL</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.5"
+       id="rect4776"
+       width="1600.001"
+       height="900"
+       x="-1582.4424"
+       y="-9072.1562" />
+    <rect
+       y="-8636.4111"
+       x="-796.71973"
+       height="28.509666"
+       width="28.509666"
+       id="rect4786"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:2;marker:none;enable-background:accumulate" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4808"
+       y="-8228.584"
+       x="-781.69043"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke:none"
+         y="-8228.584"
+         x="-781.69043"
+         sodipodi:role="line"
+         id="tspan4810">BULLETS SHOT</tspan></text>
+    <rect
+       y="-8224.4062"
+       x="-888.44189"
+       height="53"
+       width="212"
+       id="rect4812"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;marker:none;enable-background:accumulate" />
+    <rect
+       y="-9072.9062"
+       x="-870.12305"
+       height="91.923874"
+       width="175.36247"
+       id="rect4814"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;marker:none;enable-background:accumulate" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       x="-782.44043"
+       y="-8949.3477"
+       id="text4816"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4818"
+         sodipodi:role="line"
+         x="-782.44043"
+         y="-8949.3477"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke:none">END LOCATION</tspan></text>
+    <rect
+       transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"
+       y="-5858.3589"
+       x="-6964.8989"
+       height="57.22971"
+       width="57.22971"
+       id="rect4820"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;marker:none;enable-background:accumulate" />
+    <path
+       style="fill:#000000;fill-opacity:1"
+       d="m -71.003881,-9072.9065 0,89.9788 16.2595,0 7.7654,-14.2609 4.601,-8.4524 -5.1423,0 -1.3324,-4.7884 11.2421,-12.3247 11.263,-12.3455 11.2629,12.3455 11.263,12.3247 -1.3324,4.7884 -5.1423,0 4.601,8.4524 7.7654,14.2609 16.2386,0 0,-89.9788 z"
+       id="path4822"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccccc" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4824"
+       y="-9032.5049"
+       x="-76.857407"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.7673645px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.7673645px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+         y="-9032.5049"
+         x="-76.857407"
+         sodipodi:role="line"
+         id="tspan4826">EXIT</tspan><tspan
+         id="tspan4829"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.7673645px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+         y="-9004.0459"
+         x="-76.857407"
+         sodipodi:role="line">LEVEL</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       x="-992.94043"
+       y="-8228.584"
+       id="text4852"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4854"
+         sodipodi:role="line"
+         x="-992.94043"
+         y="-8228.584"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke:none">TARGETS LEFT</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4856"
+       y="-8228.584"
+       x="-563.94043"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke:none"
+         y="-8228.584"
+         x="-563.94043"
+         sodipodi:role="line"
+         id="tspan4858">TARGETS SHOT</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       d="m -915.77248,-8224.4065 2.2065,10.3282 6.6709,-0.051 -3.9331,41.7626 -14.6951,0.1131 -4.575,-41.6971 6.6709,-0.051 2.0474,-10.361 z"
+       id="path4260-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc" />
+    <path
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:connector-curvature="0"
+       id="path4878"
+       d="m -952.03028,-8224.4065 2.2065,10.3282 6.6709,-0.051 -3.9331,41.7626 -14.6951,0.1131 -4.575,-41.6971 6.6709,-0.051 2.0474,-10.361 z"
+       style="fill:#000000;fill-opacity:1;stroke:none" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       d="m -988.28808,-8224.4065 2.2065,10.3282 6.6709,-0.051 -3.9331,41.7626 -14.6951,0.1131 -4.57502,-41.6971 6.67092,-0.051 2.0474,-10.361 z"
+       id="path4880"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc" />
+    <path
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:connector-curvature="0"
+       id="path4882"
+       d="m -1024.546,-8224.4065 2.2065,10.3282 6.6709,-0.051 -3.9331,41.7626 -14.6951,0.1131 -4.575,-41.6971 6.6709,-0.051 2.0474,-10.361 z"
+       style="fill:#000000;fill-opacity:1;stroke:none" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       d="m -1060.8038,-8224.4065 2.2065,10.3282 6.6709,-0.051 -3.9331,41.7626 -14.6951,0.1131 -4.575,-41.6971 6.6709,-0.051 2.0474,-10.361 z"
+       id="path4884"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc" />
+    <path
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:connector-curvature="0"
+       id="path4886"
+       d="m -1133.3192,-8224.4065 2.2065,10.3282 6.6709,-0.051 -3.9331,41.7626 -14.6951,0.1131 -4.575,-41.6971 6.6709,-0.051 2.0474,-10.361 z"
+       style="fill:#000000;fill-opacity:1;stroke:none" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       d="m -1097.0616,-8224.4065 2.2065,10.3282 6.6709,-0.051 -3.9331,41.7626 -14.6951,0.1131 -4.575,-41.6971 6.6709,-0.051 2.0474,-10.361 z"
+       id="path4888"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc" />
+    <path
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:connector-curvature="0"
+       id="path4890"
+       d="m -642.16248,-8224.4065 2.2065,10.3282 6.6709,-0.051 -3.9331,41.7626 -14.6951,0.1131 -4.575,-41.6971 6.6709,-0.051 2.0474,-10.361 z"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3" />
+    <path
+       id="path4962"
+       d="m -676.07658,-8606.4259 -69.8977,0.031 -17.0853,-11.375 17.0853,36.6563 66.5185,0 z"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;stroke:none;stroke-width:1.5;marker:none;enable-background:accumulate"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       inkscape:connector-curvature="0"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;stroke:none;stroke-width:1.5;marker:none;enable-background:accumulate"
+       d="m -884.60008,-8606.4259 65.6454,0.031 17.0852,-11.375 -17.0852,36.6563 -62.2662,0 z"
+       id="path4964"
+       sodipodi:nodetypes="cccccc" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4966"
+       y="-8567.0967"
+       x="-746.3291"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke:none"
+         y="-8567.0967"
+         x="-746.3291"
+         sodipodi:role="line"
+         id="tspan4968">t - FRAMES</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4974"
+       y="-8567.0967"
+       x="-819.1543"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke:none"
+         y="-8567.0967"
+         x="-819.1543"
+         sodipodi:role="line"
+         id="tspan4976">t - secs</tspan></text>
+    <g
+       transform="translate(-7526.5705,-4445.5591)"
+       id="g5713-0">
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="path5705-9"
+         d="m 6738.7275,-4597.8039 8.2798,14.341 8.2798,14.3409 -16.5596,-4 -16.5595,4 8.2798,-14.3409 z"
+         inkscape:transform-center-y="-4.7803296"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate"
+         transform="translate(5.4010973,2.0771781)" />
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="path5707-4"
+         d="m 6738.7275,-4597.8039 8.2798,14.341 8.2798,14.3409 -16.5596,-7.8873 -16.5595,7.8873 8.2798,-14.3409 z"
+         inkscape:transform-center-y="-2.4242714"
+         inkscape:transform-center-x="0.00014219411"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate"
+         transform="matrix(0.50714575,0,0,0.50714575,3326.6115,-2259.845)" />
+    </g>
+    <g
+       transform="translate(-7526.5706,-5685.8577)"
+       id="g5713-8">
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="path5705-8"
+         d="m 6738.7275,-4597.8039 8.2798,14.341 8.2798,14.3409 -16.5596,-4 -16.5595,4 8.2798,-14.3409 z"
+         inkscape:transform-center-y="-4.7803296"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate"
+         transform="translate(5.4010973,2.0771781)" />
+      <path
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="path5707-2"
+         d="m 6738.7275,-4597.8039 8.2798,14.341 8.2798,14.3409 -16.5596,-7.8873 -16.5595,7.8873 8.2798,-14.3409 z"
+         inkscape:transform-center-y="-2.4242714"
+         inkscape:transform-center-x="0.00014219411"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate"
+         transform="matrix(0.50714575,0,0,0.50714575,3326.6115,-2259.845)" />
+    </g>
+    <text
+       sodipodi:linespacing="75%"
+       id="text8235"
+       y="-4206.2139"
+       x="2546.6272"
+       style="font-size:70.45381927px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:75%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:tb-rl;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:League Gothic;-inkscape-font-specification:League Gothic"
+       xml:space="preserve"><tspan
+         y="-4206.2139"
+         x="2546.6272"
+         id="tspan8237"
+         sodipodi:role="line" /></text>
+    <g
+       id="g4685"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="translate(-8992,-1280)">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.1"
+         id="rect4611"
+         width="1600.001"
+         height="900"
+         x="5497.541"
+         y="-5240.9155" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4616"
+         y="-4397.3433"
+         x="6298.293"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke:none"
+           y="-4397.3433"
+           x="6298.293"
+           sodipodi:role="line"
+           id="tspan4619">BULLETS SHOT</tspan></text>
+      <rect
+         y="-4393.1655"
+         x="6191.5415"
+         height="53"
+         width="212"
+         id="rect4621"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;marker:none;enable-background:accumulate" />
+      <rect
+         y="-5241.6655"
+         x="6209.8604"
+         height="91.923874"
+         width="175.36247"
+         id="rect4623"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;marker:none;enable-background:accumulate" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="6297.543"
+         y="-5118.1069"
+         id="text4625"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan4627"
+           sodipodi:role="line"
+           x="6297.543"
+           y="-5118.1069"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke:none">END LOCATION</tspan></text>
+      <rect
+         transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"
+         y="-8155.5664"
+         x="750.50201"
+         height="57.22971"
+         width="57.22971"
+         id="rect4629"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;marker:none;enable-background:accumulate" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000"
+         d="m 7008.9794,-5241.6653 0,89.9788 16.2595,0 7.7654,-14.2609 4.601,-8.4524 -5.1423,0 -1.3324,-4.7884 11.2421,-12.3247 11.263,-12.3455 11.2629,12.3455 11.263,12.3247 -1.3324,4.7884 -5.1423,0 4.601,8.4524 7.7654,14.2609 16.2386,0 0,-89.9788 z"
+         id="path4631"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccccccccccccccc" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4633"
+         y="-5201.2642"
+         x="7003.126"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.7673645px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.7673645px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+           y="-5201.2642"
+           x="7003.126"
+           sodipodi:role="line"
+           id="tspan4635">EXIT</tspan><tspan
+           id="tspan4637"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.7673645px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+           y="-5172.8052"
+           x="7003.126"
+           sodipodi:role="line">LEVEL</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="6087.043"
+         y="-4397.3433"
+         id="text4639"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan4641"
+           sodipodi:role="line"
+           x="6087.043"
+           y="-4397.3433"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke:none">TARGETS LEFT</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4643"
+         y="-4397.3433"
+         x="6516.043"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.11826324px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke:none"
+           y="-4397.3433"
+           x="6516.043"
+           sodipodi:role="line"
+           id="tspan4645">TARGETS SHOT</tspan></text>
+      <path
+         id="path4667"
+         d="m 6403.9067,-4775.1847 -69.8977,0.031 -17.0853,-11.375 17.0853,36.6563 66.5185,0 z"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;stroke:none;stroke-width:1.5;marker:none;enable-background:accumulate"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccc" />
+      <path
+         inkscape:connector-curvature="0"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;stroke:none;stroke-width:1.5;marker:none;enable-background:accumulate"
+         d="m 6195.3832,-4775.1847 65.6454,0.031 17.0852,-11.375 -17.0852,36.6563 -62.2662,0 z"
+         id="path4669"
+         sodipodi:nodetypes="cccccc" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4671"
+         y="-4735.8555"
+         x="6333.6543"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke:none"
+           y="-4735.8555"
+           x="6333.6543"
+           sodipodi:role="line"
+           id="tspan4673">t - FRAMES</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4675"
+         y="-4735.8555"
+         x="6260.8291"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.58904171px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke:none"
+           y="-4735.8555"
+           x="6260.8291"
+           sodipodi:role="line"
+           id="tspan4677">t - secs</tspan></text>
+    </g>
+    <g
+       id="g4679"
+       transform="translate(-9561.6238,-2080.9941)">
+      <path
+         transform="translate(5.4010973,2.0771781)"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate"
+         inkscape:transform-center-y="-4.7803296"
+         d="m 6738.7275,-4597.8039 8.2798,14.341 8.2798,14.3409 -16.5596,-4 -16.5595,4 8.2798,-14.3409 z"
+         id="path4681"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccc" />
+      <path
+         transform="matrix(0.50714575,0,0,0.50714575,3326.6115,-2259.845)"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate"
+         inkscape:transform-center-x="0.00014219411"
+         inkscape:transform-center-y="-2.4242714"
+         d="m 6738.7275,-4597.8039 8.2798,14.341 8.2798,14.3409 -16.5596,-7.8873 -16.5595,7.8873 8.2798,-14.3409 z"
+         id="path4683"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccc" />
+    </g>
+    <path
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:connector-curvature="0"
+       id="path4690"
+       d="m -2692.4633,-6641.2275 2.2065,10.3282 6.6709,-0.051 -3.9331,41.7626 -14.6951,0.1131 -4.575,-41.6971 6.6709,-0.051 2.0474,-10.361 z"
+       style="fill:#000000;fill-opacity:1;stroke:none" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3"
+       d="m -2649.8533,-6641.2275 2.2065,10.3282 6.6709,-0.051 -3.9331,41.7626 -14.6951,0.1131 -4.575,-41.6971 6.6709,-0.051 2.0474,-10.361 z"
+       id="path4692"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:2;marker:none;enable-background:accumulate"
+       id="rect4613"
+       width="28.509666"
+       height="28.509666"
+       x="-2741.7363"
+       y="-6710.1108" />
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+splash cards:
+	UoB
+	Team
+	Rating (?)
+
+video 1 :
+	menu picking a level, no music (~3s)
+	loading level
+	music starts
+	start playing:
+		shoot
+		cut
+		aim
+		repeat
+	end level
+	score
+
+hold, cut music
+
+video 2 :
+	music
+	load level
+	cut shooting with different player
+	1/2 time
+	score
+
+hold, cut music
+
+repeat above x3 going faster
+
+hard cut to title
+
+release date
+
+where to find it
+ 
+music credits
+
+end
+
