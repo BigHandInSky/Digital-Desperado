@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Tutorial Level.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="375"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="false"
+     inkscape:window-width="1536"
+     inkscape:window-height="814"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       y="270.16711"
+       x="1280.9373"
+       height="633.83765"
+       width="633.83765"
+       id="rect4188"
+       style="opacity:1;fill:#666666;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1"
+       x="5"
+       y="348.36221"
+       id="text4136"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4138"
+         x="5"
+         y="348.36221">1 - intro to the game:</tspan><tspan
+         sodipodi:role="line"
+         x="5"
+         y="379.61221"
+         id="tspan4142">- aim is to speedrun to the big white tower</tspan><tspan
+         sodipodi:role="line"
+         x="5"
+         y="410.86221"
+         id="tspan4146">- wasd to move</tspan><tspan
+         sodipodi:role="line"
+         x="5"
+         y="442.11221"
+         id="tspan4148">- mouse to look</tspan><tspan
+         sodipodi:role="line"
+         x="5"
+         y="473.36221"
+         id="tspan4150" /><tspan
+         sodipodi:role="line"
+         x="5"
+         y="504.61221"
+         id="tspan4158">2 - how to play:</tspan><tspan
+         sodipodi:role="line"
+         x="5"
+         y="535.86218"
+         id="tspan4164">- targets</tspan><tspan
+         sodipodi:role="line"
+         x="5"
+         y="567.11218"
+         id="tspan4168">- shooting</tspan><tspan
+         sodipodi:role="line"
+         x="5"
+         y="598.36218"
+         id="tspan4170">- shoot all, or take penalty to time</tspan><tspan
+         sodipodi:role="line"
+         x="5"
+         y="629.61218"
+         id="tspan4172" /><tspan
+         sodipodi:role="line"
+         x="5"
+         y="660.86218"
+         id="tspan4174">3 - levels:</tspan><tspan
+         sodipodi:role="line"
+         x="5"
+         y="692.11218"
+         id="tspan4176">- have red base areas you run on</tspan><tspan
+         sodipodi:role="line"
+         x="5"
+         y="723.36218"
+         id="tspan4178">- blue towers where targets rest</tspan><tspan
+         sodipodi:role="line"
+         x="5"
+         y="754.61218"
+         id="tspan4180">- white end tower, where the level ends</tspan><tspan
+         sodipodi:role="line"
+         x="5"
+         y="785.86218"
+         id="tspan4220" /><tspan
+         sodipodi:role="line"
+         x="5"
+         y="817.11218"
+         id="tspan4222">4 - game:</tspan><tspan
+         sodipodi:role="line"
+         x="5"
+         y="848.36218"
+         id="tspan4224">- every finish saves to the xml file for each level</tspan><tspan
+         sodipodi:role="line"
+         x="5"
+         y="879.61218"
+         id="tspan4226">- you can make your own by following the format</tspan><tspan
+         sodipodi:role="line"
+         x="5"
+         y="910.86218"
+         id="tspan4228">- play with friends to see who can get the fastest time!</tspan></text>
+    <rect
+       style="opacity:1;fill:#999999;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1"
+       id="rect4182"
+       width="457.83765"
+       height="457.83765"
+       x="910.93732"
+       y="358.16711" />
+    <circle
+       style="opacity:1;fill:#008000;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1"
+       id="path4184"
+       cx="1139.8562"
+       cy="587.08594"
+       r="31.112698" />
+    <rect
+       y="501.78949"
+       x="1208.9099"
+       height="170.59291"
+       width="11.592911"
+       id="rect4186"
+       style="opacity:1;fill:#ff6600;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:#333333;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1"
+       id="rect4190"
+       width="199.83765"
+       height="199.83765"
+       x="1976.9373"
+       y="487.16711" />
+    <rect
+       y="487.16711"
+       x="2276.9373"
+       height="199.83765"
+       width="199.83765"
+       id="rect4192"
+       style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-opacity:1"
+       id="rect4194"
+       width="139.67827"
+       height="139.67827"
+       x="2514.3687"
+       y="517.24683" />
+    <rect
+       y="323.83615"
+       x="2172.2581"
+       height="111.83765"
+       width="111.83765"
+       id="rect4196"
+       style="opacity:1;fill:#37abc8;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:#37abc8;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1"
+       id="rect4198"
+       width="111.83765"
+       height="111.83765"
+       x="2132.9373"
+       y="769.16711" />
+    <rect
+       y="375.49005"
+       x="2489.8906"
+       height="111.83765"
+       width="111.83765"
+       id="rect4200"
+       style="opacity:1;fill:#37abc8;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:#ff6600;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1"
+       id="rect4202"
+       width="11.592911"
+       height="170.59291"
+       x="1783.4677"
+       y="-148.2614"
+       transform="matrix(0.90925907,0.41623064,-0.41623064,0.90925907,0,0)" />
+    <rect
+       y="1299.5719"
+       x="1477.5791"
+       height="170.59291"
+       width="11.592911"
+       id="rect4204"
+       style="opacity:1;fill:#ff6600;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1"
+       transform="matrix(0.8471125,-0.53141359,0.53141359,0.8471125,0,0)" />
+    <circle
+       r="31.112698"
+       cy="814.77429"
+       cx="1593.8187"
+       id="circle4206"
+       style="opacity:1;fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1"
+       id="circle4208"
+       cx="1692.8137"
+       cy="550.31635"
+       r="31.112698" />
+    <circle
+       r="31.112698"
+       cy="321.21375"
+       cx="1848.3772"
+       id="circle4210"
+       style="opacity:1;fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1"
+       id="circle4212"
+       cx="2180.7173"
+       cy="823.25958"
+       r="31.112698" />
+    <circle
+       r="31.112698"
+       cy="379.19653"
+       cx="2218.9011"
+       id="circle4214"
+       style="opacity:1;fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1" />
+    <circle
+       style="opacity:1;fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1"
+       id="circle4216"
+       cx="2544.6555"
+       cy="430.93365"
+       r="31.112698" />
+    <rect
+       transform="matrix(0.8471125,0.53141359,0.53141359,-0.8471125,0,0)"
+       style="opacity:1;fill:#ff6600;fill-opacity:1;stroke:none;stroke-width:4;stroke-opacity:1"
+       id="rect4218"
+       width="11.592911"
+       height="170.59291"
+       x="2497.5457"
+       y="578.9447" />
+  </g>
+</svg>
