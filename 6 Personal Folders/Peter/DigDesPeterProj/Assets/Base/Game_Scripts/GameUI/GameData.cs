@@ -5,23 +5,20 @@ public class GameData : MonoBehaviour {
     
 	private static GameData m_DataInstance;
 	public static GameData Instance
-		{	get {
+		{	
+        get {
             if (!m_DataInstance) { m_DataInstance = FindObjectOfType<GameData>(); }
             return m_DataInstance;
 			}
 		}
 
-    [SerializeField]
-    private Transform m_Camera;
+    [SerializeField] private Transform m_Camera;
     public Transform trCamera { get { return m_Camera; } }
-    [SerializeField]
-    private Transform m_EndLvlTow;
+    [SerializeField] private Transform m_EndLvlTow;
     public Transform trEndLvlTow { get { return m_EndLvlTow; } }
 
-    [SerializeField]
-    private GameObject m_UITargetsLeft;
-    [SerializeField]
-    private GameObject m_UITargetsShot;
+    [SerializeField] private GameObject m_UITargetsLeft;
+    [SerializeField] private GameObject m_UITargetsShot;
 
     private int m_TargetsLeft;
     public int iTargsLft { get { return m_TargetsLeft; } }

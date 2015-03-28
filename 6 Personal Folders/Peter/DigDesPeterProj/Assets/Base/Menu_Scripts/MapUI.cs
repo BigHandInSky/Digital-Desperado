@@ -11,7 +11,7 @@ public class MapUI : MonoBehaviour {
     public Image MapTwrImg;
     public Image MapEndImg;
 
-    public void Refresh()
+    public void vRefresh()
     {
 
     }
