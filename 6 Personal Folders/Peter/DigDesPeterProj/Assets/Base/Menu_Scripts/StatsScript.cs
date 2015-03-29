@@ -6,24 +6,7 @@ using System.Collections.Generic;
 //given a set of strings/variables, will pass onto the right texts
 public class StatsScript : MonoBehaviour 
 {
-    public struct StatsFormat
-    {
-        public StatsFormat(int _listSize)
-        {
-            sTags = new List<string>(_listSize);
-            sSecs = new List<string>(_listSize);
-            sFras = new List<string>(_listSize);
-            sShts = new List<string>(_listSize);
-        }
-
-        public List<string> sTags;
-        public List<string> sSecs;
-        public List<string> sFras;
-        public List<string> sShts;
-    }
-
     private int iState = 0;
-    private StatsFormat m_StatData;
 
     [SerializeField]
     private float fRotateStatsTime = 2f;
@@ -35,15 +18,24 @@ public class StatsScript : MonoBehaviour
 
     [SerializeField]
     private List<Text> txStatTexts = new List<Text>(6);
-    
+
+    public List<string> sTags = new List<string>(6);
+    public List<string> sSecs = new List<string>(6);
+    public List<string> sFras = new List<string>(6);
+    public List<string> sShts = new List<string>(6);
+
     void Start()
     {
         StartCoroutine("ieRotateStats");
     }
 
-    public void vSetData(StatsFormat _newData)
+    public void vSetData(List<string> _tags, List<string> _secs, List<string> _frames, List<string> _shots)
     {
-        m_StatData = _newData;
+        sTags = _tags;
+        sSecs = _secs;
+        sFras = _frames;
+        sShts = _shots;
+        vUpdateTexts();
     }
 
     IEnumerator ieRotateStats()
@@ -73,38 +65,36 @@ public class StatsScript : MonoBehaviour
 
         imStatsObj.sprite = m_StatImgSprites[iState];
 
+        vUpdateTexts();
+    }
+
+    private void vUpdateTexts()
+    {
         int _switchLoopInt = 0;
 
-        switch(iState)
+        foreach (Text obj in txStatTexts)
         {
-            case 0:
-                foreach (Text obj in txStatTexts)
-                {
-                    obj.text = m_StatData.sTags[_switchLoopInt];
-                    _switchLoopInt++;
-                }
-                break;
-            case 1:
-                foreach (Text obj in txStatTexts)
-                {
-                    obj.text = m_StatData.sSecs[_switchLoopInt];
-                    _switchLoopInt++;
-                }
-                break;
-            case 2:
-                foreach (Text obj in txStatTexts)
-                {
-                    obj.text = m_StatData.sFras[_switchLoopInt];
-                    _switchLoopInt++;
-                }
-                break;
-            case 3:
-                foreach (Text obj in txStatTexts)
-                {
-                    obj.text = m_StatData.sShts[_switchLoopInt];
-                    _switchLoopInt++;
-                }
-                break;
+            switch (iState)
+            {
+                case 0:
+                    obj.text = sTags[_switchLoopInt];                    
+                    break;
+
+                case 1:
+                    obj.text = sSecs[_switchLoopInt];                    
+                    break;
+
+                case 2:
+                    obj.text = sFras[_switchLoopInt];                    
+                    break;
+
+                case 3:
+                    obj.text = sShts[_switchLoopInt];                    
+                    break;
+            }
+
+            _switchLoopInt++;
         }
+        
     }
 }
