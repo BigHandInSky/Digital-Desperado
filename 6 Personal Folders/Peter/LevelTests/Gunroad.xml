@@ -1,0 +1,58 @@
+<LevelData>
+  <Stats>
+    <Tags A="AAA" B="BBB" C="CCC" D="DDD" E="EEE" F="FFF"/>
+    <Secs A="1.5" B="1.7" C="1.8" D="2.0" E="3.5" F="5"/>
+    <Fras A="126" B="245" C="384" D="429" E="518" F="679"/>
+    <Shts A="10" B="23" C="34" D="35" E="43" F="46"/>
+  </Stats>
+  
+	<PlayerStart>
+		<Position x = "0" y = "0" z = "0" />
+		<Rotation>0</Rotation>
+	</PlayerStart>
+	
+	<Goal>
+		<Position x = "0" y = "0" z = "34" />
+		<Rotation>0</Rotation>
+	</Goal>
+	
+	<Platforms>
+		<Platform level = "1">
+			<Position x = "0" y = "-1.5" z = "0" />
+			<Rotation>0</Rotation>
+			<Scale x = "8" y = "1" z = "8" />
+		</Platform>
+		
+		<Platform level = "2">
+			<Position x = "0" y = "-3" z = "8" />
+			<Rotation>0</Rotation>
+			<Scale x = "8" y = "1" z = "8" />
+		</Platform>
+		
+		<Platform level = "3">
+			<Position x = "0" y = "-4.5" z = "16"/>
+			<Rotation>0</Rotation>
+			<Scale x = "8" y = "1" z = "8" />
+		</Platform>
+		
+		<Platform level = "4">
+			<Position x = "0" y = "-6" z = "24" />
+			<Rotation>0</Rotation>
+			<Scale x = "8" y = "1" z = "8" />
+		</Platform>
+		
+		<Platform level = "5">
+			<Position x = "0" y = "-7.5" z = "32" />
+			<Rotation>0</Rotation>
+			<Scale x = "8" y = "1" z = "8" />
+		</Platform>
+	</Platforms>
+	
+	<Towers>
+		<Tower type = "2">
+			<Position x = "-10" y = "0" z = "0" />
+			<Rotation>0</Rotation>
+			<Scale x = "1" y = "1" z = "1" />
+		</Tower>
+	</Towers>
+</LevelData>

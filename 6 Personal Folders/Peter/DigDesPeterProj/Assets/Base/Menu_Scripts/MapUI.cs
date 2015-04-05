@@ -14,7 +14,7 @@ public class MapUI : MonoBehaviour {
     [SerializeField] private GameObject MapTwrImg;
     [SerializeField] private GameObject MapEndImg;
 
-    public void vRefresh(Vector2 _pos)
+    public void vClearMap()
     {
         foreach (GameObject obj in m_MapImages)
         {
@@ -22,16 +22,58 @@ public class MapUI : MonoBehaviour {
         }
 
         m_MapImages.Clear();
-        SetupMap(_pos);
+    }
+    
+    public void vSetupMapUIPlayer(Vector2 _Pos)
+    {
+        vCreateMapUIObj(_Pos,MapPlyImg);
+    }
+    public void vSetupMapUIEndTower(Vector2 _Pos)
+    {
+        vCreateMapUIObj(_Pos, MapEndImg);
+    }
+    public void vSetupMapUITargets(List<Vector2> _poss)
+    {
+        foreach(Vector2 variable in _poss)
+        {
+            vCreateMapUIObj(variable, MapEndImg);
+        }
+    }
+    public void vSetupMapUILevels(List<Vector2> _poss, List<Vector2> _scales)
+    {
+        int i = 0;
+        foreach (Vector2 variable in _poss)
+        {
+            vCreateMapUIObj(variable, _scales[i], MapLvlImg);
+        }
+    }
+    public void vSetupMapUITowers(List<Vector2> _poss, List<Vector2> _scales)
+    {
+        int i = 0;
+        foreach (Vector2 variable in _poss)
+        {
+            vCreateMapUIObj(variable, _scales[i], MapTwrImg);
+        }
     }
 
-    void SetupMap(Vector2 _newpos)
+    private void vCreateMapUIObj(Vector2 _pos, GameObject _obj)
     {
-        GameObject playerImg = (GameObject)Instantiate(MapPlyImg,gameObject.transform.position,gameObject.transform.rotation);
-        playerImg.GetComponent<RectTransform>().SetParent(gameObject.transform);
-        playerImg.GetComponent<RectTransform>().localScale = Vector3.one;
-        playerImg.GetComponent<RectTransform>().localPosition = _newpos;
+        GameObject mapUIImg = (GameObject)Instantiate(_obj, gameObject.transform.position, gameObject.transform.rotation);
+        mapUIImg.GetComponent<RectTransform>().SetParent(gameObject.transform);
+        mapUIImg.GetComponent<RectTransform>().localScale = Vector3.one;
+        mapUIImg.GetComponent<RectTransform>().localPosition = _pos;
 
-        m_MapImages.Add(playerImg);
+        m_MapImages.Add(mapUIImg);
+    }
+    private void vCreateMapUIObj(Vector2 _pos, Vector2 _scale, GameObject _obj)
+    {
+        GameObject mapUIImg = (GameObject)Instantiate(_obj, gameObject.transform.position, gameObject.transform.rotation);
+        mapUIImg.GetComponent<RectTransform>().SetParent(gameObject.transform);
+
+        Vector3 _temp = new Vector3(_scale.x, _scale.y, 1f);
+        mapUIImg.GetComponent<RectTransform>().localScale = _temp;
+        mapUIImg.GetComponent<RectTransform>().localPosition = _pos;
+
+        m_MapImages.Add(mapUIImg);
     }
 }

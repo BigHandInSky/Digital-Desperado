@@ -19,18 +19,31 @@ public class StatsScript : MonoBehaviour
     [SerializeField]
     private List<Text> txStatTexts = new List<Text>(6);
 
-    public List<string> sTags = new List<string>(6);
-    public List<string> sSecs = new List<string>(6);
-    public List<string> sFras = new List<string>(6);
-    public List<string> sShts = new List<string>(6);
+    public List<string> sTags;
+    public List<string> sSecs;
+    public List<string> sFras;
+    public List<string> sShts;
 
     void Start()
-    {
+    {/*
+        for (int i = 0; i < 6; i++ )
+        {
+            sTags.Add("?");
+            sSecs.Add("?");
+            sFras.Add("?");
+            sShts.Add("?");
+        }*/
+
         StartCoroutine("ieRotateStats");
     }
 
     public void vSetData(List<string> _tags, List<string> _secs, List<string> _frames, List<string> _shots)
     {
+        sTags.Clear();
+        sSecs.Clear();
+        sFras.Clear();
+        sShts.Clear();
+
         sTags = _tags;
         sSecs = _secs;
         sFras = _frames;

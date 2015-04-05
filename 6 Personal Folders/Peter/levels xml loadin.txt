@@ -1,0 +1,313 @@
+/*on start:
+	
+	gets all files inside,
+		sets all urls to a list
+		sets all filenames to a list
+	
+on levels ui
+	get current name (+1, -1)
+	
+	start coroutine for stats
+		set spinner to active
+		load current level stats into lists
+		once reached end of levelstats send to stats obj
+		set spinner to unactive
+		end coroutine
+		
+	start coroutine for maps
+		set spinner to active
+		go through xml, creating objects as you go
+		once reached end of leveldata
+		set spinner to unactive
+		end coroutine
+		
+on levels ui change current level
+	do above*/
+	
+using System.Collections.Generic;
+using System.Globalization;
+using System.Xml;
+using System.IO;
+
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.UI;
+
+// Manages the loading and creation of levels
+
+public class CreateLevel : MonoBehaviour 
+{
+	
+	const string sDefaultFolderPath = "C:\Users\Peter\Documents\GitHub\Digital-Desperado\6 Personal Folders\Peter\LevelTests";
+	string FolderPath;
+	DirectoryInfo FolderInfo;
+	string FileType = ".xml";
+	
+	List<string> FileUrls;
+	List<string> FileNames;
+		
+	private bool bCheckUrl(string _url)
+	{
+		if(_url == ""
+		|| DirectoryInfo(_url) == null
+		|| !_url.Contains(".xml"))
+		{
+			return false
+		}
+		else 
+		{
+			return true;
+		}
+	}
+		
+	//function to setup variables
+	public void Setup()
+	{
+		if(!FolderPath || DirectoryInfo(FolderPath) == null)
+		{
+			FolderInfo = new DirectoryInfo(sDefaultFilePath); 
+			Debug.Error("FolderPath not assigned/is null, using default");
+		}
+		else
+		{
+			FolderInfo = new DirectoryInfo(FolderPath);	
+		}		
+		
+		FileInfo[] info = dir.GetFiles("*.xml");
+		
+		foreach (FileInfo obj in info)
+		{
+			Debug.Log(obj);
+			//FileUrls.add(obj.url)
+			//FileNames.add(GetFileName(obj.url,false))
+		}	
+		
+	}
+	
+	//given a url, will split and return just the name + xml
+	public string GetFileName(string _url, bool _withType)
+	{
+        if (!bCheckUrl(_url))
+        {
+            return;
+        }
+		
+        string[] _Names = _url.Split('/');
+        string _fileName = _Names[_Names.Length - 1];
+		
+		if(_withType)
+			return _fileName;
+		else
+			return (_fileName.Remove(_fileName.Length - FileType.Length));
+	}
+
+	
+	//given a url and number, will return the stats for that leaderboard value
+	public List<string> GetStats(string _url, int _StatNum)
+	{
+        if (!bCheckUrl(_url))
+        {
+            return;
+        }
+
+        XmlReader reader = XmlReader.Create(_url);
+
+        reader.Read();
+        if (reader.Name != "LevelData")
+        {
+            Debug.Error("File not a supported level");
+
+            return;
+        }
+
+		List<string> _temp;
+		
+        while (reader.Read())
+        {
+			if(reader.Name == ("Stat" + _StatNum.ToString()))
+			{
+				_temp.Add(reader.GetAttribute("tag"));
+				_temp.Add(reader.GetAttribute("secs"));
+				_temp.Add(reader.GetAttribute("frames"));
+				_temp.Add(reader.GetAttribute("shots"));
+			}
+        }
+	
+        reader.Close();
+		
+		if(_temp == null)
+		{
+			Debug.Error("xml reader did not find any stats in file")
+			return;
+		}
+		else
+		{
+			return _temp;
+		}
+	}
+	
+	public enum LoaderMapData
+	{
+		Player 	= 0,
+		End 		= 1,
+		Level 	= 2,
+		Tower 	= 3,
+		Target 	= 4
+	}
+	public List<Vector3> GetLevelData(string _url, LoaderMapData _objType)
+	{
+        if (!bCheckUrl(_url))
+        {
+            return;
+        }
+
+        XmlReader reader = XmlReader.Create(_url);
+
+        reader.Read();
+        if (reader.Name != "LevelData")
+        {
+            Debug.Error("File not a supported level");
+
+            return;
+        }
+		
+		List<Vector3> _temp;
+		
+        while (reader.Read())
+        {
+			if(reader.Name == "PlayerStart" && _objType == LoaderMapData.Player)
+			{
+				_temp.Add( GetTransformData("Position", reader) );
+				_temp.Add( GetTransformData("Scale", reader) );
+			}
+			else if (reader.Name == "Goal" && _objType == LoaderMapData.End)
+			{
+				_temp.Add( GetTransformData("Position", reader) );
+				_temp.Add( GetTransformData("Scale", reader) );
+			}
+			else if (reader.Name == "Platform" && _objType == LoaderMapData.Level)
+			{
+				_temp.Add( GetTransformData("Position", reader) );
+				_temp.Add( GetTransformData("Scale", reader) );
+			}
+			else if (reader.Name == "Tower" && _objType == LoaderMapData.Tower)
+			{
+				_temp.Add( GetTransformData("Position", reader) );
+				_temp.Add( GetTransformData("Scale", reader) );
+			}
+			else if (reader.Name == "Target" && _objType == LoaderMapData.Target)
+			{
+				_temp.Add( GetTransformData("Position", reader) );
+				_temp.Add( GetTransformData("Scale", reader) );
+			}
+        }
+	
+        reader.Close();
+		
+		if(_temp == null)
+		{
+			Debug.Error("xml reader did not find any stats in file")
+			return;
+		}
+		else
+		{
+			return _temp;
+		}
+	}
+	
+	private Vector3 GetTransformData(string _elementName, XmlReader reader)
+	{
+		Vector3 _temp;
+		
+        while(reader.Read())
+        {
+            if (reader.IsStartElement())
+            {
+                switch (reader.Name)
+                {
+                    case "Position":
+                        _temp = new Vector3(float.Parse(reader.GetAttribute("x"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign),
+                            float.Parse(reader.GetAttribute("y"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign),
+                            float.Parse(reader.GetAttribute("z"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign));
+                    break;
+
+                    case "Scale":
+                        _temp.x = 1f * float.Parse(reader.GetAttribute("x"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        _temp.y = 1f * float.Parse(reader.GetAttribute("y"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        _temp.z = 1f * float.Parse(reader.GetAttribute("z"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                    break;
+                }
+            }
+        }
+		
+		if(_temp == null)
+		{
+			Debug.Error("xml reader did not find any stats in file")
+			return;
+		}
+		else
+		{
+			return _temp;
+		}
+	}
+	
+	public float GetLevelData(string _url, LoaderMapData _objType)
+	{
+        if (!bCheckUrl(_url))
+        {
+            return;
+        }
+
+        XmlReader reader = XmlReader.Create(_url);
+
+        reader.Read();
+        if (reader.Name != "LevelData")
+        {
+            Debug.Error("File not a supported level");
+
+            return;
+        }
+		
+		float _rotation;
+		
+        while (reader.Read())
+        {
+			if(reader.Name == "Rotation" && _objType == LoaderMapData.Player)
+			{
+				if(reader.parent.name == "PlayerStart" && _objType == LoaderMapData.Player)
+				{
+					_rotation = float.Parse(reader.Value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+				}
+				else if (reader..parent.name == "Goal" && _objType == LoaderMapData.End)
+				{
+					_rotation = float.Parse(reader.Value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+				}
+				else if (reader..parent.name == "Platform" && _objType == LoaderMapData.Level)
+				{
+					_rotation = float.Parse(reader.Value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+				}
+				else if (reader..parent.name == "Tower" && _objType == LoaderMapData.Tower)
+				{
+					_rotation = float.Parse(reader.Value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+				}
+				else if (reader..parent.name == "Target" && _objType == LoaderMapData.Target)
+				{
+					_rotation = float.Parse(reader.Value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+				}
+			}
+        }
+	
+        reader.Close();
+		
+		if(_rotation == null)
+		{
+			Debug.Error("xml reader did not find any stats in file")
+			return;
+		}
+		else
+		{
+			return _rotation;
+		}
+	}
+	
+}
