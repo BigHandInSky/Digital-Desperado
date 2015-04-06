@@ -272,11 +272,11 @@
      inkscape:current-layer="layer1"
      showgrid="false"
      showborder="false"
-     inkscape:window-width="752"
-     inkscape:window-height="798"
-     inkscape:window-x="768"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
+     inkscape:window-width="1536"
+     inkscape:window-height="814"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-grids="true"
@@ -2921,35 +2921,32 @@
          d="m 8276.0112,-8643.8927 -13.1875,0.094 -4.8437,24.4062 -15.7188,0.125 10.7812,98.25 34.625,-0.2812 2.8438,-30 3.3125,30.2812 34.625,-0.2812 2.2813,-24.125 2.6562,24.4062 34.625,-0.2812 2.2812,-24.1876 2.6876,24.4688 34.5937,-0.2812 9.2813,-98.375 -15.7188,0.125 -5.1875,-24.3438 -13.2187,0.094 -4.8126,24.4062 -0.6562,0 0.031,-0.2812 -15.7187,0.125 -5.2187,-24.3438 -13.1876,0.094 -4.8437,24.4062 -0.6563,0 0.031,-0.2812 -15.6875,0.125 -5.2188,-24.3438 -13.2187,0.094 -4.8125,24.4062 -1.8438,0 0.031,-0.2812 -15.7187,0.125 -5.2188,-24.3438 z"
          id="path5904" />
     </g>
-    <g
-       id="g5914"
-       inkscape:export-filename="C:\Users\Peter\Documents\GitHub\Digital-Desperado\6 Personal Folders\Peter\Art Assets\UI_Loading.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
-      <rect
-         y="-9032.4551"
-         x="9167.2168"
-         height="900"
-         width="1600.001"
-         id="rect5906"
-         style="opacity:0.25;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.5" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48.37279892px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.5"
-         x="9880.3936"
+    <rect
+       style="opacity:0.25;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.5"
+       id="rect5906"
+       width="1600.001"
+       height="900"
+       x="9167.2168"
+       y="-9032.4551" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text5908"
+       y="-8460.0459"
+       x="9880.3936"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48.37279892px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.5"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48.37279892px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke:none;stroke-width:1.5"
          y="-8460.0459"
-         id="text5908"
-         sodipodi:linespacing="125%"><tspan
-           id="tspan5910"
-           sodipodi:role="line"
-           x="9880.3936"
-           y="-8460.0459"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48.37279892px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke:none;stroke-width:1.5">LOADING</tspan></text>
-      <path
-         id="path5912"
-         d="m 9913.6705,-8643.8927 -13.1875,0.094 -4.8437,24.4062 -15.7188,0.125 10.7812,98.25 34.625,-0.2812 2.8438,-30 3.3125,30.2812 34.625,-0.2812 2.2813,-24.125 2.6562,24.4062 34.6255,-0.2812 2.281,-24.1876 2.687,24.4688 34.594,-0.2812 9.281,-98.375 -15.718,0.125 -5.188,-24.3438 -13.219,0.094 -4.812,24.4062 -0.656,0 0.03,-0.2812 -15.7192,0.125 -5.2187,-24.3438 -13.1876,0.094 -4.8437,24.4062 -0.6563,0 0.031,-0.2812 -15.6875,0.125 -5.2188,-24.3438 -13.2187,0.094 -4.8125,24.4062 -1.8438,0 0.031,-0.2812 -15.7187,0.125 -5.2188,-24.3438 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         inkscape:connector-curvature="0" />
-    </g>
+         x="9880.3936"
+         sodipodi:role="line"
+         id="tspan5910">LOADING</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       d="m 8713.6705,-7939.8927 -13.1875,0.094 -4.8437,24.4062 -15.7188,0.125 10.7812,98.25 34.625,-0.2812 2.8438,-30 3.3125,30.2812 34.625,-0.2812 2.2813,-24.125 2.6562,24.4062 34.6255,-0.2812 2.281,-24.1876 2.687,24.4688 34.594,-0.2812 9.281,-98.375 -15.718,0.125 -5.188,-24.3438 -13.219,0.094 -4.812,24.4062 -0.656,0 0.03,-0.2812 -15.7192,0.125 -5.2187,-24.3438 -13.1876,0.094 -4.8437,24.4062 -0.6563,0 0.031,-0.2812 -15.6875,0.125 -5.2188,-24.3438 -13.2187,0.094 -4.8125,24.4062 -1.8438,0 0.031,-0.2812 -15.7187,0.125 -5.2188,-24.3438 z"
+       id="path5912"
+       inkscape:export-filename="C:\Users\Peter\Documents\GitHub\Digital-Desperado\6 Personal Folders\Peter\Art Assets\UI_Loading_Centre.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>

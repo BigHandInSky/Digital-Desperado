@@ -8,12 +8,12 @@
   
 	<PlayerStart>
 		<Position x = "0" y = "0" z = "0" />
-		<Rotation>0</Rotation>
+		<Rotation>25</Rotation>
 	</PlayerStart>
 	
 	<Goal>
 		<Position x = "0" y = "0" z = "34" />
-		<Rotation>0</Rotation>
+		<Rotation>85</Rotation>
 	</Goal>
 	
 	<Platforms>
@@ -25,7 +25,7 @@
 		
 		<Platform level = "3">
 			<Position x = "0" y = "-4.5" z = "16"/>
-			<Rotation>0</Rotation>
+			<Rotation>15</Rotation>
 			<Scale x = "8" y = "1" z = "8" />
 		</Platform>
 		
@@ -38,7 +38,7 @@
 		<Platform level = "5">
 			<Position x = "0" y = "-7.5" z = "32" />
 			<Rotation>0</Rotation>
-			<Scale x = "8" y = "1" z = "8" />
+			<Scale x = "5" y = "1" z = "8" />
 		</Platform>
 	</Platforms>
 	

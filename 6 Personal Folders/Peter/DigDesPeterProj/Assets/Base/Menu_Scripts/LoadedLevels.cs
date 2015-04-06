@@ -70,6 +70,7 @@ public class LoadedLevels : MonoBehaviour
        m_StatsObject.vSetData(sTags,sSecs,sFras,sShts);
 
         m_MapObject.vClearMap();
+        vGetNewMapData();
     }
     
     //placeholder, currently just randomises times into strings with generic tags
@@ -82,9 +83,30 @@ public class LoadedLevels : MonoBehaviour
     }
 
     //placeholder, currently gives map a random set of coordinates to use
-    private Vector2 vGetNewMapStats()
+    private void vGetNewMapData()
     {
-        Vector2 _temp = new Vector2(Random.Range(-50f,+50f), Random.Range(-50f,+50f));
-        return _temp;
+        List<MenuLoadLevelsFromXML.MenuLoadXMLMapData> _mapList = MenuLoadLevelsFromXML.Instance.GetLevelObjs(iCurrentLvl);
+        List<MenuLoadLevelsFromXML.MenuLoadXMLMapData> _mapListLate = new List<MenuLoadLevelsFromXML.MenuLoadXMLMapData>();
+
+        foreach(MenuLoadLevelsFromXML.MenuLoadXMLMapData obj in _mapList)
+        {
+            if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Towr)
+                m_MapObject.vSetupMapUITower(obj.Position, obj.Scale, obj.Rotation.y);
+
+            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.EndT)
+                m_MapObject.vSetupMapUIEndTower(obj.Position, obj.Rotation.y);
+
+        }
+        foreach (MenuLoadLevelsFromXML.MenuLoadXMLMapData obj in _mapListLate)
+        {
+            if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Play)
+                m_MapObject.vSetupMapUIPlayer(obj.Position, obj.Rotation.y);
+
+            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Targ)
+                m_MapObject.vSetupMapUITarget(obj.Position, obj.Rotation.y);
+
+            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Levl)
+                m_MapObject.vSetupMapUILevel(obj.Position, obj.Scale, obj.Rotation.y);
+        }
     }
 }

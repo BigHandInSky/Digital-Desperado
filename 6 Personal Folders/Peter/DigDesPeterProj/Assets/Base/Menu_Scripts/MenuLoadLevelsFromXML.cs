@@ -23,8 +23,17 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
     private const string sDefaultFolderPath = "C:/Users/Peter/Documents/GitHub/Digital-Desperado/6 Personal Folders/Peter/LevelTests";
     string sFileType = ".xml";
 
+    public enum MapDataObjType
+    {
+        Play,
+        EndT,
+        Levl,
+        Towr,
+        Targ
+    }
     public struct MenuLoadXMLMapData
     {
+        public MapDataObjType Type;
         public Vector3 Position;
         public Vector3 Scale;
         public Quaternion Rotation;
@@ -90,97 +99,21 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
 		else 
 			return true;
 	}
-
-    // Creates an Open File Dialog for xml files and selects that path
-    public void SelectFilePath()
+    private bool CheckXML(string _url)
     {
-        // File Path
-        string filePath = "";
-        // File Name
-        string fileName = "";
-
-        // Create File Dialog and retrieve path
-        filePath = EditorUtility.OpenFilePanel("Load Level", "", "xml");
-
-        // Split up file path by folder
-        string[] folderNames = filePath.Split('/');
-        // Find the file name
-        fileName = folderNames[folderNames.Length - 1];
-        // Remove the file name from the path
-        filePath = filePath.Remove(filePath.Length - fileName.Length);
-
-        // Set the Browse Level Text
-        //browseLevelText.text = fileName;
-
-        // Set the file path and name
-        //sFilePath = filePath;
-        //sFileName = fileName;
-    }
-
-    // Loads a level from an xml file
-    public void LoadLevel()
-    {
-        // If the file path or name is empty, then return
-        if (!CheckUrl(sLevelsFolderUrl))
-        {
-            Debug.Log("No path data");
-            return;
-        }
-
-        // Xml reader for the file
-        XmlReader reader = XmlReader.Create(sLevelsFolderUrl);
-
-        // Read the first node
+        XmlReader reader = XmlReader.Create(_url);
         reader.Read();
-
-        // If the first node is not LevelData then return
         if (reader.Name != "LevelData")
         {
-            Debug.Log("File not a supported level");
+            Debug.LogError("File not a supported level");
 
-            return;
+            return false;
         }
-
-        // While there are nodes to read
-        while (reader.Read())
+        else
         {
-            // If the node is an open node
-            if (reader.IsStartElement())
-            {
-                // Check node name, instantiate the prefab for each node and assign its transform
-                switch (reader.Name)
-                {
-                    case "Stats":
-                        break;
-
-                    case "PlayerStart":
-                        break;
-
-                    case "Goal":
-                        break;
-
-                    case "Platform":
-                        break;
-
-                    case "Tower":
-                        break;
-
-                    case "Target":
-                        break;
-                        /*
-                    case "Target":
-                        int targetType = Mathf.Clamp(int.Parse(reader.GetAttribute("type")) - 1, 0, agoPlatformPrefabs.Length);
-                        GameObject target = Instantiate(agoTargetPrefabs[targetType]);
-                        AssignTransform(target, reader.ReadSubtree());
-                        break;*/
-                }
-            }
+            reader.Close();
+            return true;
         }
-
-        // Close the reader
-        reader.Close();
-
-        Debug.Log("Level Load Complete - " + sLevelsFolderUrl);
     }
 
     public enum StatsType
@@ -193,21 +126,12 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
     public List<string> GetLevelStats(int _levelUrlNum, StatsType _statName)
     {
         List<string> _tempStrings = new List<string>();
-
-        // Xml reader for the file
-        XmlReader reader = XmlReader.Create(FileUrls[_levelUrlNum]);
-
-        // Read the first node
-        reader.Read();
-
-        // If the first node is not LevelData then return
-        if (reader.Name != "LevelData")
+        if (!CheckXML(FileUrls[_levelUrlNum]))
         {
-            Debug.LogError("File not a supported level");
-
             return _tempStrings;
         }
-        
+
+        XmlReader reader = XmlReader.Create(FileUrls[_levelUrlNum]);        
         while (reader.Read())
         {
             if (reader.Name == _statName.ToString())                
@@ -225,85 +149,96 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
                 _tempStrings.Add(reader.GetAttribute("E"));
                 _tempStrings.Add(reader.GetAttribute("F"));
             }
-            
+
         }
+        reader.Close();
 
         return _tempStrings;
     }
-
-    public MenuLoadXMLMapData ReturnPlayerData(int _levelUrlNum)
+    public List<MenuLoadXMLMapData> GetLevelObjs(int _levelUrlNum)
     {
-        MenuLoadXMLMapData _tempData = new MenuLoadXMLMapData();
+        List<MenuLoadXMLMapData> _temps = new List<MenuLoadXMLMapData>();
+        if (!CheckXML(FileUrls[_levelUrlNum]))
+        {
+            return _temps;
+        }
 
-        return _tempData;
-    }
-    public MenuLoadXMLMapData ReturnEndData(int _levelUrlNum)
-    {
-        MenuLoadXMLMapData _tempData = new MenuLoadXMLMapData();
-
-        return _tempData;
-    }
-    public List<MenuLoadXMLMapData> ReturnLevelsData(int _levelUrlNum)
-    {
-        List<MenuLoadXMLMapData> _tempData = new List<MenuLoadXMLMapData>();
-
-        return _tempData;
-    }
-    public List<MenuLoadXMLMapData> ReturnTowersData(int _levelUrlNum)
-    {
-        List<MenuLoadXMLMapData> _tempData = new List<MenuLoadXMLMapData>();
-
-        return _tempData;
-    }
-    public List<MenuLoadXMLMapData> ReturnTargetData(int _levelUrlNum)
-    {
-        List<MenuLoadXMLMapData> _tempData = new List<MenuLoadXMLMapData>();
-
-        return _tempData;
-    }
-
-    // Assigns transform data from a reader subtree to the specified object
-    private void AssignTransform(GameObject obj, XmlReader reader)
-    {
-        // Position
-        Vector3 position = Vector3.zero;
-        // Rotation
-        float rotation = 0;
-        // Scale
-        Vector3 scale = obj.transform.localScale;
-
-        // While there are nodes to read
+        XmlReader reader = XmlReader.Create(FileUrls[_levelUrlNum]);   
         while (reader.Read())
         {
-            // If the node is an open node
-            if (reader.IsStartElement())
+            switch (reader.Name)
             {
-                // Check each node and retrieve the data
-                switch (reader.Name)
+                case "PlayerStart":
+                    MenuLoadXMLMapData _newDataPlay = GetLevelObjValues(reader.ReadSubtree(), MapDataObjType.Play);
+                    _temps.Add(_newDataPlay);
+                    break;
+
+                case "Goal":
+                    MenuLoadXMLMapData _newDataEndT = GetLevelObjValues(reader.ReadSubtree(), MapDataObjType.EndT);
+                    _temps.Add(_newDataEndT);
+                    break;
+
+                case "Platform":
+                    MenuLoadXMLMapData _newDataLevl = GetLevelObjValues(reader.ReadSubtree(), MapDataObjType.Levl);
+                    _temps.Add(_newDataLevl);
+                    break;
+
+                case "Tower":
+                    MenuLoadXMLMapData _newDataTowr = GetLevelObjValues(reader.ReadSubtree(), MapDataObjType.Towr);
+                    _temps.Add(_newDataTowr);
+                    break;
+
+                case "Target":
+                    MenuLoadXMLMapData _newDataTarg = GetLevelObjValues(reader.ReadSubtree(), MapDataObjType.Targ);
+                    _temps.Add(_newDataTarg);
+                    break;
+            }
+        }
+
+        reader.Close();
+
+        return _temps;
+    }
+
+    private MenuLoadXMLMapData GetLevelObjValues(XmlReader _reader, MapDataObjType _type)
+    {
+        MenuLoadXMLMapData _temp = new MenuLoadXMLMapData();
+        _temp.Type = _type;
+
+        float _rot = 0f;
+
+        while (_reader.Read())
+        {
+            if (_reader.IsStartElement())
+            {
+                switch (_reader.Name)
                 {
                     case "Position":
-                        position = new Vector3(float.Parse(reader.GetAttribute("x"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign),
-                            float.Parse(reader.GetAttribute("y"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign),
-                            float.Parse(reader.GetAttribute("z"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign));
+                        _temp.Position = new Vector3(float.Parse(_reader.GetAttribute("x"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign),
+                            float.Parse(_reader.GetAttribute("y"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign),
+                            float.Parse(_reader.GetAttribute("z"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign));
                         break;
 
                     case "Rotation":
-                        reader.Read();
-                        rotation = float.Parse(reader.Value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        _reader.Read();
+                        _rot = float.Parse(_reader.Value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
                         break;
 
                     case "Scale":
-                        scale.x *= float.Parse(reader.GetAttribute("x"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
-                        scale.y *= float.Parse(reader.GetAttribute("y"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
-                        scale.z *= float.Parse(reader.GetAttribute("z"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        _temp.Scale.x = float.Parse(_reader.GetAttribute("x"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        _temp.Scale.y = float.Parse(_reader.GetAttribute("y"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        _temp.Scale.z = float.Parse(_reader.GetAttribute("z"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
                         break;
                 }
             }
         }
 
-        // Set the Position, Rotation and Scale
-        obj.transform.position = position;
-        obj.transform.rotation = Quaternion.Euler(new Vector3(0, rotation, 0));
-        obj.transform.localScale = scale;
+        _temp.Rotation = new Quaternion(0f, _rot, 0f, 0f);
+
+        Debug.Log("MenuLoadLevelsFromXML - GetLevelObjValues - Position: " + _temp.Position);
+        Debug.Log("MenuLoadLevelsFromXML - GetLevelObjValues - Rotation: " + _temp.Rotation);
+        Debug.Log("MenuLoadLevelsFromXML - GetLevelObjValues - Scale: " + _temp.Scale);
+        Debug.Log("MenuLoadLevelsFromXML - GetLevelObjValues - Type: " + _temp.Type);
+        return _temp;
     }
 }
