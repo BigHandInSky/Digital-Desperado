@@ -20,7 +20,7 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
         }
     }
 
-    private const string sDefaultFolderPath = "C:/Users/Peter/Documents/GitHub/Digital-Desperado/6 Personal Folders/Peter/LevelTests";
+    private string sDefaultFolderPath;
     string sFileType = ".xml";
 
     public enum MapDataObjType
@@ -54,6 +54,8 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
     void Start ()
     {
         m_DataInstance = this;
+
+        sDefaultFolderPath = Application.dataPath + "/XML";
 
         if (CheckUrl(sLevelsFolderUrl))
         {
