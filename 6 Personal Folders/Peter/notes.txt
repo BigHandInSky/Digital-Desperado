@@ -1,0 +1,23 @@
+
+start
+	- loading ui on by default, animated obj
+	[loadingUIAnim - list of images, every variable switch
+	- when [x obj is loaded / timer ends] switch to ready btn
+	/Ready btn on click start countdown
+	- countdown
+	-[Countdown script - scales down, --, if == 0 start gamedata, disable parent, enable given gameobject
+	
+game
+	- already working save for map arrow
+	- when player collides with end tower, stop gamedata, disable game ui, enable end ui
+	-[end level script
+	
+end
+	- get data from gamedata + xml
+	[LdrBrd get data
+	- replay button calls [generate level] to restart, disable end ui, enable loading ui
+	[Replay btn script
+	- exit btn loads menu scene
+	- save btn disables ldrbrd, enables save
+	- save tag checks entry, if fail then print error message, otherwise save then exit to menu
+	[SaveAndExitToMenuBtn

@@ -17,31 +17,31 @@ public class GameData : MonoBehaviour {
     [SerializeField] private Transform m_EndLvlTow;
     public Transform trEndLvlTow { get { return m_EndLvlTow; } }
 
-    [SerializeField] private GameObject m_UITargetsLeft;
-    [SerializeField] private GameObject m_UITargetsShot;
+    [SerializeField] private GameUITargetScript m_UITargetsLeft;
+    [SerializeField] private GameUITargetScript m_UITargetsShot;
 
-    private int m_TargetsLeft;
+    private int m_TargetsLeft = 0;
     public int iTargsLft { get { return m_TargetsLeft; } }
-    private int m_TargetsTotl;
+    private int m_TargetsTotl = 0;
     public int iTargsTtl { get { return m_TargetsTotl; } }
 
-    private int m_BullsShot;
+    private int m_BullsShot = 0;
     public int iBullsShot { get { return m_BullsShot; } }
 
-    private int m_TimeFrames;
+    private int m_TimeFrames = 0;
     public int iTimeFr { get { return m_TimeFrames; } }
-    private float m_TimeSecs;
+    private float m_TimeSecs = 0;
     public float fTimeScs { get { return m_TimeSecs; } }
     
     void Awake() 
     {
-        m_TargetsLeft = 3;
-        m_TargetsTotl = 5;
-        m_BullsShot = 1;
-        vUpdateTargetUIs();
-
         m_DataInstance = this;
+    }
+
+    public void StartData()
+    {
         StartCoroutine("UpdateTime");
+        vUpdateTargetUIs();
     }
 
     IEnumerator UpdateTime()
@@ -50,19 +50,32 @@ public class GameData : MonoBehaviour {
         {
             m_TimeFrames++;
             m_TimeSecs += Time.deltaTime;
-
+            vUpdateTargetUIs();
             yield return new WaitForEndOfFrame();
         }
     }
 
-    void vStopCounting()
+    public void vStopCounting()
     {
         StopCoroutine("UpdateTime");
     }
 
     void vUpdateTargetUIs()
     {
-        m_UITargetsLeft.SendMessage("vSetNumberOfImages");
-        m_UITargetsShot.SendMessage("vSetNumberOfImages");
+        m_UITargetsLeft.vSetNumberOfImages();
+        m_UITargetsShot.vSetNumberOfImages();
+    }
+
+    public void Restart()
+    {
+        m_TargetsLeft = 0;
+        m_TargetsTotl = 0;
+        m_BullsShot = 0;
+        m_TimeFrames = 0;
+        m_TimeSecs = 0;
+    }
+    public void GetObjects()
+    {
+
     }
 }
