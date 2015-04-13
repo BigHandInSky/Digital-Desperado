@@ -6,8 +6,11 @@ public class MenuButtonFunctions : MonoBehaviour {
     //Unity's UI let's us use functions from an attached script to the UI button
     //hence all the functions for the generic buttons are contained in here
 
-    [SerializeField] private string sCameraTag = "";
-
+    [SerializeField]
+    private string sCameraTag = "";
+    [SerializeField]
+    private MenuCubeDoShit Cube;
+    
     public void vChangeLevel(string _levelName)
     {
         //print("vChangeLevel called");

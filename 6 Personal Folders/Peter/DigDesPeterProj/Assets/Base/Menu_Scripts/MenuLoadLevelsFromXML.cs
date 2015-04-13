@@ -237,10 +237,10 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
 
         _temp.Rotation = new Quaternion(0f, _rot, 0f, 0f);
 
-        Debug.Log("MenuLoadLevelsFromXML - GetLevelObjValues - Position: " + _temp.Position);
+       /* Debug.Log("MenuLoadLevelsFromXML - GetLevelObjValues - Position: " + _temp.Position);
         Debug.Log("MenuLoadLevelsFromXML - GetLevelObjValues - Rotation: " + _temp.Rotation);
         Debug.Log("MenuLoadLevelsFromXML - GetLevelObjValues - Scale: " + _temp.Scale);
-        Debug.Log("MenuLoadLevelsFromXML - GetLevelObjValues - Type: " + _temp.Type);
+        Debug.Log("MenuLoadLevelsFromXML - GetLevelObjValues - Type: " + _temp.Type);*/
         return _temp;
     }
 }
