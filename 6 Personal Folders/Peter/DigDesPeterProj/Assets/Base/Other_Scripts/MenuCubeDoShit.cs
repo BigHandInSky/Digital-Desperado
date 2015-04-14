@@ -18,6 +18,15 @@ public class MenuCubeDoShit : MonoBehaviour {
         StopAllCoroutines();
         StartCoroutine(Sine(_axisToMove));
     }
+    public void SetAxis(int _axisType)
+    {
+        StopAllCoroutines();
+
+        if (_axisType == 0) //menu/levels
+            StartCoroutine(Sine(Vector3.left));
+        if (_axisType == 1) //option/credits
+            StartCoroutine(Sine(Vector3.forward));
+    }
 
     IEnumerator Sine(Vector3 _axis)
     {

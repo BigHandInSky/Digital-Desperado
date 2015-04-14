@@ -8,8 +8,6 @@ public class MenuButtonFunctions : MonoBehaviour {
 
     [SerializeField]
     private string sCameraTag = "";
-    [SerializeField]
-    private MenuCubeDoShit Cube;
     
     public void vChangeLevel(string _levelName)
     {
