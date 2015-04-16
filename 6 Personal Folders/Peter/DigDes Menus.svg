@@ -2162,80 +2162,9 @@
          x="2521.2114"
          y="-5787.4907"
          id="tspan4558">switch to loading screen?</tspan></text>
-    <path
-       sodipodi:nodetypes="ccccccccccccc"
-       id="path4508"
-       d="m -525.34332,-6332.5751 0,512 125.64119,0 -31.94746,-289.8428 93.32007,0 28.67814,-143.3451 78.37419,-0.5564 30.91976,143.9015 93.32008,0 -27.65044,289.8428 121.344467,0 0,-512 z"
-       style="fill:#800080;fill-opacity:1;stroke:none"
-       inkscape:connector-curvature="0" />
-    <path
-       sodipodi:nodetypes="cccc"
-       inkscape:connector-curvature="0"
-       id="path4510"
-       d="m -404.18269,-6085.1185 29.19198,262.8148 239.69611,-262.8148 z"
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#800080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate" />
     <g
-       clip-path="url(#clipPath4091-0)"
-       style="opacity:0.5;fill:#000000;fill-opacity:1;stroke:none"
-       transform="matrix(2.9892364,0,0,2.9670409,3392.5179,18663.261)"
-       id="g4512">
-      <path
-         sodipodi:nodetypes="ccccccccccccc"
-         id="path4514"
-         d="m -1310.6562,-8424.5 0,172.5625 42.0312,0 -10.6875,-97.6875 31.2187,0 9.5938,-48.3125 26.2188,-0.1875 10.3437,48.5 31.2187,0 -9.25,97.6875 40.5938,0 0,-172.5625 z"
-         style="fill:#000000;fill-opacity:1;stroke:none"
-         inkscape:connector-curvature="0" />
-      <path
-         sodipodi:nodetypes="cccc"
-         inkscape:connector-curvature="0"
-         id="path4516"
-         d="m -1270.1239,-8341.0982 9.7657,88.5781 80.1864,-88.5781 z"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate" />
-    </g>
-    <g
-       id="g4650">
-      <g
-         transform="translate(-869.31371,-637.65685)"
-         id="g4622">
-        <text
-           sodipodi:linespacing="125%"
-           id="text4578"
-           y="-8894.5518"
-           x="-1228.5541"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.71755981px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"
-           transform="scale(0.99945199,1.0005483)"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.71755981px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1"
-             y="-8894.5518"
-             x="-1228.5541"
-             sodipodi:role="line"
-             id="tspan4580">DIGITAL</tspan><tspan
-             id="tspan4582"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.71755981px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1"
-             y="-8779.9053"
-             x="-1228.5541"
-             sodipodi:role="line">DESPERADO</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.76785278px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#800080;fill-opacity:1;stroke:none"
-           x="-1227.8809"
-           y="-8907.4287"
-           id="text4572"
-           sodipodi:linespacing="125%"><tspan
-             id="tspan4574"
-             sodipodi:role="line"
-             x="-1227.8809"
-             y="-8907.4287"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.76785278px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#800080;fill-opacity:1">DIGITAL</tspan><tspan
-             sodipodi:role="line"
-             x="-1227.8809"
-             y="-8792.7188"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.76785278px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#800080;fill-opacity:1"
-             id="tspan4576">DESPERADO</tspan></text>
-      </g>
-    </g>
-    <g
-       id="g4642">
+       id="g4642"
+       transform="translate(-1623.5172,4508.5128)">
       <text
          transform="scale(1.0118017,0.98833596)"
          xml:space="preserve"
@@ -2761,6 +2690,119 @@
          id="rect4807"
          d="M 460.93945 -6151.6113 L 460.93945 -6087.7188 L 595.00195 -6087.7188 L 595.00195 -6151.6113 L 585.87695 -6151.6113 L 586.62695 -6150.3125 L 574.2832 -6150.3125 L 569.50195 -6142.0312 L 561.5957 -6128.2812 L 553.6582 -6142.0312 L 548.87695 -6150.3125 L 536.50195 -6150.3125 L 537.25195 -6151.6113 L 523.41602 -6151.6113 C 523.74867 -6151.2097 524.06849 -6150.7965 524.37695 -6150.375 L 521.31445 -6147.625 L 516.88477 -6151.6113 L 515.55273 -6151.6113 L 510.9707 -6147.5312 L 506.41797 -6151.6113 L 505.08594 -6151.6113 L 500.5332 -6147.5312 L 495.98047 -6151.6113 L 494.65039 -6151.6113 L 490.18945 -6147.5938 L 485.7168 -6151.6113 L 484.41797 -6151.6113 L 483.2832 -6150.5938 C 483.54357 -6150.9425 483.82239 -6151.2775 484.10156 -6151.6113 L 460.93945 -6151.6113 z M 484.68945 -6151.4688 L 489.62695 -6147.0938 L 485.00195 -6142.9062 L 480.87695 -6146.625 C 481.38133 -6147.6474 481.90186 -6148.6229 482.5332 -6149.5625 C 482.5412 -6149.5745 482.55645 -6149.5818 482.56445 -6149.5938 L 484.68945 -6151.4688 z M 495.31445 -6151.4688 L 500.1582 -6147.1562 L 495.4082 -6142.9062 L 490.5957 -6147.25 L 495.31445 -6151.4688 z M 505.75195 -6151.4688 L 510.5957 -6147.1562 L 505.75195 -6142.8125 L 500.9082 -6147.1562 L 505.75195 -6151.4688 z M 516.2207 -6151.4688 L 520.9082 -6147.25 L 516.0957 -6142.9062 L 511.37695 -6147.1562 L 516.2207 -6151.4688 z M 524.87695 -6149.6875 C 526.06692 -6147.9431 527.05037 -6146.0484 527.7832 -6144.0312 L 526.50195 -6142.9062 L 521.9082 -6147.0625 L 524.87695 -6149.6875 z M 500.56445 -6146.8125 L 505.37695 -6142.4375 L 504.18945 -6141.375 C 504.04251 -6141.385 503.90141 -6141.4062 503.75195 -6141.4062 C 501.97725 -6141.4062 500.38918 -6140.6502 499.2832 -6139.4375 L 495.81445 -6142.5625 L 500.56445 -6146.8125 z M 510.9707 -6146.7812 L 515.68945 -6142.5625 L 510.8457 -6138.2188 L 506.1582 -6142.4375 L 510.9707 -6146.7812 z M 490.00195 -6146.7207 L 494.81445 -6142.377 L 490.18945 -6138.2207 L 485.4082 -6142.5645 L 490.00195 -6146.7207 z M 521.50195 -6146.7207 L 526.0957 -6142.5645 L 521.31445 -6138.2207 L 516.68945 -6142.377 L 521.50195 -6146.7207 z M 480.50195 -6145.877 L 484.4082 -6142.377 L 479.75195 -6138.2207 L 478.5332 -6139.3457 C 478.89539 -6141.6419 479.57193 -6143.8268 480.50195 -6145.877 z M 528.0332 -6143.2207 C 528.27381 -6142.4824 528.48476 -6141.7369 528.6582 -6140.9707 L 527.0957 -6142.377 L 528.0332 -6143.2207 z M 505.75195 -6142.127 L 510.4707 -6137.8457 L 505.75195 -6133.627 L 501.0332 -6137.8457 L 504.50195 -6140.9707 C 504.61645 -6140.9807 504.72939 -6141.002 504.8457 -6141.002 C 505.38129 -6141.002 505.88743 -6140.9569 506.37695 -6140.8145 C 505.89826 -6141.0431 505.38464 -6141.2165 504.8457 -6141.3145 L 505.75195 -6142.127 z M 484.7832 -6142.0332 L 489.5957 -6137.6895 L 485.00195 -6133.5332 L 480.1582 -6137.8457 L 484.7832 -6142.0332 z M 495.2207 -6142.0332 L 498.7832 -6138.8145 C 498.14232 -6137.8955 497.74325 -6136.7899 497.68945 -6135.5957 L 495.4082 -6133.5332 L 490.5957 -6137.8457 L 495.2207 -6142.0332 z M 516.2832 -6142.0332 L 520.9082 -6137.8457 L 516.0957 -6133.5332 L 511.43945 -6137.6895 L 516.2832 -6142.0332 z M 526.7207 -6142.0332 L 528.8457 -6140.0957 C 529.09714 -6138.7672 529.2462 -6137.3945 529.2832 -6136.002 L 526.5332 -6133.5332 L 521.9082 -6137.6895 L 526.7207 -6142.0332 z M 503.5957 -6140.8457 L 500.6582 -6138.2207 L 500.2832 -6138.5645 C 501.04481 -6139.692 502.22996 -6140.5247 503.5957 -6140.8457 z M 478.4082 -6138.377 L 479.1582 -6137.6895 L 478.2832 -6136.877 C 478.3133 -6137.377 478.3497 -6137.8851 478.4082 -6138.377 z M 499.87695 -6137.8457 L 500.06445 -6137.6895 L 499.6582 -6137.3457 C 499.7184 -6137.5153 499.80105 -6137.6843 499.87695 -6137.8457 z M 479.56445 -6137.3145 L 484.4082 -6133.002 L 479.87695 -6128.9395 L 478.81445 -6129.877 C 478.43544 -6131.6283 478.2207 -6133.449 478.2207 -6135.3145 C 478.2207 -6135.5876 478.24355 -6135.856 478.25195 -6136.127 L 479.56445 -6137.3145 z M 490.00195 -6137.3145 L 494.81445 -6133.002 L 490.18945 -6128.8145 L 485.4082 -6133.1582 L 490.00195 -6137.3145 z M 500.43945 -6137.3145 L 505.1582 -6133.0957 L 502.37695 -6130.5957 C 500.57881 -6131.4998 499.3457 -6133.3508 499.3457 -6135.502 C 499.3457 -6135.8151 499.38945 -6136.1095 499.43945 -6136.4082 L 500.43945 -6137.3145 z M 511.0957 -6137.3145 L 515.68945 -6133.1895 L 510.93945 -6128.9395 L 506.3457 -6133.0957 L 511.0957 -6137.3145 z M 521.4707 -6137.3145 L 526.0957 -6133.1582 L 521.31445 -6128.8145 L 516.68945 -6133.002 L 521.4707 -6137.3145 z M 529.31445 -6134.9707 C 529.29775 -6133.7135 529.19421 -6132.4901 529.00195 -6131.2832 L 527.0957 -6133.002 L 529.31445 -6134.9707 z M 497.7207 -6134.875 C 497.88494 -6132.5422 499.32615 -6130.5591 501.37695 -6129.6875 L 500.5332 -6128.9375 L 495.81445 -6133.1562 L 497.7207 -6134.875 z M 516.2832 -6132.6562 L 520.9082 -6128.5 L 516.18945 -6124.2188 L 511.56445 -6128.4062 L 516.2832 -6132.6562 z M 484.7832 -6132.627 L 489.5957 -6128.2832 L 485.0957 -6124.2207 L 480.25195 -6128.5645 L 484.7832 -6132.627 z M 495.2207 -6132.627 L 499.9082 -6128.4082 L 495.31445 -6124.2207 L 490.5957 -6128.4707 L 495.2207 -6132.627 z M 526.7207 -6132.627 L 528.87695 -6130.6895 C 528.49759 -6128.6207 527.87929 -6126.6449 527.0332 -6124.7832 L 526.4082 -6124.2207 L 521.9082 -6128.2832 L 526.7207 -6132.627 z M 505.75195 -6132.5645 L 507.68945 -6130.8457 C 506.85628 -6130.3287 505.90025 -6130.002 504.8457 -6130.002 C 504.26591 -6130.002 503.71407 -6130.086 503.18945 -6130.252 L 505.75195 -6132.5645 z M 507.7832 -6130.752 L 510.37695 -6128.4082 L 505.75195 -6124.2207 L 501.12695 -6128.4082 L 502.25195 -6129.4082 C 502.73178 -6129.2856 503.23305 -6129.2207 503.75195 -6129.2207 C 505.30027 -6129.2207 506.70947 -6129.7977 507.7832 -6130.752 z M 521.50195 -6127.9707 L 526.0332 -6123.8457 L 521.31445 -6119.627 L 516.7832 -6123.6895 L 521.50195 -6127.9707 z M 490.00195 -6127.9395 L 494.7207 -6123.6895 L 490.18945 -6119.627 L 485.50195 -6123.877 L 490.00195 -6127.9395 z M 479.50195 -6127.8457 L 484.2832 -6123.5332 L 482.18945 -6121.627 C 480.99544 -6123.5051 480.05103 -6125.5514 479.37695 -6127.7207 L 479.50195 -6127.8457 z M 500.5332 -6127.8457 L 505.1582 -6123.6895 L 500.5332 -6119.5332 L 495.87695 -6123.6895 L 500.5332 -6127.8457 z M 510.9707 -6127.8457 L 515.5957 -6123.6895 L 510.9707 -6119.5332 L 506.3457 -6123.6895 L 510.9707 -6127.8457 z M 484.68945 -6123.1582 L 489.43945 -6118.9395 L 486.62695 -6116.377 C 485.05747 -6117.7984 483.64737 -6119.4199 482.4707 -6121.1895 L 484.68945 -6123.1582 z M 495.2832 -6123.1582 L 499.9082 -6119.002 L 495.4082 -6114.9395 L 490.7832 -6119.0957 L 495.2832 -6123.1582 z M 505.75195 -6123.1582 L 510.37695 -6119.002 L 505.75195 -6114.8457 L 501.12695 -6119.002 L 505.75195 -6123.1582 z M 516.18945 -6123.1582 L 520.7207 -6119.0957 L 516.0957 -6114.9395 L 511.56445 -6119.002 L 516.18945 -6123.1582 z M 525.62695 -6122.0645 C 524.8114 -6120.7244 523.85513 -6119.4775 522.81445 -6118.3145 L 522.12695 -6118.9395 L 525.62695 -6122.0645 z M 500.5332 -6118.4707 L 505.1582 -6114.2832 L 500.6582 -6110.2207 L 496.0332 -6114.4082 L 500.5332 -6118.4707 z M 510.93945 -6118.4707 L 515.4707 -6114.4082 L 511.81445 -6111.0957 C 511.33274 -6110.9358 510.83964 -6110.7897 510.3457 -6110.6582 L 506.3457 -6114.2832 L 510.93945 -6118.4707 z M 490.00195 -6118.4082 L 494.62695 -6114.2207 L 492.56445 -6112.377 C 490.62267 -6113.3251 488.81604 -6114.4892 487.18945 -6115.877 L 490.00195 -6118.4082 z M 521.50195 -6118.377 L 522.25195 -6117.7207 C 520.80613 -6116.2043 519.18746 -6114.8463 517.4082 -6113.7207 L 516.87695 -6114.1895 L 521.50195 -6118.377 z M 505.75195 -6113.752 L 509.43945 -6110.4395 C 507.60883 -6110.0238 505.7082 -6109.7832 503.75195 -6109.7832 C 502.98567 -6109.7832 502.21971 -6109.811 501.4707 -6109.877 L 505.75195 -6113.752 z M 495.2207 -6113.6895 L 499.0957 -6110.2207 C 497.08453 -6110.591 495.16154 -6111.1907 493.3457 -6112.002 L 495.2207 -6113.6895 z M 516.2832 -6113.6602 L 516.68945 -6113.2852 C 516.05889 -6112.915 515.41559 -6112.6013 514.75195 -6112.2852 L 516.2832 -6113.6602 z "
          style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#400040;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;enable-background:accumulate" />
+    </g>
+    <rect
+       y="-5183.6377"
+       x="-1260"
+       height="1080"
+       width="1920"
+       id="rect4651"
+       style="opacity:1;fill:#800080;fill-opacity:1;stroke:none;stroke-width:10;stroke-opacity:1"
+       inkscape:export-filename="C:\Users\Peter\Documents\GitHub\Digital-Desperado\7 Promotion\WallpaperA_1920x1080.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       style="fill:#ffffff;fill-opacity:1"
+       id="g4659"
+       transform="translate(2004,60)">
+      <path
+         sodipodi:nodetypes="ccccccccccccc"
+         id="path4661"
+         d="m -2560,-4899.6377 0,512 125.6412,0 -31.9475,-289.8428 93.3201,0 28.6781,-143.3451 78.3742,-0.5564 30.9198,143.9015 93.3201,0 -27.6505,289.8428 121.3445,0 0,-512 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         inkscape:connector-curvature="0" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path4663"
+         d="m -2438.8394,-4652.1811 29.192,262.8148 239.6961,-262.8148 z"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate" />
+    </g>
+    <g
+       transform="translate(1797.163,4566.5128)"
+       id="g4665">
+      <g
+         id="g4667"
+         transform="translate(-869.31371,-637.65685)">
+        <text
+           transform="scale(0.99945199,1.0005483)"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.71755981px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+           x="-1228.5541"
+           y="-8894.5518"
+           id="text4669"
+           sodipodi:linespacing="125%"><tspan
+             id="tspan4671"
+             sodipodi:role="line"
+             x="-1228.5541"
+             y="-8894.5518"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.71755981px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">DIGITAL</tspan><tspan
+             sodipodi:role="line"
+             x="-1228.5541"
+             y="-8779.9053"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.71755981px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1"
+             id="tspan4673">DESPERADO</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4675"
+           y="-8907.4287"
+           x="-1227.8809"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.76785278px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.76785278px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+             y="-8907.4287"
+             x="-1227.8809"
+             sodipodi:role="line"
+             id="tspan4677">DIGITAL</tspan><tspan
+             id="tspan4679"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.76785278px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+             y="-8792.7188"
+             x="-1227.8809"
+             sodipodi:role="line">DESPERADO</tspan></text>
+      </g>
+    </g>
+    <g
+       transform="translate(-1231.8957,4488.1813)"
+       id="g4665-6">
+      <g
+         id="g4667-8"
+         transform="translate(-869.31371,-637.65685)">
+        <text
+           transform="scale(0.99945199,1.0005483)"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.71755981px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+           x="-1228.5541"
+           y="-8894.5518"
+           id="text4669-2"
+           sodipodi:linespacing="125%"><tspan
+             id="tspan4671-7"
+             sodipodi:role="line"
+             x="-1228.5541"
+             y="-8894.5518"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.71755981px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">DIGITAL</tspan><tspan
+             sodipodi:role="line"
+             x="-1228.5541"
+             y="-8779.9053"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.71755981px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1"
+             id="tspan4673-4">DESPERADO</tspan></text>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4675-4"
+           y="-8907.4287"
+           x="-1227.8809"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.76785278px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#800080;fill-opacity:1;stroke:none;"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.76785278px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#800080;fill-opacity:1;"
+             y="-8907.4287"
+             x="-1227.8809"
+             sodipodi:role="line"
+             id="tspan4677-6">DIGITAL</tspan><tspan
+             id="tspan4679-6"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.76785278px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#800080;fill-opacity:1;"
+             y="-8792.7188"
+             x="-1227.8809"
+             sodipodi:role="line">DESPERADO</tspan></text>
+      </g>
     </g>
   </g>
 </svg>
