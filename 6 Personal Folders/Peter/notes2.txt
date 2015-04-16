@@ -1,0 +1,48 @@
+//merge todo for dirty alpha
+
+/ options menu
+	/ fov slider + setting it
+	/ volume settings to gameSettings
+	/ GameSettings across scenes
+	
+- game settings
+	/ game camera get settings
+	/ audio manager get settings instance and check volume/on or off setting
+		/ if off dont create objects
+		
+	- AudioManager3dObject for objects like target
+	
+		[requires AudioSource]
+		[serialisedField] private AudioClip acClipToPlay;
+		private AudioSource SourceComponent;
+		
+		void Awake()
+			SourceComponent = gameobject.GetComponent<AudioSource>();
+		
+		public void PlayAudio()
+			if GameSettings.Instance.Effects
+				SourceComponent.PlayOneShot(acClip)
+			
+	/ audio obj setup volume
+	/ 2 music files for each music state
+	
+/ on camera effects
+	
+- russ current shooting + targets
+- target update gamedata
+	/target shoot reaction
+- player disable/enable movement + looking script
+
+[once all above complete put in XML with Alex]
+
+goals:
+	be able to load a folder in Exe, 
+	edit settings, 
+	search through levels, 
+	open, 
+	have loading ui "pause" (read: exist, disable when loading coroutine finished) player, 
+	goto ready,
+	play through a level shooting targets,
+	at end receive data + data from stats ("xxx" for default values) +/- data
+	save+exit to main, or exit - see change in the xml file,
+	clear level and be able to play again,
