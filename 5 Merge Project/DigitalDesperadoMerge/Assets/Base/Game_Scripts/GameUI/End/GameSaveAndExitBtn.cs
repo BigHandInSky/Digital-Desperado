@@ -6,6 +6,8 @@ public class GameSaveAndExitBtn : MonoBehaviour {
 
     [SerializeField] private InputField TagInputField;
     [SerializeField] private Text TagErrorField;
+    [SerializeField] private SaveLevelData SaveDataComponent;
+
     private string sSceneToLoad = "Main";
 
     private const string sNormMsg = " ";
@@ -19,6 +21,7 @@ public class GameSaveAndExitBtn : MonoBehaviour {
 
         if (bCheckTagEntry())
         {
+            SaveDataComponent.SaveLeaderboard(TagInputField.text);
             Application.LoadLevel(sSceneToLoad);
         }
         else

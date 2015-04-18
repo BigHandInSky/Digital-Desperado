@@ -36,7 +36,7 @@ public class GameData : MonoBehaviour {
     void Awake() 
     {
         m_DataInstance = this;
-        StartData();
+        //StartData();
     }
 
     public void StartData()
