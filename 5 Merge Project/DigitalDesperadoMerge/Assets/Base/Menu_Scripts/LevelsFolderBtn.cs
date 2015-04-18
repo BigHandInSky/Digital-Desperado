@@ -15,6 +15,7 @@ public class LevelsFolderBtn : MonoBehaviour
         filePath = EditorUtility.OpenFolderPanel("Load Level Folder", "", "");
         Debug.Log("filepath: " + filePath);
 
-        MenuLoadLevelsFromXML.Instance.sLevelsFolderUrl = filePath;
+        MenuLoadLevelsFromXML.Instance.GetFolder(filePath);
+        LoadedLevels.Instance.vResetToZero();
     }
 }

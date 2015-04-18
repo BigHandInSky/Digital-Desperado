@@ -5,8 +5,18 @@ using System.Collections.Generic;
 using System.Linq;
 
 //Script which contains urls to all levels in the levels folder
-public class LoadedLevels : MonoBehaviour 
+public class LoadedLevels : MonoBehaviour
 {
+    private static LoadedLevels m_DataInstance;
+    public static LoadedLevels Instance
+    {
+        get
+        {
+            if (!m_DataInstance) { m_DataInstance = FindObjectOfType<LoadedLevels>(); }
+            return m_DataInstance;
+        }
+    }
+
     [SerializeField] private string sSceneToLoad;
 
     [SerializeField] private StatsScript m_StatsObject;
@@ -22,6 +32,11 @@ public class LoadedLevels : MonoBehaviour
     private int m_CurrLvlUrl = 0;
     public int iCurrentLvl { get { return m_CurrLvlUrl; } }
     
+    void Awake()
+    {
+        m_DataInstance = this;
+    }
+
     public void vLoadLevel()
     {
         GameSettings.Instance.SetLevelUrl(MenuLoadLevelsFromXML.Instance.Urls[m_CurrLvlUrl]);
@@ -46,7 +61,7 @@ public class LoadedLevels : MonoBehaviour
 
     public string sGetFullUrl()
     {
-        Debug.Log("sGetFullUrl");
+        //Debug.Log("sGetFullUrl");
         return MenuLoadLevelsFromXML.Instance.sLevelsFolderUrl;
     }
 
@@ -121,5 +136,11 @@ public class LoadedLevels : MonoBehaviour
             else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Levl)
                 m_MapObject.vSetupMapUILevel(obj.Position, obj.Scale, obj.Rotation.y);
         }
+    }
+
+    public void vResetToZero()
+    {
+        m_CurrLvlUrl = 0;
+        vUpdateData();
     }
 }

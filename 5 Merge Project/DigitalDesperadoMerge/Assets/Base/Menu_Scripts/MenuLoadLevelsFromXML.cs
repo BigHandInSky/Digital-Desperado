@@ -58,12 +58,25 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
 
         sDefaultFolderPath = Application.dataPath + "/XML";
 
-        if (CheckUrl(sLevelsFolderUrl, false))
+        GetFolder(sDefaultFolderPath);
+    }
+
+    public void GetFolder(string _folder)
+    {
+        if (CheckUrl(_folder, false))
         {
-            FolderInfo = new DirectoryInfo(sLevelsFolderUrl);
+            //if folder url checks out
+            FolderInfo = new DirectoryInfo(_folder);
+            sLevelsFolderUrl = _folder;
         }
         else
         {
+            //else check failed, so first check if last url held isnt empty, in that we have a url, and have folder info
+            //in which case, dont do anything else and stick with it
+            if (CheckUrl(sLevelsFolderUrl, false) && FolderInfo.Exists)
+                return;
+
+            //else use default path
             FolderInfo = new DirectoryInfo(sDefaultFolderPath);
             sLevelsFolderUrl = sDefaultFolderPath;
             Debug.LogError("FolderPath not assigned/is null, using default, assigning default as url");
@@ -72,23 +85,25 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
         if (FolderInfo != null)
         {
             FileInfo[] infos = FolderInfo.GetFiles("*.xml");
+            FileUrls.Clear();
+            FileNames.Clear();
 
             foreach (FileInfo obj in infos)
             {
-                //Debug.Log("FileInfo name : " + obj.Name);
-                //Debug.Log("FileInfo name through path : " + Path.GetFileNameWithoutExtension(obj.Name));
-                //Debug.Log("FileInfo full name : " + obj.FullName);
+                /*Debug.Log("FileInfo name : " + obj.Name);
+                Debug.Log("FileInfo name through path : " + Path.GetFileNameWithoutExtension(obj.Name));
+                Debug.Log("FileInfo full name : " + obj.FullName);*/
 
                 FileUrls.Add(obj.FullName);
                 FileNames.Add(Path.GetFileNameWithoutExtension(obj.Name));
-            }	
+            }
         }
         else
         {
             Debug.LogError("FolderInfo checked to be null");
         }
 
-        gameObject.GetComponent<LoadedLevels>().vUpdateData();
+        LoadedLevels.Instance.vResetToZero();
     }
     
 	private bool CheckUrl(string _url, bool _XML)

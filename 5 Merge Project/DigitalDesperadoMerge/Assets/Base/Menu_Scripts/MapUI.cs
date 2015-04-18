@@ -65,7 +65,7 @@ public class MapUI : MonoBehaviour {
         mapUIImg.GetComponent<RectTransform>().SetParent(gameObject.transform);
 
         Vector3 _temp = new Vector3(MapSizeScale * _scale.x, MapSizeScale * _scale.z, 1f);
-        print(_temp);
+        //print(_temp);
         mapUIImg.GetComponent<RectTransform>().localScale = _temp;
         Vector2 _spawn = new Vector2(_pos.x, _pos.z);
         mapUIImg.GetComponent<RectTransform>().localPosition = _spawn * MapPosScale;
