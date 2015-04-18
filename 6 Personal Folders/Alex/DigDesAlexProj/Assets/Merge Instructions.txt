@@ -1,0 +1,16 @@
+Required Class Files:
+
+- SaveLevelData - Game_Scripts>Level Management
+- RestartLevel - Game_Scripts>Level Management
+- GameSaveAndExitBtn - Game_Scripts>GameUI>End
+
+Component Configuration
+  
+- SaveLevelData
+    - Object - GamePlaHol>Canvas>EndLvl>SaveData>ConfirmSave
+    - Set GameSaveAndExitBtn SaveDataComponent to the SaveLevelData component
+
+- RestartLevel
+    - Object - GamePlaHol>Canvas>EndLvl>LdrBrd>Replay
+    - Set RestartLevel.RestartPlayerPosition() to be triggered by the Replay Button OnClick
+    - Set EndLvl Canvas and the ReadyButton as variables for RestartLevel
