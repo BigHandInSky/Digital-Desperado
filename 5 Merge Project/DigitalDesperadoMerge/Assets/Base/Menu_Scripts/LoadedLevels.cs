@@ -118,15 +118,6 @@ public class LoadedLevels : MonoBehaviour
 
         foreach(MenuLoadLevelsFromXML.MenuLoadXMLMapData obj in _mapList)
         {
-            if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Towr)
-                m_MapObject.vSetupMapUITower(obj.Position, obj.Scale, obj.Rotation.y);
-
-            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.EndT)
-                m_MapObject.vSetupMapUIEndTower(obj.Position, obj.Rotation.y);
-
-        }
-        foreach (MenuLoadLevelsFromXML.MenuLoadXMLMapData obj in _mapListLate)
-        {
             if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Play)
                 m_MapObject.vSetupMapUIPlayer(obj.Position, obj.Rotation.y);
 
@@ -135,6 +126,13 @@ public class LoadedLevels : MonoBehaviour
 
             else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Levl)
                 m_MapObject.vSetupMapUILevel(obj.Position, obj.Scale, obj.Rotation.y);
+
+            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Towr)
+                m_MapObject.vSetupMapUITower(obj.Position, obj.Scale, obj.Rotation.y);
+
+            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.EndT)
+                m_MapObject.vSetupMapUIEndTower(obj.Position, obj.Rotation.y);
+
         }
     }
 

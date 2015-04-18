@@ -38,7 +38,6 @@ public class AudioManagerEffects : MonoBehaviour {
 
     private void SelectClip(Effects _clipType)
     {
-        Debug.Log("selectClip");
         int _selected = 0;
 
         switch (_clipType)
@@ -48,18 +47,13 @@ public class AudioManagerEffects : MonoBehaviour {
                 break;
         }
 
-
         CreateObj(Clips[_selected]);
     }
 
     private void CreateObj(AudioClip _clipToPlay)
     {
-        Debug.Log("CreateObj pre check");
-
         if (!GameSettings.Instance.Effects)
             return;
-
-        Debug.Log("CreateObj post check");
 
         GameObject _clone = Instantiate(ObjToSpawn);
         _clone.transform.parent = gameObject.transform;
