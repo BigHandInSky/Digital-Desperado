@@ -6,9 +6,13 @@ public class LevelsNameUI : MonoBehaviour {
 
     [SerializeField] private LoadedLevels LevelsDataObj;
     [SerializeField] private int iValueFromCurrLvlToDisplay;
+    [SerializeField] private bool bGetUrl = false;
     
     private void vGetText()
     {
-        gameObject.GetComponent<Text>().text = LevelsDataObj.sGetCurrUrlName(iValueFromCurrLvlToDisplay);
+        if (bGetUrl)
+            gameObject.GetComponent<Text>().text = LevelsDataObj.sGetFullUrl();
+        else
+            gameObject.GetComponent<Text>().text = LevelsDataObj.sGetCurrUrlName(iValueFromCurrLvlToDisplay);
     }
 }

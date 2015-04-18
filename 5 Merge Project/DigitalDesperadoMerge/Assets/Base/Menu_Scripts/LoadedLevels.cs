@@ -44,6 +44,12 @@ public class LoadedLevels : MonoBehaviour
         }
     }
 
+    public string sGetFullUrl()
+    {
+        Debug.Log("sGetFullUrl");
+        return MenuLoadLevelsFromXML.Instance.sLevelsFolderUrl;
+    }
+
     //alter the level to display, then update data
     public void vChangeCurrentLevel(int _changeByValue)
     {
