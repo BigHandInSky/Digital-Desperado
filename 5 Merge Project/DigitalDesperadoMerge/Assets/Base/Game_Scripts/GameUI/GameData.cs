@@ -87,8 +87,4 @@ public class GameData : MonoBehaviour {
         m_TimeFrames = 0;
         m_TimeSecs = 0;
     }
-    public void GetObjects()
-    {
-
-    }
 }

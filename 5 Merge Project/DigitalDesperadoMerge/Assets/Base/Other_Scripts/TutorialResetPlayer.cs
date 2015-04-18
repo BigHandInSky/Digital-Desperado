@@ -10,7 +10,7 @@ public class TutorialResetPlayer : MonoBehaviour {
 
     void OnColliderEnter(Collision other)
     {
-        Debug.Log("triggered");
+        //Debug.Log("triggered");
 
         if (other.gameObject.tag == sPlayerTag)
         {
@@ -19,7 +19,7 @@ public class TutorialResetPlayer : MonoBehaviour {
     }
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("triggered");
+        //Debug.Log("triggered");
 
         if (other.gameObject.tag == sPlayerTag)
         {

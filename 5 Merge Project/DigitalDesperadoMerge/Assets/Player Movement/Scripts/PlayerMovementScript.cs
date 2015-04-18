@@ -12,8 +12,9 @@ public class PlayerMovementScript : MonoBehaviour
     public float fPlayerSideSpeedPercent;
     public float fPlayerBackSpeedPercent;
 
-    // Movement bool
-    bool bIsMovementEnabled = true;
+    // Movement/Camera Enabled bools
+    [SerializeField] private bool bIsMovementEnabled = true;
+    [SerializeField] private bool bIsCameraEnabled = true;
 
     // Axes float
     float fHorizontal;
@@ -30,91 +31,38 @@ public class PlayerMovementScript : MonoBehaviour
     // Artificial gravity float
     float fVerticalVelocity;
 
-    // Count down variables
-    float fBetweenCountDownTime = 1;
-    float fCountDown = 3;
-    public Text TextCountDown;
-
     // Gets character controller
     public CharacterController ccPlayerController;
 
     // Camera object
     public GameObject GOCamera;
 
-    /*void Start()
+    void OnLevelWasLoaded(int level)
     {
-        // Locks mouse to screen and makes visable
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }*/
-
-    // Add player speed variables
-
-    void Update()
-    {
-        //LockMouseCursor();
-        //LevelStartCountDown();
+        if (Application.loadedLevelName.Contains("Tutorial"))
+            AllowControls(true, true);
+        else
+            AllowControls(false, true);
     }
-
+    
     void FixedUpdate()
     {
-        CameraMovement();
+        if (bIsCameraEnabled)
+            CameraMovement();
+
         if (bIsMovementEnabled)
         {
             PlayerMovement();
             PlayerJump();
         }
-        HeadBobbing();
+        //HeadBobbing();
     }
-    /*
-    // Starts count down at beginning
-    void LevelStartCountDown()
-    {
-        // Checks movement enabled and countdown
-        if (!bIsMovementEnabled)
-        {
-            fBetweenCountDownTime -= Time.deltaTime;
 
-            for (int i = 0; i <= 3; i++)
-            {
-                // if 0 activate movement
-                if (fCountDown == 0)
-                {
-                    TextCountDown.text = "GO!";
-                    bIsMovementEnabled = true;
-                    Invoke("DisableCountDownText", 1.0f);
-                }
-                else if (fBetweenCountDownTime <= 0)
-                {
-                    fBetweenCountDownTime = 1;
-                    fCountDown--;
-                    TextCountDown.text = fCountDown.ToString();
-                }
-            }
-        }
-    }*/
-
-    // Disables count down text
-    void DisableCountDownText()
+    public void AllowControls(bool _MoveVal, bool _CamVal)
     {
-        TextCountDown.enabled = false;
+        bIsMovementEnabled = _MoveVal;
+        bIsCameraEnabled = _CamVal;
     }
-    /*
-    // Locks mouse cursor
-    void LockMouseCursor()
-    {
-        // Used to change mouse lock
-        if (Input.GetKey(KeyCode.T))
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-        if (Input.GetKey(KeyCode.Y))
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-    }*/
 
     // Player camera function
     void CameraMovement()
@@ -164,7 +112,7 @@ public class PlayerMovementScript : MonoBehaviour
     // Player jump button check function
     void PlayerJump()
     {
-        Debug.Log("Is player on ground: " + ccPlayerController.isGrounded);
+        //Debug.Log("Is player on ground: " + ccPlayerController.isGrounded);
 
         // Increases fall speed over time
         fVerticalVelocity += Physics.gravity.y * Time.deltaTime;
@@ -174,7 +122,7 @@ public class PlayerMovementScript : MonoBehaviour
         {
             // Revereses gravity for jump
             fVerticalVelocity = fJumpHeight;
-            Debug.Log("Jumping");
+            //Debug.Log("Jumping");
         }
         // Resets fall speed if already on ground
         else if (ccPlayerController.isGrounded)
@@ -193,30 +141,23 @@ public class PlayerMovementScript : MonoBehaviour
             // And off ground
             if (ccPlayerController.isGrounded)
             {
-                StartAnimation();
+                SetAnimation(true);
             }
             else
             {
-                StopAnimation();
+                SetAnimation(false);
             }
         }
         // Else if player is off ground or is idle
         else if (ccPlayerController.isGrounded == false || fHorizontal == 0.0f || fVertical == 0.0f)
         {
-            StopAnimation();
+            SetAnimation(false);
         }
     }
 
-    // Stops animation
-    void StopAnimation()
+    //start/stop animation
+    void SetAnimation(bool _value)
     {
-        GOCamera.GetComponent<Animator>().SetBool("bIsMoving", false);
-    }
-
-    // Start animation
-    void StartAnimation()
-    {
-        GOCamera.GetComponent<Animator>().SetBool("bIsMoving", true);
-        Debug.Log("Camera Bobbing");
+        GOCamera.GetComponent<Animator>().SetBool("bIsMoving", _value);
     }
 }

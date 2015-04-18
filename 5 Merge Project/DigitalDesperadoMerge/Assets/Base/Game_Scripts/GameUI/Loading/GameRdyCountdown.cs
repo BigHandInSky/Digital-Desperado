@@ -12,6 +12,9 @@ public class GameRdyCountdown : MonoBehaviour {
     [SerializeField] private List<GameObject> ObjsToActivateWhenComplete;
     [SerializeField] private List<GameObject> ObjsToDeActivateWhenComplete;
 
+    [SerializeField] private PlayerMovementScript PlayerControlObj;
+    [SerializeField] private PlayerShootLaser PlayerShootObj;
+
     public void StartCountdown()
     {
         StartCoroutine("Countdown");
@@ -49,7 +52,9 @@ public class GameRdyCountdown : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
 
-        //set player to active
+        PlayerControlObj.AllowControls(true, true);
+        PlayerShootObj.bCanShoot = true;
+
         GameData.Instance.StartData();
 
         foreach(GameObject obj in ObjsToActivateWhenComplete)

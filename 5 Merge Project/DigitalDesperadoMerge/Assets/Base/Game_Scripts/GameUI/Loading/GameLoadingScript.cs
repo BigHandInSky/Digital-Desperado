@@ -15,6 +15,8 @@ public class GameLoadingScript : MonoBehaviour {
     [SerializeField] private GameObject ObjToActivateWhenComplete;
     [SerializeField] private GameObject ObjToDeActivateWhenComplete;
 
+    [SerializeField] private PlayerMovementScript PlayerControlObj;
+
     void Start()
     {
         AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Loading);
@@ -40,6 +42,7 @@ public class GameLoadingScript : MonoBehaviour {
 
     public void SwitchToRdy()
     {
+        PlayerControlObj.AllowControls(false, true);
         StopCoroutine(Switch());
         ObjToActivateWhenComplete.SetActive(true);
         ObjToDeActivateWhenComplete.SetActive(false);

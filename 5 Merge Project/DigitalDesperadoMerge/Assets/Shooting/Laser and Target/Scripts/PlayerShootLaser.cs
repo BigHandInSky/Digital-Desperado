@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerShootLaser : MonoBehaviour {
 
+    //bool called by GUI to enable/disable shooting as needed
+    public bool bCanShoot = false;
 	//Prefabs of the laser object
 	public GameObject prefabLaser;
 	//Layermask for the raycast, not sure if we are going to use it
@@ -16,9 +18,21 @@ public class PlayerShootLaser : MonoBehaviour {
 	private float fShootTimer = 0.0f;
 
 
+    void OnLevelWasLoaded(int level)
+    {
+        if (Application.loadedLevelName.Contains("Tutorial"))
+            bCanShoot = true;
+        else
+            bCanShoot = false;
+    }
+
 	void Update () 
 	{
 		//Debug.DrawLine(Camera.main.transform.position, Camera.main.transform.position +  Camera.main.transform.forward * 100, Color.red);
+        
+        //if cannot shoot, exit function here
+        if (!bCanShoot)
+            return;
 
 		fShootTimer -= Time.deltaTime;
 		//if script timer reaches 0, allow the player to use the mouse click

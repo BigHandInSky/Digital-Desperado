@@ -8,6 +8,9 @@ public class GameEndLvl : MonoBehaviour {
     [SerializeField] private GameLdrBrdGetData LeaderBoard;
     private const string sPlayerTag = "Player";
 
+    [SerializeField] private PlayerMovementScript PlayerControlObj;
+    [SerializeField] private PlayerShootLaser PlayerShootObj;
+
     void OnCollisionEnter(Collision _coll)
     {
         if (_coll.gameObject.tag == sPlayerTag)
@@ -22,6 +25,9 @@ public class GameEndLvl : MonoBehaviour {
 
     private void DoAction()
     {
+        PlayerControlObj.AllowControls(false, false);
+        PlayerShootObj.bCanShoot = false;
+
         GameData.Instance.vStopCounting();
         goObjToActivate.SetActive(true);
         goObjToDeActivate.SetActive(false);
