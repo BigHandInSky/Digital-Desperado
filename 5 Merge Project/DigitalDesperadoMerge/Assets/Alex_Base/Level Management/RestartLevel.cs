@@ -1,47 +1,64 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class RestartLevel : MonoBehaviour 
 {
-    public static Transform tPlayerStartPosition;
+    private Transform tPlayerStartPosition;
 
-    GameObject goPlayer;
-    GameObject[] agoTargets;
-    GameObject[] agoTargetFrags;
+    private GameObject goPlayer;
+    private GameObject[] agoTargetFrags;
 
-    [SerializeField] private GameObject goEndLevelScreen;
-    [SerializeField] private GameObject goReadyButton;
+    [SerializeField] private List<GameObject> goObjsToActivate = new List<GameObject>();
+    [SerializeField] private List<GameObject> goObjsToDeactivate = new List<GameObject>();
+
+    [SerializeField] private PlayerMovementScript PlayerControlObj;
 
     void Awake()
     {
         FindLevelObjects();
     }
 
-    private void FindLevelObjects()
+    public void DoRestart()
     {
-        goPlayer = GameObject.FindGameObjectWithTag("Player");
-        agoTargets = GameObject.FindGameObjectsWithTag("Target");
-        agoTargetFrags = GameObject.FindGameObjectsWithTag("Effect");
+        Debug.Log("DoRestart");
+        GameData.Instance.Restart();
+        PlayerControlObj.AllowControls(false, true);
+
+        FindLevelObjects();
+        RestartPlayer();
+        RestartTargets();
+        SetUI();
     }
 
-    public void RestartPlayerPosition()
+    private void FindLevelObjects()
+    {
+        tPlayerStartPosition = GameObject.FindGameObjectWithTag("SpawnPosition").transform; 
+        goPlayer = GameObject.FindGameObjectWithTag("Player");
+        agoTargetFrags = GameObject.FindGameObjectsWithTag("Effect");
+    }
+    private void RestartPlayer()
     {
         goPlayer.transform.position = tPlayerStartPosition.position;
         goPlayer.transform.rotation = tPlayerStartPosition.rotation;
-
-        if (agoTargets.Length > 0)
-            foreach (GameObject target in agoTargets)
-            {
-                target.SetActive(true);
-            }
-
+    }
+    private void RestartTargets()
+    {
         if (agoTargetFrags.Length > 0)
             foreach (GameObject frag in agoTargetFrags)
             {
                 DestroyObject(frag);
-            }
-
-        goEndLevelScreen.SetActive(false);
-        goReadyButton.SetActive(true);
+            }        
+    }
+    private void SetUI()
+    {
+        foreach (GameObject ui in goObjsToActivate)
+        {
+            ui.SetActive(true);
+        }
+        foreach (GameObject ui in goObjsToDeactivate)
+        {
+            ui.SetActive(false);
+        }
     }
 }

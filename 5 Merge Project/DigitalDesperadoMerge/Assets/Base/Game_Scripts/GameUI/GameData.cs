@@ -17,6 +17,7 @@ public class GameData : MonoBehaviour {
     [SerializeField] private Transform m_EndLvlTow;
     public Transform trEndLvlTow { get { return m_EndLvlTow; } }
 
+    private GameObject[] agoTargets;
     [SerializeField] private GameUITargetScript m_UITargetsLeft;
     [SerializeField] private GameUITargetScript m_UITargetsShot;
 
@@ -41,6 +42,10 @@ public class GameData : MonoBehaviour {
 
     public void StartData()
     {
+        if (agoTargets == null)
+            agoTargets = GameObject.FindGameObjectsWithTag("Target");
+
+        m_TargetsTotl = agoTargets.Length;
         m_TargetsLeft = m_TargetsTotl;
         StartCoroutine("UpdateTime");
         vUpdateTargetUIs();
@@ -81,10 +86,20 @@ public class GameData : MonoBehaviour {
 
     public void Restart()
     {
-        m_TargetsLeft = 0;
-        m_TargetsTotl = 0;
+        Debug.Log("gamedata restart");
+
+        foreach (GameObject target in agoTargets)
+        {
+            Debug.Log("Resetting target: " + target);
+            target.SetActive(true);
+            target.GetComponent<TargetFragmentation>().ResetPosition();
+        }
+
+        m_TargetsLeft = m_TargetsTotl;
         m_BullsShot = 0;
         m_TimeFrames = 0;
         m_TimeSecs = 0;
+
+        vUpdateTargetUIs();
     }
 }

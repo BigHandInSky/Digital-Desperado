@@ -11,6 +11,10 @@ public class GameUIArrowScript : MonoBehaviour {
     {
         StartCoroutine("Rotate");
     }
+    public void Reset()
+    {
+        StartCoroutine("Rotate");
+    }
 
     IEnumerator Rotate()
     {

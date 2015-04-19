@@ -21,6 +21,25 @@ public class GameUITextScript : MonoBehaviour {
         StartCoroutine("GetData");
     }
 
+    public void Reset()
+    {
+        switch (m_TextType)
+        {
+            case GameUITextType.Bullets:
+                m_UITextToSet.text = "000";
+                break;
+
+            case GameUITextType.Frames:
+                m_UITextToSet.text = "000000";
+                break;
+
+            case GameUITextType.Secs:
+                m_UITextToSet.text = "000.0";
+                break;
+        }
+        StartCoroutine("GetData");
+    }
+
     IEnumerator GetData()
     {
         while(true)

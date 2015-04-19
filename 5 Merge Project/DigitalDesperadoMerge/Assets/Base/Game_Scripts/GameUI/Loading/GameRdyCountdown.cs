@@ -57,8 +57,11 @@ public class GameRdyCountdown : MonoBehaviour {
 
         GameData.Instance.StartData();
 
-        foreach(GameObject obj in ObjsToActivateWhenComplete)
+        foreach (GameObject obj in ObjsToActivateWhenComplete)
+        {
             obj.SetActive(true);
+            obj.SendMessage("Reset");
+        }
 
         foreach (GameObject obj in ObjsToDeActivateWhenComplete)
             obj.SetActive(false);
