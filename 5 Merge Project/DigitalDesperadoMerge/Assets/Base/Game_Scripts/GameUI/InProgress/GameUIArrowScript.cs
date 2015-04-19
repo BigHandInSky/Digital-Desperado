@@ -16,30 +16,24 @@ public class GameUIArrowScript : MonoBehaviour {
     {
         while(true)
         {
-            Vector3 _screenMid = new Vector3(Screen.width/2, Screen.height/2, 0); 
-            Vector3 _targPos = Camera.main.WorldToScreenPoint(GameData.Instance.trEndLvlTow.position);
-
-            float tarAngle = ( Mathf.Atan2( _targPos.x - _screenMid.x, Screen.height - _targPos.y - _screenMid.y ) * Mathf.Rad2Deg ); 
-            //tarAngle -= 90f;
-            /*
-            if (tarAngle < 0) 
-            {
-                tarAngle +=360;
-            }*/
-
-            Vector3 _direction = GameData.Instance.trCamera.position - ( Camera.main.WorldToScreenPoint(GameData.Instance.trEndLvlTow.position));
+            // Vector between the player and the level end
+            Vector3 _direction = GameData.Instance.trEndLvlTow.position - GameData.Instance.trCamera.position;
+            // Forward direction of the player
             Vector3 _forw = GameData.Instance.trCamera.forward;
-            float _angle = Vector3.Angle(_direction,_forw);
 
-            //Debug.Log("angle " + _angle + " | tarAngle " + tarAngle);
+            // Angle between player view and level end (Abs value)
+            float _angle = Vector3.Angle(_forw, _direction);
+            // Cross Vector of angle between player view and level end
+            Vector3 _crossVector = Vector3.Cross(_forw, _direction);
 
-            if(_angle > 90)
+            // If the cross product angle is less than 0, angle is positive
+            if (_crossVector.y < 0)
             {
-                transform.localRotation = Quaternion.Euler(0,0, -tarAngle);
-            } 
-            else
+                transform.localRotation = Quaternion.Euler(0, 0, _angle);
+            }
+            else // Otherwise, angle is negative
             {
-                transform.localRotation = Quaternion.Euler(0,0, tarAngle);
+                transform.localRotation = Quaternion.Euler(0, 0, -_angle);
             }
 
             yield return new WaitForEndOfFrame();
