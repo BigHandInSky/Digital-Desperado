@@ -3,7 +3,6 @@ using System.Globalization;
 using System.Xml;
 using System.IO;
 
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 

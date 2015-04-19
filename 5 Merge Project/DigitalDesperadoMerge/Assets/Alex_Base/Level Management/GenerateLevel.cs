@@ -2,7 +2,6 @@
 using System.Globalization;
 using System.Xml;
 
-using UnityEditor;
 using UnityEngine;
 
 public class GenerateLevel : MonoBehaviour 
