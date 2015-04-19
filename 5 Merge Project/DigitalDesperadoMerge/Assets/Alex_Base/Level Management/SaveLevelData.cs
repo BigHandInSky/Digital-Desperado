@@ -16,10 +16,57 @@ public class SaveLevelData : MonoBehaviour
     // Array of stat node attribute names
     string[] AS_ATTRIBUTE_NAMES = {"A", "B", "C", "D", "E", "F"};
 
-    // Saves the leaderboard back into the level data
-    public void SaveLeaderboard(string newTag)
+    [SerializeField] private GameLdrBrdGetData LeaderBoard;
+
+    private string CurrTag;
+    private float CurrSecs;
+    private int CurrFrames;
+    private int CurrShots;
+
+    private GameLdrBrdGetData.LdrBrdStat[] DataStats = new GameLdrBrdGetData.LdrBrdStat[0];
+
+    public void SaveData(string _EntryTag)
     {
-        //sLevelDataUrl = Application.dataPath + "/XML/" + GameSettings.Instance.m_LoadedLevelUrl;
+        //get current data
+        CurrTag = _EntryTag;
+        CurrSecs = GameData.Instance.fTimeScs;
+        CurrFrames = GameData.Instance.iTimeFr;
+        CurrShots = GameData.Instance.iBullsShot;
+
+        //get data from leaderboard
+        DataStats = LeaderBoard.LdrBrdStats;
+
+        //order current data into leaderboard by seconds
+        for (int loop = 0; loop < DataStats.Length; loop++)
+        {
+            //if current < loop's value
+            if (CurrSecs < DataStats[loop].Secs)
+            {
+                for (int subloop = DataStats.Length - 1; subloop >= loop; subloop--)
+                {
+                    if (subloop + 1 < DataStats.Length)
+                    {
+                        DataStats[subloop + 1] = DataStats[subloop];
+                    }
+                }
+
+                //set loop value as current
+                Debug.Log("loop num trying to set: " + loop);
+                DataStats[loop].Tag = CurrTag;
+                DataStats[loop].Secs = CurrSecs;
+                DataStats[loop].Frames = CurrFrames;
+                DataStats[loop].Shots = CurrShots;
+                
+                break;
+            }
+        }
+
+        SaveLeaderboard();
+    }
+
+    // Saves the leaderboard back into the level data
+    private void SaveLeaderboard()
+    {
         sLevelDataUrl = GameSettings.Instance.LoadLevelUrl;
 
         // Level xml document
@@ -39,79 +86,55 @@ public class SaveLevelData : MonoBehaviour
                     switch (statNode.Name)
                     {
                         case "Tags":
-                            // Loop through each LeaderboardEntry and set the value as an attribute
-                            for (int i = 0; i < I_ENTRIES; i++)
+                            //loop through structs
+                            for (int loop = 0; loop < DataStats.Length; loop++ )
                             {
-                                XmlAttribute attribute = levelDoc.CreateAttribute(AS_ATTRIBUTE_NAMES[i]);
-
-                                if (i < 5)
-                                {
-                                    attribute.Value = "XX" + Random.Range(0, 9).ToString();
-                                }
-                                else
-                                {
-                                    attribute.Value = newTag;
-                                }
-
+                                //foreach one make a new attribute
+                                XmlAttribute attribute = levelDoc.CreateAttribute(AS_ATTRIBUTE_NAMES[loop]);
+                                //set value as data
+                                attribute.Value = DataStats[loop].Tag;
+                                //append to node
                                 statNode.Attributes.Append(attribute);
                             }
                         break;
 
                         case "Secs":
-                            // Loop through each LeaderboardEntry and set the value as an attribute
-                            for (int i = 0; i < I_ENTRIES; i++)
+                            //loop through structs
+                            for (int loop = 0; loop < DataStats.Length; loop++)
                             {
-                                XmlAttribute attribute = levelDoc.CreateAttribute(AS_ATTRIBUTE_NAMES[i]);
-
-                                if (i < 5)
-                                {
-                                    attribute.Value = Random.Range(0.0f, 100.0f).ToString("00.00");
-                                }
-                                else
-                                {
-                                    attribute.Value = GameData.Instance.fTimeScs.ToString("00.00");
-                                }
-
+                                //foreach one make a new attribute
+                                XmlAttribute attribute = levelDoc.CreateAttribute(AS_ATTRIBUTE_NAMES[loop]);
+                                //set value as data
+                                attribute.Value = DataStats[loop].Secs.ToString("00.00");
+                                //append to node
                                 statNode.Attributes.Append(attribute);
                             }
                         break;
 
                         case "Fras":
-                            // Loop through each LeaderboardEntry and set the value as an attribute
-                            for (int i = 0; i < I_ENTRIES; i++)
+                            //loop through structs
+                            for (int loop = 0; loop < DataStats.Length; loop++)
                             {
-                                XmlAttribute attribute = levelDoc.CreateAttribute(AS_ATTRIBUTE_NAMES[i]);
-
-                                if (i < 5)
-                                {
-                                    attribute.Value = Random.Range(100, 900).ToString("00000");
-                                }
-                                else
-                                {
-                                    attribute.Value = GameData.Instance.iTimeFr.ToString("00000");
-                                }
-
+                                //foreach one make a new attribute
+                                XmlAttribute attribute = levelDoc.CreateAttribute(AS_ATTRIBUTE_NAMES[loop]);
+                                //set value as data
+                                attribute.Value = DataStats[loop].Frames.ToString("00000");
+                                //append to node
                                 statNode.Attributes.Append(attribute);
                             }
                         break;
 
                         case "Shts":
-                            // Loop through each LeaderboardEntry and set the value as an attribute
-                            for (int i = 0; i < I_ENTRIES; i++)
-                            {
-                                XmlAttribute attribute = levelDoc.CreateAttribute(AS_ATTRIBUTE_NAMES[i]);
-
-                                if (i < 5)
-                                {
-                                    attribute.Value = Random.Range(0, 99).ToString("000");
-                                }
-                                else
-                                {
-                                    attribute.Value = GameData.Instance.iBullsShot.ToString("000");
-                                }
-
-                                statNode.Attributes.Append(attribute);
-                            }
+                        //loop through structs
+                        for (int loop = 0; loop < DataStats.Length; loop++)
+                        {
+                            //foreach one make a new attribute
+                            XmlAttribute attribute = levelDoc.CreateAttribute(AS_ATTRIBUTE_NAMES[loop]);
+                            //set value as data
+                            attribute.Value = DataStats[loop].Shots.ToString("000");
+                            //append to node
+                            statNode.Attributes.Append(attribute);
+                        }
                         break;
                     }
                 }

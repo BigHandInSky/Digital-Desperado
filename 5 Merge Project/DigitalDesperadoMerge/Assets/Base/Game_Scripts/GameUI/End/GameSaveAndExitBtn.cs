@@ -21,7 +21,7 @@ public class GameSaveAndExitBtn : MonoBehaviour {
 
         if (bCheckTagEntry())
         {
-            SaveDataComponent.SaveLeaderboard(TagInputField.text);
+            SaveDataComponent.SaveData(TagInputField.text);
             Application.LoadLevel(sSceneToLoad);
         }
         else
