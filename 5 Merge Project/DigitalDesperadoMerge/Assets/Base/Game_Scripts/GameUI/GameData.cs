@@ -23,7 +23,7 @@ public class GameData : MonoBehaviour {
 
     private int m_TargetsLeft = 0;
     public int iTargsLft { get { return m_TargetsLeft; } }
-    [SerializeField] private int m_TargetsTotl = 0;
+    private int m_TargetsTotl = 0;
     public int iTargsTtl { get { return m_TargetsTotl; } }
 
     private int m_BullsShot = 0;
@@ -37,7 +37,9 @@ public class GameData : MonoBehaviour {
     void Awake() 
     {
         m_DataInstance = this;
-        //StartData();
+        
+        if(Application.loadedLevelName.Contains("Tutorial"))
+            StartData();
     }
 
     public void StartData()
@@ -69,6 +71,12 @@ public class GameData : MonoBehaviour {
 
     void vUpdateTargetUIs()
     {
+        if(!m_UITargetsLeft)
+        {
+            Debug.LogError("No Target UI objs set");
+            return;
+        }
+        
         m_UITargetsLeft.vSetNumberOfImages();
         m_UITargetsShot.vSetNumberOfImages();
     }

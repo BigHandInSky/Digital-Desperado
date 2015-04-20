@@ -22,12 +22,15 @@ public class GameSettings : MonoBehaviour {
 
     void OnLevelWasLoaded(int level)
     {
+        //if another gameSettings detected, delete other
         if (Application.loadedLevelName.Contains("Tutorial"))
         {
             AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Loading);
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+
+            ApplyFOV();
         }
         else if (Application.loadedLevelName.Contains("Main"))
         {
@@ -35,6 +38,10 @@ public class GameSettings : MonoBehaviour {
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+        }
+        else if (Application.loadedLevelName.Contains("Game"))
+        {
+            ApplyFOV();
         }
     }
 
@@ -45,7 +52,7 @@ public class GameSettings : MonoBehaviour {
 
     private float fVolume = 10;
     public float Volume { get { return fVolume; } }
-    private float fFOV = 10f;
+    private float fFOV = 90f;
     public float FOV { get { return fFOV; } }
 
     private int iResWidth = 800;
@@ -79,6 +86,9 @@ public class GameSettings : MonoBehaviour {
     {
         Screen.SetResolution(iResWidth, iResHeight, true);
         AudioListener.volume = (fVolume * 0.01f);
-        //Camera.main.fieldOfView = fFOV;
+    }
+    public void ApplyFOV()
+    {
+        Camera.main.fieldOfView = fFOV;
     }
 }

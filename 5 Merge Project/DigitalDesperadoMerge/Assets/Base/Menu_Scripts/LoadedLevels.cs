@@ -27,7 +27,7 @@ public class LoadedLevels : MonoBehaviour
     [SerializeField] private List<string> sSecs = new List<string>(6);
     [SerializeField] private List<string> sFras = new List<string>(6);
     [SerializeField] private List<string> sShts = new List<string>(6);
-
+    
     private int m_LevelsCount;
     private int m_CurrLvlUrl = 0;
     public int iCurrentLvl { get { return m_CurrLvlUrl; } }
@@ -97,8 +97,7 @@ public class LoadedLevels : MonoBehaviour
        vGetNewLevelStats();
        m_StatsObject.vSetData(sTags,sSecs,sFras,sShts);
 
-        m_MapObject.vClearMap();
-        vGetNewMapData();
+       vGetNewMapData();
     }
     
     //placeholder, currently just randomises times into strings with generic tags
@@ -113,6 +112,8 @@ public class LoadedLevels : MonoBehaviour
     //placeholder, currently gives map a random set of coordinates to use
     private void vGetNewMapData()
     {
+        m_MapObject.vClearMap();
+
         List<MenuLoadLevelsFromXML.MenuLoadXMLMapData> _mapList = MenuLoadLevelsFromXML.Instance.GetLevelObjs(iCurrentLvl);
         List<MenuLoadLevelsFromXML.MenuLoadXMLMapData> _mapListLate = new List<MenuLoadLevelsFromXML.MenuLoadXMLMapData>();
 
@@ -132,7 +133,6 @@ public class LoadedLevels : MonoBehaviour
 
             else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.EndT)
                 m_MapObject.vSetupMapUIEndTower(obj.Position, obj.Rotation.y);
-
         }
     }
 

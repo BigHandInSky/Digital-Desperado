@@ -23,8 +23,9 @@ public class AudioManagerEffects : MonoBehaviour {
 
     public enum Effects
     {
-        BtnClick,
-        Error
+        BtnClick = 0,
+        Error = 1,
+        NewEffect = 2
     }
 
     public void PlaySound(Effects _type)

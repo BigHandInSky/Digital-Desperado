@@ -1639,106 +1639,6 @@
       </g>
     </g>
     <g
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       id="g4876"
-       transform="translate(756,-1184)">
-      <g
-         id="g4878"
-         transform="matrix(1.9367685,0,0,2.9670409,2034.4889,16808.071)"
-         style="fill:#ffffff;fill-opacity:1;stroke:none">
-        <path
-           inkscape:connector-curvature="0"
-           style="fill:#ffffff;fill-opacity:1;stroke:none"
-           d="m -1310.6562,-8336.1965 0,84.259 105.3781,0 0,-84.259 z"
-           id="path4880"
-           sodipodi:nodetypes="ccccc" />
-      </g>
-      <g
-         id="g4882"
-         transform="matrix(0.60733731,0,0,2.9670409,236.60819,16808.071)"
-         style="fill:#800080;fill-opacity:1;stroke:none">
-        <path
-           inkscape:connector-curvature="0"
-           style="fill:#800080;fill-opacity:1;stroke:none"
-           d="m -1310.6562,-8336.1965 0,84.259 105.3781,0 0,-84.259 z"
-           id="path4884"
-           sodipodi:nodetypes="ccccc" />
-      </g>
-      <g
-         id="g4886"
-         transform="matrix(0.48828125,0,0,0.48828125,-253.75658,-4260.6703)">
-        <g
-           style="fill:#800080;fill-opacity:1;stroke:none"
-           transform="matrix(2.9892364,0,0,2.9670409,3358.459,17489.722)"
-           id="g4888">
-          <path
-             sodipodi:nodetypes="ccccccccccccc"
-             id="path4890"
-             d="m -1310.6562,-8424.5 0,172.5625 42.0312,0 -10.6875,-97.6875 31.2187,0 9.5938,-48.3125 26.2188,-0.1875 10.3437,48.5 31.2187,0 -9.25,97.6875 40.5938,0 0,-172.5625 z"
-             style="fill:#800080;fill-opacity:1;stroke:none"
-             inkscape:connector-curvature="0" />
-          <path
-             sodipodi:nodetypes="cccc"
-             inkscape:connector-curvature="0"
-             id="path4892"
-             d="m -1270.1239,-8341.0982 9.7657,88.5781 80.1864,-88.5781 z"
-             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#800080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate" />
-        </g>
-        <g
-           id="g4894"
-           transform="matrix(2.9892364,0,0,2.9670409,3358.459,17489.722)"
-           style="opacity:0.5;fill:#000000;fill-opacity:1;stroke:none"
-           clip-path="url(#clipPath4091-0)">
-          <path
-             inkscape:connector-curvature="0"
-             style="fill:#000000;fill-opacity:1;stroke:none"
-             d="m -1310.6562,-8424.5 0,172.5625 42.0312,0 -10.6875,-97.6875 31.2187,0 9.5938,-48.3125 26.2188,-0.1875 10.3437,48.5 31.2187,0 -9.25,97.6875 40.5938,0 0,-172.5625 z"
-             id="path4896"
-             sodipodi:nodetypes="ccccccccccccc" />
-          <path
-             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate"
-             d="m -1270.1239,-8341.0982 9.7657,88.5781 80.1864,-88.5781 z"
-             id="path4898"
-             inkscape:connector-curvature="0"
-             sodipodi:nodetypes="cccc" />
-        </g>
-      </g>
-      <g
-         style="fill:#800080;fill-opacity:1;stroke:none"
-         transform="matrix(0.62157177,0,0,2.9670409,504.76467,16808.071)"
-         id="g4900">
-        <path
-           sodipodi:nodetypes="ccccc"
-           id="path4902"
-           d="m -1310.6562,-8336.1965 0,84.259 105.3781,0 0,-84.259 z"
-           style="fill:#800080;fill-opacity:1;stroke:none"
-           inkscape:connector-curvature="0" />
-      </g>
-      <g
-         style="fill:#400040;fill-opacity:1;stroke:none"
-         transform="matrix(0.60733731,0,0,1.3393637,236.60819,3376.5811)"
-         id="g4904">
-        <path
-           sodipodi:nodetypes="ccccc"
-           id="path4906"
-           d="m -1310.6562,-8336.1965 0,84.259 105.3781,0 0,-84.259 z"
-           style="fill:#400040;fill-opacity:1;stroke:none"
-           inkscape:connector-curvature="0" />
-      </g>
-      <g
-         id="g4908"
-         transform="matrix(0.62157177,0,0,1.3393637,504.76467,3376.5811)"
-         style="fill:#400040;fill-opacity:1;stroke:none">
-        <path
-           inkscape:connector-curvature="0"
-           style="fill:#400040;fill-opacity:1;stroke:none"
-           d="m -1310.6562,-8336.1965 0,84.259 105.3781,0 0,-84.259 z"
-           id="path4910"
-           sodipodi:nodetypes="ccccc" />
-      </g>
-    </g>
-    <g
        id="g5090"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
@@ -2267,6 +2167,126 @@
            d="m 2546.1879,-7313.1455 -59.3867,0.455 -0.7852,3.9747 56.1719,-0.4297 23.3691,109.3847 70.6504,-0.5429 -23.0117,244.3593 3.6231,0 23.3886,-248.3554 -70.6504,0.5429 -23.3691,-109.3847 z m -84.2852,110.2129 -67.4355,0.5175 0.4355,3.9668 66.2149,-0.5097 0.7851,-3.9746 z"
            style="fill:#b200b2;fill-opacity:1;stroke:none"
            inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:146.74043274px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#400040;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:1"
+       x="-2009.3403"
+       y="-5630.0161"
+       id="text4520"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4522"
+         x="-2009.3403"
+         y="-5630.0161">gamejolt</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4524"
+       y="-7372.3271"
+       x="-2009.3403"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:146.74043274px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#400040;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="-7372.3271"
+         x="-2009.3403"
+         id="tspan4526"
+         sodipodi:role="line">itchi</tspan></text>
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="C:\Users\Peter\Documents\GitHub\Digital-Desperado\7 Promotion\WallpaperA_1920x1080.png"
+       style="opacity:1;fill:#800080;fill-opacity:1;stroke:none;stroke-width:10;stroke-opacity:1"
+       id="rect4287-0-4"
+       width="588"
+       height="331"
+       x="-1783"
+       y="-4856.6377" />
+    <g
+       transform="matrix(0.74785285,0,0,0.74785285,-2962.9761,636.65838)"
+       id="g4422-5-5-7-3">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         d="m 1808.8511,-7297.8078 23.3689,109.385 70.6505,-0.543 -23.3896,248.3568 -195.2908,0.1698 -27.0606,-246.6366 70.6503,-0.543 21.6834,-109.733 z"
+         id="path4359-0-0-6-7"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccc" />
+      <path
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:connector-curvature="0"
+         id="path5614-2-8-8-8-3-3"
+         d="m 1820.8511,-7307.8078 23.3689,109.385 70.6505,-0.543 -23.3896,248.3568 -195.2908,0.1698 -27.0606,-246.6366 70.6503,-0.543 21.6834,-109.733 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <text
+         transform="matrix(1,0,-0.09952798,1,0,0)"
+         sodipodi:linespacing="125%"
+         id="text4396-1-3-3-5"
+         y="-6968.6792"
+         x="1048.3022"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:245.26400757px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#800080;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan4400-2-3-0-9"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:245.26400757px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#800080;fill-opacity:1"
+           y="-6968.6792"
+           x="1048.3022"
+           sodipodi:role="line">D</tspan></text>
+      <g
+         transform="matrix(0.95577573,0,0,0.95577573,89.900451,-311.34716)"
+         id="g4458-9-5-2-9">
+        <g
+           id="g4412-9-1-0-9"
+           transform="matrix(1,0,-0.10310371,1,-739.17397,0)">
+          <text
+             sodipodi:linespacing="125%"
+             id="text4669-5-8-8-5-0"
+             y="-7082.9023"
+             x="1915.7743"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.71755981px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+             xml:space="preserve"
+             transform="scale(0.999452,1.0005483)"><tspan
+               id="tspan4673-7-1-1-6-6"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.71755981px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+               y="-7082.9023"
+               x="1915.7743"
+               sodipodi:role="line">IGITAL</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.76785278px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
+             x="1914.4818"
+             y="-7094.7861"
+             id="text4675-9-5-2-2-4"
+             sodipodi:linespacing="125%"><tspan
+               sodipodi:role="line"
+               x="1914.4818"
+               y="-7094.7861"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.76785278px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1"
+               id="tspan4679-2-6-4-6-5">IGITAL</tspan></text>
+        </g>
+        <text
+           sodipodi:linespacing="125%"
+           id="text4420-2-3-3-5"
+           y="-6968.2554"
+           x="1166.4756"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.71755981px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+           xml:space="preserve"
+           transform="matrix(0.999452,0,-0.10468742,1.0005483,0,0)"><tspan
+             id="tspan4422-8-4-7-4"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.71755981px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+             y="-6968.2554"
+             x="1166.4756"
+             sodipodi:role="line">ESPERADO</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.76785278px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
+           x="1165.5936"
+           y="-6980.0762"
+           id="text4424-8-1-0-0"
+           sodipodi:linespacing="125%"
+           transform="matrix(1,0,-0.10463005,1,0,0)"><tspan
+             sodipodi:role="line"
+             x="1165.5936"
+             y="-6980.0762"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:91.76785278px;line-height:125%;font-family:GreatLakesNF;-inkscape-font-specification:GreatLakesNF;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1"
+             id="tspan4426-1-9-4-1">ESPERADO</tspan></text>
       </g>
     </g>
   </g>
