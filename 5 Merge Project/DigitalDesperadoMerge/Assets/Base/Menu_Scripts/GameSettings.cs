@@ -52,7 +52,7 @@ public class GameSettings : MonoBehaviour {
 
     private float fVolume = 10;
     public float Volume { get { return fVolume; } }
-    private float fFOV = 10f;
+    private float fFOV = 90f;
     public float FOV { get { return fFOV; } }
 
     private int iResWidth = 800;

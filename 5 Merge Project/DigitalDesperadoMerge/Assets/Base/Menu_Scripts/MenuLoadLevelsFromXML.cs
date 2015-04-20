@@ -106,7 +106,7 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
         LoadedLevels.Instance.vResetToZero();
     }
     
-	private bool CheckUrl(string _url, bool _XML)
+	public bool CheckUrl(string _url, bool _XML)
 	{
         if (_XML && !_url.Contains(".xml"))
             return false;

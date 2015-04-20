@@ -278,7 +278,7 @@
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     showguides="true"
+     showguides="false"
      inkscape:guide-bbox="true"
      inkscape:snap-grids="true"
      inkscape:snap-nodes="true"
@@ -2533,5 +2533,15 @@
            style="opacity:1;fill:#400040;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:1" />
       </g>
     </g>
+    <rect
+       style="opacity:0.75;fill:#400040;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:1"
+       id="rect4727-0"
+       width="124"
+       height="124"
+       x="-2649"
+       y="-7441.6377"
+       inkscape:export-filename="C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Art\genericBtnBGDisabled.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>
