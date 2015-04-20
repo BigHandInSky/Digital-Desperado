@@ -2,11 +2,11 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class MenuButtonFunctions : MonoBehaviour {
-
+public class MenuButtonFunctions : MonoBehaviour 
+{
     //Unity's UI let's us use functions from an attached script to the UI button
     //hence all the functions for the generic buttons are contained in here
-
+    
     [SerializeField]
     private string sCameraTag = "";
 
