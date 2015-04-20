@@ -22,22 +22,28 @@ public class TransitionPointScript : MonoBehaviour {
                 other.gameObject.GetComponent<CameraTransitionScript>().vTransition(goMenu.transform.position, goMenu.transform.rotation);
                 goMenu.SetActive(true);
                 goOther.SetActive(false);
+
+                DoAction(0);
             }
             else
             {
                 other.gameObject.GetComponent<CameraTransitionScript>().vTransition(goOther.transform.position, goOther.transform.rotation);
                 goOther.SetActive(true);
                 goMenu.SetActive(false);
+
+                DoAction(1);
             }
-            DoAction();
         }
     }
 
-    void DoAction()
+    void DoAction(int _dir)
     {
-        if(Type == TransitionType.ToLevel)
+        if(Type == TransitionType.ToLevel && _dir == 1)
         {
             LoadedLevels.Instance.vUpdateData();
+
+            if (MenuLoadLevelsFromXML.Instance.Urls.Count < 1)
+                FolderUIControl.Instance.OpenFolderUI();
         }
     }
 }

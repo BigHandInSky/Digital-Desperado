@@ -39,6 +39,8 @@ public class StatsScript : MonoBehaviour
 
     public void vSetData(List<string> _tags, List<string> _secs, List<string> _frames, List<string> _shots)
     {
+        StopCoroutine("ieRotateStats");
+
         sTags.Clear();
         sSecs.Clear();
         sFras.Clear();
@@ -48,6 +50,8 @@ public class StatsScript : MonoBehaviour
         sSecs = _secs;
         sFras = _frames;
         sShts = _shots;
+
+        StartCoroutine("ieRotateStats");
         vUpdateTexts();
     }
 
