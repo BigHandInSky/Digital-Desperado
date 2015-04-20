@@ -1,0 +1,35 @@
+﻿
+OpenFolder
+	- FolderSelectUI - this controls what to activate/deactivate, as well as when opening, starting the list manager
+		- UIBlock - stops UI clicking
+		- MainPanel - the general bg to all the cool stuff
+		- Texts - white font
+		- Cancel - has script which when the ui opens, dictates whether this can be interacted with/not
+			/ eg in the main game, if MenusXML has no urls, you can't exit out of folder select
+		- Select - same as cancel, except this has a coroutine checking each frame whether it is selectable
+			/ eg in main game, if the folder selected has no xml files in it, then this cannot be interacted with
+			/ currently the list manager handles checking, and this reads the resulting bool
+		- SystemFolders - Handles getting the current directory, displaying files/folders from it, and changing directory
+			/ this is the core of the ui
+			/ to change to files, look at FillList and FolderSelectEntry's script, switch from looking for directories to Files + FileInfos
+			- scroll rect master - the scroll rect
+				- scrollcontent - this is where the buttons for the files go
+					(- FolderSelectEntry - a button given a directoryInfo, which displays FullName from the given info
+						/ when the button is pressed it calls SystemFolders to load the DirectoryInfo on this button)
+		- CurrentUrl - linked to SystemFolder, just displays a given string
+		- Scroller - scroll bar for SystemFolders
+			-/
+				-/
+		- UpFolder - calls a function from SystemFolders to move to the parent of the current directory
+
+Editor:
+	- Popup Canvas is in Sort order 1, Main in 0, so as UIBlocker can do it's job
+	- Popup's UI blocker will stop the user from clicking on any of the UI behind it
+	- So when either button is clicked or the function finished, SetActive(false) the popup canvas
+	- For tooltip, Inputfields are provided, and it is set to scale from the bottom right
+	- Placed under an empty parent, so enable/disable that to show/hide it
+	- As well as this is Tooltip space, which has text explaining how to make it appear, switch between the two for added polish
+	- Name text has support for around 22 characters, switching resolutions in the game view takes off 1/2 characters
+	- I have set the buttons around the background to the name text to anchor from it, so you can expand this without worry if need be
+	- other than that should be self-explanatory as to what does what
+	
