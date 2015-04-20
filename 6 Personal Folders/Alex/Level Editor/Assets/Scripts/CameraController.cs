@@ -6,12 +6,15 @@ using UnityEngine;
 public class CameraController : MonoBehaviour 
 {
     // Original Transform for the camera to reset to
-    public Transform tOriginalTransform;
+    [SerializeField]
+    Transform tOriginalTransform;
 
     // Move Speed
-    public float fSpeed;
+    [SerializeField]
+    float fSpeed;
     // Turn Speed
-    public float fMouseSensitivity;
+    [SerializeField]
+    float fMouseSensitivity;
 
 	// Initialization
 	void Start () 

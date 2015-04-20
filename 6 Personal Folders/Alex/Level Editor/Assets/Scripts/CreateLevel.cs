@@ -11,44 +11,59 @@ using UnityEngine.UI;
 public class CreateLevel : MonoBehaviour 
 {
     // File Path (Minus Filename)
-    string sFilePath = "";
+    public static string sFilePath = "";
     // File Name (Including .xml Extension)
-    string sFileName = "";
+    public static string sFileName = "";
+
+    [SerializeField]
+    GameObject goPlayer;
+    [SerializeField]
+    GameObject goGoal;
+    [SerializeField]
+    GameObject[] agoPlatforms;
 
     // Parent Transform for Level Objects
-    public Transform tLevelRootObject;
-
-    // Player Prefab
-    public GameObject goPlayerPrefab;
-    // Goal Prefab
-    public GameObject goGoalPrefab;
-    // Array of Platform Prefabs
-    public GameObject[] agoPlatformPrefabs;
+    [SerializeField]
+    Transform tLevelRootObject;
     // Array of Tower Prefabs
-    public GameObject[] agoTowerPrefabs;
+    [SerializeField]
+    GameObject goTowerPrefab;
     // Array of Target Prefabs
-    public GameObject[] agoTargetPrefabs;
+    [SerializeField]
+    GameObject[] agoTargetPrefabs;
+
+    [SerializeField]
+    Transform tDefaultPlayerTransform;
+    [SerializeField]
+    Transform tDefaultGoalTransform;
+    [SerializeField]
+    Transform[] atDefaultPlatformTransforms;
+
+    [SerializeField]
+    GameObject goProjectManagementPanel;
+    [SerializeField]
+    GameObject goToolbarPanel;
 
     // Number of targets in a level
     int iTargets = 0;
 
-    // Browse Level Text UI
-    public InputField browseLevelText;
-    // Target Text UI
-    public Text targetsText;
+    public int Targets
+    {
+        get { return iTargets; }
+    }
 
-	// Initialization
-	void Start () 
+    public void AddTarget()
     {
-	}
-	
-	// Update
-	void Update () 
+        iTargets++;
+    }
+
+    public void RemoveTarget()
     {
-	}
+        iTargets--;
+    }
 
     // Creates an Open File Dialog for xml files and selects that path
-    public void SelectFilePath()
+    private void SelectFilePath()
     {
         // File Path
         string filePath = "";
@@ -58,24 +73,59 @@ public class CreateLevel : MonoBehaviour
         // Create File Dialog and retrieve path
         filePath = EditorUtility.OpenFilePanel("Load Level", "", "xml");
 
-        // Split up file path by folder
-        string[] folderNames = filePath.Split('/');
-        // Find the file name
-        fileName = folderNames[folderNames.Length - 1];
-        // Remove the file name from the path
-        filePath = filePath.Remove(filePath.Length - fileName.Length);
+        if (filePath != "" || filePath != string.Empty)
+        {
+            print("Select File");
 
-        // Set the Browse Level Text
-        browseLevelText.text = fileName;
+            // Split up file path by folder
+            string[] folderNames = filePath.Split('/');
+            // Find the file name
+            fileName = folderNames[folderNames.Length - 1];
+            // Remove the file name from the path
+            filePath = filePath.Remove(filePath.Length - fileName.Length);
 
-        // Set the file path and name
-        sFilePath = filePath;
-        sFileName = fileName;
+            // Set the file path and name
+            sFilePath = filePath;
+            sFileName = fileName;
+        }
+    }
+
+    public void CreateNewLevel()
+    {
+        string projectPath = "";
+        string fileName = "";
+
+        projectPath = EditorUtility.SaveFilePanel("Create New Project", "", "New Untitled Level.xml", ".xml");
+
+        if (projectPath != "" ||
+            projectPath != string.Empty)
+        {
+            // Split up file path by folder
+            string[] folderNames = projectPath.Split('/');
+            // Find the file name
+            fileName = folderNames[folderNames.Length - 1];
+            // Remove the file name from the path
+            projectPath = projectPath.Remove(projectPath.Length - fileName.Length);
+
+            // Set the file path and name
+            sFilePath = projectPath;
+            sFileName = fileName;
+
+            DestroyCurrentLevel();
+            ResetPreMadeObjectTransforms();
+            ActivatePreMadeObjects();
+
+            goProjectManagementPanel.SetActive(false);
+            goToolbarPanel.SetActive(true);            
+        }
+
     }
 
     // Loads a level from an xml file
     public void LoadLevel()
     {
+        SelectFilePath();
+
         // If the file path or name is empty, then return
         if (sFilePath == "" || sFileName == "")
         {
@@ -92,9 +142,14 @@ public class CreateLevel : MonoBehaviour
             // If the first node is not LevelData then return
             if (reader.Name != "LevelData")
             {
-                Debug.Log("File not a supported level");
+                reader.Read();
 
-                return;
+                if (reader.Name != "LevelData")
+                {
+                    Debug.Log("File not a supported level");
+
+                    return;
+                }
             }
 
             // Reset number of targets
@@ -112,42 +167,42 @@ public class CreateLevel : MonoBehaviour
                     switch (reader.Name)
                     {
                         case "PlayerStart":
-                            GameObject player = Instantiate(goPlayerPrefab);
-                            AssignTransform(player, reader.ReadSubtree());
-                        break;
+                            AssignTransform(goPlayer, reader.ReadSubtree());
+                            break;
 
                         case "Goal":
-                            GameObject goal = Instantiate(goGoalPrefab);
-                            AssignTransform(goal, reader.ReadSubtree());
-                        break;
+                            AssignTransform(goGoal, reader.ReadSubtree());
+                            break;
 
                         case "Platform":
-                            int platformLevel = Mathf.Clamp(int.Parse(reader.GetAttribute("level")) - 1, 0, agoPlatformPrefabs.Length);
-                            GameObject platform = Instantiate(agoPlatformPrefabs[platformLevel]);
-                            AssignTransform(platform, reader.ReadSubtree());
-                        break;
+                            int platformLevel = Mathf.Clamp(int.Parse(reader.GetAttribute("level")) - 1, 0, agoPlatforms.Length);
+                            AssignTransform(agoPlatforms[platformLevel], reader.ReadSubtree());
+                            break;
 
                         case "Tower":
-                            int towerType = Mathf.Clamp(int.Parse(reader.GetAttribute("type")) - 1, 0, agoTowerPrefabs.Length);
-                            GameObject tower = Instantiate(agoTowerPrefabs[towerType]);
+                            GameObject tower = Instantiate(goTowerPrefab);
                             AssignTransform(tower, reader.ReadSubtree());
-                        break;
+                            tower.transform.parent = tLevelRootObject;
+                            break;
 
                         case "Target":
-                            int targetType = Mathf.Clamp(int.Parse(reader.GetAttribute("type")) - 1, 0, agoPlatformPrefabs.Length);
+                            int targetType = Mathf.Clamp(int.Parse(reader.GetAttribute("type")) - 1, 0, agoTargetPrefabs.Length);
                             GameObject target = Instantiate(agoTargetPrefabs[targetType]);
                             AssignTransform(target, reader.ReadSubtree());
-                            
+                            target.transform.parent = tLevelRootObject;
+
                             // Increment the number of targets
                             iTargets++;
-                        break;
+                            break;
                     }
                 }
             }
         }
 
-        // Update the TargetText
-        targetsText.text = "Targets: " + iTargets;
+        ActivatePreMadeObjects();
+
+        goProjectManagementPanel.SetActive(false);
+        goToolbarPanel.SetActive(true);
 
         Debug.Log("Level Load Complete - " + sFileName);
     }
@@ -209,9 +264,9 @@ public class CreateLevel : MonoBehaviour
                     break;
 
                     case "Scale":
-                        scale.x *= float.Parse(reader.GetAttribute("x"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
-                        scale.y *= float.Parse(reader.GetAttribute("y"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
-                        scale.z *= float.Parse(reader.GetAttribute("z"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        scale.x = float.Parse(reader.GetAttribute("x"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        scale.y = float.Parse(reader.GetAttribute("y"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        scale.z = float.Parse(reader.GetAttribute("z"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
                     break;
                 }
             }
@@ -221,8 +276,31 @@ public class CreateLevel : MonoBehaviour
         obj.transform.position = position;
         obj.transform.rotation = Quaternion.Euler(new Vector3(0, rotation, 0)); 
         obj.transform.localScale = scale;
+    }
 
-        // Set the transform parent to the Level Root Transform
-        obj.transform.parent = tLevelRootObject;
+    private void ResetPreMadeObjectTransforms()
+    {
+        goPlayer.transform.position = tDefaultPlayerTransform.position;
+        goPlayer.transform.rotation = tDefaultPlayerTransform.rotation;
+
+        goGoal.transform.position = tDefaultGoalTransform.position;
+        goGoal.transform.rotation = tDefaultGoalTransform.rotation;
+
+        for (int i = 0; i < agoPlatforms.Length; i++)
+        {
+            agoPlatforms[i].transform.position = atDefaultPlatformTransforms[i].position;
+            agoPlatforms[i].transform.rotation = atDefaultPlatformTransforms[i].rotation;
+        }
+    }
+
+    private void ActivatePreMadeObjects()
+    {
+        goPlayer.SetActive(true);
+        goGoal.SetActive(true);
+
+        foreach (GameObject platform in agoPlatforms)
+        {
+            platform.SetActive(true);
+        }
     }
 }
