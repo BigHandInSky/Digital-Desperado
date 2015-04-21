@@ -34,7 +34,6 @@ public class GunBehavior : MonoBehaviour {
 		}
 		else
 		 */
-		//transform.eulerAngles = new Vector3 (obj.transform.eulerAngles.x + Mathf.Sin(xAxis) * 2, transform.eulerAngles.y + ( (Input.GetAxis("Vertical") != 0) ? Mathf.Sin(0) * 0.5f : Mathf.Sin(0) * 0.02f ), transform.eulerAngles.z);
-		transform.LookAt (Camera.main.transform.position + Camera.main.transform.forward * 100);
+		transform.eulerAngles = new Vector3 (obj.transform.eulerAngles.x + Mathf.Sin(xAxis) * 2, transform.eulerAngles.y + ( (Input.GetAxis("Vertical") > 0) ? Mathf.Sin(yAxis) * 0.5f : Mathf.Sin(yAxis) * 0.02f ), transform.eulerAngles.z);
 	}
 }

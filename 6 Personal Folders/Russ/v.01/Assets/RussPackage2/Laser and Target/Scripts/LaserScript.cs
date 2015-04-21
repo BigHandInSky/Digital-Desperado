@@ -12,9 +12,7 @@ public class LaserScript : MonoBehaviour {
 	void Start () {
 		//Get and set the LineRenderer component
 		lineRenderer = transform.GetComponent<LineRenderer> ();
-		lineRenderer.SetWidth (fSize, fSize);
-		lineRenderer.SetPosition (0, V3startPosition);
-		lineRenderer.SetPosition (1, V3endPosition);
+		lineRenderer.SetWidth (fSize,fSize);
 	}
 	
 	// Update is called once per frame
