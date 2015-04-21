@@ -9,8 +9,8 @@ public class PlayerMovementScript : MonoBehaviour
 
     // Movement speed
     public float fPlayerBaseSpeed;
-    public float fPlayerSideSpeedPercent;
-    public float fPlayerBackSpeedPercent;
+    float fPlayerSideSpeedPercent = 80;
+    float fPlayerBackSpeedPercent = 60;
 
     // Movement/Camera Enabled bools
     [SerializeField] private bool bIsMovementEnabled = true;
@@ -21,12 +21,12 @@ public class PlayerMovementScript : MonoBehaviour
     float fVertical;
 
     // Mouse settings
-    public float fMouseSensitivity;
-    public float fMouseClampRange;
+    float fMouseSensitivity = 5;
+    float fMouseClampRange = 40;
 
     // Jumping floats
     public float fJumpHeight;
-    public float fJumpSpeedPercent;
+    float fJumpSpeedPercent = 80.0f;
 
     // Artificial gravity float
     float fVerticalVelocity;
@@ -55,7 +55,7 @@ public class PlayerMovementScript : MonoBehaviour
             PlayerMovement();
             PlayerJump();
         }
-        //HeadBobbing();
+        HeadBobbing();
     }
 
     public void AllowControls(bool _MoveVal, bool _CamVal)
@@ -115,7 +115,7 @@ public class PlayerMovementScript : MonoBehaviour
         //Debug.Log("Is player on ground: " + ccPlayerController.isGrounded);
 
         // Increases fall speed over time
-        fVerticalVelocity += Physics.gravity.y * Time.deltaTime;
+        fVerticalVelocity += Physics.gravity.y * 5 * Time.deltaTime;
 
         // When spacebar and on floor is true
         if (Input.GetKey(KeyCode.Space) && ccPlayerController.isGrounded)
@@ -136,7 +136,7 @@ public class PlayerMovementScript : MonoBehaviour
     {
         // Calls movement animations
         // If player movement detected
-        if (fHorizontal >= 0.1f || fHorizontal <= -0.1f || fVertical >= 0.1f || fVertical <= -0.1f)
+        if (fHorizontal != 0f || fVertical != 0f)
         {
             // And off ground
             if (ccPlayerController.isGrounded)
@@ -149,7 +149,7 @@ public class PlayerMovementScript : MonoBehaviour
             }
         }
         // Else if player is off ground or is idle
-        else if (ccPlayerController.isGrounded == false || fHorizontal == 0.0f || fVertical == 0.0f)
+        else if (ccPlayerController.isGrounded == false || fHorizontal == 0f || fVertical == 0f)
         {
             SetAnimation(false);
         }
