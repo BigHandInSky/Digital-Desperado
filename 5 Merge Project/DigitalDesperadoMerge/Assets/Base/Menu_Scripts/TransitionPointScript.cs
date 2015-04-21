@@ -12,7 +12,7 @@ public class TransitionPointScript : MonoBehaviour {
         ToLevel
     }
     public TransitionType Type = TransitionType.Norm;
-
+    
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.GetComponent<CameraTransitionScript>())
@@ -23,7 +23,7 @@ public class TransitionPointScript : MonoBehaviour {
                 goMenu.SetActive(true);
                 goOther.SetActive(false);
 
-                DoAction(0);
+                StartCoroutine(DoAction(0));
             }
             else
             {
@@ -31,16 +31,18 @@ public class TransitionPointScript : MonoBehaviour {
                 goOther.SetActive(true);
                 goMenu.SetActive(false);
 
-                DoAction(1);
+                StartCoroutine(DoAction(1));
             }
         }
     }
 
-    void DoAction(int _dir)
+    IEnumerator DoAction(int _dir)
     {
+        yield return new WaitForSeconds(0.01f);
+
         if(Type == TransitionType.ToLevel && _dir == 1)
         {
-            LoadedLevels.Instance.vUpdateData();
+            LoadedLevels.Instance.vChangeCurrentLevel(1);
 
             if (MenuLoadLevelsFromXML.Instance.Urls.Count < 1)
                 FolderUIControl.Instance.OpenFolderUI();

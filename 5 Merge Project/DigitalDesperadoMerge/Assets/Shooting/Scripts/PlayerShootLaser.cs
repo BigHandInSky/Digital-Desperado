@@ -40,6 +40,8 @@ public class PlayerShootLaser : MonoBehaviour {
 
 	public void vShoot()
 	{
+        GameData.Instance.Shoot();
+
 		//if script timer reaches 0, allow the player to use the mouse click
 		if (fShootTimer <= 0) {
 			GetComponent<AudioSource> ().PlayOneShot (gunShot);

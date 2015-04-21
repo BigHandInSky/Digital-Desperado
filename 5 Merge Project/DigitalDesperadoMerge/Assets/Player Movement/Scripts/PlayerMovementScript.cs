@@ -55,7 +55,9 @@ public class PlayerMovementScript : MonoBehaviour
             PlayerMovement();
             PlayerJump();
         }
-        HeadBobbing();
+
+        if (bIsCameraEnabled && bIsMovementEnabled)
+            HeadBobbing();
     }
 
     public void AllowControls(bool _MoveVal, bool _CamVal)
