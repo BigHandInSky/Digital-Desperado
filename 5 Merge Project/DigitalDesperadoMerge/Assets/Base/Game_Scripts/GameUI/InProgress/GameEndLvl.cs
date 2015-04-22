@@ -5,7 +5,7 @@ public class GameEndLvl : MonoBehaviour {
 
     [SerializeField] private GameObject goObjToActivate;
     [SerializeField] private GameObject goObjToDeActivate;
-    [SerializeField] private GameLdrBrdGetData LeaderBoard;
+    [SerializeField] private EndScreenStart EndScreenObj;
     private const string sPlayerTag = "Player";
 
     [SerializeField] private PlayerMovementScript PlayerControlObj;
@@ -31,7 +31,7 @@ public class GameEndLvl : MonoBehaviour {
         GameData.Instance.vStopCounting();
         goObjToActivate.SetActive(true);
         goObjToDeActivate.SetActive(false);
-        LeaderBoard.Load();
+        EndScreenObj.SetupEndScreen();
 
         AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.EndGame);
 

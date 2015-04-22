@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
@@ -8,7 +9,6 @@ using System.IO;
 public class GameSettings : MonoBehaviour {
 
     private static GameSettings m_DataInstance;
-	
     public static GameSettings Instance
     {
         get
@@ -25,11 +25,13 @@ public class GameSettings : MonoBehaviour {
 		LoadData ();
     }
 
+    public bool bComeFromGame = false;
     void OnLevelWasLoaded(int level)
     {
         //if another gameSettings detected, delete other
         if (Application.loadedLevelName.Contains("Tutorial"))
         {
+            bComeFromGame = false;
             AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Loading);
 
             Cursor.lockState = CursorLockMode.Locked;
@@ -43,20 +45,20 @@ public class GameSettings : MonoBehaviour {
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+
+            if (bComeFromGame)
+                Camera.main.GetComponent<CameraTransitionScript>().GotoLevelSide();
+            else
+                Camera.main.GetComponent<CameraTransitionScript>().FirstLoad();
+
+            bComeFromGame = false;
         }
         else if (Application.loadedLevelName.Contains("Game"))
         {
             ApplyFOV();
+            bComeFromGame = true;
         }
     }
-
-	/*public void OnGUI(){
-		if (GUI.Button (new Rect (10, 10, 100, 30), "Save"))
-			SaveData ();
-
-		if(GUI.Button(new Rect (10,40,100,30), "Load"))
-			LoadData ();
-	}*/
 
 	public void SaveData()
 	{
@@ -88,7 +90,7 @@ public class GameSettings : MonoBehaviour {
 			file.Close ();
 
 			SetResolution(data.RWidth,data.RHeight);
-			SetLevelUrl(data.LoadLevelUrl);
+			//SetLevelUrl(data.LoadLevelUrl);
 			SetVolume(data.Volume);
 			SetFOV(data.FOV);
 
@@ -112,13 +114,44 @@ public class GameSettings : MonoBehaviour {
     private int iResHeight = 600;
     public int RHeight { get { return iResHeight; } }
 
+    private KeyCode MoveForw = KeyCode.W;
+    private KeyCode MoveBack = KeyCode.S;
+    private KeyCode MoveLeft = KeyCode.A;
+    private KeyCode MoveRigh = KeyCode.D;
+    public KeyCode Forw { get { return MoveForw; } }
+    public KeyCode Back { get { return MoveBack; } }
+    public KeyCode Left { get { return MoveLeft; } }
+    public KeyCode Righ { get { return MoveRigh; } }
 
-    private string m_LoadedLevelUrl;
-    public string LoadLevelUrl { get { return m_LoadedLevelUrl; } }
+    private KeyCode KeyJump = KeyCode.Space;
+    private KeyCode KeyFire = KeyCode.Mouse0;
+    public KeyCode Jump { get { return KeyJump; } }
+    public KeyCode Fire { get { return KeyFire; } }
 
-    public void SetLevelUrl(string _url)
+    private List<string> m_LoadedUrls = new List<string>();
+    public string LoadLevelUrl { get { return m_LoadedUrls[m_LoadedLevelInt]; } }
+    public string LoadLevelName
     {
-        m_LoadedLevelUrl = _url;
+        get
+        {
+            string _temp = m_LoadedUrls[m_LoadedLevelInt];
+            _temp = _temp.Split('\\')[_temp.Split('\\').Length - 1];
+            int _index = _temp.IndexOf(".");
+            _temp.Remove(_index, 4);
+            return _temp;
+        }
+    }
+
+    private int m_LoadedLevelInt = 0;
+    public int LevelInt { get { return m_LoadedLevelInt; } set { m_LoadedLevelInt = value; } }
+
+    public void SetLevelUrl(int _index)
+    {
+        m_LoadedLevelInt = _index;
+    }
+    public void SetUrls(List<string> _Urls)
+    {
+        m_LoadedUrls = _Urls;
     }
 
     public void SetResolution(int _width, int _height)
@@ -134,9 +167,18 @@ public class GameSettings : MonoBehaviour {
     {
         fFOV = _Val;
     }
+    public void SetControls(KeyCode _w, KeyCode _s, KeyCode _a, KeyCode _d, KeyCode _jump, KeyCode _fire)
+    {
+        MoveForw = _w;
+        MoveBack = _s;
+        MoveLeft = _a;
+        MoveRigh = _d;
+        KeyJump = _jump;
+        KeyFire = _fire;
+    }
     public void ApplySettings()
     {
-        Screen.SetResolution(iResWidth, iResHeight, true);
+        Screen.SetResolution(iResWidth, iResHeight, false);
         AudioListener.volume = (fVolume * 0.01f);
     }
     public void ApplyFOV()

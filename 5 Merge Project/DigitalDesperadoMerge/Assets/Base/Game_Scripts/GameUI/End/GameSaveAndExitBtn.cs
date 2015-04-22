@@ -24,8 +24,8 @@ public class GameSaveAndExitBtn : MonoBehaviour {
             SaveDataComponent.SaveData(TagInputField.text);
             Application.LoadLevel(sSceneToLoad);
         }
-        else
-            TagErrorField.text = sErrorMsg;
+        /*else
+            TagErrorField.text = sErrorMsg;*/
     }
     public void Exit()
     {
@@ -38,8 +38,8 @@ public class GameSaveAndExitBtn : MonoBehaviour {
         if (
             TagInputField.text == null
             || TagInputField.text == string.Empty
-            || TagInputField.text.Length != 3
-            || TagInputField.text.Contains(" ")
+            || TagInputField.text.Length != 3/*
+            || TagInputField.text.Contains(" ")*/
             )
             return false;
         else

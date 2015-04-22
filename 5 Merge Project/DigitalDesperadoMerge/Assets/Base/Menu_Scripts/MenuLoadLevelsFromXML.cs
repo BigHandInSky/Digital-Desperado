@@ -51,9 +51,7 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
     List<MenuLoadXMLMapData> stMapUILevels;
     List<MenuLoadXMLMapData> stMapUITowers;
     List<MenuLoadXMLMapData> stMapUITargets;
-
-    private bool bFirstLoad = true;
-
+    
     void Start ()
     {
         m_DataInstance = this;
@@ -105,11 +103,8 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
             Debug.LogError("FolderInfo checked to be null");
         }
 
-        if (!bFirstLoad)
-            LoadedLevels.Instance.vResetToZero();
-
-        if (bFirstLoad)
-            bFirstLoad = false;
+        if (GameSettings.Instance.bComeFromGame)
+            LoadedLevels.Instance.vUpdateData();
     }
     
 	public bool CheckUrl(string _url, bool _XML)

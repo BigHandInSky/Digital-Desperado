@@ -25,6 +25,7 @@ public class SelectFolderBtn : MonoBehaviour {
     public void Select()
     {
         MenuLoadLevelsFromXML.Instance.GetFolder(Manager.DirectoryUrl);
+        LoadedLevels.Instance.vResetToZero();
         FolderParent.CloseFolderUI();
     }
 }

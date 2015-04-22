@@ -29,13 +29,8 @@ public class MenuButtonFunctions : MonoBehaviour
         GameObject.FindGameObjectWithTag(sCameraTag).GetComponent<CameraTransitionScript>()
             .vTransition(goPointToGoto.transform.position, goPointToGoto.transform.rotation);
     }
-    public void vOptionsMusic(bool _SetUpOne)
+    public void vApplySettings()
     {
-    }
-    public void vOptionsEffects(bool _SetUpOne)
-    {
-    }
-    public void vOptionsGraphics(bool _SetUpOne)
-    {
+        GameSettings.Instance.ApplySettings();
     }
 }

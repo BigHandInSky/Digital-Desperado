@@ -74,7 +74,9 @@ public class PlayerShootLaser : MonoBehaviour {
 		GameData.Instance.Shoot();
 
 		//if script timer reaches 0, allow the player to use the mouse click
-		if (fShootTimer <= 0) {
+        if (fShootTimer <= 0)
+        {
+            GameData.Instance.Shoot();
 			GetComponent<AudioSource> ().PlayOneShot (gunShot);
 			
 			GameObject laser = Instantiate (prefabLaser, gunMuzzle.transform.position, Quaternion.identity) as GameObject;

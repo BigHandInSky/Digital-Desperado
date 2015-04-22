@@ -29,17 +29,20 @@ public class LoadedLevels : MonoBehaviour
     [SerializeField] private List<string> sShts = new List<string>(6);
     
     private int m_LevelsCount;
-    private int m_CurrLvlUrl = 0;
+    private int m_CurrLvlUrl;
     public int iCurrentLvl { get { return m_CurrLvlUrl; } }
     
     void Awake()
     {
+        m_CurrLvlUrl = GameSettings.Instance.LevelInt;
         m_DataInstance = this;
     }
 
     public void vLoadLevel()
     {
-        GameSettings.Instance.SetLevelUrl(MenuLoadLevelsFromXML.Instance.Urls[m_CurrLvlUrl]);
+        GameSettings.Instance.LevelInt = m_CurrLvlUrl;
+        GameSettings.Instance.SetLevelUrl(m_CurrLvlUrl);
+        GameSettings.Instance.SetUrls(MenuLoadLevelsFromXML.Instance.Urls);
         Application.LoadLevel(sSceneToLoad);
     }
     //get name
@@ -139,6 +142,7 @@ public class LoadedLevels : MonoBehaviour
     public void vResetToZero()
     {
         m_CurrLvlUrl = 0;
+        GameSettings.Instance.LevelInt = 0;
         vUpdateData();
     }
 }

@@ -55,13 +55,18 @@ public class GameRdyCountdown : MonoBehaviour {
         PlayerControlObj.AllowControls(true, true);
         PlayerShootObj.bCanShoot = true;
 
-        GameData.Instance.StartData();
-
         foreach (GameObject obj in ObjsToActivateWhenComplete)
         {
             obj.SetActive(true);
-            obj.SendMessage("Reset");
+
+            if(obj.GetComponent<GameUIArrowScript>()
+                || obj.GetComponent<GameUITextScript>())
+            {
+                obj.SendMessage("Reset");
+            }
         }
+
+        GameData.Instance.StartData();
 
         foreach (GameObject obj in ObjsToDeActivateWhenComplete)
             obj.SetActive(false);

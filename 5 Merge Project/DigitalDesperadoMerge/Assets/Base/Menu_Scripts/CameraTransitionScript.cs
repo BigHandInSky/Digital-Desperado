@@ -1,43 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 //script that handles rotation and translating the camera to a point/rotation given
 //works via the vTransition function that is called by other objects in the world through CallForCamTransition.cs
 public class CameraTransitionScript : MonoBehaviour {
 
+    [SerializeField] private List<GameObject> Canvii = new List<GameObject>();
+
 	//point to move to on scene load from cam starting point
 	public GameObject startSettings;
+    public GameObject transitionToLevelsSide;
+    public GameObject LevelLoadStartPos;
 
     public int iTransToMenuNum = 0;
+    private int iPreviousNum = 0;
 
 	//variables to hold point and rotation to go to
 	Vector3 v3TransitionPoint;
 	Quaternion qRotation;
 
 	//speed that the camera should do things
-	public float fTransitionSpeed = 1.0f;
-	public float fRotationSpeed = 1.0f;
-
-	void Start()
-	{
-		//if a point has been given in the inspector
-		if(startSettings)
-		{
-			//start with point values given via the inspector
-			v3TransitionPoint = startSettings.transform.position;
-			qRotation = startSettings.transform.rotation;
-		}
-		else
-		{
-			//start with camera settings, rather than 0,0,0 / 0,0,0
-			v3TransitionPoint = gameObject.transform.position;
-			qRotation = gameObject.transform.rotation;
-
-			print ("Camera with transition script has an unset startSettings GameObject : " + gameObject);
-		}
-
-	}
-
+    private float fTransitionSpeed = 7.0f;
+    private float fRotationSpeed = 36.0f;
+    
 	void Update()
 	{
 		//if self is not the same as position, use moveTowards to do so smoothly
@@ -60,5 +46,64 @@ public class CameraTransitionScript : MonoBehaviour {
 	{
 		v3TransitionPoint = _point;
 		qRotation = _rotation;
+
+        int _num = 0;
+        foreach(GameObject _obj in Canvii)
+        {
+            if (iTransToMenuNum == _num)
+            {
+                _obj.SetActive(true);
+                StartCoroutine(DoAction(_num));
+            }
+            else if (_num != iPreviousNum)
+            {
+                _obj.SetActive(false);
+            }
+            _num++;
+        }
+
+        iPreviousNum = iTransToMenuNum;
 	}
+
+    public void vHalfPointTransition(Vector3 _point, Quaternion _rotation)
+    {
+        v3TransitionPoint = _point;
+        qRotation = _rotation;
+    }
+
+    public void FirstLoad()
+    {
+        vTransition(startSettings.transform.position, startSettings.transform.rotation);
+    }
+    public void GotoLevelSide()
+    {
+        iTransToMenuNum = 1;
+
+        transform.position = LevelLoadStartPos.transform.position;
+        transform.rotation = LevelLoadStartPos.transform.rotation;
+
+        vTransition(transitionToLevelsSide.transform.position, transitionToLevelsSide.transform.rotation);
+    }
+
+    IEnumerator DoAction(int _dir)
+    {
+        yield return new WaitForSeconds(0.01f);
+
+        if (_dir == 1)
+        {
+            //levels
+            LoadedLevels.Instance.vUpdateData();
+
+            if (MenuLoadLevelsFromXML.Instance.Urls.Count < 1)
+                FolderUIControl.Instance.OpenFolderUI();
+        }
+        else if(_dir == 2)
+        {
+            //options
+        }
+        else if(_dir == 3)
+        {
+            //controls
+        }
+    }
 }

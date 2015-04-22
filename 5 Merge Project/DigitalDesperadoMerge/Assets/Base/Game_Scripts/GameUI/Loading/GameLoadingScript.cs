@@ -16,6 +16,7 @@ public class GameLoadingScript : MonoBehaviour {
     [SerializeField] private GameObject ObjToDeActivateWhenComplete;
 
     [SerializeField] private PlayerMovementScript PlayerControlObj;
+    [SerializeField] private GameRdyCountdown ReadyBtn;
 
     void Start()
     {
@@ -45,6 +46,7 @@ public class GameLoadingScript : MonoBehaviour {
         PlayerControlObj.AllowControls(false, true);
         StopCoroutine(Switch());
         ObjToActivateWhenComplete.SetActive(true);
+        ReadyBtn.StartCountdown();
         ObjToDeActivateWhenComplete.SetActive(false);
     }
 }

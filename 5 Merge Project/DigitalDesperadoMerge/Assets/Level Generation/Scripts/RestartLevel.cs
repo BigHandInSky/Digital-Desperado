@@ -9,19 +9,16 @@ public class RestartLevel : MonoBehaviour
     private GameObject goPlayer;
     private GameObject[] agoTargetFrags;
 
+    [SerializeField] private GameRdyCountdown goCountdown;
     [SerializeField] private List<GameObject> goObjsToActivate = new List<GameObject>();
     [SerializeField] private List<GameObject> goObjsToDeactivate = new List<GameObject>();
 
     [SerializeField] private PlayerMovementScript PlayerControlObj;
-
-    void Awake()
-    {
-        FindLevelObjects();
-    }
-
+    
     public void DoRestart()
     {
         Debug.Log("DoRestart");
+        FindLevelObjects();
         GameData.Instance.Restart();
         PlayerControlObj.AllowControls(false, true);
 
@@ -29,13 +26,21 @@ public class RestartLevel : MonoBehaviour
         RestartPlayer();
         RestartTargets();
         SetUI();
+
+        goCountdown.gameObject.SetActive(true);
+        goCountdown.StartCountdown();
     }
 
     private void FindLevelObjects()
     {
-        tPlayerStartPosition = GameObject.FindGameObjectWithTag("SpawnPosition").transform; 
-        goPlayer = GameObject.FindGameObjectWithTag("Player");
-        agoTargetFrags = GameObject.FindGameObjectsWithTag("Effect");
+        if (tPlayerStartPosition == null)
+            tPlayerStartPosition = GameObject.FindGameObjectWithTag("SpawnPosition").transform;
+
+        if (goPlayer == null)
+            goPlayer = GameObject.FindGameObjectWithTag("Player");
+
+        if(agoTargetFrags == null)
+            agoTargetFrags = GameObject.FindGameObjectsWithTag("Effect");
     }
     private void RestartPlayer()
     {

@@ -33,7 +33,10 @@ public class GameData : MonoBehaviour {
     public int iTimeFr { get { return m_TimeFrames; } }
     private float m_TimeSecs = 0;
     public float fTimeScs { get { return m_TimeSecs; } }
-    
+
+    private int m_TimesFell = 0;
+    public int iFalls { get { return m_TimesFell; } }
+
     void Awake() 
     {
         m_DataInstance = this;
@@ -109,5 +112,10 @@ public class GameData : MonoBehaviour {
         m_TimeSecs = 0;
 
         vUpdateTargetUIs();
+    }
+
+    public void Fell()
+    {
+        m_TimesFell++;
     }
 }

@@ -11,29 +11,18 @@ public class StatsScript : MonoBehaviour
     [SerializeField]
     private float fRotateStatsTime = 2f;
 
-    [SerializeField] private Image imStatsObj;
+    [SerializeField] private Text imStatsText;
+    [SerializeField] private List<Color> m_StatColours = new List<Color>(4);
+    [SerializeField] private List<string> m_StatNames = new List<string>(4);
 
-    [SerializeField]
-    private List<Sprite> m_StatImgSprites = new List<Sprite>(4);
-
-    [SerializeField]
-    private List<Text> txStatTexts = new List<Text>(6);
-
+    [SerializeField] private List<Text> txStatTexts = new List<Text>(6);
     public List<string> sTags;
     public List<string> sSecs;
     public List<string> sFras;
     public List<string> sShts;
 
     void Start()
-    {/*
-        for (int i = 0; i < 6; i++ )
-        {
-            sTags.Add("?");
-            sSecs.Add("?");
-            sFras.Add("?");
-            sShts.Add("?");
-        }*/
-
+    {
         StartCoroutine("ieRotateStats");
     }
 
@@ -77,10 +66,11 @@ public class StatsScript : MonoBehaviour
     {
         iState++;
 
-        if (iState >= m_StatImgSprites.Count)
+        if (iState >= m_StatColours.Count)
             iState = 0;
 
-        imStatsObj.sprite = m_StatImgSprites[iState];
+        gameObject.GetComponent<Image>().color = m_StatColours[iState];
+        imStatsText.text = m_StatNames[iState];
 
         vUpdateTexts();
     }
@@ -94,7 +84,13 @@ public class StatsScript : MonoBehaviour
             switch (iState)
             {
                 case 0:
-                    obj.text = sTags[_switchLoopInt];                    
+                    if (sTags[_switchLoopInt].Contains(" "))
+                    {
+                        Debug.Log("contains space");
+                        obj.text = sTags[_switchLoopInt].Replace(' ', '_');
+                    }
+                    else
+                        obj.text = sTags[_switchLoopInt];                    
                     break;
 
                 case 1:

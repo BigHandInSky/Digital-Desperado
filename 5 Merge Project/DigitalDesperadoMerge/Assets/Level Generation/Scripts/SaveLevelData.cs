@@ -16,14 +16,14 @@ public class SaveLevelData : MonoBehaviour
     // Array of stat node attribute names
     string[] AS_ATTRIBUTE_NAMES = {"A", "B", "C", "D", "E", "F"};
 
-    [SerializeField] private GameLdrBrdGetData LeaderBoard;
+    [SerializeField] private EndScreenLdrBrd LeaderBoard;
 
     private string CurrTag;
     private float CurrSecs;
     private int CurrFrames;
     private int CurrShots;
 
-    private GameLdrBrdGetData.LdrBrdStat[] DataStats = new GameLdrBrdGetData.LdrBrdStat[0];
+    private EndScreenLdrBrd.LdrBrdStat[] DataStats = new EndScreenLdrBrd.LdrBrdStat[0];
 
     public void SaveData(string _EntryTag)
     {
