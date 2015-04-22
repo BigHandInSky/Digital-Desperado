@@ -37,8 +37,6 @@ public class GunBehavior : MonoBehaviour {
 		else
 		 */
 
-		Debug.Log (gunModel.transform.position);
-
 		if (Camera.main.GetComponent<PlayerShootLaser> ().bCanShoot && Input.GetMouseButtonDown (0) && Camera.main.GetComponent<PlayerShootLaser> ().fShootTimer <= 0) {
 			isShooting = true;
 		}
