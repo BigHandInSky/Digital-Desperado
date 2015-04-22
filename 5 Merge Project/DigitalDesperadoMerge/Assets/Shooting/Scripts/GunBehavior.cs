@@ -13,29 +13,9 @@ public class GunBehavior : MonoBehaviour {
 	private bool recharge = false;
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		xAxis += 0.02f;
 		yAxis += 0.06f;
-
-		/*
-		 * Dont Delete
-		if (Input.GetMouseButtonDown (0)) {
-			isShooting = true;
-			Debug.Log("Something happen");
-		}
-
-		if(isShooting)
-		{
-			transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime);
-
-			if(transform.rotation == Quaternion.identity)
-			{
-				GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerShootLaser>().vShoot();
-				isShooting = false;
-			}
-		}
-		else
-		 */
 
 		if (Camera.main.GetComponent<PlayerShootLaser> ().bCanShoot && Input.GetMouseButtonDown (0) && Camera.main.GetComponent<PlayerShootLaser> ().fShootTimer <= 0) {
 			isShooting = true;
