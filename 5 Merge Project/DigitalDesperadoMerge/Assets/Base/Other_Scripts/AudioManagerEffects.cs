@@ -53,7 +53,12 @@ public class AudioManagerEffects : MonoBehaviour {
 
     private void CreateObj(AudioClip _clipToPlay)
     {
-        if (!GameSettings.Instance.Effects)
+        if (GameSettings.Instance == null) 
+        {
+            Debug.LogError("AudioManager: No Game Settings");
+            return;
+        }
+        else if (!GameSettings.Instance.Effects)
             return;
 
         GameObject _clone = Instantiate(ObjToSpawn);

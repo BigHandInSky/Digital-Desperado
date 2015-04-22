@@ -14,9 +14,11 @@ public class PlayerShootLaser : MonoBehaviour {
 	public AudioClip gunShot;
 	//Damage value of the laser
 	public int iDamage = 50;
+	//The more you increase the range variable, the more it will be easier for the player to hit the target
+	public float range = 0.25f;
 
 	//Use to delay shooting sequence
-	private float fShootTimer = 0.0f;
+	public float fShootTimer = 0.0f;
 
 
     void OnLevelWasLoaded(int level)
@@ -28,9 +30,14 @@ public class PlayerShootLaser : MonoBehaviour {
     }
 
 	
-	void FixedUpdate () 
+	void Update () 
 	{
-		Debug.DrawLine(gunMuzzle.transform.position, Camera.main.transform.position +  Camera.main.transform.forward * 100, Color.red);
+		//Debug.DrawLine(Camera.main.transform.position, Camera.main.transform.position +  Camera.main.transform.forward * 100, Color.red);
+		//Debug.DrawLine(Camera.main.transform.position + Camera.main.transform.right * range, Camera.main.transform.position +  Camera.main.transform.forward * 100, Color.red);
+		//Debug.DrawLine(Camera.main.transform.position - Camera.main.transform.right * range, Camera.main.transform.position +  Camera.main.transform.forward * 100, Color.red);
+		//Debug.DrawLine(Camera.main.transform.position + Camera.main.transform.up * range, Camera.main.transform.position +  Camera.main.transform.forward * 100, Color.red);
+		//Debug.DrawLine(Camera.main.transform.position - Camera.main.transform.up * range, Camera.main.transform.position +  Camera.main.transform.forward * 100, Color.red);
+
 		fShootTimer -= Time.deltaTime;
 
 		//On mouse click instantiate a new prefab laser and set the position
@@ -40,6 +47,8 @@ public class PlayerShootLaser : MonoBehaviour {
 
 	public void vShootOld()
 	{
+        GameData.Instance.Shoot();
+
 		//if script timer reaches 0, allow the player to use the mouse click
 		if (fShootTimer <= 0) {
 			GetComponent<AudioSource> ().PlayOneShot (gunShot);
@@ -62,6 +71,8 @@ public class PlayerShootLaser : MonoBehaviour {
 
 	public void vShoot()
 	{
+		GameData.Instance.Shoot();
+
 		//if script timer reaches 0, allow the player to use the mouse click
 		if (fShootTimer <= 0) {
 			GetComponent<AudioSource> ().PlayOneShot (gunShot);
@@ -73,6 +84,46 @@ public class PlayerShootLaser : MonoBehaviour {
 			RaycastHit[] hits;
 			hits = Physics.RaycastAll (Camera.main.transform.position, laser.GetComponent<LaserScript> ().V3endPosition, 500f);
 			int i = 0;
+			while (i < hits.Length) {
+				RaycastHit hit = hits[i];
+				if (hit.transform.GetComponent<TargetFragmentation> ()) {
+					hit.transform.GetComponent<TargetFragmentation> ().vExplode ();
+				}
+				i++;
+			}
+
+			hits = Physics.RaycastAll (Camera.main.transform.position - Camera.main.transform.right * range, laser.GetComponent<LaserScript> ().V3endPosition, 500f);
+			i = 0;
+			while (i < hits.Length) {
+				RaycastHit hit = hits[i];
+				if (hit.transform.GetComponent<TargetFragmentation> ()) {
+					hit.transform.GetComponent<TargetFragmentation> ().vExplode ();
+				}
+				i++;
+			}
+
+			hits = Physics.RaycastAll (Camera.main.transform.position + Camera.main.transform.right * range, laser.GetComponent<LaserScript> ().V3endPosition, 500f);
+			i = 0;
+			while (i < hits.Length) {
+				RaycastHit hit = hits[i];
+				if (hit.transform.GetComponent<TargetFragmentation> ()) {
+					hit.transform.GetComponent<TargetFragmentation> ().vExplode ();
+				}
+				i++;
+			}
+
+			hits = Physics.RaycastAll (Camera.main.transform.position - Camera.main.transform.up * range, laser.GetComponent<LaserScript> ().V3endPosition, 500f);
+			i = 0;
+			while (i < hits.Length) {
+				RaycastHit hit = hits[i];
+				if (hit.transform.GetComponent<TargetFragmentation> ()) {
+					hit.transform.GetComponent<TargetFragmentation> ().vExplode ();
+				}
+				i++;
+			}
+
+			hits = Physics.RaycastAll (Camera.main.transform.position + Camera.main.transform.up * range, laser.GetComponent<LaserScript> ().V3endPosition, 500f);
+			i = 0;
 			while (i < hits.Length) {
 				RaycastHit hit = hits[i];
 				if (hit.transform.GetComponent<TargetFragmentation> ()) {

@@ -17,6 +17,32 @@ public class MapUI : MonoBehaviour {
     [SerializeField] private float MapSizeScale = 0.20f;
     public float SizeScale { get { return MapSizeScale; } }
 
+    public void Setup()
+    {
+        vClearMap();
+
+        List<MenuLoadLevelsFromXML.MenuLoadXMLMapData> _mapList = MenuLoadLevelsFromXML.Instance.GetLevelObjs(LoadedLevels.Instance.iCurrentLvl);
+        List<MenuLoadLevelsFromXML.MenuLoadXMLMapData> _mapListLate = new List<MenuLoadLevelsFromXML.MenuLoadXMLMapData>();
+
+        foreach (MenuLoadLevelsFromXML.MenuLoadXMLMapData obj in _mapList)
+        {
+            if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Play)
+                vSetupMapUIPlayer(obj.Position, obj.Rotation.y);
+
+            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Targ)
+                vSetupMapUITarget(obj.Position, obj.Rotation.y);
+
+            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Levl)
+                vSetupMapUILevel(obj.Position, obj.Scale, obj.Rotation.y);
+
+            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Towr)
+                vSetupMapUITower(obj.Position, obj.Scale, obj.Rotation.y);
+
+            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.EndT)
+                vSetupMapUIEndTower(obj.Position, obj.Rotation.y);
+        }
+    }
+
     public void vClearMap()
     {
         PlayerSpawner.ClearImages();

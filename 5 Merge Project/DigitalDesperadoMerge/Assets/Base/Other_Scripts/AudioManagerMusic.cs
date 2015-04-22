@@ -41,7 +41,12 @@ public class AudioManagerMusic : MonoBehaviour
         Source.Stop();
         StopAllCoroutines();
 
-        if (!GameSettings.Instance.Music)
+        if (GameSettings.Instance == null)
+        {
+            Debug.LogError("AudioManager: No Game Settings");
+            return;
+        }
+        else if (!GameSettings.Instance.Music)
             return;
         
         StartCoroutine(PlayMusic(_type, 0.5f));
