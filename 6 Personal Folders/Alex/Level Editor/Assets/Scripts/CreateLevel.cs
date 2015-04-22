@@ -44,22 +44,15 @@ public class CreateLevel : MonoBehaviour
     [SerializeField]
     GameObject goToolbarPanel;
 
+    [SerializeField]
+    Text levelTitleText;
+
     // Number of targets in a level
     int iTargets = 0;
 
     public int Targets
     {
         get { return iTargets; }
-    }
-
-    public void AddTarget()
-    {
-        iTargets++;
-    }
-
-    public void RemoveTarget()
-    {
-        iTargets--;
     }
 
     // Creates an Open File Dialog for xml files and selects that path
@@ -116,9 +109,9 @@ public class CreateLevel : MonoBehaviour
             ActivatePreMadeObjects();
 
             goProjectManagementPanel.SetActive(false);
-            goToolbarPanel.SetActive(true);            
+            goToolbarPanel.SetActive(true);
+            levelTitleText.text = sFileName.Remove(sFileName.Length - 4);
         }
-
     }
 
     // Loads a level from an xml file
@@ -203,6 +196,7 @@ public class CreateLevel : MonoBehaviour
 
         goProjectManagementPanel.SetActive(false);
         goToolbarPanel.SetActive(true);
+        levelTitleText.text = sFileName.Remove(sFileName.Length - 4);
 
         Debug.Log("Level Load Complete - " + sFileName);
     }
@@ -302,5 +296,17 @@ public class CreateLevel : MonoBehaviour
         {
             platform.SetActive(true);
         }
+    }
+
+    public void CreateTarget()
+    {
+        GameObject target = (GameObject)Instantiate(agoTargetPrefabs[0], Vector3.zero, Quaternion.identity);
+        target.transform.parent = tLevelRootObject.transform;
+    }
+
+    public void CreateTower()
+    {
+        GameObject tower = (GameObject)Instantiate(goTowerPrefab, Vector3.zero, Quaternion.identity);
+        tower.transform.parent = tLevelRootObject.transform;
     }
 }

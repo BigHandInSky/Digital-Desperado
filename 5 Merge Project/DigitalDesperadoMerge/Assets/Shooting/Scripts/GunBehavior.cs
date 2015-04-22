@@ -4,11 +4,13 @@ using System.Collections;
 public class GunBehavior : MonoBehaviour {
 
 
-	public GameObject obj;
+	public GameObject parentObj;
+	public GameObject gunModel;
+
 	private float xAxis = 0;
 	private float yAxis = 0;
-
 	private bool isShooting = false;
+	private bool recharge = false;
 
 	// Update is called once per frame
 	void Update () {
@@ -34,6 +36,22 @@ public class GunBehavior : MonoBehaviour {
 		}
 		else
 		 */
-		transform.eulerAngles = new Vector3 (obj.transform.eulerAngles.x + Mathf.Sin(xAxis) * 2, transform.eulerAngles.y + ( (Input.GetAxis("Vertical") > 0) ? Mathf.Sin(yAxis) * 0.5f : Mathf.Sin(yAxis) * 0.02f ), transform.eulerAngles.z);
+
+		if (Camera.main.GetComponent<PlayerShootLaser> ().bCanShoot && Input.GetMouseButtonDown (0) && Camera.main.GetComponent<PlayerShootLaser> ().fShootTimer <= 0) {
+			isShooting = true;
+		}
+
+		if (isShooting && !recharge) {
+			gunModel.transform.Translate (new Vector3 (0, 0, -0.1f), Space.Self);
+			if (gunModel.transform.localPosition.z < -0.4f)
+				recharge = true;
+		} else if (recharge) {
+			gunModel.transform.Translate (new Vector3 (0, 0, 0.05f), Space.Self);
+			if(gunModel.transform.localPosition.z >= 0)
+				recharge = false;
+				isShooting = false;
+		}
+
+		transform.eulerAngles = new Vector3 (parentObj.transform.eulerAngles.x + Mathf.Sin(xAxis) * 2, transform.eulerAngles.y + ( (Input.GetAxis("Vertical") != 0) ? Mathf.Sin(0) * 0.5f : Mathf.Sin(0) * 0.02f ), transform.eulerAngles.z);
 	}
 }

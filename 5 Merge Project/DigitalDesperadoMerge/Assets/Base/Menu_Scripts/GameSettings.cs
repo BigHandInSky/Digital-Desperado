@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 public class GameSettings : MonoBehaviour {
 
     private static GameSettings m_DataInstance;
+	
     public static GameSettings Instance
     {
         get
@@ -18,6 +22,7 @@ public class GameSettings : MonoBehaviour {
     {
         m_DataInstance = this;
         DontDestroyOnLoad(this.gameObject);
+		LoadData ();
     }
 
     void OnLevelWasLoaded(int level)
@@ -44,6 +49,53 @@ public class GameSettings : MonoBehaviour {
             ApplyFOV();
         }
     }
+
+	/*public void OnGUI(){
+		if (GUI.Button (new Rect (10, 10, 100, 30), "Save"))
+			SaveData ();
+
+		if(GUI.Button(new Rect (10,40,100,30), "Load"))
+			LoadData ();
+	}*/
+
+	public void SaveData()
+	{
+		BinaryFormatter bf = new BinaryFormatter();
+		FileStream file = File.Create(Application.persistentDataPath + "/DesperadoPlayerData.dat");
+
+		PlayerData data = new PlayerData ();
+		data.LoadLevelUrl = LoadLevelUrl;
+		data.Effects = Effects;
+		data.Volume = Volume;
+		data.Music = Music;
+		data.FOV = FOV;
+		data.RHeight = RHeight;
+		data.RWidth = RWidth;
+
+		bf.Serialize (file, data);
+		file.Close ();
+
+	}
+
+	public void LoadData()
+	{
+		if(File.Exists(Application.persistentDataPath + "/DesperadoPlayerData.dat"))
+		{
+			BinaryFormatter bf = new BinaryFormatter();
+			FileStream file = File.Open(Application.persistentDataPath + "/DesperadoPlayerData.dat", FileMode.Open);
+
+			PlayerData data = (PlayerData)bf.Deserialize(file);
+			file.Close ();
+
+			SetResolution(data.RWidth,data.RHeight);
+			SetLevelUrl(data.LoadLevelUrl);
+			SetVolume(data.Volume);
+			SetFOV(data.FOV);
+
+			Effects = data.Effects;
+			Music = data.Music;
+		}
+	}
 
     private bool bMusicOn = true;
     public bool Music { get { return bMusicOn; } set { bMusicOn = value; } }
@@ -92,3 +144,18 @@ public class GameSettings : MonoBehaviour {
         Camera.main.fieldOfView = fFOV;
     }
 }
+
+[Serializable]
+class PlayerData
+{
+	public string LoadLevelUrl;
+	public float Volume;
+	public float FOV;
+	public bool Music;
+	public bool Effects;
+	public int RWidth;
+	public int RHeight;
+}
+
+
+
