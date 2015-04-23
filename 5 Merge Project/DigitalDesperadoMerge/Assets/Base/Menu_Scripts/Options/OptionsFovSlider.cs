@@ -9,9 +9,11 @@ public class OptionsFovSlider : MonoBehaviour
     [SerializeField] private float Value = 90f;
     public float FOVValue { get { return Value; } }
 
-    void Start()
+    public void Setup()
     {
-        SetText();
+        Debug.Log("setup called");
+        Value = GameSettings.Instance.FOV;
+        SlideObj.value = Value;
     }
 
     public void SetText()

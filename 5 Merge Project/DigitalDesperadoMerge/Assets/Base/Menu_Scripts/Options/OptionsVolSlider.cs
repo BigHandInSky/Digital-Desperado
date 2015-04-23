@@ -9,9 +9,11 @@ public class OptionsVolSlider : MonoBehaviour
     [SerializeField] private float Value;
     public float VolValue { get { return Value; } }
 
-    void Start()
+    public void Setup()
     {
-        SetText();
+        Debug.Log("setup called");
+        Value = GameSettings.Instance.Volume;
+        SlideObj.value = Value;
     }
 
     public void SetText()

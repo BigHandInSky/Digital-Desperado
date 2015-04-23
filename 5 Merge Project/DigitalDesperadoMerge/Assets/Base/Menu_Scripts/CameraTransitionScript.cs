@@ -100,6 +100,7 @@ public class CameraTransitionScript : MonoBehaviour {
         else if(_dir == 2)
         {
             //options
+            OptionsSetter.Instance.SetOptions();
         }
         else if(_dir == 3)
         {

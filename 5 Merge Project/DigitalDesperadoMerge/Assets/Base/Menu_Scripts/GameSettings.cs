@@ -20,9 +20,19 @@ public class GameSettings : MonoBehaviour {
 
     void Awake()
     {
+        m_KeySettings.Add(KeyCode.W);
+        m_KeySettings.Add(KeyCode.A);
+        m_KeySettings.Add(KeyCode.S);
+        m_KeySettings.Add(KeyCode.D);
+
+        m_KeySettings.Add(KeyCode.Space);
+        m_KeySettings.Add(KeyCode.Mouse0);
+        m_KeySettings.Add(KeyCode.R);
+        m_KeySettings.Add(KeyCode.Y);
+
         m_DataInstance = this;
         DontDestroyOnLoad(this.gameObject);
-		LoadData ();
+	    LoadData ();
     }
 
     public bool bComeFromGame = false;
@@ -41,6 +51,8 @@ public class GameSettings : MonoBehaviour {
         }
         else if (Application.loadedLevelName.Contains("Main"))
         {
+            SaveData();
+
             AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Menus);
 
             Cursor.lockState = CursorLockMode.None;
@@ -64,19 +76,20 @@ public class GameSettings : MonoBehaviour {
 	{
 		BinaryFormatter bf = new BinaryFormatter();
 		FileStream file = File.Create(Application.persistentDataPath + "/DesperadoPlayerData.dat");
+        Debug.Log("GameSettings SaveData persistent path: " + Application.persistentDataPath);
 
 		PlayerData data = new PlayerData ();
-		data.LoadLevelUrl = LoadLevelUrl;
+        data.LoadLevelInt = m_LoadedLevelInt;
 		data.Effects = Effects;
 		data.Volume = Volume;
 		data.Music = Music;
 		data.FOV = FOV;
 		data.RHeight = RHeight;
 		data.RWidth = RWidth;
+        data.Keys = m_KeySettings;
 
 		bf.Serialize (file, data);
 		file.Close ();
-
 	}
 
 	public void LoadData()
@@ -90,9 +103,10 @@ public class GameSettings : MonoBehaviour {
 			file.Close ();
 
 			SetResolution(data.RWidth,data.RHeight);
-			//SetLevelUrl(data.LoadLevelUrl);
+            SetLevelUrl(data.LoadLevelInt);
 			SetVolume(data.Volume);
-			SetFOV(data.FOV);
+            SetFOV(data.FOV);
+            m_KeySettings = data.Keys;
 
 			Effects = data.Effects;
 			Music = data.Music;
@@ -114,25 +128,18 @@ public class GameSettings : MonoBehaviour {
     private int iResHeight = 600;
     public int RHeight { get { return iResHeight; } }
 
-    private KeyCode MoveForw = KeyCode.W;
-    private KeyCode MoveBack = KeyCode.S;
-    private KeyCode MoveLeft = KeyCode.A;
-    private KeyCode MoveRigh = KeyCode.D;
-    public KeyCode Forw { get { return MoveForw; } }
-    public KeyCode Back { get { return MoveBack; } }
-    public KeyCode Left { get { return MoveLeft; } }
-    public KeyCode Righ { get { return MoveRigh; } }
-
-    private KeyCode KeyJump = KeyCode.Space;
-    private KeyCode KeyFire = KeyCode.Mouse0;
-    private KeyCode KeyReset = KeyCode.R;
-    private KeyCode KeyMenu = KeyCode.T;
-    public KeyCode Jump { get { return KeyJump; } }
-    public KeyCode Fire { get { return KeyFire; } }
-    public KeyCode Rset { get { return KeyReset; } }
-    public KeyCode Menu { get { return KeyMenu; } }
-
+    private List<KeyCode> m_KeySettings = new List<KeyCode>();
+    #region KeyReturns
+    public KeyCode Forw { get { return m_KeySettings[0]; } }
+    public KeyCode Back { get { return m_KeySettings[1]; } }
+    public KeyCode Left { get { return m_KeySettings[2]; } }
+    public KeyCode Righ { get { return m_KeySettings[3]; } }
+    public KeyCode Jump { get { return m_KeySettings[4]; } }
+    public KeyCode Fire { get { return m_KeySettings[5]; } }
+    public KeyCode Rset { get { return m_KeySettings[6]; } }
+    public KeyCode Menu { get { return m_KeySettings[7]; } }
     public KeyCode HARD_EXIT { get { return KeyCode.Escape; } }
+    #endregion
 
     private List<string> m_LoadedUrls = new List<string>();
     public string LoadLevelUrl { get { return m_LoadedUrls[m_LoadedLevelInt]; } }
@@ -159,7 +166,6 @@ public class GameSettings : MonoBehaviour {
     {
         m_LoadedUrls = _Urls;
     }
-
     public void SetResolution(int _width, int _height)
     {
         iResWidth = _width;
@@ -173,17 +179,22 @@ public class GameSettings : MonoBehaviour {
     {
         fFOV = _Val;
     }
-    public void SetControls(KeyCode _w, KeyCode _s, KeyCode _a, KeyCode _d, KeyCode _jump, KeyCode _fire)
+    public void SetControls(KeyCode _w, KeyCode _s, KeyCode _a, KeyCode _d, KeyCode _jump, KeyCode _fire, KeyCode _reset, KeyCode _menu)
     {
-        MoveForw = _w;
-        MoveBack = _s;
-        MoveLeft = _a;
-        MoveRigh = _d;
-        KeyJump = _jump;
-        KeyFire = _fire;
+        m_KeySettings[0] = _w;
+        m_KeySettings[1] = _s;
+        m_KeySettings[2] = _a;
+        m_KeySettings[3] = _d;
+
+        m_KeySettings[4] = _jump;
+        m_KeySettings[5] = _fire;
+        m_KeySettings[6] = _reset;
+        m_KeySettings[7] = _menu;
     }
+
     public void ApplySettings()
     {
+        SaveData();
         Screen.SetResolution(iResWidth, iResHeight, false);
         AudioListener.volume = (fVolume * 0.01f);
     }
@@ -196,13 +207,14 @@ public class GameSettings : MonoBehaviour {
 [Serializable]
 class PlayerData
 {
-	public string LoadLevelUrl;
+	public int LoadLevelInt;
 	public float Volume;
 	public float FOV;
 	public bool Music;
 	public bool Effects;
 	public int RWidth;
 	public int RHeight;
+    public List<KeyCode> Keys;
 }
 
 
