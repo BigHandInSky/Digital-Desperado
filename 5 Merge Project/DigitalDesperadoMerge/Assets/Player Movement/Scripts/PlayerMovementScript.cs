@@ -8,13 +8,15 @@ public class PlayerMovementScript : MonoBehaviour
     float fMouseVRot;
 
     // Movement speed
-    public float fPlayerBaseSpeed;
-    float fPlayerSideSpeedPercent = 80;
-    float fPlayerBackSpeedPercent = 60;
+    public float fPlayerBaseSpeed = 12.5f;
+    int iPlayerSideSpeedPercent = 80;
+    int iPlayerBackSpeedPercent = 60;
 
     // Movement/Camera Enabled bools
-    [SerializeField] private bool bIsMovementEnabled = true;
-    [SerializeField] private bool bIsCameraEnabled = true;
+    [SerializeField]
+    private bool bIsMovementEnabled = true;
+    [SerializeField]
+    private bool bIsCameraEnabled = true;
 
     // Axes float
     float fHorizontal;
@@ -25,10 +27,11 @@ public class PlayerMovementScript : MonoBehaviour
     float fMouseClampRange = 40;
 
     // Jumping floats
-    public float fJumpHeight;
+    public float fJumpHeight = 7.5f;
     float fJumpSpeedPercent = 80.0f;
 
-    // Artificial gravity float
+    // Artificial gravity floats
+    public float fFallSpeed = -13.81f;
     float fVerticalVelocity;
 
     // Gets character controller
@@ -46,7 +49,7 @@ public class PlayerMovementScript : MonoBehaviour
         else
             AllowControls(false, true);
     }
-    
+
     void FixedUpdate()
     {
         if (bIsCameraEnabled)
@@ -91,17 +94,17 @@ public class PlayerMovementScript : MonoBehaviour
     {
         // Horizontal and vertical movement axes and speeds
         fVertical = Input.GetAxis("Vertical") * fPlayerBaseSpeed;
-        fHorizontal = Input.GetAxis("Horizontal") * fPlayerBaseSpeed / 100 * fPlayerSideSpeedPercent;
+        fHorizontal = Input.GetAxis("Horizontal") * fPlayerBaseSpeed / 100 * iPlayerSideSpeedPercent;
 
         // If player moving backwards
         if (fVertical <= -0.1f)
         {
             // Change speed
-            fVertical = fVertical / 100 * fPlayerBackSpeedPercent;
+            fVertical = fVertical / 100 * iPlayerBackSpeedPercent;
         }
 
         // If player is in air change speed
-        if(!ccPlayerController.isGrounded)
+        if (!ccPlayerController.isGrounded)
         {
             fVertical = fVertical / 100 * fJumpSpeedPercent;
             fHorizontal = fHorizontal / 100 * fJumpSpeedPercent;
@@ -122,7 +125,7 @@ public class PlayerMovementScript : MonoBehaviour
         //Debug.Log("Is player on ground: " + ccPlayerController.isGrounded);
 
         // Increases fall speed over time
-        fVerticalVelocity += Physics.gravity.y * 5 * Time.deltaTime;
+        fVerticalVelocity += fFallSpeed * Time.deltaTime;
 
         // When spacebar and on floor is true
         if (Input.GetKey(KeyCode.Space) && ccPlayerController.isGrounded)
@@ -134,7 +137,7 @@ public class PlayerMovementScript : MonoBehaviour
         // Resets fall speed if already on ground
         else if (ccPlayerController.isGrounded)
         {
-            fVerticalVelocity = 0;
+            fVerticalVelocity = fFallSpeed;
         }
     }
 
@@ -142,29 +145,37 @@ public class PlayerMovementScript : MonoBehaviour
     void HeadBobbing()
     {
         // Calls movement animations
-        // If player movement detected
-        if (fHorizontal != 0f || fVertical != 0f)
+        // If player is off ground or is idle
+        if (!ccPlayerController.isGrounded || fVertical == 0f && fHorizontal == 0f)
         {
-            // And off ground
-            if (ccPlayerController.isGrounded)
-            {
-                SetAnimation(true);
-            }
-            else
-            {
-                SetAnimation(false);
-            }
+            SetAnimation(false, false, 0);
         }
-        // Else if player is off ground or is idle
-        else if (ccPlayerController.isGrounded == false || fHorizontal == 0f || fVertical == 0f)
+        else if (ccPlayerController.isGrounded)
         {
-            SetAnimation(false);
+            // Else player movement detected
+            if (fVertical != 0f)
+            {
+                // And off ground
+                // Forwards
+                SetAnimation(true, true, 0);
+            }
+            else if (fHorizontal != 0f)
+            {
+                // Left
+                if (fHorizontal <= -0.1f)
+                    SetAnimation(true, false, 1);
+                // Right
+                else if (fHorizontal >= 0.1f)
+                    SetAnimation(true, false, 2);
+            }
         }
     }
 
     //start/stop animation
-    void SetAnimation(bool _value)
+    void SetAnimation(bool _moveValue, bool _forwardValue, int _sideValue)
     {
-        GOCamera.GetComponent<Animator>().SetBool("bIsMoving", _value);
+        GOCamera.GetComponent<Animator>().SetBool("bIsMoving", _moveValue);
+        GOCamera.GetComponent<Animator>().SetBool("bIsForward", _forwardValue);
+        GOCamera.GetComponent<Animator>().SetInteger("iSidewaysValue", _sideValue);
     }
 }
