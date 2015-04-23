@@ -125,8 +125,14 @@ public class GameSettings : MonoBehaviour {
 
     private KeyCode KeyJump = KeyCode.Space;
     private KeyCode KeyFire = KeyCode.Mouse0;
+    private KeyCode KeyReset = KeyCode.R;
+    private KeyCode KeyMenu = KeyCode.T;
     public KeyCode Jump { get { return KeyJump; } }
     public KeyCode Fire { get { return KeyFire; } }
+    public KeyCode Rset { get { return KeyReset; } }
+    public KeyCode Menu { get { return KeyMenu; } }
+
+    public KeyCode HARD_EXIT { get { return KeyCode.Escape; } }
 
     private List<string> m_LoadedUrls = new List<string>();
     public string LoadLevelUrl { get { return m_LoadedUrls[m_LoadedLevelInt]; } }

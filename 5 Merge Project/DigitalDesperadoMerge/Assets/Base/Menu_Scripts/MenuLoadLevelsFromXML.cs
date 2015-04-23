@@ -21,6 +21,7 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
     }
 
     private string sDefaultFolderPath;
+    public string sLevelsFolderUrl { get { return sDefaultFolderPath; } }
     string sFileType = ".xml";
 
     public enum MapDataObjType
@@ -40,7 +41,6 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
     }
 
     [SerializeField] private DirectoryInfo FolderInfo;
-    public string sLevelsFolderUrl = "";
     [SerializeField] private List<string> FileUrls;
     public List<string> Urls { get { return FileUrls; } }
     [SerializeField] private List<string> FileNames;
@@ -56,32 +56,15 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
     {
         m_DataInstance = this;
 
-        sDefaultFolderPath = Application.dataPath + "/XML";
+        sDefaultFolderPath = Application.dataPath + "/StreamingAssets/XML";
 
-        GetFolder(sDefaultFolderPath);
+        GetFolder();
     }
 
-    public void GetFolder(string _folder)
+    public void GetFolder()
     {
-        if (CheckUrl(_folder, false))
-        {
-            //if folder url checks out
-            FolderInfo = new DirectoryInfo(_folder);
-            sLevelsFolderUrl = _folder;
-        }
-        else
-        {
-            //else check failed, so first check if last url held isnt empty, in that we have a url, and have folder info
-            //in which case, dont do anything else and stick with it
-            if (CheckUrl(sLevelsFolderUrl, false) && FolderInfo.Exists)
-                return;
-
-            //else use default path
-            FolderInfo = new DirectoryInfo(sDefaultFolderPath);
-            sLevelsFolderUrl = sDefaultFolderPath;
-            Debug.LogError("FolderPath not assigned/is null, using default, assigning default as url");
-        }
-
+        FolderInfo = new DirectoryInfo(sDefaultFolderPath);
+        
         if (FolderInfo != null)
         {
             FileInfo[] infos = FolderInfo.GetFiles("*.xml");
@@ -90,10 +73,6 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
 
             foreach (FileInfo obj in infos)
             {
-                /*Debug.Log("FileInfo name : " + obj.Name);
-                Debug.Log("FileInfo name through path : " + Path.GetFileNameWithoutExtension(obj.Name));
-                Debug.Log("FileInfo full name : " + obj.FullName);*/
-
                 FileUrls.Add(obj.FullName);
                 FileNames.Add(Path.GetFileNameWithoutExtension(obj.Name));
             }

@@ -10,7 +10,7 @@ public class LoadFromFirstLevelScript : MonoBehaviour {
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(0.1f);
-        Application.LoadLevel("Main");
+        yield return new WaitForEndOfFrame();
+        Application.LoadLevelAsync("Main");
     }
 }

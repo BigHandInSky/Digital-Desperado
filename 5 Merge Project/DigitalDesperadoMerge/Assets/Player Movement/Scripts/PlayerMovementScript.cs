@@ -5,34 +5,34 @@ using UnityEngine.UI;
 public class PlayerMovementScript : MonoBehaviour
 {
     // Mouse rotation float
-    float fMouseVRot;
+    private float fMouseVRot;
 
     // Movement speed
-    public float fPlayerBaseSpeed = 12.5f;
-    int iPlayerSideSpeedPercent = 80;
-    int iPlayerBackSpeedPercent = 60;
+    private float fPlayerBaseSpeed = 13f;
+    private int iPlayerSideSpeedPercent = 70;
+    private int iPlayerBackSpeedPercent = 55;
 
     // Movement/Camera Enabled bools
-    [SerializeField]
     private bool bIsMovementEnabled = true;
-    [SerializeField]
     private bool bIsCameraEnabled = true;
 
     // Axes float
-    float fHorizontal;
-    float fVertical;
+    private float fHorizontal;
+    private float fVertical;
 
     // Mouse settings
-    float fMouseSensitivity = 5;
-    float fMouseClampRange = 40;
+    private float fMouseSensitivity = 5;
+    private float fMouseClampRange = 59;
 
     // Jumping floats
-    public float fJumpHeight = 7.5f;
-    float fJumpSpeedPercent = 80.0f;
+    private float fJumpHeight = 14f;
+    private float fJumpSpeedPercent = 80.0f;
+    private bool bHasJumped = false;
 
     // Artificial gravity floats
-    public float fFallSpeed = -13.81f;
-    float fVerticalVelocity;
+    private float fJumpGrav = -15.5f;
+    private float fFallGrav = -11.5f;
+    private float fVerticalVelocity;
 
     // Gets character controller
     public CharacterController ccPlayerController;
@@ -61,11 +61,11 @@ public class PlayerMovementScript : MonoBehaviour
             PlayerJump();
         }
 
-        if (bIsCameraEnabled && bIsMovementEnabled)
-            HeadBobbing();
+        //if (bIsCameraEnabled && bIsMovementEnabled)
+            //HeadBobbing();
 
-        if (Input.GetKey(ExitToMenu))
-            Application.LoadLevel("Main");
+        //if (Input.GetKey(ExitToMenu))
+            //Application.LoadLevel("Main");
     }
 
     public void AllowControls(bool _MoveVal, bool _CamVal)
@@ -111,6 +111,9 @@ public class PlayerMovementScript : MonoBehaviour
         }
 
         // Applies movement to vectors
+        if (fVerticalVelocity <= fFallGrav)
+            fVerticalVelocity = fFallGrav;
+
         Vector3 v3Velocity = new Vector3(fHorizontal, fVerticalVelocity, fVertical);
 
         v3Velocity = transform.rotation * v3Velocity;
@@ -125,19 +128,26 @@ public class PlayerMovementScript : MonoBehaviour
         //Debug.Log("Is player on ground: " + ccPlayerController.isGrounded);
 
         // Increases fall speed over time
-        fVerticalVelocity += fFallSpeed * Time.deltaTime;
+        if (fVerticalVelocity <= 15f)
+            fVerticalVelocity += fJumpGrav * Time.deltaTime;
 
         // When spacebar and on floor is true
-        if (Input.GetKey(KeyCode.Space) && ccPlayerController.isGrounded)
+        if (Input.GetKey(KeyCode.Space) && ccPlayerController.isGrounded && !bHasJumped)
         {
             // Revereses gravity for jump
             fVerticalVelocity = fJumpHeight;
-            //Debug.Log("Jumping");
+            bHasJumped = true;
+        }
+        else if (Input.GetKey(KeyCode.Space) && !ccPlayerController.isGrounded && !bHasJumped)
+        {
+            fVerticalVelocity = fJumpHeight;
+            bHasJumped = true;
         }
         // Resets fall speed if already on ground
         else if (ccPlayerController.isGrounded)
         {
-            fVerticalVelocity = fFallSpeed;
+            bHasJumped = false;
+            fVerticalVelocity = fJumpGrav;
         }
     }
 
