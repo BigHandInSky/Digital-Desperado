@@ -7,7 +7,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // Manages the loading and creation of levels
-
 public class CreateLevel : MonoBehaviour 
 {
     // File Path (Minus Filename)
@@ -46,6 +45,9 @@ public class CreateLevel : MonoBehaviour
 
     [SerializeField]
     Text levelTitleText;
+
+    [SerializeField]
+    SelectObject objectSelecter;
 
     // Number of targets in a level
     int iTargets = 0;
@@ -302,11 +304,15 @@ public class CreateLevel : MonoBehaviour
     {
         GameObject target = (GameObject)Instantiate(agoTargetPrefabs[0], Vector3.zero, Quaternion.identity);
         target.transform.parent = tLevelRootObject.transform;
+
+        objectSelecter.SelectNewObject(target);
     }
 
     public void CreateTower()
     {
         GameObject tower = (GameObject)Instantiate(goTowerPrefab, Vector3.zero, Quaternion.identity);
         tower.transform.parent = tLevelRootObject.transform;
+
+        objectSelecter.SelectNewObject(tower);
     }
 }

@@ -16,6 +16,8 @@ public class SelectObject : MonoBehaviour
 
     [SerializeField]
     GameObject goEditObjectPanel;
+    [SerializeField]
+    TooltipFunctions tooltipFunctions;
 
     public GameObject ObjectSelected
     {
@@ -34,49 +36,39 @@ public class SelectObject : MonoBehaviour
     //IEnumerator UpdateClick()
     void Update()
     {
-        //print("Start Running");
+        if (Input.GetMouseButtonDown(0))
+        {
+            print("Click");
 
-        //while (true)
-        //{
-            if (Input.GetMouseButtonDown(0))
+            Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            Physics.Raycast(mouseRay, out hit, 100000, collisionMask);
+
+            if (hit.collider != null)
             {
-                print("Click");
-
-                RaycastHit hit;
-
-                Physics.Raycast(levelCamera.transform.position, levelCamera.ScreenToWorldPoint(Input.mousePosition),
-                    out hit, 100000, collisionMask);
-
-                if (hit.collider != null)
-                {
-                    DeselectObject();
-                    SelectNewObject(hit.collider.gameObject);
-                }
-                else
-                {
-                    DeselectObject();
-                }
+                SelectNewObject(hit.collider.gameObject);
             }
-
-            //yield return new WaitForEndOfFrame();
-        //}
+        }
     }
 
-    private void SelectNewObject(GameObject clickedObject)
+    public void SelectNewObject(GameObject clickedObject)
     {
-        print("Select");
+        print("Select Object");
         print(clickedObject);
 
-        Renderer objectRenderer = goSelectedObject.GetComponent<MeshRenderer>();
-
+        DeselectObject();
         goSelectedObject = clickedObject;
+
+        Renderer objectRenderer = goSelectedObject.GetComponent<Renderer>();
         mObjectOriginalMaterial = objectRenderer.material;
         objectRenderer.material = mSelectMaterial;
 
         goEditObjectPanel.SetActive(true);
+        tooltipFunctions.UpdateTextFields();
     }
 
-    private void DeselectObject()
+    public void DeselectObject()
     {
         print("Deselect Object");
 
