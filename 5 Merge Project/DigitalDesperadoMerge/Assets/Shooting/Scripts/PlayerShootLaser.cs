@@ -8,8 +8,6 @@ public class PlayerShootLaser : MonoBehaviour {
 	//Prefabs of the laser object
 	public GameObject prefabLaser;
     public GameObject gunMuzzle;
-	//Layermask for the raycast, not sure if we are going to use it
-	public LayerMask layerMask;
 	//Audio clip
 	public AudioClip gunShot;
 	//Damage value of the laser
@@ -20,7 +18,7 @@ public class PlayerShootLaser : MonoBehaviour {
 	//Use to delay shooting sequence
 	public float fShootTimer = 0.0f;
 
-
+	public GameObject prefabBulletTrigger;
 	public GameObject prefabBullet;
 
     void OnLevelWasLoaded(int level)
@@ -46,7 +44,7 @@ public class PlayerShootLaser : MonoBehaviour {
 		if (Input.GetMouseButtonDown (0) && bCanShoot)
 			vShoot ();
 	}
-
+	
 	public void vShoot()
 	{
 		//if script timer reaches 0, allow the player to use the mouse click
@@ -59,63 +57,26 @@ public class PlayerShootLaser : MonoBehaviour {
 			laser.GetComponent<LaserScript> ().V3startPosition = laser.transform.position;
 			laser.GetComponent<LaserScript> ().V3endPosition = Camera.main.transform.position + Camera.main.transform.forward * 100;
 
-			GameObject bullet = (GameObject)Instantiate(prefabBullet, Camera.main.transform.position, Quaternion.identity);
+			GameObject bullet = (GameObject)Instantiate(prefabBullet, Camera.main.transform.position + Camera.main.transform.forward, Quaternion.identity);
 			bullet.GetComponent<Rigidbody>().velocity = Camera.main.transform.forward * 120;
 
-			/*
-			 * 
-			RaycastHit[] hits;
-			hits = Physics.RaycastAll (Camera.main.transform.position, laser.GetComponent<LaserScript> ().V3endPosition, 500f);
-			int i = 0;
-			while (i < hits.Length) {
-				RaycastHit hit = hits[i];
-				Debug.Log(hit.transform.gameObject.name);
-				if (hit.transform.GetComponent<TargetFragmentation> ()) {
-					hit.transform.GetComponent<TargetFragmentation> ().vExplode ();
-				}
-				i++;
-			}
+			//trigger object
+			GameObject triggerEffect = (GameObject)Instantiate(prefabBulletTrigger, Camera.main.transform.position, Quaternion.identity);
+			triggerEffect.GetComponent<Rigidbody>().velocity = Camera.main.transform.forward * 120;
 
-			hits = Physics.RaycastAll (Camera.main.transform.position - Camera.main.transform.right * range, laser.GetComponent<LaserScript> ().V3endPosition - Camera.main.transform.right * range, 500f);
-			i = 0;
-			while (i < hits.Length) {
-				RaycastHit hit = hits[i];
-				if (hit.transform.GetComponent<TargetFragmentation> ()) {
-					hit.transform.GetComponent<TargetFragmentation> ().vExplode ();
-				}
-				i++;
-			}
-
-			hits = Physics.RaycastAll (Camera.main.transform.position + Camera.main.transform.right * range, laser.GetComponent<LaserScript> ().V3endPosition + Camera.main.transform.right * range, 500f);
-			i = 0;
-			while (i < hits.Length) {
-				RaycastHit hit = hits[i];
-				if (hit.transform.GetComponent<TargetFragmentation> ()) {
-					hit.transform.GetComponent<TargetFragmentation> ().vExplode ();
-				}
-				i++;
-			}
-
-			hits = Physics.RaycastAll (Camera.main.transform.position - Camera.main.transform.up * range, laser.GetComponent<LaserScript> ().V3endPosition - Camera.main.transform.up * range, 500f);
-			i = 0;
-			while (i < hits.Length) {
-				RaycastHit hit = hits[i];
-				if (hit.transform.GetComponent<TargetFragmentation> ()) {
-					hit.transform.GetComponent<TargetFragmentation> ().vExplode ();
-				}
-				i++;
-			}
-
-			hits = Physics.RaycastAll (Camera.main.transform.position + Camera.main.transform.up * range, laser.GetComponent<LaserScript> ().V3endPosition + Camera.main.transform.up * range, 500f);
-			i = 0;
-			while (i < hits.Length) {
-				RaycastHit hit = hits[i];
-				if (hit.transform.GetComponent<TargetFragmentation> ()) {
-					hit.transform.GetComponent<TargetFragmentation> ().vExplode ();
-				}
-				i++;
-			}*/
 			fShootTimer = 0.5f;
+
+			/*RaycastHit hit;
+			int layerMask = (1 << 8 ) | (1 << 3);
+			
+			if (Physics.Raycast (Camera.main.transform.position, laser.GetComponent<LaserScript> ().V3endPosition, out hit, ~layerMask)) 
+			{
+				//if(hit.collider.gameObject.layer == )
+				Debug.Log(hit.collider.gameObject.name);
+				//Vector3 v3 = (hit.point - Camera.main.transform.position).normalized;
+				//GameObject t = Instantiate (test, hit.point + v3, Quaternion.identity) as GameObject;
+			}
+			*/
 		}
 	}
 }

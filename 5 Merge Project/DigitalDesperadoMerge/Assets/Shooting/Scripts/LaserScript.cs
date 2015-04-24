@@ -5,7 +5,7 @@ public class LaserScript : MonoBehaviour {
 
 	public Vector3 V3startPosition;
 	public Vector3 V3endPosition;
-	public float fSize = 3;
+	public float fSize = 5;
 
 	private LineRenderer lineRenderer;
 
