@@ -44,7 +44,7 @@ public class PlayerMovementScript : MonoBehaviour
 
     void OnLevelWasLoaded(int level)
     {
-        if (Application.loadedLevelName.Contains("Tutorial"))
+        if (Application.loadedLevelName.Contains("Tutorial") || Application.loadedLevelName.Contains("Sandbox"))
             AllowControls(true, true);
         else
             AllowControls(false, true);

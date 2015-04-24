@@ -34,7 +34,8 @@ public class Catcher : MonoBehaviour {
             DestroyObject(_obj);
         else
         {
-            GameData.Instance.Fell();
+            if (GameData.Instance)
+                GameData.Instance.Fell();
             _obj.transform.position = tPlayerStartPosition.position;
             _obj.transform.rotation = tPlayerStartPosition.rotation;
         }
