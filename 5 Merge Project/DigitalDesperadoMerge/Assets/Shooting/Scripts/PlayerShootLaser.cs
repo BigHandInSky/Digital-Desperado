@@ -23,7 +23,7 @@ public class PlayerShootLaser : MonoBehaviour {
 
     void OnLevelWasLoaded(int level)
     {
-        if (Application.loadedLevelName.Contains("Tutorial"))
+        if (Application.loadedLevelName.Contains("Tutorial") || Application.loadedLevelName.Contains("Sandbox"))
             bCanShoot = true;
         else
             bCanShoot = false;

@@ -11,6 +11,22 @@ public class OptionsSoundBtn : MonoBehaviour {
     [SerializeField] private Sprite ImgOn;
     [SerializeField] private Sprite ImgOff;
 
+    public void Setup()
+    {
+        Debug.Log("setup called");
+        if (bMusic)
+        {
+            bOn = GameSettings.Instance.Music;
+        }
+        else
+            bOn = GameSettings.Instance.Effects;
+
+        if (bOn)
+            ImgToChange.sprite = ImgOn;
+        else
+            ImgToChange.sprite = ImgOff;
+    }
+
     public void BtnClick()
     {
         bOn = !bOn;

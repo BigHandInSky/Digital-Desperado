@@ -93,17 +93,16 @@ public class CameraTransitionScript : MonoBehaviour {
         {
             //levels
             LoadedLevels.Instance.vUpdateData();
-
-            if (MenuLoadLevelsFromXML.Instance.Urls.Count < 1)
-                FolderUIControl.Instance.OpenFolderUI();
         }
         else if(_dir == 2)
         {
             //options
+            OptionsSetter.Instance.SetOptions();
         }
-        else if(_dir == 3)
+        else if(_dir == 4)
         {
             //controls
+            ControlsSetter.Instance.SetControls();
         }
     }
 }
