@@ -2,26 +2,27 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class OptionsFovSlider : MonoBehaviour 
+public class OptionsSensSlider : MonoBehaviour
 {
     [SerializeField] private Text TextObject;
     [SerializeField] private Slider SlideObj;
-    [SerializeField] private float Value = 90f;
-    public float FOVValue { get { return Value; } }
+    [SerializeField]
+    private float Value;
+    public float SensValue { get { return Value; } }
 
     public void Setup()
     {
         Debug.Log("setup called");
-        Value = GameSettings.Instance.FOV;
+        Value = GameSettings.Instance.Sens;
         SlideObj.value = Value;
         TextObject.text = (SlideObj.value.ToString());
     }
 
     public void SetText()
     {
-        TextObject.text = (SlideObj.value).ToString();
+        TextObject.text = (SlideObj.value.ToString());
         Value = SlideObj.value;
-        GameSettings.Instance.SetFOV(Value);
+        GameSettings.Instance.SetSens(Value);
     }
     public void Reset(float _val)
     {

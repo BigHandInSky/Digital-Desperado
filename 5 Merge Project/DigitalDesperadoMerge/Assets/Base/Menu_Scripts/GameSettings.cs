@@ -18,6 +18,7 @@ public class GameSettings : MonoBehaviour {
         }
     }
 
+    public bool bDebug = false;
     void Awake()
     {
         m_KeySettings.Add(KeyCode.W);
@@ -29,6 +30,9 @@ public class GameSettings : MonoBehaviour {
         m_KeySettings.Add(KeyCode.Mouse0);
         m_KeySettings.Add(KeyCode.R);
         m_KeySettings.Add(KeyCode.Y);
+
+        if (bDebug)
+            SaveData();
 
         m_DataInstance = this;
         DontDestroyOnLoad(this.gameObject);
@@ -83,6 +87,7 @@ public class GameSettings : MonoBehaviour {
 		data.Effects = Effects;
 		data.Volume = Volume;
 		data.Music = Music;
+        data.Sens = fSens;
 		data.FOV = FOV;
 		data.RHeight = RHeight;
 		data.RWidth = RWidth;
@@ -106,6 +111,7 @@ public class GameSettings : MonoBehaviour {
             SetLevelUrl(data.LoadLevelInt);
 			SetVolume(data.Volume);
             SetFOV(data.FOV);
+            SetSens(data.Sens);
             m_KeySettings = data.Keys;
 
 			Effects = data.Effects;
@@ -122,6 +128,8 @@ public class GameSettings : MonoBehaviour {
     public float Volume { get { return fVolume; } }
     private float fFOV = 90f;
     public float FOV { get { return fFOV; } }
+    private float fSens = 5f;
+    public float Sens { get { return fSens; } }
 
     private int iResWidth = 800;
     public int RWidth { get { return iResWidth; } }
@@ -129,15 +137,16 @@ public class GameSettings : MonoBehaviour {
     public int RHeight { get { return iResHeight; } }
 
     private List<KeyCode> m_KeySettings = new List<KeyCode>();
+    public List<KeyCode> CurrentKeySettings { get { return m_KeySettings; } }
     #region KeyReturns
-    public KeyCode Forw { get { return m_KeySettings[0]; } }
-    public KeyCode Back { get { return m_KeySettings[1]; } }
-    public KeyCode Left { get { return m_KeySettings[2]; } }
-    public KeyCode Righ { get { return m_KeySettings[3]; } }
-    public KeyCode Jump { get { return m_KeySettings[4]; } }
-    public KeyCode Fire { get { return m_KeySettings[5]; } }
-    public KeyCode Rset { get { return m_KeySettings[6]; } }
-    public KeyCode Menu { get { return m_KeySettings[7]; } }
+    public KeyCode Forw { get { return m_KeySettings[0]; } set { m_KeySettings[0] = value; } }
+    public KeyCode Back { get { return m_KeySettings[1]; } set { m_KeySettings[1] = value; } }
+    public KeyCode Left { get { return m_KeySettings[2]; } set { m_KeySettings[2] = value; } }
+    public KeyCode Righ { get { return m_KeySettings[3]; } set { m_KeySettings[3] = value; } }
+    public KeyCode Jump { get { return m_KeySettings[4]; } set { m_KeySettings[4] = value; } }
+    public KeyCode Fire { get { return m_KeySettings[5]; } set { m_KeySettings[5] = value; } }
+    public KeyCode Rset { get { return m_KeySettings[6]; } set { m_KeySettings[6] = value; } }
+    public KeyCode Menu { get { return m_KeySettings[7]; } set { m_KeySettings[7] = value; } }
     public KeyCode HARD_EXIT { get { return KeyCode.Escape; } }
     #endregion
 
@@ -179,17 +188,9 @@ public class GameSettings : MonoBehaviour {
     {
         fFOV = _Val;
     }
-    public void SetControls(KeyCode _w, KeyCode _s, KeyCode _a, KeyCode _d, KeyCode _jump, KeyCode _fire, KeyCode _reset, KeyCode _menu)
+    public void SetSens(float _val)
     {
-        m_KeySettings[0] = _w;
-        m_KeySettings[1] = _s;
-        m_KeySettings[2] = _a;
-        m_KeySettings[3] = _d;
-
-        m_KeySettings[4] = _jump;
-        m_KeySettings[5] = _fire;
-        m_KeySettings[6] = _reset;
-        m_KeySettings[7] = _menu;
+        fSens = _val;
     }
 
     public void ApplySettings()
@@ -197,6 +198,10 @@ public class GameSettings : MonoBehaviour {
         SaveData();
         Screen.SetResolution(iResWidth, iResHeight, false);
         AudioListener.volume = (fVolume * 0.01f);
+    }
+    public void ApplyControls()
+    {
+        SaveData();
     }
     public void ApplyFOV()
     {
@@ -210,6 +215,7 @@ class PlayerData
 	public int LoadLevelInt;
 	public float Volume;
 	public float FOV;
+    public float Sens;
 	public bool Music;
 	public bool Effects;
 	public int RWidth;

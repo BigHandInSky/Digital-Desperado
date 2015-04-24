@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class OptionsSetter : MonoBehaviour {
 
@@ -13,10 +14,8 @@ public class OptionsSetter : MonoBehaviour {
         }
     }
 
-    [SerializeField] private OptionsFovSlider ObjFOV;
-    [SerializeField] private OptionsVolSlider ObjVol;
-    [SerializeField] private OptionsSoundBtn ObjMus;
-    [SerializeField] private OptionsSoundBtn ObjEff;
+    [SerializeField]
+    private List<GameObject> OptionObjects = new List<GameObject>();
 
     void Awake()
     {
@@ -25,11 +24,8 @@ public class OptionsSetter : MonoBehaviour {
 
     public void SetOptions()
     {
-        Debug.Log("SetOptions called");
-        ObjFOV.Setup();
-        ObjVol.Setup();
-        ObjMus.Setup();
-        ObjEff.Setup();
+        foreach (GameObject _obj in OptionObjects)
+            _obj.SendMessage("Setup");
     }
 
 }

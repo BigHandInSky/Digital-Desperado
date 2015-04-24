@@ -14,6 +14,7 @@ public class OptionsVolSlider : MonoBehaviour
         Debug.Log("setup called");
         Value = GameSettings.Instance.Volume;
         SlideObj.value = Value;
+        TextObject.text = (SlideObj.value.ToString());
     }
 
     public void SetText()
