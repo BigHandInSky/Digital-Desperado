@@ -65,10 +65,6 @@ public class PlayerShootLaser : MonoBehaviour {
 			GameObject bullet = (GameObject)Instantiate(prefabBullet, Camera.main.transform.position + Camera.main.transform.forward, Quaternion.identity);
 			bullet.GetComponent<Rigidbody>().velocity = Camera.main.transform.forward * 120;
 
-			//trigger object
-			GameObject triggerEffect = (GameObject)Instantiate(prefabBulletTrigger, Camera.main.transform.position, Quaternion.identity);
-			triggerEffect.GetComponent<Rigidbody>().velocity = Camera.main.transform.forward * 120;
-
 			fShootTimer = 0.5f;
 
 			RaycastHit hit;
@@ -85,17 +81,18 @@ public class PlayerShootLaser : MonoBehaviour {
 				}
 			}
 
-			if (Physics.Raycast (Camera.main.transform.position + Camera.main.transform.forward, Camera.main.transform.forward, out hit, 500f, layerMaskPlayer)) 
+			if (Physics.Raycast (Camera.main.transform.position + Camera.main.transform.forward * 3, Camera.main.transform.forward, out hit, 500f, layerMaskPlayer)) 
 			{
-				if(hit.collider.gameObject.tag == "Effect")
+				Debug.Log (hit.collider.gameObject.name);
+				if(hit.collider.gameObject.tag == "Fragment")
 				{
-					GameObject frag = Instantiate (platformFrag, transform.position, Quaternion.identity) as GameObject;
+					GameObject frag = Instantiate (platformFrag, hit.point, Quaternion.identity) as GameObject;
 					foreach(Transform child in frag.transform)
 					{
 						if(child.gameObject.GetComponent<Renderer>() && hit.collider.gameObject.GetComponent<Renderer>())
 							child.gameObject.GetComponent<Renderer>().material = hit.collider.gameObject.GetComponent<Renderer>().material;
 					}
-					Destroy (gameObject);
+					Destroy (hit.collider.gameObject);
 				}
 			}
 		}
