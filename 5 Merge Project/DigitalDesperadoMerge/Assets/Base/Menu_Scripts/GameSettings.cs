@@ -151,21 +151,52 @@ public class GameSettings : MonoBehaviour {
     #endregion
 
     private List<string> m_LoadedUrls = new List<string>();
-    public string LoadLevelUrl { get { return m_LoadedUrls[m_LoadedLevelInt]; } }
+    public string LoadLevelUrl 
+    { 
+        get
+        {
+            if (m_LoadedLevelInt < m_LoadedUrls.Count && m_LoadedLevelInt > -1)
+                return m_LoadedUrls[m_LoadedLevelInt];
+            else
+            {
+                Debug.LogWarning("GameSettings was given an int greater than url array");
+                return m_LoadedUrls[0];
+            }
+        } 
+    }
     public string LoadLevelName
     {
         get
         {
             string _temp = m_LoadedUrls[m_LoadedLevelInt];
             _temp = _temp.Split('\\')[_temp.Split('\\').Length - 1];
+
             int _index = _temp.IndexOf(".");
-            _temp.Remove(_index, 4);
+            if (_index >= 0)
+                _temp = _temp.Substring(_index, _temp.Length - _index);
+
+            Debug.Log("GameSettings returning new LoadLevelName: Orig: " + m_LoadedUrls[m_LoadedLevelInt]
+                + ", New: " + _temp);
             return _temp;
         }
     }
 
     private int m_LoadedLevelInt = 0;
-    public int LevelInt { get { return m_LoadedLevelInt; } set { m_LoadedLevelInt = value; } }
+    public int LevelInt 
+    { 
+        get { return m_LoadedLevelInt; } 
+        set 
+        {
+            if (m_LoadedLevelInt < m_LoadedUrls.Count
+                && m_LoadedLevelInt > -1)
+                m_LoadedLevelInt = value; 
+            else
+            {
+                Debug.LogWarning("GameSettings was given an int greater than url array");
+                m_LoadedLevelInt = 0;
+            }
+        } 
+    }
 
     public void SetLevelUrl(int _index)
     {

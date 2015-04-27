@@ -1,0 +1,11 @@
+digdes level design rules:
+
+1 - The player must see the end tower in their centre of vision when starting a level
+2 - The path to the end tower must be discernibile from the start (e.g. have towers dotting obstructed corners)
+3 - Levels must be at least 10 seconds long
+4 - The first Target must show what level of difficulty the level is:
+	Easy 		- in plain view
+	Medium 	- Obstructed but at least half is visible
+	Hard 		- Mostly obstructed
+	Puzzle		- Hidden from player starting area
+5 - Levels must have a X by X wide starting area around the player

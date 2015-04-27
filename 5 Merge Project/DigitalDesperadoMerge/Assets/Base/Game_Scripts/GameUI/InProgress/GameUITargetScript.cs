@@ -24,9 +24,11 @@ public class GameUITargetScript : MonoBehaviour {
         else
             _num = (GameData.Instance.iTargsTtl - GameData.Instance.iTargsLft);
 
-        if (_num != 0 || _num != iLastNum)
+        if (_num == iLastNum)
+            return;
+
+        if (_num != 0)
         {
-            //for now, delete objects and clear list
             foreach (GameObject obj in m_TargetUIs)
             {
                 DestroyObject(obj);
