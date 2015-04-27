@@ -81,9 +81,8 @@ public class PlayerShootLaser : MonoBehaviour {
 				}
 			}
 
-			if (Physics.Raycast (Camera.main.transform.position + Camera.main.transform.forward * 3, Camera.main.transform.forward, out hit, 500f, layerMaskPlayer)) 
+			if (Physics.Raycast (Camera.main.transform.position + Camera.main.transform.forward * 1.0f, Camera.main.transform.forward, out hit, 500f, layerMaskPlayer)) 
 			{
-				Debug.Log (hit.collider.gameObject.name);
 				if(hit.collider.gameObject.tag == "Fragment")
 				{
 					GameObject frag = Instantiate (platformFrag, hit.point, Quaternion.identity) as GameObject;
