@@ -74,14 +74,16 @@ public class GameData : MonoBehaviour {
 
     void vUpdateTargetUIs()
     {
-        if(!m_UITargetsLeft)
+        if(!m_UITargetsLeft && !Application.loadedLevelName.Contains("Tutorial"))
         {
             Debug.LogError("No Target UI objs set");
             return;
         }
-        
-        m_UITargetsLeft.vSetNumberOfImages();
-        m_UITargetsShot.vSetNumberOfImages();
+        else
+        {
+            m_UITargetsLeft.vSetNumberOfImages();
+            m_UITargetsShot.vSetNumberOfImages();
+        }        
     }
 
     public void TargetShot()

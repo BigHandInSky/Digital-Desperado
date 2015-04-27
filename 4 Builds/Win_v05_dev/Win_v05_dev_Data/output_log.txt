@@ -14,7 +14,7 @@ Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wi
 Loading C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v05_dev\Win_v05_dev_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v05_dev\Win_v05_dev_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v05_dev\Win_v05_dev_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.132 seconds
+- Completed reload, in  0.221 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
@@ -23,9 +23,9 @@ Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wi
 Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v05_dev\Win_v05_dev_Data\Managed\System.Xml.dll (this message is harmless)
 Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v05_dev\Win_v05_dev_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 6a0 -> priority: 1 
+  Thread -> id: 1654 -> priority: 1 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 9.087120 ms
+UnloadTime: 8.546319 ms
 GameSettings SaveData persistent path: C:/Users/Peter/AppData/LocalLow/University Of Bedfordshire/Digital Desperado
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
@@ -38,7 +38,7 @@ System memory in use before: 206.5 MB.
 System memory in use after: 206.6 MB.
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 1888.
-Total: 1.895491 ms (FindLiveObjects: 0.200296 ms CreateObjectMapping: 0.107964 ms MarkObjects: 1.559871 ms  DeleteObjects: 0.024914 ms)
+Total: 1.967793 ms (FindLiveObjects: 0.190037 ms CreateObjectMapping: 0.134833 ms MarkObjects: 1.604327 ms  DeleteObjects: 0.036151 ms)
 
 setup called
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
@@ -95,55 +95,75 @@ OptionsSetter:SetOptions() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado
  
 (Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Options/OptionsSensSlider.cs Line: 15)
 
-GameSettings SaveData persistent path: C:/Users/Peter/AppData/LocalLow/University Of Bedfordshire/Digital Desperado
+setup called
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-GameSettings:SaveData() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:83)
-GameSettings:ApplySettings() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:198)
-MenuButtonFunctions:vApplySettings() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\MenuButtonFunctions.cs:34)
-UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:110)
-UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:574)
-UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:716)
-UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:53)
-UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
-UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:44)
-UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:52)
-UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:269)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:358)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:249)
-UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:160)
-UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:272)
+OptionsFovSlider:Setup() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsFovSlider.cs:14)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineGameObject.gen.cs:365)
+OptionsSetter:SetOptions() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSetter.cs:28)
+<DoAction>c__Iterator7:MoveNext() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\CameraTransitionScript.cs:100)
  
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 83)
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Options/OptionsFovSlider.cs Line: 14)
 
-GameSettings SaveData persistent path: C:/Users/Peter/AppData/LocalLow/University Of Bedfordshire/Digital Desperado
+setup called
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-GameSettings:SaveData() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:83)
-GameSettings:ApplySettings() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:198)
-MenuButtonFunctions:vApplySettings() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\MenuButtonFunctions.cs:34)
-UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:110)
-UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:574)
-UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:716)
-UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:53)
-UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
-UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:44)
-UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:52)
-UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:269)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:358)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:249)
-UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:160)
-UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:272)
+OptionsVolSlider:Setup() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsVolSlider.cs:14)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineGameObject.gen.cs:365)
+OptionsSetter:SetOptions() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSetter.cs:28)
+<DoAction>c__Iterator7:MoveNext() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\CameraTransitionScript.cs:100)
  
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 83)
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Options/OptionsVolSlider.cs Line: 14)
+
+setup called
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+OptionsSoundBtn:Setup() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSoundBtn.cs:16)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineGameObject.gen.cs:365)
+OptionsSetter:SetOptions() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSetter.cs:28)
+<DoAction>c__Iterator7:MoveNext() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\CameraTransitionScript.cs:100)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Options/OptionsSoundBtn.cs Line: 16)
+
+setup called
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+OptionsSoundBtn:Setup() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSoundBtn.cs:16)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineGameObject.gen.cs:365)
+OptionsSetter:SetOptions() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSetter.cs:28)
+<DoAction>c__Iterator7:MoveNext() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\CameraTransitionScript.cs:100)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Options/OptionsSoundBtn.cs Line: 16)
+
+setup called
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+OptionsSensSlider:Setup() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSensSlider.cs:15)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.GameObject:SendMessage(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineGameObject.gen.cs:365)
+OptionsSetter:SetOptions() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSetter.cs:28)
+<DoAction>c__Iterator7:MoveNext() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\CameraTransitionScript.cs:100)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Options/OptionsSensSlider.cs Line: 15)
 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.941503 ms
-System memory in use before: 207.6 MB.
-System memory in use after: 207.5 MB.
+UnloadTime: 5.033798 ms
+System memory in use before: 207.8 MB.
+System memory in use after: 207.8 MB.
 
-Unloading 82 unused Assets to reduce memory usage. Loaded Objects now: 928.
-Total: 0.739632 ms (FindLiveObjects: 0.091354 ms CreateObjectMapping: 0.039570 ms MarkObjects: 0.489994 ms  DeleteObjects: 0.116269 ms)
+Unloading 88 unused Assets to reduce memory usage. Loaded Objects now: 1154.
+Total: 1.437739 ms (FindLiveObjects: 0.178801 ms CreateObjectMapping: 0.123109 ms MarkObjects: 0.943837 ms  DeleteObjects: 0.187594 ms)
+
+catcher triggered by: Player
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
 
 triggered
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
@@ -153,7 +173,7 @@ TutEndTowOnColliderEnter:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\G
 (Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Other_Scripts/TutEndTowOnColliderEnter.cs Line: 22)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.168578 ms
+UnloadTime: 2.379134 ms
 GameSettings SaveData persistent path: C:/Users/Peter/AppData/LocalLow/University Of Bedfordshire/Digital Desperado
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
@@ -162,9 +182,2228 @@ GameSettings:OnLevelWasLoaded(Int32) (at C:\Users\Peter\Documents\GitHub\Digital
  
 (Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 83)
 
-System memory in use before: 207.7 MB.
-System memory in use after: 207.7 MB.
+System memory in use before: 207.9 MB.
+System memory in use after: 207.9 MB.
 
-Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 1886.
-Total: 1.852989 ms (FindLiveObjects: 0.159260 ms CreateObjectMapping: 0.071813 ms MarkObjects: 1.443113 ms  DeleteObjects: 0.176358 ms)
+Unloading 284 unused Assets to reduce memory usage. Loaded Objects now: 1886.
+Total: 2.603857 ms (FindLiveObjects: 0.222280 ms CreateObjectMapping: 0.109430 ms MarkObjects: 1.707896 ms  DeleteObjects: 0.562296 ms)
+
+GameSettings was given an int greater than url array
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+GameSettings:set_LevelInt(Int32) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:195)
+LoadedLevels:vLoadLevel() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\LoadedLevels.cs:43)
+UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:110)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:574)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:716)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:53)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:44)
+UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:52)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:269)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:358)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:249)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:160)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:272)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 195)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.249258 ms
+System memory in use before: 208.0 MB.
+System memory in use after: 208.0 MB.
+
+Unloading 86 unused Assets to reduce memory usage. Loaded Objects now: 1807.
+Total: 2.720127 ms (FindLiveObjects: 0.302399 ms CreateObjectMapping: 0.212509 ms MarkObjects: 1.996127 ms  DeleteObjects: 0.205182 ms)
+
+catcher triggered by: Untagged
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Effect
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
+
+catcher triggered by: Player
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Catcher:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Game_Scripts\Catcher.cs:21)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Game_Scripts/Catcher.cs Line: 21)
 
