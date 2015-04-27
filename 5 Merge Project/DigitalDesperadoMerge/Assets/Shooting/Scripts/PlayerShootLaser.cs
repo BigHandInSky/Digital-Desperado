@@ -21,6 +21,11 @@ public class PlayerShootLaser : MonoBehaviour {
 	public GameObject prefabBulletTrigger;
 	public GameObject prefabBullet;
 
+	public LayerMask layerMask;
+	public LayerMask layerMaskPlayer;
+
+	public GameObject platformFrag;
+
     void OnLevelWasLoaded(int level)
     {
         if (Application.loadedLevelName.Contains("Tutorial") || Application.loadedLevelName.Contains("Sandbox"))
@@ -66,17 +71,33 @@ public class PlayerShootLaser : MonoBehaviour {
 
 			fShootTimer = 0.5f;
 
-			/*RaycastHit hit;
-			int layerMask = (1 << 8 ) | (1 << 3);
+			RaycastHit hit;
 			
-			if (Physics.Raycast (Camera.main.transform.position, laser.GetComponent<LaserScript> ().V3endPosition, out hit, ~layerMask)) 
+			if (Physics.Raycast (Camera.main.transform.position, Camera.main.transform.forward, out hit, 500f, layerMask)) 
 			{
-				//if(hit.collider.gameObject.layer == )
-				Debug.Log(hit.collider.gameObject.name);
-				//Vector3 v3 = (hit.point - Camera.main.transform.position).normalized;
-				//GameObject t = Instantiate (test, hit.point + v3, Quaternion.identity) as GameObject;
+				//Debug.Log(hit.collider.gameObject.name);
+				Vector3 v3 = (Camera.main.transform.forward).normalized;
+				GameObject frag = Instantiate (platformFrag, hit.point + v3 * 0.5f, Quaternion.identity) as GameObject;
+				foreach(Transform child in frag.transform)
+				{
+					if(child.gameObject.GetComponent<Renderer>() && hit.collider.gameObject.GetComponent<Renderer>())
+						child.gameObject.GetComponent<Renderer>().material = hit.collider.gameObject.GetComponent<Renderer>().material;
+				}
 			}
-			*/
+
+			if (Physics.Raycast (Camera.main.transform.position + Camera.main.transform.forward, Camera.main.transform.forward, out hit, 500f, layerMaskPlayer)) 
+			{
+				if(hit.collider.gameObject.tag == "Effect")
+				{
+					GameObject frag = Instantiate (platformFrag, transform.position, Quaternion.identity) as GameObject;
+					foreach(Transform child in frag.transform)
+					{
+						if(child.gameObject.GetComponent<Renderer>() && hit.collider.gameObject.GetComponent<Renderer>())
+							child.gameObject.GetComponent<Renderer>().material = hit.collider.gameObject.GetComponent<Renderer>().material;
+					}
+					Destroy (gameObject);
+				}
+			}
 		}
 	}
 }

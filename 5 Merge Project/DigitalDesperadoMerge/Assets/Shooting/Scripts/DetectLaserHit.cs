@@ -17,7 +17,7 @@ public class DetectLaserHit : MonoBehaviour {
 			Destroy (gameObject);
 	}
 
-	void OnTriggerStay(Collider other) {
+	/*void OnTriggerStay(Collider other) {
 		if (other.gameObject.layer == 0 && gameObject.layer == 0 ) {
 			Vector3 v3 = (transform.position - Camera.main.transform.position).normalized;
 			GameObject frag = Instantiate (platformFrag, transform.position - v3 * 2, Quaternion.identity) as GameObject;
@@ -28,17 +28,13 @@ public class DetectLaserHit : MonoBehaviour {
 			}
 			Destroy(gameObject);
 		}
-	}
+	}*/
 
-	void OnCollisionEnter(Collision other) {
-
+	void OnCollisionEnter(Collision other) 
+	{
 		if (other.gameObject.GetComponent<TargetFragmentation> ()) {
 			other.gameObject.GetComponent<TargetFragmentation> ().vExplode ();
 			Destroy (gameObject);
-		} else if (other.gameObject.layer == 8) {
-			Destroy (gameObject);
 		}
-
-
 	}
 }
