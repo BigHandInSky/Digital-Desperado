@@ -22,6 +22,8 @@ public class GameUIArrowScript : MonoBehaviour {
         {
             // Vector between the player and the level end
             Vector3 _direction = GameData.Instance.trEndLvlTow.position - GameData.Instance.trCamera.position;
+
+            _direction.y = 0;
             // Forward direction of the player
             Vector3 _forw = GameData.Instance.trCamera.forward;
 

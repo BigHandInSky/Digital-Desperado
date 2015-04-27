@@ -1,9 +1,9 @@
 <LevelData>
   <Stats>
-    <Tags A="AAA" B="BBB" C="CCC" D="DDD" E="TAG" F="EEE" />
-    <Secs A="01.50" B="01.70" C="01.80" D="02.00" E="02.60" F="03.50" />
-    <Fras A="00126" B="00245" C="00384" D="00429" E="00156" F="00518" />
-    <Shts A="010" B="023" C="034" D="035" E="000" F="043" />
+    <Tags A="AAA" B="BBB" C="CCC" D="DDD" E="TAG" F="alx" />
+    <Secs A="01.50" B="01.70" C="01.80" D="02.00" E="02.60" F="03.41" />
+    <Fras A="00126" B="00245" C="00384" D="00429" E="00156" F="00206" />
+    <Shts A="010" B="023" C="034" D="035" E="000" F="000" />
   </Stats>
   <PlayerStart>
     <Position x="0" y="0" z="0" />
@@ -40,6 +40,8 @@
       <Scale x="8" y="1" z="8" />
     </Platform>
   </Platforms>
+  <Targets>
+  </Targets>
   <Towers>
     <Tower type="2">
       <Position x="-10" y="0" z="0" />

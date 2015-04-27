@@ -64,6 +64,7 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
     public void GetFolder()
     {
         FolderInfo = new DirectoryInfo(sDefaultFolderPath);
+        int failedLevels = 0;
         
         if (FolderInfo != null)
         {
@@ -73,8 +74,20 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
 
             foreach (FileInfo obj in infos)
             {
-                FileUrls.Add(obj.FullName);
-                FileNames.Add(Path.GetFileNameWithoutExtension(obj.Name));
+                if (CheckEntireXMLLevel(obj.FullName))
+                {
+                    FileUrls.Add(obj.FullName);
+                    FileNames.Add(Path.GetFileNameWithoutExtension(obj.Name));
+                }
+                else
+                {
+                    failedLevels++;
+                }
+            }
+
+            if (failedLevels > 0)
+            {
+                ErrorScript.Instance.OpenError(ErrorScript.Errors.InvalidLevel, "Failed to load " + failedLevels.ToString() + " Levels. \nCause: Invalid Level File");
             }
         }
         else
@@ -112,6 +125,104 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
             reader.Close();
             return true;
         }
+    }
+
+    private bool CheckEntireXMLLevel(string _url)
+    {
+        bool statsNode = false;
+        bool playerNode = false;
+        bool endNode = false;
+        bool platformsNode = false;
+        bool targetsNode = false;
+        bool towersNode = false;
+
+        using (XmlReader reader = XmlReader.Create(_url))
+        {
+            reader.Read();
+
+            if (reader.Name != "LevelData")
+            {
+                reader.Read();
+
+                if (reader.Name != "LevelData")
+                {
+                    Debug.LogError("File not a supported level");
+
+                    return false;
+                }
+            }
+
+            while (reader.Read())
+            {
+                if (reader.IsStartElement())
+                {
+                    switch (reader.Name)
+                    {
+                        case "Stats":
+                            statsNode = true;
+                        break;
+
+                        case "PlayerStart":
+                            playerNode = true;
+                        break;
+
+                        case "Goal":
+                            endNode = true;
+                        break;
+
+                        case "Platforms":
+                            platformsNode = true;
+                        break;
+
+                        case "Towers":
+                            towersNode = true;
+                        break;
+
+                        case "Targets":
+                            targetsNode = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (!statsNode)
+        {
+            Debug.LogError("File not a supported level");
+            return false;
+        }
+
+        if (!playerNode)
+        {
+            Debug.LogError("File not a supported level");
+            return false;
+        }
+
+        if (!endNode)
+        {
+            Debug.LogError("File not a supported level");
+            return false;
+        }
+
+        if (!platformsNode)
+        {
+            Debug.LogError("File not a supported level");
+            return false;
+        }
+
+        if (!towersNode)
+        {
+            Debug.LogError("File not a supported level");
+            return false;
+        }
+
+        if (!targetsNode)
+        {
+            Debug.LogError("File not a supported level");
+            return false;
+        }
+
+        return true;
     }
 
     public enum StatsType
