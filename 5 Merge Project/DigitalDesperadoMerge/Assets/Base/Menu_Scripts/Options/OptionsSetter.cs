@@ -17,6 +17,9 @@ public class OptionsSetter : MonoBehaviour {
     [SerializeField]
     private List<GameObject> OptionObjects = new List<GameObject>();
 
+    public Color NormCol;
+    public Color TempCol;
+
     void Awake()
     {
         m_DataInstance = this;
@@ -27,5 +30,10 @@ public class OptionsSetter : MonoBehaviour {
         foreach (GameObject _obj in OptionObjects)
             _obj.SendMessage("Setup");
     }
-
+    public void Apply()
+    {
+        foreach (GameObject _obj in OptionObjects)
+            _obj.SendMessage("Apply");
+        GameSettings.Instance.ApplySettings();
+    }
 }

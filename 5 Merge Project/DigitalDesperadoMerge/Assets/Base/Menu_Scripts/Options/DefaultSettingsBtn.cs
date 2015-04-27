@@ -8,6 +8,7 @@ public class DefaultSettingsBtn : MonoBehaviour {
     public Button EfftsBtn;
     public Slider FOVSlider;
     public Slider VolSlider;
+    public Slider SenSlider;
 
     public void SetDefaults()
     {
@@ -16,11 +17,13 @@ public class DefaultSettingsBtn : MonoBehaviour {
         GameSettings.Instance.SetVolume(100f);
         GameSettings.Instance.SetFOV(90f);
         GameSettings.Instance.SetResolution(800, 600);
+        GameSettings.Instance.SetSens(5f);
 
         MusicBtn.GetComponent<OptionsSoundBtn>().Reset();
         EfftsBtn.GetComponent<OptionsSoundBtn>().Reset();
-        FOVSlider.GetComponent<OptionsFovSlider>().Reset(90f);
-        VolSlider.GetComponent<OptionsVolSlider>().Reset(100f);
+        FOVSlider.GetComponent<OptionsSlider>().Reset(90f);
+        VolSlider.GetComponent<OptionsSlider>().Reset(100f);
+        SenSlider.GetComponent<OptionsSlider>().Reset(5f);
 
         GameSettings.Instance.ApplySettings();
     }

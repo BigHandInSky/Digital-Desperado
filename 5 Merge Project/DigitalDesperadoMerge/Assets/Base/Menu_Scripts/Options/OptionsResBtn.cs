@@ -6,6 +6,11 @@ public class OptionsResBtn : MonoBehaviour {
     [SerializeField] private int Width = 800;
     [SerializeField] private int Height = 600;
 
+    void OnEnable()
+    {
+
+    }
+
     public void SetResolution()
     {
         GameSettings.Instance.SetResolution(Width,Height);
