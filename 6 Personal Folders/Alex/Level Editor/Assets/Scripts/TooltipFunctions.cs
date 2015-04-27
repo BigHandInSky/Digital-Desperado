@@ -15,7 +15,9 @@ public class TooltipFunctions : MonoBehaviour
     [SerializeField]
     InputField posZText;
     [SerializeField]
-    InputField rotText;
+    InputField rotYText;
+    [SerializeField]
+    InputField rotXText;
     [SerializeField]
     InputField scaleXText;
     [SerializeField]
@@ -28,7 +30,8 @@ public class TooltipFunctions : MonoBehaviour
         posXText.text = objectSelecter.ObjectSelected.transform.position.x.ToString();
         posYText.text = objectSelecter.ObjectSelected.transform.position.y.ToString();
         posZText.text = objectSelecter.ObjectSelected.transform.position.z.ToString();
-        rotText.text = objectSelecter.ObjectSelected.transform.rotation.eulerAngles.y.ToString();
+        rotYText.text = objectSelecter.ObjectSelected.transform.rotation.eulerAngles.y.ToString();
+        rotXText.text = objectSelecter.ObjectSelected.transform.rotation.eulerAngles.x.ToString();
         scaleXText.text = objectSelecter.ObjectSelected.transform.localScale.x.ToString();
         scaleYText.text = objectSelecter.ObjectSelected.transform.localScale.y.ToString();
         scaleZText.text = objectSelecter.ObjectSelected.transform.localScale.z.ToString();
@@ -57,7 +60,13 @@ public class TooltipFunctions : MonoBehaviour
     }
 
     // Rotation
-    public void SetRotation(InputField input)
+    public void SetRotationX(InputField input)
+    {
+        Quaternion rotation = objectSelecter.ObjectSelected.transform.rotation;
+        rotation = Quaternion.Euler(float.Parse(input.text), rotation.eulerAngles.y, rotation.eulerAngles.z);
+        objectSelecter.ObjectSelected.transform.rotation = rotation;
+    }
+    public void SetRotationY(InputField input)
     {
         Quaternion rotation = objectSelecter.ObjectSelected.transform.rotation;
         rotation = Quaternion.Euler(rotation.eulerAngles.x, float.Parse(input.text), rotation.eulerAngles.z);

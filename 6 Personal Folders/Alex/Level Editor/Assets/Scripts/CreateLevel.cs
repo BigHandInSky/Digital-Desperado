@@ -171,7 +171,12 @@ public class CreateLevel : MonoBehaviour
 
                         case "Platform":
                             int platformLevel = Mathf.Clamp(int.Parse(reader.GetAttribute("level")) - 1, 0, agoPlatforms.Length);
-                            AssignTransform(agoPlatforms[platformLevel], reader.ReadSubtree());
+
+                            if (platformLevel > -1 && platformLevel < agoTargetPrefabs.Length)
+                                AssignTransform(agoPlatforms[platformLevel], reader.ReadSubtree());
+                            else
+                                AssignTransform(agoPlatforms[0], reader.ReadSubtree());
+
                             break;
 
                         case "Tower":
@@ -182,7 +187,12 @@ public class CreateLevel : MonoBehaviour
 
                         case "Target":
                             int targetType = Mathf.Clamp(int.Parse(reader.GetAttribute("type")) - 1, 0, agoTargetPrefabs.Length);
-                            GameObject target = Instantiate(agoTargetPrefabs[targetType]);
+                            GameObject target;
+                            if(targetType > -1 && targetType < agoTargetPrefabs.Length)
+                                target = Instantiate(agoTargetPrefabs[targetType]);
+                            else
+                                target = Instantiate(agoTargetPrefabs[0]);
+
                             AssignTransform(target, reader.ReadSubtree());
                             target.transform.parent = tLevelRootObject;
 
