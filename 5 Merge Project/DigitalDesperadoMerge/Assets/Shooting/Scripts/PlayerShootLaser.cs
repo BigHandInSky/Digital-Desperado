@@ -60,7 +60,7 @@ public class PlayerShootLaser : MonoBehaviour {
 			
 			GameObject laser = Instantiate (prefabLaser, gunMuzzle.transform.position, Quaternion.identity) as GameObject;
 			laser.GetComponent<LaserScript> ().V3startPosition = laser.transform.position;
-			laser.GetComponent<LaserScript> ().V3endPosition = Camera.main.transform.position + Camera.main.transform.forward * 100;
+			laser.GetComponent<LaserScript> ().V3endPosition = Camera.main.transform.position + Camera.main.transform.forward * 40;
 
 			GameObject bullet = (GameObject)Instantiate(prefabBullet, Camera.main.transform.position + Camera.main.transform.forward, Quaternion.identity);
 			bullet.GetComponent<Rigidbody>().velocity = Camera.main.transform.forward * 120;
