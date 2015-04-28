@@ -23,7 +23,7 @@ public class GenerateLevel : MonoBehaviour
     [SerializeField]
     GameObject[] agoPlatformPrefabs;
     [SerializeField]
-    GameObject[] agoTowerPrefabs;
+    GameObject goTowerPrefab;
     [SerializeField]
     GameObject[] agoTargetPrefabs;
 
@@ -72,8 +72,7 @@ public class GenerateLevel : MonoBehaviour
                         break;
 
                         case "Tower":
-                            int towerType = Mathf.Clamp(int.Parse(reader.GetAttribute("type")) - 1, 0, agoTowerPrefabs.Length - 1);
-                            GameObject tower = Instantiate(agoTowerPrefabs[towerType]);
+                            GameObject tower = Instantiate(goTowerPrefab);
                             AssignTransform(tower, reader.ReadSubtree());
                         break;
 

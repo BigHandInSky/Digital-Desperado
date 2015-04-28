@@ -165,6 +165,9 @@ public class GameSettings : MonoBehaviour {
     { 
         get
         {
+            print(m_LoadedLevelInt);
+            print(m_LoadedUrls.Count);
+
             if (m_LoadedLevelInt < m_LoadedUrls.Count && m_LoadedLevelInt > -1)
                 return m_LoadedUrls[m_LoadedLevelInt];
             else
@@ -209,7 +212,7 @@ public class GameSettings : MonoBehaviour {
     }
     public void SetUrls(List<string> _Urls)
     {
-        if (_Urls.Count < 1)
+        //if (_Urls.Count < 1)
             m_LoadedUrls = _Urls;
     }
     public void SetResolution(int _width, int _height)

@@ -32,7 +32,7 @@ public class LoadedLevels : MonoBehaviour
     private int m_CurrLvlUrl;
     public int iCurrentLvl { get { return m_CurrLvlUrl; } }
     
-    void Awake()
+    void Start()
     {
         m_CurrLvlUrl = GameSettings.Instance.LevelInt;
         m_DataInstance = this;
