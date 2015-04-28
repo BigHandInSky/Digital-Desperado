@@ -235,10 +235,12 @@ public class GameSettings : MonoBehaviour {
 
     public void ApplySettings()
     {
-        SaveData();
+        Debug.Log(iResWidth + ", " + iResHeight);
         Screen.SetResolution(iResWidth, iResHeight, false);
         if (AudioManagerMusic.Instance)
             AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Menus);
+
+        SaveData();
     }
     public void ApplyControls()
     {

@@ -7,7 +7,8 @@ public class DefaultSettingsBtn : MonoBehaviour {
     public Button MusicBtn;
     public Button EfftsBtn;
     public Slider FOVSlider;
-    public Slider VolSlider;
+    public Slider MusSlider;
+    public Slider EffSlider;
     public Slider SenSlider;
 
     public void SetDefaults()
@@ -23,7 +24,8 @@ public class DefaultSettingsBtn : MonoBehaviour {
         MusicBtn.GetComponent<OptionsSoundBtn>().Reset();
         EfftsBtn.GetComponent<OptionsSoundBtn>().Reset();
         FOVSlider.GetComponent<OptionsSlider>().Reset(90f);
-        VolSlider.GetComponent<OptionsSlider>().Reset(100f);
+        MusSlider.GetComponent<OptionsSlider>().Reset(75f);
+        EffSlider.GetComponent<OptionsSlider>().Reset(75f);
         SenSlider.GetComponent<OptionsSlider>().Reset(5f);
 
         GameSettings.Instance.ApplySettings();
