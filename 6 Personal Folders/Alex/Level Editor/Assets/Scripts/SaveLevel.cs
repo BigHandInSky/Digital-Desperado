@@ -106,7 +106,7 @@ public class SaveLevel : MonoBehaviour
             foreach (GameObject tower in agoTowers)
             {
                 writer.WriteStartElement("Tower");
-                CreateTransformElements(writer, tower);
+                CreateTransformElements(writer, tower, true);
                 writer.WriteEndElement();
             }
 
