@@ -239,8 +239,6 @@ public class GameSettings : MonoBehaviour {
     }
     public void ApplyControls()
     {
-        
-
         SaveData();
     }
     public void ApplyFOV()

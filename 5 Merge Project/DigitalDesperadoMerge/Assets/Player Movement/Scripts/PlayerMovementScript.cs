@@ -150,9 +150,11 @@ public class PlayerMovementScript : MonoBehaviour
             // Revereses gravity for jump
             fVerticalVelocity = fJumpHeight;
             bHasJumped = true;
+            AudioManagerEffects.Instance.PlaySound(AudioManagerEffects.Effects.Jump);
         }
         else if (Input.GetKey(GameSettings.Instance.Jump) && !ccPlayerController.isGrounded && !bHasJumped)
         {
+            AudioManagerEffects.Instance.PlaySound(AudioManagerEffects.Effects.Jump);
             fVerticalVelocity = fJumpHeight;
             bHasJumped = true;
         }

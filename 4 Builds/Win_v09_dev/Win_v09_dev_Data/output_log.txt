@@ -14,7 +14,7 @@ Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wi
 Loading C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v09_dev\Win_v09_dev_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v09_dev\Win_v09_dev_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v09_dev\Win_v09_dev_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.127 seconds
+- Completed reload, in  0.216 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
@@ -23,9 +23,9 @@ Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wi
 Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v09_dev\Win_v09_dev_Data\Managed\System.Xml.dll (this message is harmless)
 Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v09_dev\Win_v09_dev_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 21bc -> priority: 1 
+  Thread -> id: cec -> priority: 1 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 8.899525 ms
+UnloadTime: 16.563562 ms
 GameSettings SaveData persistent path: C:/Users/Peter/AppData/LocalLow/University Of Bedfordshire/Digital Desperado
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
@@ -34,289 +34,25 @@ GameSettings:OnLevelWasLoaded(Int32) (at C:\Users\Peter\Documents\GitHub\Digital
  
 (Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 83)
 
-System memory in use before: 208.3 MB.
-System memory in use after: 208.4 MB.
+System memory in use before: 208.4 MB.
+System memory in use after: 208.5 MB.
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 1934.
-Total: 2.197401 ms (FindLiveObjects: 0.179290 ms CreateObjectMapping: 0.131902 ms MarkObjects: 1.850057 ms  DeleteObjects: 0.034197 ms)
+Total: 5.110986 ms (FindLiveObjects: 0.553014 ms CreateObjectMapping: 0.230096 ms MarkObjects: 4.243848 ms  DeleteObjects: 0.076698 ms)
 
-setup called
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.984475 ms
+cam fov: 91
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-OptionsSlider:Setup() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSlider.cs:23)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.GameObject:SendMessage(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineGameObject.gen.cs:365)
-OptionsSetter:SetOptions() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSetter.cs:31)
-<DoAction>c__Iterator7:MoveNext() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\CameraTransitionScript.cs:100)
+GameSettings:ApplyFOV() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:247)
+GameSettings:OnLevelWasLoaded(Int32) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:54)
  
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Options/OptionsSlider.cs Line: 23)
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 247)
 
-setup called
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-OptionsSlider:Setup() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSlider.cs:23)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.GameObject:SendMessage(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineGameObject.gen.cs:365)
-OptionsSetter:SetOptions() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSetter.cs:31)
-<DoAction>c__Iterator7:MoveNext() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\CameraTransitionScript.cs:100)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Options/OptionsSlider.cs Line: 23)
+System memory in use before: 208.9 MB.
+System memory in use after: 208.9 MB.
 
-setup called
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-OptionsSlider:Setup() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSlider.cs:23)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.GameObject:SendMessage(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineGameObject.gen.cs:365)
-OptionsSetter:SetOptions() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSetter.cs:31)
-<DoAction>c__Iterator7:MoveNext() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\CameraTransitionScript.cs:100)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Options/OptionsSlider.cs Line: 23)
-
-setup called
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-OptionsSlider:Setup() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSlider.cs:23)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.GameObject:SendMessage(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineGameObject.gen.cs:365)
-OptionsSetter:SetOptions() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSetter.cs:31)
-<DoAction>c__Iterator7:MoveNext() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\CameraTransitionScript.cs:100)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Options/OptionsSlider.cs Line: 23)
-
-GameSettings SaveData persistent path: C:/Users/Peter/AppData/LocalLow/University Of Bedfordshire/Digital Desperado
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameSettings:SaveData() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:83)
-GameSettings:ApplySettings() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:236)
-OptionsSetter:Apply() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSetter.cs:37)
-UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:110)
-UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:574)
-UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:716)
-UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:53)
-UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
-UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:44)
-UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:52)
-UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:269)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:358)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:249)
-UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:160)
-UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:272)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 83)
-
-GameSettings SaveData persistent path: C:/Users/Peter/AppData/LocalLow/University Of Bedfordshire/Digital Desperado
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameSettings:SaveData() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:83)
-GameSettings:ApplySettings() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:236)
-OptionsSetter:Apply() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSetter.cs:37)
-UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:110)
-UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:574)
-UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:716)
-UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:53)
-UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
-UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:44)
-UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:52)
-UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:269)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:358)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:249)
-UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:160)
-UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:272)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 83)
-
-GameSettings SaveData persistent path: C:/Users/Peter/AppData/LocalLow/University Of Bedfordshire/Digital Desperado
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameSettings:SaveData() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:83)
-GameSettings:ApplySettings() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:236)
-OptionsSetter:Apply() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Options\OptionsSetter.cs:37)
-UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:110)
-UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:574)
-UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:716)
-UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:53)
-UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
-UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:44)
-UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:52)
-UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:269)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:358)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:249)
-UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:160)
-UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:272)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 83)
-
-FetchKey
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-ControlsInput:FetchKey() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:66)
-ControlsInput:Update() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:38)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Controls/ControlsInput.cs Line: 66)
-
-FetchKey
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-ControlsInput:FetchKey() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:66)
-ControlsInput:Update() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:38)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Controls/ControlsInput.cs Line: 66)
-
-FetchKey
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-ControlsInput:FetchKey() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:66)
-ControlsInput:Update() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:38)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Controls/ControlsInput.cs Line: 66)
-
-FetchKey
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-ControlsInput:FetchKey() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:66)
-ControlsInput:Update() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:38)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Controls/ControlsInput.cs Line: 66)
-
-FetchKey
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-ControlsInput:FetchKey() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:66)
-ControlsInput:Update() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:38)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Controls/ControlsInput.cs Line: 66)
-
-FetchKey
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-ControlsInput:FetchKey() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:66)
-ControlsInput:Update() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:38)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Controls/ControlsInput.cs Line: 66)
-
-FetchKey
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-ControlsInput:FetchKey() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:66)
-ControlsInput:Update() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:38)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Controls/ControlsInput.cs Line: 66)
-
-FetchKey
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-ControlsInput:FetchKey() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:66)
-ControlsInput:Update() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:38)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Controls/ControlsInput.cs Line: 66)
-
-FetchKey
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-ControlsInput:FetchKey() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:66)
-ControlsInput:Update() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:38)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Controls/ControlsInput.cs Line: 66)
-
-FetchKey
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-ControlsInput:FetchKey() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:66)
-ControlsInput:Update() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:38)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Controls/ControlsInput.cs Line: 66)
-
-FetchKey
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-ControlsInput:FetchKey() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:66)
-ControlsInput:Update() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:38)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Controls/ControlsInput.cs Line: 66)
-
-FetchKey
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-ControlsInput:FetchKey() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:66)
-ControlsInput:Update() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:38)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Controls/ControlsInput.cs Line: 66)
-
-FetchKey
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-ControlsInput:FetchKey() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:66)
-ControlsInput:Update() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:38)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Controls/ControlsInput.cs Line: 66)
-
-FetchKey
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-ControlsInput:FetchKey() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:66)
-ControlsInput:Update() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:38)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Controls/ControlsInput.cs Line: 66)
-
-FetchKey
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-ControlsInput:FetchKey() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:66)
-ControlsInput:Update() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:38)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Controls/ControlsInput.cs Line: 66)
-
-FetchKey
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-ControlsInput:FetchKey() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:66)
-ControlsInput:Update() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsInput.cs:38)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/Controls/ControlsInput.cs Line: 66)
-
-GameSettings SaveData persistent path: C:/Users/Peter/AppData/LocalLow/University Of Bedfordshire/Digital Desperado
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameSettings:SaveData() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:83)
-GameSettings:ApplyControls() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:244)
-ControlsSetter:Apply() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\Controls\ControlsSetter.cs:35)
-UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:110)
-UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:574)
-UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:716)
-UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:53)
-UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
-UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:44)
-UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:52)
-UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:269)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:358)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:249)
-UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:160)
-UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:272)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 83)
-
-Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.864261 ms
-System memory in use before: 209.4 MB.
-System memory in use after: 209.2 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 1201.
-Total: 1.015650 ms (FindLiveObjects: 0.138253 ms CreateObjectMapping: 0.088912 ms MarkObjects: 0.684428 ms  DeleteObjects: 0.101613 ms)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.338097 ms
-GameSettings SaveData persistent path: C:/Users/Peter/AppData/LocalLow/University Of Bedfordshire/Digital Desperado
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-GameSettings:SaveData() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:83)
-GameSettings:OnLevelWasLoaded(Int32) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:58)
- 
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 83)
-
-System memory in use before: 209.3 MB.
-System memory in use after: 209.2 MB.
-
-Unloading 286 unused Assets to reduce memory usage. Loaded Objects now: 1932.
-Total: 2.857892 ms (FindLiveObjects: 0.209090 ms CreateObjectMapping: 0.106499 ms MarkObjects: 1.724994 ms  DeleteObjects: 0.813400 ms)
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 869.
+Total: 1.469494 ms (FindLiveObjects: 0.128483 ms CreateObjectMapping: 0.123597 ms MarkObjects: 1.026398 ms  DeleteObjects: 0.186617 ms)
 
