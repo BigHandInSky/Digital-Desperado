@@ -20,8 +20,6 @@ public class OptionsSlider : MonoBehaviour
 
     public void Setup()
     {
-        Debug.Log("setup called");
-
         if (m_Type == SliderType.EffVolume)
             Value = GameSettings.Instance.EffVolume * 100f;
         else if (m_Type == SliderType.MusVolume)
@@ -56,8 +54,6 @@ public class OptionsSlider : MonoBehaviour
 
     public void Apply()
     {
-        GameSettings.Instance.SetSens(Value);
-
         if (m_Type == SliderType.EffVolume)
             GameSettings.Instance.SetVolume(Value, false);
         else if (m_Type == SliderType.MusVolume)

@@ -41,6 +41,21 @@ public class PlayerMovementScript : MonoBehaviour
     public GameObject GOCamera;
 
     private KeyCode ExitToMenu = KeyCode.Escape;
+    private KeyCode Forward = KeyCode.W;
+    private KeyCode Backward = KeyCode.S;
+    private KeyCode Left = KeyCode.A;
+    private KeyCode Right = KeyCode.D;
+    private KeyCode Jump = KeyCode.D;
+
+    void Awake()
+    {
+        fMouseSensitivity = GameSettings.Instance.Sens;
+        Forward = GameSettings.Instance.Forw;
+        Backward = GameSettings.Instance.Back;
+        Left = GameSettings.Instance.Left;
+        Right = GameSettings.Instance.Righ;
+        Jump = GameSettings.Instance.Jump;
+    }
 
     void OnLevelWasLoaded(int level)
     {
@@ -50,10 +65,14 @@ public class PlayerMovementScript : MonoBehaviour
             AllowControls(false, true);
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (bIsCameraEnabled)
             CameraMovement();
+    }
+
+    void FixedUpdate()
+    {
 
         if (bIsMovementEnabled)
         {
@@ -95,14 +114,14 @@ public class PlayerMovementScript : MonoBehaviour
         fVertical = 0;
         fHorizontal = 0;
 
-        if (Input.GetKey(GameSettings.Instance.Forw))
+        if (Input.GetKey(Forward))
             fVertical = 1 * fPlayerBaseSpeed;
-        else if (Input.GetKey(GameSettings.Instance.Back))
+        else if (Input.GetKey(Backward))
             fVertical = -1 * fPlayerBaseSpeed;
 
-        if (Input.GetKey(GameSettings.Instance.Left))
+        if (Input.GetKey(Left))
             fHorizontal = -1 * fPlayerBaseSpeed / 100 * iPlayerSideSpeedPercent;
-        else if (Input.GetKey(GameSettings.Instance.Righ))
+        else if (Input.GetKey(Right))
             fHorizontal = 1 * fPlayerBaseSpeed / 100 * iPlayerSideSpeedPercent;
 
         // Horizontal and vertical movement axes and speeds
@@ -145,14 +164,14 @@ public class PlayerMovementScript : MonoBehaviour
             fVerticalVelocity += fJumpGrav * Time.deltaTime;
 
         // When spacebar and on floor is true
-        if (Input.GetKey(GameSettings.Instance.Jump) && ccPlayerController.isGrounded && !bHasJumped)
+        if (Input.GetKey(Jump) && ccPlayerController.isGrounded && !bHasJumped)
         {
             // Revereses gravity for jump
             fVerticalVelocity = fJumpHeight;
             bHasJumped = true;
             AudioManagerEffects.Instance.PlaySound(AudioManagerEffects.Effects.Jump);
         }
-        else if (Input.GetKey(GameSettings.Instance.Jump) && !ccPlayerController.isGrounded && !bHasJumped)
+        else if (Input.GetKey(Jump) && !ccPlayerController.isGrounded && !bHasJumped)
         {
             AudioManagerEffects.Instance.PlaySound(AudioManagerEffects.Effects.Jump);
             fVerticalVelocity = fJumpHeight;

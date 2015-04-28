@@ -22,8 +22,8 @@ public class GameSettings : MonoBehaviour {
     void Awake()
     {
         m_KeySettings.Add(KeyCode.W);
-        m_KeySettings.Add(KeyCode.A);
         m_KeySettings.Add(KeyCode.S);
+        m_KeySettings.Add(KeyCode.A);
         m_KeySettings.Add(KeyCode.D);
 
         m_KeySettings.Add(KeyCode.Space);
@@ -118,6 +118,8 @@ public class GameSettings : MonoBehaviour {
 
 			Effects = data.Effects;
 			Music = data.Music;
+
+            ApplySettings();
 		}
 	}
 
@@ -174,11 +176,11 @@ public class GameSettings : MonoBehaviour {
         {
             string _temp = m_LoadedUrls[m_LoadedLevelInt];
             _temp = _temp.Split('\\')[_temp.Split('\\').Length - 1];
-            /*
+            
             int _index = _temp.IndexOf(".");
             if (_index >= 0)
-                _temp = _temp.Substring(_index, _temp.Length - _index);
-            */
+                _temp = _temp.Remove(_temp.Length - _index);
+            
             Debug.Log("GameSettings returning new LoadLevelName: Orig: " + m_LoadedUrls[m_LoadedLevelInt]
                 + ", New: " + _temp);
             return _temp;
@@ -233,9 +235,12 @@ public class GameSettings : MonoBehaviour {
 
     public void ApplySettings()
     {
-        SaveData();
+        Debug.Log(iResWidth + ", " + iResHeight);
         Screen.SetResolution(iResWidth, iResHeight, false);
-        AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Menus);
+        if (AudioManagerMusic.Instance)
+            AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Menus);
+
+        SaveData();
     }
     public void ApplyControls()
     {

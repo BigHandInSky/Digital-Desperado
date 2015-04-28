@@ -1,16 +1,31 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class LoadFromFirstLevelScript : MonoBehaviour {
 
+    [SerializeField]
+    private Slider LoadingBar;
+    private int iloadProgress = 0;
+
+    private AsyncOperation async;
+
 	void Start () 
     {
-        StartCoroutine(Wait());
+        StartCoroutine(Load());
 	}
 
-    IEnumerator Wait()
+    IEnumerator Load()
     {
         yield return new WaitForEndOfFrame();
-        Application.LoadLevelAsync("Main");
+        async = Application.LoadLevelAsync("Main");
+
+        while (!async.isDone)
+        {
+            iloadProgress = (int)(async.progress * 100f);
+            LoadingBar.value = iloadProgress;
+
+            yield return null;
+        }
     }
 }

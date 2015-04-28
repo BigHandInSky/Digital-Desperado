@@ -24,6 +24,13 @@ public class PlayerShootLaser : MonoBehaviour {
 
 	public GameObject platformFrag;
 
+    private KeyCode Shoot = KeyCode.Mouse0;
+
+    void Awake()
+    {
+        Shoot = GameSettings.Instance.Fire;
+    }
+
     void OnLevelWasLoaded(int level)
     {
         if (Application.loadedLevelName.Contains("Tutorial") || Application.loadedLevelName.Contains("Sandbox"))
@@ -33,7 +40,7 @@ public class PlayerShootLaser : MonoBehaviour {
     }
 
 	
-	void FixedUpdate () 
+	void Update () 
 	{
 		//Debug.DrawLine(Camera.main.transform.position, Camera.main.transform.position + Camera.main.transform.forward * 100, Color.red);
 		//Debug.DrawLine(Camera.main.transform.position + Camera.main.transform.right * range, Camera.main.transform.right * range + Camera.main.transform.position +  Camera.main.transform.forward * 100, Color.red);
@@ -44,7 +51,7 @@ public class PlayerShootLaser : MonoBehaviour {
 		fShootTimer -= Time.deltaTime;
 
 		//On mouse click instantiate a new prefab laser and set the position
-		if (Input.GetMouseButtonDown (0) && bCanShoot)
+		if (Input.GetKey(Shoot) && bCanShoot)
 			vShoot ();
 	}
 	
