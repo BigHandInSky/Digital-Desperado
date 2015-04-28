@@ -18,6 +18,7 @@ public class GameData : MonoBehaviour {
     public Transform trEndLvlTow { get { return m_EndLvlTow; } }
 
     private GameObject[] agoTargets;
+    public GameObject[] Targets { get { return agoTargets; } }
     [SerializeField] private GameUITargetScript m_UITargetsLeft;
     [SerializeField] private GameUITargetScript m_UITargetsShot;
 
@@ -74,7 +75,11 @@ public class GameData : MonoBehaviour {
 
     void vUpdateTargetUIs()
     {
-        if(!m_UITargetsLeft && !Application.loadedLevelName.Contains("Tutorial"))
+        if(!m_UITargetsLeft && Application.loadedLevelName.Contains("Tutorial"))
+        {
+            return;
+        }
+        else if (!m_UITargetsLeft)
         {
             Debug.LogError("No Target UI objs set");
             return;
@@ -100,13 +105,6 @@ public class GameData : MonoBehaviour {
     public void Restart()
     {
         Debug.Log("gamedata restart");
-
-        foreach (GameObject target in agoTargets)
-        {
-            Debug.Log("Resetting target: " + target);
-            target.SetActive(true);
-            target.GetComponent<TargetFragmentation>().ResetPosition();
-        }
 
         m_TargetsLeft = m_TargetsTotl;
         m_BullsShot = 0;

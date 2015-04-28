@@ -78,7 +78,8 @@ public class GenerateLevel : MonoBehaviour
                         break;
 
                         case "Target":
-                            int targetType = Mathf.Clamp(int.Parse(reader.GetAttribute("type")) - 1, 0, agoTargetPrefabs.Length - 1);
+                            //int targetType = Mathf.Clamp(int.Parse(reader.GetAttribute("type")) - 1, 0, agoTargetPrefabs.Length - 1);
+                            int targetType = Random.Range(0, agoTargetPrefabs.Length);
                             GameObject target = Instantiate(agoTargetPrefabs[targetType]);
                             AssignTransform(target, reader.ReadSubtree());
                         break;

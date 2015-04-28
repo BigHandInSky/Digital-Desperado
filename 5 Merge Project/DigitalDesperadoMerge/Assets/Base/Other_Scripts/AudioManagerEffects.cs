@@ -25,7 +25,12 @@ public class AudioManagerEffects : MonoBehaviour {
     {
         BtnClick = 0,
         Error = 1,
-        NewEffect = 2
+        Shoot = 2,
+        Countdown = 3,
+        GameOneMin = 4,
+        Jump = 5,
+        UIDing = 6,
+        Woosh = 7
     }
 
     public void PlaySound(Effects _type)
@@ -43,8 +48,29 @@ public class AudioManagerEffects : MonoBehaviour {
 
         switch (_clipType)
         {
+            case Effects.Error:
+                _selected = 7;
+                break;
             case Effects.BtnClick:
                 _selected = Random.Range(0,3);
+                break;
+            case Effects.Shoot:
+                _selected = 3;
+                break;
+            case Effects.Countdown:
+                _selected = 4;
+                break;
+            case Effects.GameOneMin:
+                _selected = 5;
+                break;
+            case Effects.Jump:
+                _selected = 6;
+                break;
+            case Effects.UIDing:
+                _selected = 7;
+                break;
+            case Effects.Woosh:
+                _selected = 8;
                 break;
         }
 

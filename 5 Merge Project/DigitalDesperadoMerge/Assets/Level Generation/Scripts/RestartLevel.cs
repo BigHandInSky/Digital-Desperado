@@ -8,19 +8,23 @@ public class RestartLevel : MonoBehaviour
 
     private GameObject goPlayer;
     private GameObject[] agoTargetFrags;
+    private GameObject[] agoTargetSpawners;
 
     [SerializeField] private GameRdyCountdown goCountdown;
     [SerializeField] private List<GameObject> goObjsToActivate = new List<GameObject>();
     [SerializeField] private List<GameObject> goObjsToDeactivate = new List<GameObject>();
 
     [SerializeField] private PlayerMovementScript PlayerControlObj;
+    [SerializeField] private PlayerShootLaser PlayerShootObj;
     
     public void DoRestart()
     {
         Debug.Log("DoRestart");
         FindLevelObjects();
+
         GameData.Instance.Restart();
         PlayerControlObj.AllowControls(false, true);
+        PlayerShootObj.bCanShoot = false;
 
         FindLevelObjects();
         RestartPlayer();
@@ -41,6 +45,9 @@ public class RestartLevel : MonoBehaviour
 
         if(agoTargetFrags == null)
             agoTargetFrags = GameObject.FindGameObjectsWithTag("Effect");
+
+        if (agoTargetSpawners == null)
+            agoTargetSpawners = GameObject.FindGameObjectsWithTag("TargSpawner");
     }
     private void RestartPlayer()
     {
@@ -53,7 +60,13 @@ public class RestartLevel : MonoBehaviour
             foreach (GameObject frag in agoTargetFrags)
             {
                 DestroyObject(frag);
-            }        
+            }
+
+        foreach (GameObject target in agoTargetSpawners)
+        {
+            Debug.Log("Resetting target: " + target);
+            target.GetComponent<TargetRespawner>().vRespawn();
+        }
     }
     private void SetUI()
     {
