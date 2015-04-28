@@ -18,7 +18,7 @@ public class ControlsInput : MonoBehaviour {
     private ControlsBtn m_BtnToSetPostChange;
 
     private const string m_StrUnselected = "Select Key to\nchange below";
-    private const string m_StrSelected = "Enter New Key";
+    private const string m_StrSelected = "Enter New Key\nBackspace to cancel";
     private const string m_StrInputDetect = "Key Entered\nApply to save entered Keys";
     private const string m_StrCancel = "Cancelled";
 
@@ -37,15 +37,22 @@ public class ControlsInput : MonoBehaviour {
             }
             else if (FetchKey() != KeyCode.None)
             {
-                m_ImgToSet.sprite = m_InputDetect;
-                //set text
-                m_TextToSet.text = m_LastInput.ToString();
-                //set last button key
-                m_BtnToSetPostChange.SetKey(m_LastInput);
-
-                m_Listen = false;
-                m_ImgToSet.sprite = m_Unselected;
-                m_HelpText.text = m_StrInputDetect;
+                SetKeyVal(m_LastInput);
+            }
+            else if (Input.GetKey(KeyCode.Mouse0))
+            {
+                m_LastInput = KeyCode.Mouse0;
+                SetKeyVal(m_LastInput);
+            }
+            else if (Input.GetKey(KeyCode.Mouse1))
+            {
+                m_LastInput = KeyCode.Mouse0;
+                SetKeyVal(m_LastInput);
+            }
+            else if (Input.GetKey(KeyCode.Mouse2))
+            {
+                m_LastInput = KeyCode.Mouse0;
+                SetKeyVal(m_LastInput);
             }
         }
     }
@@ -63,12 +70,10 @@ public class ControlsInput : MonoBehaviour {
     }
     KeyCode FetchKey()
     {
-        Debug.Log("FetchKey");
-
         int _TotKeycodes = System.Enum.GetNames(typeof(KeyCode)).Length;
         for (int i = 0; i < _TotKeycodes; i++)
         {
-            if (Input.GetKey((KeyCode)i))
+            if (Input.GetKey((KeyCode)i) && (KeyCode)i != KeyCode.Escape)
             {
                 m_LastInput = (KeyCode)i;
                 return (KeyCode)i;
@@ -76,5 +81,18 @@ public class ControlsInput : MonoBehaviour {
         }
 
         return KeyCode.None;
+    }
+
+    void SetKeyVal(KeyCode _key)
+    {
+        m_ImgToSet.sprite = m_InputDetect;
+        //set text
+        m_TextToSet.text = _key.ToString();
+        //set last button key
+        m_BtnToSetPostChange.SetKey(_key);
+
+        m_Listen = false;
+        m_ImgToSet.sprite = m_Unselected;
+        m_HelpText.text = m_StrInputDetect;
     }
 }
