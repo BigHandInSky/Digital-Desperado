@@ -65,8 +65,6 @@ public class GameData : MonoBehaviour {
             m_TimeSecs += Time.deltaTime;
             if (m_TimeSecs % 60f == 0)
                 AudioManagerEffects.Instance.PlaySound(AudioManagerEffects.Effects.GameOneMin);
-
-            vUpdateTargetUIs();
             yield return new WaitForEndOfFrame();
         }
     }

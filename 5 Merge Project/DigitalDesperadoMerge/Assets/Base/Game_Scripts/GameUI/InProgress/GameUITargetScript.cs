@@ -27,6 +27,8 @@ public class GameUITargetScript : MonoBehaviour {
         if (_num == iLastNum)
             return;
 
+        iLastNum = _num;
+
         if (_num != 0)
         {
             foreach (GameObject obj in m_TargetUIs)
@@ -43,11 +45,14 @@ public class GameUITargetScript : MonoBehaviour {
                 targUIClone.GetComponent<RectTransform>().localScale = Vector3.one;
                 m_TargetUIs.Add(targUIClone);
             }
-
-            if (m_CheckTargetsLeft == true)
-                iLastNum = GameData.Instance.iTargsLft;
-            else
-                iLastNum = (GameData.Instance.iTargsTtl - GameData.Instance.iTargsLft);
-        }        
+        }    
+        else
+        {
+            foreach (GameObject obj in m_TargetUIs)
+            {
+                DestroyObject(obj);
+            }
+            m_TargetUIs.Clear();
+        }
     }
 }

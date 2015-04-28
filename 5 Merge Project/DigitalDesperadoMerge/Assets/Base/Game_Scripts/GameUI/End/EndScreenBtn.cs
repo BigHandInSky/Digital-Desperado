@@ -26,6 +26,7 @@ public class EndScreenBtn : MonoBehaviour
         if (ButtonType == BtnType.Replay)
         {
             ErrorText.text = "";
+            GeneralControlKeys.Instance.bCanRestartOrMenu = true;
             GameObject.FindGameObjectWithTag("GameController").GetComponent<RestartLevel>().DoRestart();
         }
         else if (ButtonType == BtnType.Menu)
@@ -48,7 +49,7 @@ public class EndScreenBtn : MonoBehaviour
             }
 
             SaveComponent.SaveData(TagInput.text);
-            GameSettings.Instance.SetLevelUrl(GameSettings.Instance.LevelInt + 1);
+            GameSettings.Instance.LevelInt += 1;
             Application.LoadLevel("GamePlaHol");
         }
     }
@@ -59,7 +60,9 @@ public class EndScreenBtn : MonoBehaviour
             TagInput.text == null
             || TagInput.text == string.Empty
             || TagInput.text.Length != 3
-            || TagInput.text.Contains(" ")
+            || !char.IsLetterOrDigit(TagInput.text, 0)
+            || !char.IsLetterOrDigit(TagInput.text, 1)
+            || !char.IsLetterOrDigit(TagInput.text, 2)
             )
             return false;
         else

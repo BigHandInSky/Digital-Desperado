@@ -25,6 +25,8 @@ public class GameEndLvl : MonoBehaviour {
 
     private void DoAction()
     {
+        GeneralControlKeys.Instance.bCanRestartOrMenu = false;
+
         PlayerControlObj.AllowControls(false, false);
         PlayerShootObj.bCanShoot = false;
 

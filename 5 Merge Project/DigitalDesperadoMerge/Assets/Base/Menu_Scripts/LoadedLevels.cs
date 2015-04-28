@@ -40,9 +40,8 @@ public class LoadedLevels : MonoBehaviour
 
     public void vLoadLevel()
     {
-        GameSettings.Instance.LevelInt = m_CurrLvlUrl;
-        GameSettings.Instance.SetLevelUrl(m_CurrLvlUrl);
         GameSettings.Instance.SetUrls(MenuLoadLevelsFromXML.Instance.Urls);
+        GameSettings.Instance.LevelInt = m_CurrLvlUrl;
         Application.LoadLevel(sSceneToLoad);
     }
     //get name
@@ -118,7 +117,6 @@ public class LoadedLevels : MonoBehaviour
         m_MapObject.vClearMap();
 
         List<MenuLoadLevelsFromXML.MenuLoadXMLMapData> _mapList = MenuLoadLevelsFromXML.Instance.GetLevelObjs(iCurrentLvl);
-        List<MenuLoadLevelsFromXML.MenuLoadXMLMapData> _mapListLate = new List<MenuLoadLevelsFromXML.MenuLoadXMLMapData>();
 
         foreach(MenuLoadLevelsFromXML.MenuLoadXMLMapData obj in _mapList)
         {
