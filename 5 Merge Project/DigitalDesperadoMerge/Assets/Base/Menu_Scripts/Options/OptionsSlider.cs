@@ -10,7 +10,8 @@ public class OptionsSlider : MonoBehaviour
 
     public enum SliderType
     {
-        Volume,
+        EffVolume,
+        MusVolume,
         FOV,
         Sensitivity
     }
@@ -21,8 +22,10 @@ public class OptionsSlider : MonoBehaviour
     {
         Debug.Log("setup called");
 
-        if (m_Type == SliderType.Volume)
-            Value = GameSettings.Instance.Volume;
+        if (m_Type == SliderType.EffVolume)
+            Value = GameSettings.Instance.EffVolume * 100f;
+        else if (m_Type == SliderType.MusVolume)
+            Value = GameSettings.Instance.MusVolume * 100f;
         else if (m_Type == SliderType.FOV)
             Value = GameSettings.Instance.FOV;
         else if (m_Type == SliderType.Sensitivity)
@@ -38,7 +41,9 @@ public class OptionsSlider : MonoBehaviour
         TextObject.text = (SlideObj.value).ToString();
         Value = SlideObj.value;
 
-        if (m_Type == SliderType.Volume && Value != GameSettings.Instance.Volume)
+        if (m_Type == SliderType.EffVolume && Value != GameSettings.Instance.EffVolume)
+            TextObject.color = OptionsSetter.Instance.TempCol;
+        else if (m_Type == SliderType.MusVolume && Value != GameSettings.Instance.MusVolume)
             TextObject.color = OptionsSetter.Instance.TempCol;
         else if (m_Type == SliderType.FOV && Value != GameSettings.Instance.FOV)
             TextObject.color = OptionsSetter.Instance.TempCol;
@@ -53,8 +58,10 @@ public class OptionsSlider : MonoBehaviour
     {
         GameSettings.Instance.SetSens(Value);
 
-        if (m_Type == SliderType.Volume)
-            GameSettings.Instance.SetVolume(Value);
+        if (m_Type == SliderType.EffVolume)
+            GameSettings.Instance.SetVolume(Value, false);
+        else if (m_Type == SliderType.MusVolume)
+            GameSettings.Instance.SetVolume(Value, true);
         else if (m_Type == SliderType.FOV)
             GameSettings.Instance.SetFOV(Value);
         else if (m_Type == SliderType.Sensitivity)

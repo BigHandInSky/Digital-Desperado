@@ -44,6 +44,7 @@ public class GameRdyCountdown : MonoBehaviour {
 
             if(_Timer < 0.15f)
             {
+                AudioManagerEffects.Instance.PlaySound(AudioManagerEffects.Effects.Countdown);
                 _Timer = 0.99f;
                 _Count--;
                 ObjTextToSet.text = _Count.ToString();

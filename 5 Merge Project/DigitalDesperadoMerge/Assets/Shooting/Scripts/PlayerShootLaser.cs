@@ -8,8 +8,6 @@ public class PlayerShootLaser : MonoBehaviour {
 	//Prefabs of the laser object
 	public GameObject prefabLaser;
     public GameObject gunMuzzle;
-	//Audio clip
-	public AudioClip gunShot;
 	//Damage value of the laser
 	public int iDamage = 50;
 	//The more you increase the range variable, the more it will be easier for the player to hit the target
@@ -56,7 +54,7 @@ public class PlayerShootLaser : MonoBehaviour {
         if (fShootTimer <= 0)
         {
             GameData.Instance.Shoot();
-			GetComponent<AudioSource> ().PlayOneShot (gunShot);
+            AudioManagerEffects.Instance.PlaySound(AudioManagerEffects.Effects.Shoot);
 			
 			GameObject laser = Instantiate (prefabLaser, gunMuzzle.transform.position, Quaternion.identity) as GameObject;
 			laser.GetComponent<LaserScript> ().V3startPosition = laser.transform.position;

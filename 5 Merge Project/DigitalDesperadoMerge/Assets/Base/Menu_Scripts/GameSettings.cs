@@ -85,7 +85,8 @@ public class GameSettings : MonoBehaviour {
 		PlayerData data = new PlayerData ();
         data.LoadLevelInt = m_LoadedLevelInt;
 		data.Effects = Effects;
-		data.Volume = Volume;
+        data.MusVolume = fMusicVolume;
+        data.EffVolume = fEffxsVolume;
 		data.Music = Music;
         data.Sens = fSens;
 		data.FOV = FOV;
@@ -109,7 +110,8 @@ public class GameSettings : MonoBehaviour {
 
 			SetResolution(data.RWidth,data.RHeight);
             SetLevelUrl(data.LoadLevelInt);
-			SetVolume(data.Volume);
+            fMusicVolume = data.MusVolume;
+            fEffxsVolume = data.EffVolume;
             SetFOV(data.FOV);
             SetSens(data.Sens);
             m_KeySettings = data.Keys;
@@ -124,8 +126,10 @@ public class GameSettings : MonoBehaviour {
     private bool bEffectsOn = true;
     public bool Effects { get { return bEffectsOn; } set { bEffectsOn = value; } }
 
-    private float fVolume = 10;
-    public float Volume { get { return fVolume; } }
+    private float fMusicVolume = 1f;
+    private float fEffxsVolume = 1f;
+    public float MusVolume { get { return fMusicVolume; } }
+    public float EffVolume { get { return fMusicVolume; } }
     private float fFOV = 90f;
     public float FOV { get { return fFOV; } }
     private float fSens = 5f;
@@ -170,11 +174,11 @@ public class GameSettings : MonoBehaviour {
         {
             string _temp = m_LoadedUrls[m_LoadedLevelInt];
             _temp = _temp.Split('\\')[_temp.Split('\\').Length - 1];
-
+            /*
             int _index = _temp.IndexOf(".");
             if (_index >= 0)
                 _temp = _temp.Substring(_index, _temp.Length - _index);
-
+            */
             Debug.Log("GameSettings returning new LoadLevelName: Orig: " + m_LoadedUrls[m_LoadedLevelInt]
                 + ", New: " + _temp);
             return _temp;
@@ -211,9 +215,12 @@ public class GameSettings : MonoBehaviour {
         iResWidth = _width;
         iResHeight = _height;
     }
-    public void SetVolume(float _Val)
+    public void SetVolume(float _Val, bool _music)
     {
-        fVolume = _Val;
+        if(_music)
+            fMusicVolume = _Val * 0.01f;
+        else
+            fEffxsVolume = _Val * 0.01f;
     }
     public void SetFOV(float _Val)
     {
@@ -228,7 +235,7 @@ public class GameSettings : MonoBehaviour {
     {
         SaveData();
         Screen.SetResolution(iResWidth, iResHeight, false);
-        AudioListener.volume = (fVolume * 0.01f);
+        AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Menus);
     }
     public void ApplyControls()
     {
@@ -237,6 +244,7 @@ public class GameSettings : MonoBehaviour {
     public void ApplyFOV()
     {
         Camera.main.fieldOfView = fFOV;
+        Debug.Log("cam fov: " + Camera.main.fieldOfView);
     }
 }
 
@@ -244,7 +252,8 @@ public class GameSettings : MonoBehaviour {
 class PlayerData
 {
 	public int LoadLevelInt;
-	public float Volume;
+    public float MusVolume;
+    public float EffVolume;
 	public float FOV;
     public float Sens;
 	public bool Music;

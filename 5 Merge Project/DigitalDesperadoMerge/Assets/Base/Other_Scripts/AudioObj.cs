@@ -7,7 +7,7 @@ public class AudioObj : MonoBehaviour {
     public void Setup(AudioClip _clip)
     {
         gameObject.GetComponent<AudioSource>().clip = _clip;
-        gameObject.GetComponent<AudioSource>().volume = GameSettings.Instance.Volume;
+        gameObject.GetComponent<AudioSource>().volume = GameSettings.Instance.EffVolume;
         StartCoroutine(Delete(_clip.length));
     }
 

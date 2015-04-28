@@ -60,7 +60,6 @@ public class OptionsSoundBtn : MonoBehaviour {
         if (bMusic)
         {
             GameSettings.Instance.Music = bOn;
-            AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Menus);
         }
         else
             GameSettings.Instance.Effects = bOn;

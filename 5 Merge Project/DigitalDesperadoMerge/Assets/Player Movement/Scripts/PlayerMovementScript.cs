@@ -92,9 +92,22 @@ public class PlayerMovementScript : MonoBehaviour
     // Player movement function
     void PlayerMovement()
     {
+        fVertical = 0;
+        fHorizontal = 0;
+
+        if (Input.GetKey(GameSettings.Instance.Forw))
+            fVertical = 1 * fPlayerBaseSpeed;
+        else if (Input.GetKey(GameSettings.Instance.Back))
+            fVertical = -1 * fPlayerBaseSpeed;
+
+        if (Input.GetKey(GameSettings.Instance.Left))
+            fHorizontal = -1 * fPlayerBaseSpeed / 100 * iPlayerSideSpeedPercent;
+        else if (Input.GetKey(GameSettings.Instance.Righ))
+            fHorizontal = 1 * fPlayerBaseSpeed / 100 * iPlayerSideSpeedPercent;
+
         // Horizontal and vertical movement axes and speeds
-        fVertical = Input.GetAxis("Vertical") * fPlayerBaseSpeed;
-        fHorizontal = Input.GetAxis("Horizontal") * fPlayerBaseSpeed / 100 * iPlayerSideSpeedPercent;
+        /*fVertical = Input.GetAxis("Vertical") * fPlayerBaseSpeed;
+        fHorizontal = Input.GetAxis("Horizontal") * fPlayerBaseSpeed / 100 * iPlayerSideSpeedPercent;*/
 
         // If player moving backwards
         if (fVertical <= -0.1f)
@@ -132,14 +145,16 @@ public class PlayerMovementScript : MonoBehaviour
             fVerticalVelocity += fJumpGrav * Time.deltaTime;
 
         // When spacebar and on floor is true
-        if (Input.GetKey(KeyCode.Space) && ccPlayerController.isGrounded && !bHasJumped)
+        if (Input.GetKey(GameSettings.Instance.Jump) && ccPlayerController.isGrounded && !bHasJumped)
         {
             // Revereses gravity for jump
             fVerticalVelocity = fJumpHeight;
             bHasJumped = true;
+            AudioManagerEffects.Instance.PlaySound(AudioManagerEffects.Effects.Jump);
         }
-        else if (Input.GetKey(KeyCode.Space) && !ccPlayerController.isGrounded && !bHasJumped)
+        else if (Input.GetKey(GameSettings.Instance.Jump) && !ccPlayerController.isGrounded && !bHasJumped)
         {
+            AudioManagerEffects.Instance.PlaySound(AudioManagerEffects.Effects.Jump);
             fVerticalVelocity = fJumpHeight;
             bHasJumped = true;
         }

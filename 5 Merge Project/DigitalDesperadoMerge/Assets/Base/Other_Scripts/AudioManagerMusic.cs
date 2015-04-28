@@ -48,6 +48,8 @@ public class AudioManagerMusic : MonoBehaviour
         }
         else if (!GameSettings.Instance.Music)
             return;
+        else if (gameObject.GetComponent<AudioSource>().volume != GameSettings.Instance.MusVolume)
+            gameObject.GetComponent<AudioSource>().volume = GameSettings.Instance.MusVolume;
         
         StartCoroutine(PlayMusic(_type, 0.5f));
     }

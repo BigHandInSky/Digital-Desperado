@@ -1,0 +1,55 @@
+<LevelData>
+  <Stats>
+    <Tags A="EJB" B="YBB" C="EGC" D="DIO" E="EWR" F="www" />
+    <Secs A="01.50" B="01.70" C="01.80" D="02.00" E="03.50" F="04.71" />
+    <Fras A="00126" B="00245" C="00384" D="00429" E="00518" F="00272" />
+    <Shts A="010" B="023" C="034" D="035" E="043" F="001" />
+  </Stats>
+  <PlayerStart>
+    <Position x="0" y="0" z="0" />
+    <Rotation>0</Rotation>
+  </PlayerStart>
+  <Goal>
+    <Position x="0" y="0" z="34" />
+    <Rotation>0</Rotation>
+  </Goal>
+  <Platforms>
+    <Platform level="1">
+      <Position x="0" y="-1.5" z="0" />
+      <Rotation>0</Rotation>
+      <Scale x="8" y="1" z="8" />
+    </Platform>
+    <Platform level="2">
+      <Position x="0" y="-3" z="8" />
+      <Rotation>0</Rotation>
+      <Scale x="8" y="1" z="8" />
+    </Platform>
+    <Platform level="3">
+      <Position x="0" y="-4.5" z="16" />
+      <Rotation>0</Rotation>
+      <Scale x="8" y="1" z="8" />
+    </Platform>
+    <Platform level="4">
+      <Position x="0" y="-6" z="24" />
+      <Rotation>0</Rotation>
+      <Scale x="8" y="1" z="8" />
+    </Platform>
+    <Platform level="5">
+      <Position x="0" y="-7.5" z="32" />
+      <Rotation>0</Rotation>
+      <Scale x="8" y="1" z="8" />
+    </Platform>
+  </Platforms>
+  <Targets>
+    <Target type="1">
+      <Position x="3.5" y="0" z="3.5" />
+      <Rotation>0</Rotation>
+    </Target>
+    <Target type="2">
+      <Position x="-3.5" y="0" z="3.5" />
+      <Rotation>0</Rotation>
+    </Target>
+  </Targets>
+  <Towers>
+  </Towers>
+</LevelData>

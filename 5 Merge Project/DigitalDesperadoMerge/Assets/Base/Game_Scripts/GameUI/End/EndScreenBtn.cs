@@ -26,7 +26,7 @@ public class EndScreenBtn : MonoBehaviour
         if (ButtonType == BtnType.Replay)
         {
             ErrorText.text = "";
-            gameObject.GetComponent<RestartLevel>().DoRestart();
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<RestartLevel>().DoRestart();
         }
         else if (ButtonType == BtnType.Menu)
         {
