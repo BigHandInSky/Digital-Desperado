@@ -42,19 +42,14 @@ public class PlayerShootLaser : MonoBehaviour {
 	
 	void Update () 
 	{
-		//Debug.DrawLine(Camera.main.transform.position, Camera.main.transform.position + Camera.main.transform.forward * 100, Color.red);
-		//Debug.DrawLine(Camera.main.transform.position + Camera.main.transform.right * range, Camera.main.transform.right * range + Camera.main.transform.position +  Camera.main.transform.forward * 100, Color.red);
-		//Debug.DrawLine(Camera.main.transform.position - Camera.main.transform.right * range, Camera.main.transform.position +  Camera.main.transform.forward * 100 - Camera.main.transform.right * range, Color.red);
-		//Debug.DrawLine(Camera.main.transform.position + Camera.main.transform.up * range, Camera.main.transform.position +  Camera.main.transform.forward * 100 + Camera.main.transform.up * range, Color.red);
-		//Debug.DrawLine(Camera.main.transform.position - Camera.main.transform.up * range, Camera.main.transform.position +  Camera.main.transform.forward * 100 - Camera.main.transform.up * range, Color.red);
-
 		fShootTimer -= Time.deltaTime;
 
 		//On mouse click instantiate a new prefab laser and set the position
 		if (Input.GetKey(Shoot) && bCanShoot)
 			vShoot ();
 	}
-	
+
+
 	public void vShoot()
 	{
 		//if script timer reaches 0, allow the player to use the mouse click
@@ -76,7 +71,6 @@ public class PlayerShootLaser : MonoBehaviour {
 			
 			if (Physics.Raycast (Camera.main.transform.position, Camera.main.transform.forward, out hit, 500f, layerMask)) 
 			{
-				//Debug.Log(hit.collider.gameObject.name);
 				Vector3 v3 = (Camera.main.transform.forward).normalized;
 				GameObject frag = Instantiate (platformFrag, hit.point + v3 * 0.5f, Quaternion.identity) as GameObject;
 				foreach(Transform child in frag.transform)
@@ -84,6 +78,10 @@ public class PlayerShootLaser : MonoBehaviour {
 					if(child.gameObject.GetComponent<Renderer>() && hit.collider.gameObject.GetComponent<Renderer>())
 						child.gameObject.GetComponent<Renderer>().material = hit.collider.gameObject.GetComponent<Renderer>().material;
 				}
+
+				//GameObject crackObj = Instantiate (crackPrefab, hit.point, Quaternion.identity) as GameObject;
+				//crackObj.transform.position = hit.point;
+
 			}
 
 			if (Physics.Raycast (Camera.main.transform.position + Camera.main.transform.forward * 1.0f, Camera.main.transform.forward, out hit, 500f, layerMaskPlayer)) 
