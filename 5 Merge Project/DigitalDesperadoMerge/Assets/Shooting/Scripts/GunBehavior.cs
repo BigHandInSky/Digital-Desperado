@@ -12,12 +12,24 @@ public class GunBehavior : MonoBehaviour {
 	private bool isShooting = false;
 	private bool recharge = false;
 
+    private KeyCode Shoot = KeyCode.Mouse0;
+
+    void Awake()
+    {
+        Shoot = GameSettings.Instance.Fire;
+    }
+
+
 	// Update is called once per frame
-	void FixedUpdate () {
+    void Update()
+    {
 		xAxis += 0.02f;
 		yAxis += 0.06f;
 
-		if (Camera.main.GetComponent<PlayerShootLaser> ().bCanShoot && Input.GetMouseButtonDown (0) && Camera.main.GetComponent<PlayerShootLaser> ().fShootTimer <= 0) {
+		if (Camera.main.GetComponent<PlayerShootLaser> ().bCanShoot 
+            && Input.GetKey(Shoot) 
+            && Camera.main.GetComponent<PlayerShootLaser> ().fShootTimer <= 0) 
+        {
 			isShooting = true;
 		}
 

@@ -94,7 +94,7 @@ public class SaveLevel : MonoBehaviour
                 writer.WriteStartElement("Platform");
 
                 writer.WriteAttributeString("level", (i + 1).ToString());
-                CreateTransformElements(writer, agoPlatforms[i], true);
+                CreateTransformElements(writer, agoPlatforms[i], true, true);
 
                 writer.WriteEndElement();
             }
@@ -106,7 +106,7 @@ public class SaveLevel : MonoBehaviour
             foreach (GameObject tower in agoTowers)
             {
                 writer.WriteStartElement("Tower");
-                CreateTransformElements(writer, tower, true);
+                CreateTransformElements(writer, tower, true, true);
                 writer.WriteEndElement();
             }
 
@@ -205,7 +205,7 @@ public class SaveLevel : MonoBehaviour
         agoTargets = GameObject.FindGameObjectsWithTag("Target");
     }
 
-    private void CreateTransformElements(XmlWriter writer, GameObject obj, bool writeScale = false)
+    private void CreateTransformElements(XmlWriter writer, GameObject obj, bool writeScale = false, bool writeFullRot = false)
     {
         writer.WriteStartElement("Position");
 
@@ -215,7 +215,20 @@ public class SaveLevel : MonoBehaviour
 
         writer.WriteEndElement();
 
-        writer.WriteElementString("Rotation", obj.transform.rotation.y.ToString());
+        if (writeFullRot)
+        {
+            writer.WriteStartElement("Rotation");
+
+            writer.WriteAttributeString("x", obj.transform.rotation.x.ToString());
+            writer.WriteAttributeString("y", obj.transform.rotation.y.ToString());
+            writer.WriteAttributeString("z", obj.transform.rotation.z.ToString());
+
+            writer.WriteEndElement();
+        }
+        else
+        {
+            writer.WriteElementString("Rotation", obj.transform.rotation.y.ToString());
+        }
 
         if (writeScale)
         {

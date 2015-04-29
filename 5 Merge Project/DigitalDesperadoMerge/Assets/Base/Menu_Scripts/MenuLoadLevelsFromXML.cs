@@ -334,9 +334,16 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
                         break;
 
                     case "Rotation":
-                        _reader.Read();
-                        _rot = float.Parse(_reader.Value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
-                        break;
+                        if (_reader.AttributeCount > 0)
+                        {
+                            _rot = float.Parse(_reader.GetAttribute("y"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        }
+                        else
+                        {
+                            _reader.Read();
+                            _rot = float.Parse(_reader.Value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        }
+                            break;
 
                     case "Scale":
                         _temp.Scale.x = float.Parse(_reader.GetAttribute("x"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);

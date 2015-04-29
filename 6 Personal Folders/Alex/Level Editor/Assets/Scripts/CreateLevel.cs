@@ -143,7 +143,7 @@ public class CreateLevel : MonoBehaviour
                 {
                     Debug.Log("File not a supported level");
 
-                    return;
+                    //return;
                 }
             }
 
@@ -245,7 +245,7 @@ public class CreateLevel : MonoBehaviour
         // Position
         Vector3 position = Vector3.zero;
         // Rotation
-        float rotation = 0;
+        Quaternion rotation = obj.transform.rotation;
         // Scale
         Vector3 scale = obj.transform.localScale;
 
@@ -265,8 +265,17 @@ public class CreateLevel : MonoBehaviour
                     break;
 
                     case "Rotation":
-                        reader.Read();
-                        rotation = float.Parse(reader.Value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        if(reader.AttributeCount > 0)
+                        {
+                            rotation.x = float.Parse(reader.GetAttribute("x"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                            rotation.y = float.Parse(reader.GetAttribute("y"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                            rotation.z = float.Parse(reader.GetAttribute("z"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        }
+                        else
+                        {
+                            reader.Read();
+                            rotation.y = float.Parse(reader.Value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        }
                     break;
 
                     case "Scale":
@@ -280,7 +289,7 @@ public class CreateLevel : MonoBehaviour
 
         // Set the Position, Rotation and Scale
         obj.transform.position = position;
-        obj.transform.rotation = Quaternion.Euler(new Vector3(0, rotation, 0)); 
+        obj.transform.rotation = rotation; 
         obj.transform.localScale = scale;
     }
 
