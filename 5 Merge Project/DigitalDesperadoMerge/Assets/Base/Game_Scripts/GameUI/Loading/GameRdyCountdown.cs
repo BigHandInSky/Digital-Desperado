@@ -14,6 +14,7 @@ public class GameRdyCountdown : MonoBehaviour {
 
     [SerializeField] private PlayerMovementScript PlayerControlObj;
     [SerializeField] private PlayerShootLaser PlayerShootObj;
+    [SerializeField] private GameEndLvl EndTrigger;
 
     public void StartCountdown()
     {
@@ -55,6 +56,7 @@ public class GameRdyCountdown : MonoBehaviour {
 
         PlayerControlObj.AllowControls(true, true);
         PlayerShootObj.bCanShoot = true;
+        EndTrigger.bCanEnd = true;
 
         foreach (GameObject obj in ObjsToActivateWhenComplete)
         {

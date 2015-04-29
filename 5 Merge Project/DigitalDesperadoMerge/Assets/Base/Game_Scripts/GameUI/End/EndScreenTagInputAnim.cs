@@ -22,11 +22,8 @@ public class EndScreenTagInputAnim : MonoBehaviour {
             //if inputfield is not selected && text length != 3
             if (InputComponent.isFocused == false && InputComponent.text.Length != 3)
             {
-                Debug.Log("not focused and less than 3 chars");
                 if (InputComponent.text == "" || InputComponent.text.Contains(" "))
                 {
-                    Debug.Log("contains spaces or nothing");
-
                     _On = !_On;
 
                     if (_On)
@@ -37,8 +34,6 @@ public class EndScreenTagInputAnim : MonoBehaviour {
             }
             else
             {
-                Debug.Log("fine");
-
                 gameObject.GetComponent<Image>().sprite = m_Normal;
             }
 

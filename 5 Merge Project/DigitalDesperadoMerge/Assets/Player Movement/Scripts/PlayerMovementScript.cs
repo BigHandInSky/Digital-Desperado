@@ -40,7 +40,6 @@ public class PlayerMovementScript : MonoBehaviour
     // Camera object
     public GameObject GOCamera;
 
-    private KeyCode ExitToMenu = KeyCode.Escape;
     private KeyCode Forward = KeyCode.W;
     private KeyCode Backward = KeyCode.S;
     private KeyCode Left = KeyCode.A;
@@ -82,9 +81,6 @@ public class PlayerMovementScript : MonoBehaviour
 
         //if (bIsCameraEnabled && bIsMovementEnabled)
             //HeadBobbing();
-
-        //if (Input.GetKey(ExitToMenu))
-            //Application.LoadLevel("Main");
     }
 
     public void AllowControls(bool _MoveVal, bool _CamVal)

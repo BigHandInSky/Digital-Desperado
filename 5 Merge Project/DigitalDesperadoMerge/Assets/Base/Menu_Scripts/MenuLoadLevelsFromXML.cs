@@ -112,7 +112,8 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
 	}
     private bool CheckXML(string _url)
     {
-        XmlReader reader = XmlReader.Create(_url);
+        return true;
+        /*XmlReader reader = XmlReader.Create(_url);
         reader.Read();
         if (reader.Name != "LevelData")
         {
@@ -124,11 +125,12 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
         {
             reader.Close();
             return true;
-        }
+        }*/
     }
 
     private bool CheckEntireXMLLevel(string _url)
     {
+        bool leveldata = false;
         bool statsNode = false;
         bool playerNode = false;
         bool endNode = false;
@@ -137,27 +139,24 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
         bool towersNode = false;
 
         using (XmlReader reader = XmlReader.Create(_url))
-        {
+        {/*
             reader.Read();
 
-            if (reader.Name != "LevelData")
+            if (reader.Name == "LevelData")
             {
-                reader.Read();
-
-                if (reader.Name != "LevelData")
-                {
-                    Debug.LogError("File not a supported level");
-
-                    return false;
-                }
+                leveldata = true;
             }
-
+            */
             while (reader.Read())
             {
                 if (reader.IsStartElement())
                 {
                     switch (reader.Name)
                     {
+                        case "LevelData":
+                            leveldata = true;
+                            break;
+
                         case "Stats":
                             statsNode = true;
                         break;
@@ -186,39 +185,45 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
             }
         }
 
+        if (!leveldata)
+        {
+            Debug.LogError("File not a supported level - no root");
+            return false;
+        }
+
         if (!statsNode)
         {
-            Debug.LogError("File not a supported level");
+            Debug.LogError("File not a supported level - no stats");
             return false;
         }
 
         if (!playerNode)
         {
-            Debug.LogError("File not a supported level");
+            Debug.LogError("File not a supported level - no player");
             return false;
         }
 
         if (!endNode)
         {
-            Debug.LogError("File not a supported level");
+            Debug.LogError("File not a supported level - no end");
             return false;
         }
 
         if (!platformsNode)
         {
-            Debug.LogError("File not a supported level");
+            Debug.LogError("File not a supported level - no platform");
             return false;
         }
 
         if (!towersNode)
         {
-            Debug.LogError("File not a supported level");
+            Debug.LogError("File not a supported level - no towers");
             return false;
         }
 
         if (!targetsNode)
         {
-            Debug.LogError("File not a supported level");
+            Debug.LogError("File not a supported targets");
             return false;
         }
 
@@ -329,9 +334,16 @@ public class MenuLoadLevelsFromXML : MonoBehaviour
                         break;
 
                     case "Rotation":
-                        _reader.Read();
-                        _rot = float.Parse(_reader.Value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
-                        break;
+                        if (_reader.AttributeCount > 0)
+                        {
+                            _rot = float.Parse(_reader.GetAttribute("y"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        }
+                        else
+                        {
+                            _reader.Read();
+                            _rot = float.Parse(_reader.Value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        }
+                            break;
 
                     case "Scale":
                         _temp.Scale.x = float.Parse(_reader.GetAttribute("x"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);

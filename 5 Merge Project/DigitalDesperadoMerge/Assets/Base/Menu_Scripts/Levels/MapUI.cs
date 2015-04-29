@@ -22,7 +22,6 @@ public class MapUI : MonoBehaviour {
         vClearMap();
 
         List<MenuLoadLevelsFromXML.MenuLoadXMLMapData> _mapList = MenuLoadLevelsFromXML.Instance.GetLevelObjs(LoadedLevels.Instance.iCurrentLvl);
-        List<MenuLoadLevelsFromXML.MenuLoadXMLMapData> _mapListLate = new List<MenuLoadLevelsFromXML.MenuLoadXMLMapData>();
 
         foreach (MenuLoadLevelsFromXML.MenuLoadXMLMapData obj in _mapList)
         {

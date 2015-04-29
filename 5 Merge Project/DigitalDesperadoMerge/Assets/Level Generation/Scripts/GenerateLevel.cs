@@ -16,6 +16,8 @@ public class GenerateLevel : MonoBehaviour
     [SerializeField]
     GameObject goPlayer;
     [SerializeField]
+    GameObject goPlayerStart;
+    [SerializeField]
     GameObject goGoal;
 
     [SerializeField]
@@ -23,7 +25,7 @@ public class GenerateLevel : MonoBehaviour
     [SerializeField]
     GameObject[] agoPlatformPrefabs;
     [SerializeField]
-    GameObject[] agoTowerPrefabs;
+    GameObject goTowerPrefab;
     [SerializeField]
     GameObject[] agoTargetPrefabs;
 
@@ -58,7 +60,8 @@ public class GenerateLevel : MonoBehaviour
                             XmlReader transformSubTree = reader.ReadSubtree();
 
                             AssignTransform(goPlayer, transformSubTree);
-                            AssignTransform(playerStart, transformSubTree);
+                            playerStart.transform.position = goPlayer.transform.position;
+                            playerStart.transform.rotation = goPlayer.transform.rotation;
                         break;
 
                         case "Goal":
@@ -66,14 +69,13 @@ public class GenerateLevel : MonoBehaviour
                         break;
 
                         case "Platform":
-                            int platformLevel = Mathf.Clamp(int.Parse(reader.GetAttribute("level")) - 1, 0, agoPlatformPrefabs.Length - 1);
+                            int platformLevel = Mathf.Clamp(int.Parse(reader.GetAttribute("level")) - 1, 0, agoPlatformPrefabs.Length);
                             GameObject platform = Instantiate(agoPlatformPrefabs[platformLevel]);
                             AssignTransform(platform, reader.ReadSubtree());
                         break;
 
                         case "Tower":
-                            int towerType = Mathf.Clamp(int.Parse(reader.GetAttribute("type")) - 1, 0, agoTowerPrefabs.Length - 1);
-                            GameObject tower = Instantiate(agoTowerPrefabs[towerType]);
+                            GameObject tower = Instantiate(goTowerPrefab);
                             AssignTransform(tower, reader.ReadSubtree());
                         break;
 
@@ -97,7 +99,7 @@ public class GenerateLevel : MonoBehaviour
         // Position
         Vector3 position = Vector3.zero;
         // Rotation
-        float rotation = 0;
+        Quaternion rotation = obj.transform.rotation;
         // Scale
         Vector3 scale = obj.transform.localScale;
 
@@ -117,8 +119,17 @@ public class GenerateLevel : MonoBehaviour
                         break;
 
                     case "Rotation":
-                        reader.Read();
-                        rotation = float.Parse(reader.Value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        if (reader.AttributeCount > 0)
+                        {
+                            rotation.x = float.Parse(reader.GetAttribute("x"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                            rotation.y = float.Parse(reader.GetAttribute("y"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                            rotation.z = float.Parse(reader.GetAttribute("z"), NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        }
+                        else
+                        {
+                            reader.Read();
+                            rotation.y = float.Parse(reader.Value, NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign);
+                        }
                         break;
 
                     case "Scale":
@@ -132,7 +143,7 @@ public class GenerateLevel : MonoBehaviour
 
         // Set the Position, Rotation and Scale
         obj.transform.position = position;
-        obj.transform.rotation = Quaternion.Euler(new Vector3(0, rotation, 0));
+        obj.transform.rotation = rotation;
         obj.transform.localScale = scale;
 
         // Set the transform parent to the Level Root Transform

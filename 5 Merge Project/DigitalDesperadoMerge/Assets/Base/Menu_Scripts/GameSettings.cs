@@ -42,8 +42,11 @@ public class GameSettings : MonoBehaviour {
     public bool bComeFromGame = false;
     void OnLevelWasLoaded(int level)
     {
+        if (! GeneralControlKeys.Instance.bCanRestartOrMenu)
+            GeneralControlKeys.Instance.bCanRestartOrMenu = true;
+
         //if another gameSettings detected, delete other
-        if (Application.loadedLevelName.Contains("Tutorial"))
+        if (Application.loadedLevelName.Contains("Tutorial") || Application.loadedLevelName.Contains("Sandbox"))
         {
             bComeFromGame = false;
             AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Loading);
@@ -55,15 +58,16 @@ public class GameSettings : MonoBehaviour {
         }
         else if (Application.loadedLevelName.Contains("Main"))
         {
-            SaveData();
-
             AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Menus);
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
             if (bComeFromGame)
+            {
                 Camera.main.GetComponent<CameraTransitionScript>().GotoLevelSide();
+                SaveData();
+            }
             else
                 Camera.main.GetComponent<CameraTransitionScript>().FirstLoad();
 
@@ -109,7 +113,7 @@ public class GameSettings : MonoBehaviour {
 			file.Close ();
 
 			SetResolution(data.RWidth,data.RHeight);
-            SetLevelUrl(data.LoadLevelInt);
+            LevelInt = data.LoadLevelInt;
             fMusicVolume = data.MusVolume;
             fEffxsVolume = data.EffVolume;
             SetFOV(data.FOV);
@@ -198,19 +202,15 @@ public class GameSettings : MonoBehaviour {
                 m_LoadedLevelInt = value; 
             else
             {
-                Debug.LogWarning("GameSettings was given an int greater than url array");
+                Debug.LogWarning("GameSettings was given an invalid int: " + value);
                 m_LoadedLevelInt = 0;
             }
         } 
     }
-
-    public void SetLevelUrl(int _index)
-    {
-        m_LoadedLevelInt = _index;
-    }
     public void SetUrls(List<string> _Urls)
     {
-        m_LoadedUrls = _Urls;
+        //if (_Urls.Count < 1)
+            m_LoadedUrls = _Urls;
     }
     public void SetResolution(int _width, int _height)
     {
