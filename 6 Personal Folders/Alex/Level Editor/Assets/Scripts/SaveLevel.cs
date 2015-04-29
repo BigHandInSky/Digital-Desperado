@@ -94,7 +94,7 @@ public class SaveLevel : MonoBehaviour
                 writer.WriteStartElement("Platform");
 
                 writer.WriteAttributeString("level", (i + 1).ToString());
-                CreateTransformElements(writer, agoPlatforms[i]);
+                CreateTransformElements(writer, agoPlatforms[i], true);
 
                 writer.WriteEndElement();
             }

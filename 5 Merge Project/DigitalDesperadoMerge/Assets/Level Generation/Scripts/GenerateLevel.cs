@@ -16,6 +16,8 @@ public class GenerateLevel : MonoBehaviour
     [SerializeField]
     GameObject goPlayer;
     [SerializeField]
+    GameObject goPlayerStart;
+    [SerializeField]
     GameObject goGoal;
 
     [SerializeField]
@@ -58,7 +60,8 @@ public class GenerateLevel : MonoBehaviour
                             XmlReader transformSubTree = reader.ReadSubtree();
 
                             AssignTransform(goPlayer, transformSubTree);
-                            AssignTransform(playerStart, transformSubTree);
+                            playerStart.transform.position = goPlayer.transform.position;
+                            playerStart.transform.rotation = goPlayer.transform.rotation;
                         break;
 
                         case "Goal":
@@ -66,7 +69,7 @@ public class GenerateLevel : MonoBehaviour
                         break;
 
                         case "Platform":
-                            int platformLevel = Mathf.Clamp(int.Parse(reader.GetAttribute("level")) - 1, 0, agoPlatformPrefabs.Length - 1);
+                            int platformLevel = Mathf.Clamp(int.Parse(reader.GetAttribute("level")) - 1, 0, agoPlatformPrefabs.Length);
                             GameObject platform = Instantiate(agoPlatformPrefabs[platformLevel]);
                             AssignTransform(platform, reader.ReadSubtree());
                         break;

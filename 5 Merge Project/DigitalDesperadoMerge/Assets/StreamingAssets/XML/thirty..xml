@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LevelData>
+  <Stats>
+    <Tags A="---" B="---" C="---" D="---" E="---" F="---" />
+    <Secs A="999.99" B="999.99" C="999.99" D="999.99" E="999.99" F="999.99" />
+    <Fras A="99999" B="99999" C="99999" D="99999" E="99999" F="99999" />
+    <Shts A="999" B="999" C="999" D="999" E="999" F="999" />
+  </Stats>
+  <PlayerStart>
+    <Position x="0" y="2" z="25" />
+    <Rotation>0.1650476</Rotation>
+  </PlayerStart>
+  <Goal>
+    <Position x="0" y="0" z="0" />
+    <Rotation>0</Rotation>
+  </Goal>
+  <Platforms>
+    <Platform level="1">
+      <Position x="0" y="0" z="25" />
+      <Rotation>0</Rotation>
+      <Scale x="5" y="1" z="5" />
+    </Platform>
+    <Platform level="2">
+      <Position x="0" y="0" z="20" />
+      <Rotation>0</Rotation>
+      <Scale x="5" y="1" z="5" />
+    </Platform>
+    <Platform level="3">
+      <Position x="0" y="0" z="15" />
+      <Rotation>0</Rotation>
+      <Scale x="5" y="1" z="5" />
+    </Platform>
+    <Platform level="4">
+      <Position x="0" y="0" z="10" />
+      <Rotation>0</Rotation>
+      <Scale x="5" y="1" z="5" />
+    </Platform>
+    <Platform level="5">
+      <Position x="0" y="0" z="5" />
+      <Rotation>0</Rotation>
+      <Scale x="5" y="1" z="5" />
+    </Platform>
+  </Platforms>
+  <Towers />
+  <Targets>
+    <Target type="1">
+      <Position x="0" y="2" z="20" />
+      <Rotation>0</Rotation>
+    </Target>
+  </Targets>
+</LevelData>

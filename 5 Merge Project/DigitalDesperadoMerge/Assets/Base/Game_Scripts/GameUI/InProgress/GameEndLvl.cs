@@ -11,6 +11,8 @@ public class GameEndLvl : MonoBehaviour {
     [SerializeField] private PlayerMovementScript PlayerControlObj;
     [SerializeField] private PlayerShootLaser PlayerShootObj;
 
+    public bool bCanEnd = false;
+
     void OnCollisionEnter(Collision _coll)
     {
         if (_coll.gameObject.tag == sPlayerTag)
@@ -25,19 +27,23 @@ public class GameEndLvl : MonoBehaviour {
 
     private void DoAction()
     {
-        GeneralControlKeys.Instance.bCanRestartOrMenu = false;
+        if (bCanEnd)
+        {
+            GeneralControlKeys.Instance.bCanRestartOrMenu = false;
 
-        PlayerControlObj.AllowControls(false, false);
-        PlayerShootObj.bCanShoot = false;
+            PlayerControlObj.AllowControls(false, false);
+            PlayerShootObj.bCanShoot = false;
+            bCanEnd = false;
 
-        GameData.Instance.vStopCounting();
-        goObjToActivate.SetActive(true);
-        goObjToDeActivate.SetActive(false);
-        EndScreenObj.SetupEndScreen();
+            GameData.Instance.vStopCounting();
+            goObjToActivate.SetActive(true);
+            goObjToDeActivate.SetActive(false);
+            EndScreenObj.SetupEndScreen();
 
-        AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.EndGame);
+            AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.EndGame);
 
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 }

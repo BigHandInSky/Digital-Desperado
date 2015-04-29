@@ -165,9 +165,6 @@ public class GameSettings : MonoBehaviour {
     { 
         get
         {
-            print(m_LoadedLevelInt);
-            print(m_LoadedUrls.Count);
-
             if (m_LoadedLevelInt < m_LoadedUrls.Count && m_LoadedLevelInt > -1)
                 return m_LoadedUrls[m_LoadedLevelInt];
             else
