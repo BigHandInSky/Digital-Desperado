@@ -18,7 +18,7 @@ public class Catcher : MonoBehaviour {
 
     void OnTriggerEnter(Collider _coll)
     {
-        Debug.Log("catcher triggered by: " + _coll.gameObject.tag);
+        //Debug.Log("catcher triggered by: " + _coll.gameObject.tag);
 
         if (_coll.gameObject.tag == sPlayerTag)
             DoAction(false, _coll.gameObject);

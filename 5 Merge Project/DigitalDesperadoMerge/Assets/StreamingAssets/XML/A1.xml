@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LevelData>
+  <Stats>
+    <Tags A="---" B="---" C="---" D="---" E="---" F="---" />
+    <Secs A="999.99" B="999.99" C="999.99" D="999.99" E="999.99" F="999.99" />
+    <Fras A="99999" B="99999" C="99999" D="99999" E="99999" F="99999" />
+    <Shts A="999" B="999" C="999" D="999" E="999" F="999" />
+  </Stats>
+  <PlayerStart>
+    <Position x="0" y="1.5" z="50" />
+    <Rotation>1</Rotation>
+  </PlayerStart>
+  <Goal>
+    <Position x="0" y="0" z="0" />
+    <Rotation>0</Rotation>
+  </Goal>
+  <Platforms>
+    <Platform level="1">
+      <Position x="0" y="0" z="50" />
+      <Rotation x="0" y="0" z="0" />
+      <Scale x="5" y="1" z="10" />
+    </Platform>
+    <Platform level="2">
+      <Position x="-8.84" y="-2" z="24.67" />
+      <Rotation x="0" y="-0.5" z="0" />
+      <Scale x="3" y="1" z="10" />
+    </Platform>
+    <Platform level="1">
+      <Position x="0" y="0" z="40" />
+      <Rotation x="0" y="0" z="0" />
+      <Scale x="5" y="1" z="10" />
+    </Platform>
+    <Platform level="1">
+      <Position x="0" y="0" z="30" />
+      <Rotation x="0" y="0" z="0" />
+      <Scale x="5" y="1" z="10" />
+    </Platform>
+    <Platform level="1">
+      <Position x="0" y="0" z="20" />
+      <Rotation x="0" y="0" z="0" />
+      <Scale x="5" y="1" z="10" />
+    </Platform>
+    <Platform level="1">
+      <Position x="0" y="0" z="10" />
+      <Rotation x="0" y="0" z="0" />
+      <Scale x="5" y="1" z="10" />
+    </Platform>
+    <Platform level="2">
+      <Position x="8.67" y="-2" z="-4.95" />
+      <Rotation x="0" y="-0.8" z="0" />
+      <Scale x="3" y="1" z="10" />
+    </Platform>
+  </Platforms>
+  <Towers>
+    <Tower>
+      <Position x="5" y="0" z="20" />
+      <Rotation x="0" y="0" z="0" />
+      <Scale x="4" y="15" z="4" />
+    </Tower>
+    <Tower>
+      <Position x="-5" y="0" z="20" />
+      <Rotation x="0" y="0" z="0" />
+      <Scale x="4" y="15" z="4" />
+    </Tower>
+  </Towers>
+  <Targets>
+    <Target type="1">
+      <Position x="3.58" y="9.27" z="20.47" />
+      <Rotation>-0.1573134</Rotation>
+    </Target>
+    <Target type="1">
+      <Position x="-4.18" y="9.27" z="20.37" />
+      <Rotation>0.1934637</Rotation>
+    </Target>
+    <Target type="1">
+      <Position x="-6.08" y="9.27" z="20.07" />
+      <Rotation>0.1934637</Rotation>
+    </Target>
+    <Target type="1">
+      <Position x="5.99" y="9.27" z="20.73" />
+      <Rotation>-0.206269</Rotation>
+    </Target>
+    <Target type="1">
+      <Position x="-6.5" y="-0.19" z="24.39" />
+      <Rotation>0.1505225</Rotation>
+    </Target>
+    <Target type="1">
+      <Position x="-10.47" y="-0.19" z="26.56" />
+      <Rotation>0.3372746</Rotation>
+    </Target>
+    <Target type="1">
+      <Position x="6.66" y="-0.2" z="-4.91" />
+      <Rotation>-0.06849267</Rotation>
+    </Target>
+    <Target type="1">
+      <Position x="11" y="-0.2" z="-4.27" />
+      <Rotation>-0.2585008</Rotation>
+    </Target>
+  </Targets>
+</LevelData>

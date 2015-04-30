@@ -29,7 +29,7 @@ public class GameRdyCountdown : MonoBehaviour {
     {
         float _Timer = 1f;
 
-        int _Count = 3;
+        int _Count = 10;
         ObjTextToSet.text = _Count.ToString();
 
         Vector3 _Scale = new Vector3();

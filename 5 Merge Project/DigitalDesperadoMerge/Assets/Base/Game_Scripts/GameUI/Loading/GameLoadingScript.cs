@@ -20,7 +20,7 @@ public class GameLoadingScript : MonoBehaviour {
 
     void Start()
     {
-        AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Loading);
+        AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Other);
         StartCoroutine("Switch");
     }
 

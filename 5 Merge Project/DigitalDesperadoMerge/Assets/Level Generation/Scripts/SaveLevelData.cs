@@ -29,7 +29,7 @@ public class SaveLevelData : MonoBehaviour
     {
         //get current data
         CurrTag = _EntryTag;
-        CurrSecs = GameData.Instance.fTimeScs;
+        CurrSecs = GameData.Instance.fTimeScsAndPenalty;
         CurrFrames = GameData.Instance.iTimeFr;
         CurrShots = GameData.Instance.iBullsShot;
 
@@ -51,7 +51,6 @@ public class SaveLevelData : MonoBehaviour
                 }
 
                 //set loop value as current
-                Debug.Log("loop num trying to set: " + loop);
                 DataStats[loop].Tag = CurrTag;
                 DataStats[loop].Secs = CurrSecs;
                 DataStats[loop].Frames = CurrFrames;
@@ -69,77 +68,104 @@ public class SaveLevelData : MonoBehaviour
     {
         sLevelDataUrl = GameSettings.Instance.LoadLevelUrl;
 
+        bool _tagsSaved = false;
+        bool _secsSaved = false;
+        bool _frassSaved = false;
+        bool _shotsSaved = false;
+
         // Level xml document
         XmlDocument levelDoc = new XmlDocument();
         // Load document from url
         levelDoc.Load(sLevelDataUrl);
 
-        // Loop through each node under the root node to find the stats node
-        foreach (XmlNode node in levelDoc.ChildNodes[0].ChildNodes)
+        foreach (XmlNode node in levelDoc.ChildNodes)
         {
-            if (node.Name == "Stats")
+            if (_tagsSaved
+                && _secsSaved
+                && _frassSaved
+                && _shotsSaved)
+                break;
+
+            foreach (XmlNode subnode in node.ChildNodes)
             {
-                // Loop through each stat node
-                foreach (XmlNode statNode in node.ChildNodes)
+                if (subnode.Name == "Stats")
                 {
-                    // Check the name of each node 
-                    switch (statNode.Name)
+                    // Loop through each stat node
+                    foreach (XmlNode statNode in subnode.ChildNodes)
                     {
-                        case "Tags":
-                            //loop through structs
-                            for (int loop = 0; loop < DataStats.Length; loop++ )
-                            {
-                                //foreach one make a new attribute
-                                XmlAttribute attribute = levelDoc.CreateAttribute(AS_ATTRIBUTE_NAMES[loop]);
-                                //set value as data
-                                attribute.Value = DataStats[loop].Tag;
-                                //append to node
-                                statNode.Attributes.Append(attribute);
-                            }
-                        break;
-
-                        case "Secs":
-                            //loop through structs
-                            for (int loop = 0; loop < DataStats.Length; loop++)
-                            {
-                                //foreach one make a new attribute
-                                XmlAttribute attribute = levelDoc.CreateAttribute(AS_ATTRIBUTE_NAMES[loop]);
-                                //set value as data
-                                attribute.Value = DataStats[loop].Secs.ToString("00.00");
-                                //append to node
-                                statNode.Attributes.Append(attribute);
-                            }
-                        break;
-
-                        case "Fras":
-                            //loop through structs
-                            for (int loop = 0; loop < DataStats.Length; loop++)
-                            {
-                                //foreach one make a new attribute
-                                XmlAttribute attribute = levelDoc.CreateAttribute(AS_ATTRIBUTE_NAMES[loop]);
-                                //set value as data
-                                attribute.Value = DataStats[loop].Frames.ToString("00000");
-                                //append to node
-                                statNode.Attributes.Append(attribute);
-                            }
-                        break;
-
-                        case "Shts":
-                        //loop through structs
-                        for (int loop = 0; loop < DataStats.Length; loop++)
+                        // Check the name of each node 
+                        switch (statNode.Name)
                         {
-                            //foreach one make a new attribute
-                            XmlAttribute attribute = levelDoc.CreateAttribute(AS_ATTRIBUTE_NAMES[loop]);
-                            //set value as data
-                            attribute.Value = DataStats[loop].Shots.ToString("000");
-                            //append to node
-                            statNode.Attributes.Append(attribute);
+                            case "Tags":
+                                //loop through structs
+                                for (int loop = 0; loop < DataStats.Length; loop++)
+                                {
+                                    //foreach one make a new attribute
+                                    XmlAttribute attribute = levelDoc.CreateAttribute(AS_ATTRIBUTE_NAMES[loop]);
+                                    //set value as data
+                                    attribute.Value = DataStats[loop].Tag;
+                                    //append to node
+                                    statNode.Attributes.Append(attribute);
+
+                                    if (loop == DataStats.Length - 1)
+                                        _tagsSaved = true;
+                                }
+                                break;
+
+                            case "Secs":
+                                //loop through structs
+                                for (int loop = 0; loop < DataStats.Length; loop++)
+                                {
+                                    //foreach one make a new attribute
+                                    XmlAttribute attribute = levelDoc.CreateAttribute(AS_ATTRIBUTE_NAMES[loop]);
+                                    //set value as data
+                                    attribute.Value = DataStats[loop].Secs.ToString("00.00");
+                                    //append to node
+                                    statNode.Attributes.Append(attribute);
+
+                                    if (loop == DataStats.Length - 1)
+                                        _secsSaved = true;
+                                }
+                                break;
+
+                            case "Fras":
+                                //loop through structs
+                                for (int loop = 0; loop < DataStats.Length; loop++)
+                                {
+                                    //foreach one make a new attribute
+                                    XmlAttribute attribute = levelDoc.CreateAttribute(AS_ATTRIBUTE_NAMES[loop]);
+                                    //set value as data
+                                    attribute.Value = DataStats[loop].Frames.ToString("00000");
+                                    //append to node
+                                    statNode.Attributes.Append(attribute);
+
+                                    if (loop == DataStats.Length - 1)
+                                        _frassSaved = true;
+                                }
+                                break;
+
+                            case "Shts":
+                                //loop through structs
+                                for (int loop = 0; loop < DataStats.Length; loop++)
+                                {
+                                    //foreach one make a new attribute
+                                    XmlAttribute attribute = levelDoc.CreateAttribute(AS_ATTRIBUTE_NAMES[loop]);
+                                    //set value as data
+                                    attribute.Value = DataStats[loop].Shots.ToString("000");
+                                    //append to node
+                                    statNode.Attributes.Append(attribute);
+
+                                    if (loop == DataStats.Length - 1)
+                                        _shotsSaved = true;
+                                }
+                                break;
                         }
-                        break;
                     }
                 }
             }
         }
+
+        
 
         // Save the document
         levelDoc.Save(sLevelDataUrl);

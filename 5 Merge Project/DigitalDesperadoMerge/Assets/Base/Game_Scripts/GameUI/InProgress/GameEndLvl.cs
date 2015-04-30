@@ -40,7 +40,7 @@ public class GameEndLvl : MonoBehaviour {
             goObjToDeActivate.SetActive(false);
             EndScreenObj.SetupEndScreen();
 
-            AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.EndGame);
+            AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Other);
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;

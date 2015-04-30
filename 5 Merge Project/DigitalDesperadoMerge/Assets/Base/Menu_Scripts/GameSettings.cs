@@ -49,7 +49,7 @@ public class GameSettings : MonoBehaviour {
         if (Application.loadedLevelName.Contains("Tutorial") || Application.loadedLevelName.Contains("Sandbox"))
         {
             bComeFromGame = false;
-            AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Loading);
+            AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Other);
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -84,7 +84,7 @@ public class GameSettings : MonoBehaviour {
 	{
 		BinaryFormatter bf = new BinaryFormatter();
 		FileStream file = File.Create(Application.persistentDataPath + "/DesperadoPlayerData.dat");
-        Debug.Log("GameSettings SaveData persistent path: " + Application.persistentDataPath);
+        //Debug.Log("GameSettings SaveData persistent path: " + Application.persistentDataPath);
 
 		PlayerData data = new PlayerData ();
         data.LoadLevelInt = m_LoadedLevelInt;
@@ -135,7 +135,7 @@ public class GameSettings : MonoBehaviour {
     private float fMusicVolume = 1f;
     private float fEffxsVolume = 1f;
     public float MusVolume { get { return fMusicVolume; } }
-    public float EffVolume { get { return fMusicVolume; } }
+    public float EffVolume { get { return fEffxsVolume; } }
     private float fFOV = 90f;
     public float FOV { get { return fFOV; } }
     private float fSens = 5f;
@@ -185,8 +185,8 @@ public class GameSettings : MonoBehaviour {
             if (_index >= 0)
                 _temp = _temp.Remove(_temp.Length - _index);
             
-            Debug.Log("GameSettings returning new LoadLevelName: Orig: " + m_LoadedUrls[m_LoadedLevelInt]
-                + ", New: " + _temp);
+            //Debug.Log("GameSettings returning new LoadLevelName: Orig: " + m_LoadedUrls[m_LoadedLevelInt]
+                //+ ", New: " + _temp);
             return _temp;
         }
     }
@@ -235,7 +235,7 @@ public class GameSettings : MonoBehaviour {
 
     public void ApplySettings()
     {
-        Debug.Log(iResWidth + ", " + iResHeight);
+        //Debug.Log(iResWidth + ", " + iResHeight);
         Screen.SetResolution(iResWidth, iResHeight, false);
         if (AudioManagerMusic.Instance)
             AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Menus);

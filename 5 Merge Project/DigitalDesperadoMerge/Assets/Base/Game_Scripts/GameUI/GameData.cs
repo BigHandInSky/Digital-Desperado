@@ -12,6 +12,8 @@ public class GameData : MonoBehaviour {
 			}
 		}
 
+    private float m_fTimePenaltyPerTarget = 2f;
+
     [SerializeField] private Transform m_Camera;
     public Transform trCamera { get { return m_Camera; } }
     [SerializeField] private Transform m_EndLvlTow;
@@ -34,6 +36,8 @@ public class GameData : MonoBehaviour {
     public int iTimeFr { get { return m_TimeFrames; } }
     private float m_TimeSecs = 0;
     public float fTimeScs { get { return m_TimeSecs; } }
+    public float fTimeScsAndPenalty { get { return m_TimeSecs + (m_TargetsLeft * m_fTimePenaltyPerTarget); } }
+    public float fTimePenalty { get { return (m_TargetsLeft * m_fTimePenaltyPerTarget); } }
 
     private int m_TimesFell = 0;
     public int iFalls { get { return m_TimesFell; } }

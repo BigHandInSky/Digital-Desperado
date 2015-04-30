@@ -13,8 +13,8 @@ public class GenerateBackgroundBuildings : MonoBehaviour {
 	private float zMax;
 	private float zMin;
 
-	private float centerX;
-	private float centerZ;
+	public float centerX;
+	public float centerZ;
 	private float radiusX;
 	private float radiusZ;
 
@@ -44,7 +44,7 @@ public class GenerateBackgroundBuildings : MonoBehaviour {
 			float newPositionX = centerX + Mathf.Sin(360/6 * i * 3.14f / 180) * radiusX * (Random.value + 1);
 			float newPositionZ = centerZ + Mathf.Cos(360/6 * i * 3.14f / 180) * radiusZ * (Random.value + 1);
 
-			Instantiate (objCube1, new Vector3(newPositionX, 0, newPositionZ), Quaternion.identity);
+			//Instantiate (objCube1, new Vector3(newPositionX, 0, newPositionZ), Quaternion.identity);
 		}
 
 		for (int i = 0; i < 10; i++)
@@ -52,7 +52,7 @@ public class GenerateBackgroundBuildings : MonoBehaviour {
 			float newPositionX = centerX + Mathf.Sin(360/10 * i * 3.14f / 180) * radiusX * 2 * (Random.value + 1);
 			float newPositionZ = centerZ + Mathf.Cos(360/10 * i * 3.14f / 180) * radiusZ * 2 * (Random.value + 1);
 			
-			Instantiate (objCube2, new Vector3(newPositionX, 0, newPositionZ), Quaternion.identity);
+			//Instantiate (objCube2, new Vector3(newPositionX, 0, newPositionZ), Quaternion.identity);
 		}
 
 	}

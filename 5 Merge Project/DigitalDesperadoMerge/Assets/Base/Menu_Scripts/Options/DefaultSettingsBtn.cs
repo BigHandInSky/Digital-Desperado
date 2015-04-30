@@ -15,8 +15,8 @@ public class DefaultSettingsBtn : MonoBehaviour {
     {
         GameSettings.Instance.Music = true;
         GameSettings.Instance.Effects = true;
-        GameSettings.Instance.SetVolume(0.75f, true);
-        GameSettings.Instance.SetVolume(0.75f, false);
+        GameSettings.Instance.SetVolume(75f, true);
+        GameSettings.Instance.SetVolume(75f, false);
         GameSettings.Instance.SetFOV(90f);
         GameSettings.Instance.SetResolution(800, 600);
         GameSettings.Instance.SetSens(5f);
