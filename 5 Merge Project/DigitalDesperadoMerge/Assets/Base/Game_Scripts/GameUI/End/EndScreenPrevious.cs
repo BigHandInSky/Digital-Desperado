@@ -10,7 +10,7 @@ public class EndScreenPrevious : MonoBehaviour {
 
     public void Setup()
     {
-        SecText.text = GameData.Instance.fTimeScs.ToString("00.00");
+        SecText.text = GameData.Instance.fTimeScsAndPenalty.ToString("00.00");
         FraText.text = GameData.Instance.iTimeFr.ToString("00000");
         BullText.text = GameData.Instance.iBullsShot.ToString("000");
     }

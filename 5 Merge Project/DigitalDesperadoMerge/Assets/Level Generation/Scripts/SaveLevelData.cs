@@ -29,7 +29,7 @@ public class SaveLevelData : MonoBehaviour
     {
         //get current data
         CurrTag = _EntryTag;
-        CurrSecs = GameData.Instance.fTimeScs;
+        CurrSecs = GameData.Instance.fTimeScsAndPenalty;
         CurrFrames = GameData.Instance.iTimeFr;
         CurrShots = GameData.Instance.iBullsShot;
 
