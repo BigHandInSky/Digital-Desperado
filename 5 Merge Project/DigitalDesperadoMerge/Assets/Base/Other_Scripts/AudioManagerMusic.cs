@@ -26,15 +26,13 @@ public class AudioManagerMusic : MonoBehaviour
     public enum MusicType
     {
         Menus,
-        Loading,
+        Other,
         InGame,
-        EndGame
     }
 
     [SerializeField] private List<AudioClip> MenuClips = new List<AudioClip>();
-    [SerializeField] private List<AudioClip> LoadingClips = new List<AudioClip>();
+    [SerializeField] private List<AudioClip> OtherClips = new List<AudioClip>();
     [SerializeField] private List<AudioClip> InGameClips = new List<AudioClip>();
-    [SerializeField] private List<AudioClip> EndGameClips = new List<AudioClip>();
 
     public void SetMusic(MusicType _type)
     {
@@ -69,22 +67,16 @@ public class AudioManagerMusic : MonoBehaviour
                 StartCoroutine(PlayMusic(MusicType.Menus, MenuClips[_Tune].length));
                 break;
 
-            case MusicType.Loading:
-                _Tune = Random.Range(0, LoadingClips.Count);
-                Source.PlayOneShot(LoadingClips[_Tune]);
-                StartCoroutine(PlayMusic(MusicType.Loading, LoadingClips[_Tune].length));
+            case MusicType.Other:
+                _Tune = Random.Range(0, OtherClips.Count);
+                Source.PlayOneShot(OtherClips[_Tune]);
+                StartCoroutine(PlayMusic(MusicType.Other, OtherClips[_Tune].length));
                 break;
 
             case MusicType.InGame:
                 _Tune = Random.Range(0, InGameClips.Count);
                 Source.PlayOneShot(InGameClips[_Tune]);
                 StartCoroutine(PlayMusic(MusicType.InGame, InGameClips[_Tune].length));
-                break;
-
-            case MusicType.EndGame:
-                _Tune = Random.Range(0, EndGameClips.Count);
-                Source.PlayOneShot(EndGameClips[_Tune]);
-                StartCoroutine(PlayMusic(MusicType.EndGame, EndGameClips[_Tune].length));
                 break;
         }
     }
