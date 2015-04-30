@@ -65,7 +65,7 @@ public class MapUI : MonoBehaviour {
     }
     public void vSetupMapUILevel(Vector3 _Pos, Vector3 _Scale, float _yAxisRot)
     {
-        PlatformSpawner.Create(_Pos, _Scale, _yAxisRot);
+		PlatformSpawner.Create(_Pos, _Scale, _yAxisRot);
     }
     public void vSetupMapUITower(Vector3 _Pos, Vector3 _Scale, float _yAxisRot)
     {

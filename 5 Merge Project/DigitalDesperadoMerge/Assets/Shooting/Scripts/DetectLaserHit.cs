@@ -20,7 +20,7 @@ public class DetectLaserHit : MonoBehaviour {
 	void OnTriggerStay(Collider other) {
 		if (other.gameObject.GetComponent<TargetFragmentation> ()) {
 			other.gameObject.GetComponent<TargetFragmentation> ().vExplode ();
-			Destroy (gameObject);
+			//Destroy (gameObject);
 		}
 	}
 	
