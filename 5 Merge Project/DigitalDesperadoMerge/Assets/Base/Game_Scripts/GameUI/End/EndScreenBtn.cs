@@ -38,6 +38,7 @@ public class EndScreenBtn : MonoBehaviour
             }
 
             SaveComponent.SaveData(TagInput.text);
+            GameSettings.Instance.PreviousTag = TagInput.text;
             Application.LoadLevel("Main");
         }
         else if (ButtonType == BtnType.Next)
@@ -49,6 +50,7 @@ public class EndScreenBtn : MonoBehaviour
             }
 
             SaveComponent.SaveData(TagInput.text);
+            GameSettings.Instance.PreviousTag = TagInput.text;
             GameSettings.Instance.LevelInt += 1;
             Application.LoadLevel("GamePlaHol");
         }

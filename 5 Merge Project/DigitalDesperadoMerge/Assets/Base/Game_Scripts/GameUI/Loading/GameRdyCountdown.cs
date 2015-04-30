@@ -36,6 +36,18 @@ public class GameRdyCountdown : MonoBehaviour {
 
         while (_Count > 0)
         {
+            if (Input.anyKey && _Count > 3)
+            {
+                AudioManagerEffects.Instance.PlaySound(AudioManagerEffects.Effects.Countdown);
+                _Timer = 0.99f;
+                _Count = 3;
+                ObjTextToSet.text = _Count.ToString();
+
+                continue;
+            }
+            else if (_Count <= 3 && !EndTrigger.bCanEnd)
+                EndTrigger.bCanEnd = true;
+
             _Timer -= Time.deltaTime;
             _Scale.x = _Timer;
             _Scale.y = _Timer;
@@ -56,7 +68,7 @@ public class GameRdyCountdown : MonoBehaviour {
 
         PlayerControlObj.AllowControls(true, true);
         PlayerShootObj.bCanShoot = true;
-        EndTrigger.bCanEnd = true;
+        //EndTrigger.bCanEnd = true;
 
         foreach (GameObject obj in ObjsToActivateWhenComplete)
         {

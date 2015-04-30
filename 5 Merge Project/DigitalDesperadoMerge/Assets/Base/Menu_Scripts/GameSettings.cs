@@ -146,6 +146,9 @@ public class GameSettings : MonoBehaviour {
     private int iResHeight = 600;
     public int RHeight { get { return iResHeight; } }
 
+    private string sPreviousTag = "---";
+    public string PreviousTag { get { return sPreviousTag; } set { sPreviousTag = value; } }
+
     private List<KeyCode> m_KeySettings = new List<KeyCode>();
     public List<KeyCode> CurrentKeySettings { get { return m_KeySettings; } }
     #region KeyReturns

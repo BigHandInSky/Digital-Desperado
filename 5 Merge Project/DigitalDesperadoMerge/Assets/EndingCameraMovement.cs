@@ -46,7 +46,8 @@ public class EndingCameraMovement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+    {
 		if(!gameEndLv.bCanEnd)
 		{
 			objCamera.SetActive(true);

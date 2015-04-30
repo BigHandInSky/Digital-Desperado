@@ -12,6 +12,7 @@ public class EndScreenTagInputAnim : MonoBehaviour {
     {
         InputComponent = gameObject.GetComponent<InputField>();
         StartCoroutine(Animate());
+        InputComponent.text = GameSettings.Instance.PreviousTag;
     }
 
     IEnumerator Animate()
