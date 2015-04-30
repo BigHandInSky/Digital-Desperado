@@ -51,7 +51,7 @@ public class MapUI : MonoBehaviour {
         TowerSpawner.ClearImages();
     }
     
-    public void vSetupMapUIPlayer(Vector2 _Pos, float _yAxisRot)
+    public void vSetupMapUIPlayer(Vector3 _Pos, float _yAxisRot)
     {
         PlayerSpawner.Create(_Pos, Vector3.one, _yAxisRot);
     }

@@ -95,11 +95,11 @@
   </Towers>
   <Targets>
     <Target type="1">
-      <Position x="-11.2" y="8.76" z="9.63" />
+      <Position x="-11.2" y="8.76" z="13.74" />
       <Rotation>0</Rotation>
     </Target>
     <Target type="1">
-      <Position x="-0.44" y="8.71" z="17.86" />
+      <Position x="-0.44" y="8.71" z="13.74" />
       <Rotation>0</Rotation>
     </Target>
     <Target type="1">

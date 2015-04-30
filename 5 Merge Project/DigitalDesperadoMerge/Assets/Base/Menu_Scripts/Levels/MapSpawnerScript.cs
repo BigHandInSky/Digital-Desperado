@@ -43,7 +43,7 @@ public class MapSpawnerScript : MonoBehaviour {
 
     private void vCreateMapUIObj(Vector3 _pos, float _zAxisRot)
     {
-        GameObject mapUIImg = (GameObject)Instantiate(ObjToSpawn, gameObject.transform.position, gameObject.transform.rotation);
+		/*GameObject mapUIImg = (GameObject)Instantiate(ObjToSpawn, gameObject.transform.position, gameObject.transform.rotation);
         mapUIImg.GetComponent<RectTransform>().SetParent(gameObject.transform);
         mapUIImg.GetComponent<RectTransform>().localScale = Vector3.one;
         Vector2 _spawn = new Vector2(_pos.x, _pos.z);
@@ -51,19 +51,42 @@ public class MapSpawnerScript : MonoBehaviour {
         mapUIImg.GetComponent<RectTransform>().Rotate(0f, 0f, _zAxisRot);
 
         Objects.Add(mapUIImg);
-    }
-    private void vCreateMapUIObj(Vector3 _pos, Vector3 _scale, float _zAxisRot)
+		*/
+
+		GameObject mapUIImg = (GameObject)Instantiate(ObjToSpawn, gameObject.transform.position, gameObject.transform.rotation);
+		mapUIImg.GetComponent<RectTransform>().SetParent(gameObject.transform);
+		mapUIImg.GetComponent<RectTransform> ().localPosition = new Vector3(_pos.x, _pos.z, 0);
+
+		Vector3 _temp = new Vector3(SizeScal * 3, SizeScal * 3, 1f);
+		mapUIImg.GetComponent<RectTransform>().localScale = _temp;
+
+		mapUIImg.GetComponent<RectTransform>().Rotate(0f, 0f, _zAxisRot);
+		
+		Objects.Add(mapUIImg);
+	}
+	private void vCreateMapUIObj(Vector3 _pos, Vector3 _scale, float _zAxisRot)
     {
-        GameObject mapUIImg = (GameObject)Instantiate(ObjToSpawn, gameObject.transform.position, gameObject.transform.rotation);
+        /*GameObject mapUIImg = (GameObject)Instantiate(ObjToSpawn, gameObject.transform.position, gameObject.transform.rotation);
         mapUIImg.GetComponent<RectTransform>().SetParent(gameObject.transform);
 
-        Vector3 _temp = new Vector3(SizeScal * _scale.x, SizeScal * _scale.z, 1f);
+        Vector3 _temp = new Vector3(1 * _scale.x, 1 * _scale.z, 1f);
         //print(_temp);
         mapUIImg.GetComponent<RectTransform>().localScale = _temp;
         Vector2 _spawn = new Vector2(_pos.x, _pos.z);
         mapUIImg.GetComponent<RectTransform>().localPosition = _spawn * PosScal;
         mapUIImg.GetComponent<RectTransform>().Rotate(0f, 0f, _zAxisRot);
 
-        Objects.Add(mapUIImg);
-    }
+        Objects.Add(mapUIImg);*/
+
+		GameObject mapUIImg = (GameObject)Instantiate(ObjToSpawn, gameObject.transform.position, gameObject.transform.rotation);
+		mapUIImg.GetComponent<RectTransform>().SetParent(gameObject.transform);
+		mapUIImg.GetComponent<RectTransform> ().localPosition = new Vector3(_pos.x, _pos.z, 0);
+
+		Vector3 _temp = new Vector3(SizeScal * _scale.x, SizeScal * _scale.z, 1f);
+		mapUIImg.GetComponent<RectTransform>().localScale = _temp;
+
+		mapUIImg.GetComponent<RectTransform>().Rotate(0f, 0f, _zAxisRot);
+		Objects.Add(mapUIImg);
+	}
+
 }
