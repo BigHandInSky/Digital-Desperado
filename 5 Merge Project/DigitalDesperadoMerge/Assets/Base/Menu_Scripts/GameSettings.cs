@@ -113,7 +113,7 @@ public class GameSettings : MonoBehaviour {
 			file.Close ();
 
 			SetResolution(data.RWidth,data.RHeight);
-            LevelInt = data.LoadLevelInt;
+            m_LoadedLevelInt = data.LoadLevelInt;
             fMusicVolume = data.MusVolume;
             fEffxsVolume = data.EffVolume;
             SetFOV(data.FOV);

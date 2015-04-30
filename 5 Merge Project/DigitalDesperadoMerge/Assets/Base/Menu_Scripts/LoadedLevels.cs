@@ -91,6 +91,9 @@ public class LoadedLevels : MonoBehaviour
     {
         m_LevelsCount = MenuLoadLevelsFromXML.Instance.Names.Count;
 
+        if (m_CurrLvlUrl > m_LevelsCount)
+            m_CurrLvlUrl = 0;
+
         foreach(LevelsNameUI obj in m_TextObjs)
         {
             obj.SendMessage("vGetText");

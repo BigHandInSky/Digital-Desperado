@@ -39,7 +39,7 @@ public class GenerateLevel : MonoBehaviour
     {
         //sFilePath = Application.dataPath + "/XML/" + GameSettings.Instance.LoadLevelUrl;
         sFilePath = GameSettings.Instance.LoadLevelUrl;
-
+        
         using (XmlReader reader = XmlReader.Create(sFilePath))
         {
             reader.Read();
@@ -56,12 +56,10 @@ public class GenerateLevel : MonoBehaviour
                     switch (reader.Name)
                     {
                         case "PlayerStart":
-                            GameObject playerStart = Instantiate(goPlayerStartPrefab);
+                            goPlayerStart = Instantiate(goPlayerStartPrefab);
                             XmlReader transformSubTree = reader.ReadSubtree();
 
                             AssignTransform(goPlayer, transformSubTree);
-                            playerStart.transform.position = goPlayer.transform.position;
-                            playerStart.transform.rotation = goPlayer.transform.rotation;
                         break;
 
                         case "Goal":
@@ -89,6 +87,13 @@ public class GenerateLevel : MonoBehaviour
                 }
             }
 
+            Vector3 _direction = goGoal.transform.position;
+            _direction.y = goPlayer.transform.position.y;
+            goPlayer.transform.LookAt(_direction);
+
+            goPlayerStart.transform.position = goPlayer.transform.position;
+            goPlayerStart.transform.rotation = goPlayer.transform.rotation;
+
             LoadingObj.SwitchToRdy();
         }
     }
@@ -99,7 +104,7 @@ public class GenerateLevel : MonoBehaviour
         // Position
         Vector3 position = Vector3.zero;
         // Rotation
-        Quaternion rotation = obj.transform.rotation;
+        Quaternion rotation = new Quaternion(0f,0f,0f,0f);
         // Scale
         Vector3 scale = obj.transform.localScale;
 
