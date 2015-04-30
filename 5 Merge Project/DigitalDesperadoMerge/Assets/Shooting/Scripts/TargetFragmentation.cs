@@ -11,7 +11,7 @@ public class TargetFragmentation : MonoBehaviour {
     void Start()
     {
         StartPos = gameObject.transform.position;
-        StartPos.y += 0.5f;
+        StartPos.y += 1f;
         StartRot = gameObject.transform.rotation;
     }
 
@@ -23,9 +23,13 @@ public class TargetFragmentation : MonoBehaviour {
 
 	public void vExplode()
 	{
-        Debug.Log("vExplode");
+        //Debug.Log("vExplode");
         GameData.Instance.TargetShot();
         Instantiate(cubeFrag, transform.position, transform.rotation);
+
+        if (GetComponentInParent<SandboxTarget>())
+            GetComponentInParent<SandboxTarget>().vRespawn();
+
         this.gameObject.SetActive(false);
 	}
 }

@@ -80,10 +80,10 @@ public class GameData : MonoBehaviour {
 
     void vUpdateTargetUIs()
     {
-        if(!m_UITargetsLeft && Application.loadedLevelName.Contains("Tutorial"))
-        {
+        if (!m_UITargetsLeft && Application.loadedLevelName.Contains("Tutorial"))
             return;
-        }
+        else if (!m_UITargetsLeft && Application.loadedLevelName.Contains("Sandbox"))
+            return;
         else if (!m_UITargetsLeft)
         {
             Debug.LogError("No Target UI objs set");

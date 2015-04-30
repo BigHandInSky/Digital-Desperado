@@ -249,7 +249,6 @@ public class GameSettings : MonoBehaviour {
     public void ApplyFOV()
     {
         Camera.main.fieldOfView = fFOV;
-        Debug.Log("cam fov: " + Camera.main.fieldOfView);
     }
 }
 

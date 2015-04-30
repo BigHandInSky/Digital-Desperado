@@ -14,7 +14,7 @@ Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wi
 Loading C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v09_dev\Win_v09_dev_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v09_dev\Win_v09_dev_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v09_dev\Win_v09_dev_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.216 seconds
+- Completed reload, in  0.110 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
@@ -22,37 +22,150 @@ desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v09_dev\Win_v09_dev_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v09_dev\Win_v09_dev_Data\Managed\System.Xml.dll (this message is harmless)
 Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v09_dev\Win_v09_dev_Data\Managed\System.dll (this message is harmless)
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: cec -> priority: 1 
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 16.563562 ms
+GameSettings was given an invalid int: 0
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogWarning(Object)
+GameSettings:set_LevelInt(Int32) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:205)
+GameSettings:LoadData() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:116)
+GameSettings:Awake() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:39)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 205)
+
+1600, 900
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameSettings:ApplySettings() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:238)
+GameSettings:LoadData() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:126)
+GameSettings:Awake() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:39)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 238)
+
 GameSettings SaveData persistent path: C:/Users/Peter/AppData/LocalLow/University Of Bedfordshire/Digital Desperado
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-GameSettings:SaveData() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:83)
-GameSettings:OnLevelWasLoaded(Int32) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:58)
+GameSettings:SaveData() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:87)
+GameSettings:ApplySettings() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:243)
+GameSettings:LoadData() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:126)
+GameSettings:Awake() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:39)
  
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 83)
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 87)
 
-System memory in use before: 208.4 MB.
-System memory in use after: 208.5 MB.
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 5fc -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 10.758864 ms
+System memory in use before: 208.3 MB.
+System memory in use after: 208.4 MB.
 
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 1934.
-Total: 5.110986 ms (FindLiveObjects: 0.553014 ms CreateObjectMapping: 0.230096 ms MarkObjects: 4.243848 ms  DeleteObjects: 0.076698 ms)
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1932.
+Total: 1.938481 ms (FindLiveObjects: 0.182221 ms CreateObjectMapping: 0.088423 ms MarkObjects: 1.636570 ms  DeleteObjects: 0.029800 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.984475 ms
-cam fov: 91
+UnloadTime: 2.924332 ms
+cam fov: 94
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-GameSettings:ApplyFOV() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:247)
-GameSettings:OnLevelWasLoaded(Int32) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:54)
+GameSettings:ApplyFOV() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:252)
+GameSettings:OnLevelWasLoaded(Int32) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:57)
  
-(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 247)
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 252)
 
 System memory in use before: 208.9 MB.
 System memory in use after: 208.9 MB.
 
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 869.
-Total: 1.469494 ms (FindLiveObjects: 0.128483 ms CreateObjectMapping: 0.123597 ms MarkObjects: 1.026398 ms  DeleteObjects: 0.186617 ms)
+Unloading 78 unused Assets to reduce memory usage. Loaded Objects now: 869.
+Total: 0.851993 ms (FindLiveObjects: 0.075233 ms CreateObjectMapping: 0.056669 ms MarkObjects: 0.616034 ms  DeleteObjects: 0.102102 ms)
+
+triggered
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TutEndTowOnColliderEnter:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Other_Scripts\TutEndTowOnColliderEnter.cs:22)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Other_Scripts/TutEndTowOnColliderEnter.cs Line: 22)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.684935 ms
+cam fov: 94
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameSettings:ApplyFOV() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:252)
+GameSettings:OnLevelWasLoaded(Int32) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:57)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 252)
+
+System memory in use before: 209.0 MB.
+System memory in use after: 209.0 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 898.
+Total: 1.008323 ms (FindLiveObjects: 0.091354 ms CreateObjectMapping: 0.069371 ms MarkObjects: 0.808514 ms  DeleteObjects: 0.036151 ms)
+
+triggered
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TutEndTowOnColliderEnter:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Other_Scripts\TutEndTowOnColliderEnter.cs:22)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Other_Scripts/TutEndTowOnColliderEnter.cs Line: 22)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.082597 ms
+cam fov: 94
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameSettings:ApplyFOV() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:252)
+GameSettings:OnLevelWasLoaded(Int32) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:57)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 252)
+
+System memory in use before: 209.0 MB.
+System memory in use after: 209.1 MB.
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1447.
+Total: 1.123615 ms (FindLiveObjects: 0.128483 ms CreateObjectMapping: 0.111384 ms MarkObjects: 0.858344 ms  DeleteObjects: 0.022960 ms)
+
+vExplode
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetFragmentation:vExplode() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Shooting\Scripts\TargetFragmentation.cs:26)
+DetectLaserHit:OnTriggerStay(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Shooting\Scripts\DetectLaserHit.cs:22)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Shooting/Scripts/TargetFragmentation.cs Line: 26)
+
+vExplode
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetFragmentation:vExplode() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Shooting\Scripts\TargetFragmentation.cs:26)
+DetectLaserHit:OnTriggerStay(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Shooting\Scripts\DetectLaserHit.cs:22)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Shooting/Scripts/TargetFragmentation.cs Line: 26)
+
+triggered
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TutEndTowOnColliderEnter:OnTriggerEnter(Collider) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Other_Scripts\TutEndTowOnColliderEnter.cs:22)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Other_Scripts/TutEndTowOnColliderEnter.cs Line: 22)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.601487 ms
+System memory in use before: 209.4 MB.
+System memory in use after: 209.2 MB.
+
+Unloading 491 unused Assets to reduce memory usage. Loaded Objects now: 1944.
+Total: 3.857421 ms (FindLiveObjects: 0.315100 ms CreateObjectMapping: 0.195899 ms MarkObjects: 2.405514 ms  DeleteObjects: 0.936997 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.061608 ms
+cam fov: 94
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+GameSettings:ApplyFOV() (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:252)
+GameSettings:OnLevelWasLoaded(Int32) (at C:\Users\Peter\Documents\GitHub\Digital-Desperado\5 Merge Project\DigitalDesperadoMerge\Assets\Base\Menu_Scripts\GameSettings.cs:57)
+ 
+(Filename: C:/Users/Peter/Documents/GitHub/Digital-Desperado/5 Merge Project/DigitalDesperadoMerge/Assets/Base/Menu_Scripts/GameSettings.cs Line: 252)
+
+System memory in use before: 209.1 MB.
+System memory in use after: 209.1 MB.
+
+Unloading 90 unused Assets to reduce memory usage. Loaded Objects now: 1302.
+Total: 0.934555 ms (FindLiveObjects: 0.108453 ms CreateObjectMapping: 0.066928 ms MarkObjects: 0.650231 ms  DeleteObjects: 0.106010 ms)
 
