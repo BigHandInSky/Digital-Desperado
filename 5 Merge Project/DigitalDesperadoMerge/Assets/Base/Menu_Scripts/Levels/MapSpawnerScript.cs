@@ -82,7 +82,7 @@ public class MapSpawnerScript : MonoBehaviour {
 		mapUIImg.GetComponent<RectTransform>().SetParent(gameObject.transform);
 		mapUIImg.GetComponent<RectTransform> ().localPosition = new Vector3(_pos.x, _pos.z, 0);
 
-		Vector3 _temp = new Vector3(SizeScal * _scale.x, SizeScal * _scale.z, 1f);
+		Vector3 _temp = new Vector3(SizeScal * _scale.x * 0.9f, SizeScal * _scale.z * 0.9f, 1f);
 		mapUIImg.GetComponent<RectTransform>().localScale = _temp;
 
 		mapUIImg.GetComponent<RectTransform>().Rotate(0f, 0f, _zAxisRot);
