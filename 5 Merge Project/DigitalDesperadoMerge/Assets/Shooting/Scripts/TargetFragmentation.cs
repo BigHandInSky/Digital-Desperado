@@ -4,7 +4,6 @@ using System.Collections;
 public class TargetFragmentation : MonoBehaviour {
 
 	[SerializeField] private GameObject cubeFrag;
-    [SerializeField] private Material ShotMat;
     private Vector3 StartPos;
     private Quaternion StartRot;
 
@@ -13,6 +12,11 @@ public class TargetFragmentation : MonoBehaviour {
         StartPos = gameObject.transform.position;
         StartPos.y += 1f;
         StartRot = gameObject.transform.rotation;
+    }
+
+    public void SetShaderSeeThrough(float _value)
+    {
+        GetComponent<Renderer>().material.SetFloat("_SeeVal", _value);
     }
 
     public void ResetPosition()

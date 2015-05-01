@@ -28,6 +28,8 @@ public class GameData : MonoBehaviour {
     public int iTargsLft { get { return m_TargetsLeft; } }
     private int m_TargetsTotl = 0;
     public int iTargsTtl { get { return m_TargetsTotl; } }
+    private float m_fTargetShaderIncrement = 0f;
+    public float fCurrShaderIncrement { get { return m_fTargetShaderIncrement * (m_TargetsTotl - m_TargetsLeft); } }
 
     private int m_BullsShot = 0;
     public int iBullsShot { get { return m_BullsShot; } }
@@ -57,6 +59,8 @@ public class GameData : MonoBehaviour {
 
         m_TargetsTotl = agoTargets.Length;
         m_TargetsLeft = m_TargetsTotl;
+        m_fTargetShaderIncrement = (100f / m_TargetsTotl);
+
         StartCoroutine("UpdateTime");
         vUpdateTargetUIs();
     }
@@ -100,6 +104,13 @@ public class GameData : MonoBehaviour {
     {
         m_TargetsLeft--;
         vUpdateTargetUIs();
+
+        if(Application.loadedLevelName.Contains("San"))
+        {
+            float _currShaderVal = fCurrShaderIncrement * 0.01f;
+            foreach (GameObject _targ in agoTargets)
+                _targ.GetComponent<TargetFragmentation>().SetShaderSeeThrough(_currShaderVal);
+        }
     }
 
     public void Shoot()

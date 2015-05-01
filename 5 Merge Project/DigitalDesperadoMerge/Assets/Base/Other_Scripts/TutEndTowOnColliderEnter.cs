@@ -10,8 +10,6 @@ public class TutEndTowOnColliderEnter : MonoBehaviour {
 
     void OnColliderEnter(Collision other)
     {
-        Debug.Log("triggered");
-
         if (other.gameObject.tag == sPlayerTag)
         {
             Application.LoadLevel(sNextTutScene);
@@ -19,8 +17,6 @@ public class TutEndTowOnColliderEnter : MonoBehaviour {
     }
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("triggered");
-
         if (other.gameObject.tag == sPlayerTag)
         {
             Application.LoadLevel(sNextTutScene);
