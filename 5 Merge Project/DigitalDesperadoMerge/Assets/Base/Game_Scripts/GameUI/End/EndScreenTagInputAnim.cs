@@ -6,7 +6,7 @@ public class EndScreenTagInputAnim : MonoBehaviour {
 
     [SerializeField] private Sprite m_Normal;
     [SerializeField] private Sprite m_Highlight;
-    [SerializeField] private float m_fSwitchTime = 1f;
+    private float m_fSwitchTime = 0.4f;
     private InputField InputComponent;
     public void Setup()
     {
@@ -21,9 +21,12 @@ public class EndScreenTagInputAnim : MonoBehaviour {
         while (true)
         {
             //if inputfield is not selected && text length != 3
-            if (InputComponent.isFocused == false && InputComponent.text.Length != 3)
+            if (InputComponent.isFocused == false)
             {
-                if (InputComponent.text == "" || InputComponent.text.Contains(" "))
+                if (InputComponent.text.Length != 3
+                    || !char.IsLetterOrDigit(InputComponent.text, 0)
+                    || !char.IsLetterOrDigit(InputComponent.text, 1)
+                    || !char.IsLetterOrDigit(InputComponent.text, 2))
                 {
                     _On = !_On;
 

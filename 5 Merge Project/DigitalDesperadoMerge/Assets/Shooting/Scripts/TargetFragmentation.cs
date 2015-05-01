@@ -17,6 +17,9 @@ public class TargetFragmentation : MonoBehaviour {
 
     public void ResetPosition()
     {
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+        GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
         gameObject.transform.position = StartPos;
         gameObject.transform.rotation = StartRot;
     }

@@ -27,6 +27,15 @@ public class ControlsSetter : MonoBehaviour {
         foreach (ControlsBtn _obj in m_Btns)
             _obj.Setup();
     }
+
+    public void Default()
+    {
+        foreach (ControlsBtn _obj in m_Btns)
+            _obj.DefaultBtn();
+
+        Apply();
+    }
+
     public void Apply()
     {
         InputGetter.Apply();

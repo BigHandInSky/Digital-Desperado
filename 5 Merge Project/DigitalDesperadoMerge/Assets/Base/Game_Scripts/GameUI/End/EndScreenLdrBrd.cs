@@ -73,7 +73,7 @@ public class EndScreenLdrBrd : MonoBehaviour {
         int _loop = 0;
         foreach(EndScreenLdrBrdEntry _entry in Entries)
         {
-            Stats[_loop].Beaten = (GameData.Instance.fTimeScs < Stats[_loop].Secs);
+            Stats[_loop].Beaten = (GameData.Instance.fTimeScsAndPenalty < Stats[_loop].Secs);
 
             _entry.SetData(Stats[_loop], TimeBeaten, TimeUnBeaten);
             _loop++;

@@ -14,7 +14,7 @@ public class LevelsNameUI : MonoBehaviour {
         if (bGetUrl)
             gameObject.GetComponent<Text>().text = LevelsDataObj.sGetFullUrl();
         else if (bGetInt)
-            gameObject.GetComponent<Text>().text = LevelsDataObj.iCurrentLvl.ToString("00");
+            gameObject.GetComponent<Text>().text = (LevelsDataObj.iCurrentLvl + 1).ToString("00");
         else
             gameObject.GetComponent<Text>().text = LevelsDataObj.sGetCurrUrlName(iValueFromCurrLvlToDisplay);
     }

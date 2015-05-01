@@ -42,61 +42,61 @@ public class PlayerShootLaser : MonoBehaviour {
 	
 	void Update () 
 	{
-		fShootTimer -= Time.deltaTime;
-
 		//On mouse click instantiate a new prefab laser and set the position
-		if (Input.GetKey(Shoot) && bCanShoot)
-			vShoot ();
+        if (fShootTimer <= 0)
+        {
+            if (Input.GetKey(Shoot) && bCanShoot)
+                vShoot();
+        }
+        else
+            fShootTimer -= Time.deltaTime;
 	}
 
 
 	public void vShoot()
-	{
-		//if script timer reaches 0, allow the player to use the mouse click
-        if (fShootTimer <= 0)
+    {
+        fShootTimer = 0.5f;
+
+        GameData.Instance.Shoot();
+        AudioManagerEffects.Instance.PlaySound(AudioManagerEffects.Effects.Shoot);
+
+        GameObject laser = Instantiate(prefabLaser, gunMuzzle.transform.position, Quaternion.identity) as GameObject;
+        laser.GetComponent<LaserScript>().V3startPosition = laser.transform.position;
+        laser.GetComponent<LaserScript>().V3endPosition = Camera.main.transform.position + Camera.main.transform.forward * 40;
+
+        GameObject bullet = (GameObject)Instantiate(prefabBullet, Camera.main.transform.position - Camera.main.transform.forward, Quaternion.identity);
+        bullet.GetComponent<Rigidbody>().velocity = Camera.main.transform.forward * 120;
+
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 500f, layerMask))
         {
-            GameData.Instance.Shoot();
-            AudioManagerEffects.Instance.PlaySound(AudioManagerEffects.Effects.Shoot);
-			
-			GameObject laser = Instantiate (prefabLaser, gunMuzzle.transform.position, Quaternion.identity) as GameObject;
-			laser.GetComponent<LaserScript> ().V3startPosition = laser.transform.position;
-			laser.GetComponent<LaserScript> ().V3endPosition = Camera.main.transform.position + Camera.main.transform.forward * 40;
+            Vector3 v3 = (Camera.main.transform.forward).normalized;
+            GameObject frag = Instantiate(platformFrag, hit.point + v3 * 0.5f, Quaternion.identity) as GameObject;
+            foreach (Transform child in frag.transform)
+            {
+                if (child.gameObject.GetComponent<Renderer>() && hit.collider.gameObject.GetComponent<Renderer>())
+                    child.gameObject.GetComponent<Renderer>().material = hit.collider.gameObject.GetComponent<Renderer>().material;
+            }
 
-			GameObject bullet = (GameObject)Instantiate(prefabBullet, Camera.main.transform.position - Camera.main.transform.forward, Quaternion.identity);
-			bullet.GetComponent<Rigidbody>().velocity = Camera.main.transform.forward * 120;
+            //GameObject crackObj = Instantiate (crackPrefab, hit.point, Quaternion.identity) as GameObject;
+            //crackObj.transform.position = hit.point;
 
-			fShootTimer = 0.5f;
+        }
 
-			RaycastHit hit;
-			
-			if (Physics.Raycast (Camera.main.transform.position, Camera.main.transform.forward, out hit, 500f, layerMask)) 
-			{
-				Vector3 v3 = (Camera.main.transform.forward).normalized;
-				GameObject frag = Instantiate (platformFrag, hit.point + v3 * 0.5f, Quaternion.identity) as GameObject;
-				foreach(Transform child in frag.transform)
-				{
-					if(child.gameObject.GetComponent<Renderer>() && hit.collider.gameObject.GetComponent<Renderer>())
-						child.gameObject.GetComponent<Renderer>().material = hit.collider.gameObject.GetComponent<Renderer>().material;
-				}
-
-				//GameObject crackObj = Instantiate (crackPrefab, hit.point, Quaternion.identity) as GameObject;
-				//crackObj.transform.position = hit.point;
-
-			}
-
-			if (Physics.Raycast (Camera.main.transform.position + Camera.main.transform.forward * 1.0f, Camera.main.transform.forward, out hit, 500f, layerMaskPlayer)) 
-			{
-				if(hit.collider.gameObject.tag == "Fragment")
-				{
-					GameObject frag = Instantiate (platformFrag, hit.point, Quaternion.identity) as GameObject;
-					foreach(Transform child in frag.transform)
-					{
-						if(child.gameObject.GetComponent<Renderer>() && hit.collider.gameObject.GetComponent<Renderer>())
-							child.gameObject.GetComponent<Renderer>().material = hit.collider.gameObject.GetComponent<Renderer>().material;
-					}
-					Destroy (hit.collider.gameObject);
-				}
-			}
-		}
+        if (Physics.Raycast(Camera.main.transform.position + Camera.main.transform.forward * 1.0f, Camera.main.transform.forward, out hit, 500f, layerMaskPlayer))
+        {
+            if (hit.collider.gameObject.tag == "Fragment")
+            {
+                GameObject frag = Instantiate(platformFrag, hit.point, Quaternion.identity) as GameObject;
+                foreach (Transform child in frag.transform)
+                {
+                    if (child.gameObject.GetComponent<Renderer>() && hit.collider.gameObject.GetComponent<Renderer>())
+                        child.gameObject.GetComponent<Renderer>().material = hit.collider.gameObject.GetComponent<Renderer>().material;
+                }
+                Destroy(hit.collider.gameObject);
+            }
+        }
 	}
 }

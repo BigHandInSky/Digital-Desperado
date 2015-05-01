@@ -56,15 +56,18 @@ public class RestartLevel : MonoBehaviour
     }
     private void RestartTargets()
     {
-        if (agoTargetFrags.Length > 0)
-            foreach (GameObject frag in agoTargetFrags)
-            {
-                DestroyObject(frag);
-            }
+        int _temp = 0;
+        agoTargetFrags = GameObject.FindGameObjectsWithTag("Effect");
+        foreach (GameObject frag in agoTargetFrags)
+        {
+            _temp++;
+            DestroyObject(frag);
+        }
+        Debug.Log("deleted frags: " + _temp);
 
         foreach (GameObject target in agoTargetSpawners)
         {
-            Debug.Log("Resetting target: " + target);
+            //Debug.Log("Resetting target: " + target);
             target.GetComponent<TargetRespawner>().vRespawn();
         }
     }

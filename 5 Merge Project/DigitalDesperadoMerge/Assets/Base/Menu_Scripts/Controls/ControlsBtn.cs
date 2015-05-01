@@ -109,4 +109,36 @@ public class ControlsBtn : MonoBehaviour {
         TextToSet.color = TempCol;
         InputObj.Activate(this);
     }
+    public void DefaultBtn()
+    {
+        switch (m_KeySetting)
+        {
+            case KeyToGet.F:
+                m_Key = KeyCode.W;
+                break;
+            case KeyToGet.B:
+                m_Key = KeyCode.S;
+                break;
+            case KeyToGet.SL:
+                m_Key = KeyCode.A;
+                break;
+            case KeyToGet.SR:
+                m_Key = KeyCode.D;
+                break;
+            case KeyToGet.J:
+                m_Key = KeyCode.Space;
+                break;
+            case KeyToGet.Sh:
+                m_Key = KeyCode.Mouse0;
+                break;
+            case KeyToGet.R:
+                m_Key = KeyCode.R;
+                break;
+            case KeyToGet.M:
+                m_Key = KeyCode.F;
+                break;
+        }
+        TextToSet.text = m_Key.ToString();
+        TextToSet.color = NormCol;
+    }
 }

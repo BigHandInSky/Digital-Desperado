@@ -27,7 +27,7 @@ public class PlayerMovementScript : MonoBehaviour
     // Jumping floats
     private float fJumpHeight = 14f;
     private float fJumpSpeedPercent = 80.0f;
-    private bool bHasJumped = false;
+    public bool bHasJumped = false;
 
     // Artificial gravity floats
     private float fJumpGrav = -15.5f;

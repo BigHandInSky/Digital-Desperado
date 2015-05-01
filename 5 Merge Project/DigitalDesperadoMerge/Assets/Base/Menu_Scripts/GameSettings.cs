@@ -29,7 +29,7 @@ public class GameSettings : MonoBehaviour {
         m_KeySettings.Add(KeyCode.Space);
         m_KeySettings.Add(KeyCode.Mouse0);
         m_KeySettings.Add(KeyCode.R);
-        m_KeySettings.Add(KeyCode.Y);
+        m_KeySettings.Add(KeyCode.F);
 
         if (bDebug)
             SaveData();
@@ -183,13 +183,11 @@ public class GameSettings : MonoBehaviour {
         {
             string _temp = m_LoadedUrls[m_LoadedLevelInt];
             _temp = _temp.Split('\\')[_temp.Split('\\').Length - 1];
-            
+
             int _index = _temp.IndexOf(".");
-            if (_index >= 0)
-                _temp = _temp.Remove(_temp.Length - _index);
-            
-            //Debug.Log("GameSettings returning new LoadLevelName: Orig: " + m_LoadedUrls[m_LoadedLevelInt]
-                //+ ", New: " + _temp);
+
+            if (_index > 0)
+                _temp = _temp.Remove(_index);
             return _temp;
         }
     }
@@ -200,8 +198,8 @@ public class GameSettings : MonoBehaviour {
         get { return m_LoadedLevelInt; } 
         set 
         {
-            if (m_LoadedLevelInt < m_LoadedUrls.Count
-                && m_LoadedLevelInt > -1)
+            if (value < m_LoadedUrls.Count
+                && value > -1)
                 m_LoadedLevelInt = value; 
             else
             {

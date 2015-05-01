@@ -15,6 +15,8 @@ public class EndScreenBtn : MonoBehaviour
     [SerializeField] private Text ErrorText;
     [SerializeField] private InputField TagInput;
     [SerializeField] private SaveLevelData SaveComponent;
+    private const string Invalid1 = "Please enter Tag";
+    private const string Invalid2 = "Invalid Tag";
 
     public void Setup()
     {
@@ -31,9 +33,14 @@ public class EndScreenBtn : MonoBehaviour
         }
         else if (ButtonType == BtnType.Menu)
         {
-            if (!bCheckTagEntry())
+            if (bIsTagEmpty())
             {
-                ErrorText.text = "Invalid Tag";
+                ErrorText.text = Invalid1;
+                return;
+            }
+            else if (!bCheckTagEntry())
+            {
+                ErrorText.text = Invalid2;
                 return;
             }
 
@@ -43,17 +50,34 @@ public class EndScreenBtn : MonoBehaviour
         }
         else if (ButtonType == BtnType.Next)
         {
-            if (!bCheckTagEntry())
+            if (bIsTagEmpty())
             {
-                ErrorText.text = "Invalid Tag";
+                ErrorText.text = Invalid1;
+                return;
+            }
+            else if (!bCheckTagEntry())
+            {
+                ErrorText.text = Invalid2;
                 return;
             }
 
             SaveComponent.SaveData(TagInput.text);
             GameSettings.Instance.PreviousTag = TagInput.text;
-            GameSettings.Instance.LevelInt += 1;
+            GameSettings.Instance.LevelInt = (GameSettings.Instance.LevelInt + 1);
             Application.LoadLevel("GamePlaHol");
         }
+    }
+    private bool bIsTagEmpty()
+    {
+        if (
+            TagInput.text == null
+            || TagInput.text == string.Empty
+            || TagInput.text.Length != 3
+            || TagInput.text.Contains("-")
+            )
+            return true;
+        else
+            return false;
     }
 
     private bool bCheckTagEntry()
