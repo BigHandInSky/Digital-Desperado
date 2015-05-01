@@ -27,6 +27,7 @@ public class PlayerMovementScript : MonoBehaviour
     // Axes float
     private float fHorizontal;
     private float fVertical;
+    public Vector2 CurrSpeed { get { return new Vector2(fHorizontal, fVertical); } }
 
     // Mouse settings
     private float fMouseSensitivity = 5;

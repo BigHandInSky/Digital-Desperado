@@ -105,12 +105,7 @@ public class GameData : MonoBehaviour {
         m_TargetsLeft--;
         vUpdateTargetUIs();
 
-        if(!Application.loadedLevelName.Contains("San"))
-        {
-            float _currShaderVal = fCurrShaderIncrement * 0.01f;
-            foreach (GameObject _targ in agoTargets)
-                _targ.GetComponent<TargetFragmentation>().SetShaderSeeThrough(_currShaderVal);
-        }
+        UpdateShader();
     }
 
     public void Shoot()
@@ -127,11 +122,22 @@ public class GameData : MonoBehaviour {
         m_TimeFrames = 0;
         m_TimeSecs = 0;
 
+        UpdateShader();
         vUpdateTargetUIs();
     }
 
     public void Fell()
     {
         m_TimesFell++;
+    }
+
+    private void UpdateShader()
+    {
+        if (!Application.loadedLevelName.Contains("San"))
+        {
+            float _currShaderVal = fCurrShaderIncrement * 0.01f;
+            foreach (GameObject _targ in agoTargets)
+                _targ.GetComponent<TargetFragmentation>().SetShaderSeeThrough(_currShaderVal);
+        }
     }
 }
