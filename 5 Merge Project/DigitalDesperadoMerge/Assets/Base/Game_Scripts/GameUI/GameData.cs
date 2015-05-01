@@ -105,7 +105,7 @@ public class GameData : MonoBehaviour {
         m_TargetsLeft--;
         vUpdateTargetUIs();
 
-        if(Application.loadedLevelName.Contains("San"))
+        if(!Application.loadedLevelName.Contains("San"))
         {
             float _currShaderVal = fCurrShaderIncrement * 0.01f;
             foreach (GameObject _targ in agoTargets)
