@@ -15,6 +15,7 @@ public class TutorialResetPlayer : MonoBehaviour {
         if (other.gameObject.tag == sPlayerTag)
         {
             other.gameObject.transform.position = tResetPosition.position;
+            other.gameObject.GetComponent<PlayerMovementScript>().Reset();
         }
     }
     void OnTriggerEnter(Collider other)
@@ -24,6 +25,7 @@ public class TutorialResetPlayer : MonoBehaviour {
         if (other.gameObject.tag == sPlayerTag)
         {
             other.gameObject.transform.position = tResetPosition.position;
+            other.gameObject.GetComponent<PlayerMovementScript>().Reset();
         }
     }
 }

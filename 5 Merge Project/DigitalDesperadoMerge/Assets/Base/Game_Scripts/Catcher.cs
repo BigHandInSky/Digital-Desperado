@@ -38,6 +38,7 @@ public class Catcher : MonoBehaviour {
                 GameData.Instance.Fell();
             _obj.transform.position = tPlayerStartPosition.position;
             _obj.transform.rotation = tPlayerStartPosition.rotation;
+            _obj.GetComponent<PlayerMovementScript>().Reset();
         }
     }
 }

@@ -8,9 +8,17 @@ public class PlayerMovementScript : MonoBehaviour
     private float fMouseVRot;
 
     // Movement speed
-    private float fPlayerBaseSpeed = 13f;
+    private float fPlayerBaseSpeed = 11f;
     private int iPlayerSideSpeedPercent = 70;
     private int iPlayerBackSpeedPercent = 55;
+
+    //speed variables
+    private float fPosVarSpeed = 0f;
+    private float fNegVarSpeed = 0f;
+    private const float fVARIABLE_INC = 1.8f;
+    private const float fVARIABLE_DEC = 0.45f;
+    private const float fVARIABLE_MAX = 0.185f;
+    private int iLastDir = -1;
 
     // Movement/Camera Enabled bools
     private bool bIsMovementEnabled = true;
@@ -25,13 +33,14 @@ public class PlayerMovementScript : MonoBehaviour
     private float fMouseClampRange = 59;
 
     // Jumping floats
-    private float fJumpHeight = 14f;
+    private float fJumpHeight = 13f;
     private float fJumpSpeedPercent = 80.0f;
     public bool bHasJumped = false;
 
     // Artificial gravity floats
-    private float fJumpGrav = -15.5f;
+    private float fJumpGrav = -15f;
     private float fFallGrav = -11.5f;
+    //private const float fSPEED_INC = 2.4f;
     private float fVerticalVelocity;
 
     // Gets character controller
@@ -44,16 +53,26 @@ public class PlayerMovementScript : MonoBehaviour
     private KeyCode Backward = KeyCode.S;
     private KeyCode Left = KeyCode.A;
     private KeyCode Right = KeyCode.D;
-    private KeyCode Jump = KeyCode.D;
+    private KeyCode Jump = KeyCode.Space;
 
     void Awake()
     {
+        if (!GameSettings.Instance)
+            return;
+
         fMouseSensitivity = GameSettings.Instance.Sens;
         Forward = GameSettings.Instance.Forw;
         Backward = GameSettings.Instance.Back;
         Left = GameSettings.Instance.Left;
         Right = GameSettings.Instance.Righ;
         Jump = GameSettings.Instance.Jump;
+    }
+
+    public void Reset()
+    {
+        fPosVarSpeed = 0f;
+        fNegVarSpeed = 0f;
+        fVerticalVelocity = 0f;
     }
 
     void OnLevelWasLoaded(int level)
@@ -72,11 +91,18 @@ public class PlayerMovementScript : MonoBehaviour
 
     void FixedUpdate()
     {
-
         if (bIsMovementEnabled)
         {
             PlayerMovement();
             PlayerJump();
+        }
+
+        if (!Input.GetKey(Forward)
+            && !Input.GetKey(Backward)
+            && !Input.GetKey(Left)
+            && !Input.GetKey(Right))
+        {
+            LastDirection(iLastDir);
         }
 
         //if (bIsCameraEnabled && bIsMovementEnabled)
@@ -107,22 +133,46 @@ public class PlayerMovementScript : MonoBehaviour
     // Player movement function
     void PlayerMovement()
     {
-        fVertical = 0;
-        fHorizontal = 0;
+        fVertical = 0f;
+        fHorizontal = 0f;
+        
+        if (Input.GetKey(Left))
+        {
+            iLastDir = 3;
+
+            fHorizontal = -(1f + fNegVarSpeed) * fPlayerBaseSpeed / 100 * iPlayerSideSpeedPercent;
+
+            if (fNegVarSpeed < fVARIABLE_MAX)
+                fNegVarSpeed += fVARIABLE_INC * Time.deltaTime;
+        }
+        else if (Input.GetKey(Right))
+        {
+            iLastDir = 4;
+
+            fHorizontal = (1f + fPosVarSpeed) * fPlayerBaseSpeed / 100 * iPlayerSideSpeedPercent;
+
+            if (fPosVarSpeed < fVARIABLE_MAX)
+                fPosVarSpeed += fVARIABLE_INC * Time.deltaTime;
+        }
 
         if (Input.GetKey(Forward))
-            fVertical = 1 * fPlayerBaseSpeed;
+        {
+            iLastDir = 1;
+
+            fVertical = (1f + fPosVarSpeed) * fPlayerBaseSpeed;
+
+            if (fPosVarSpeed < fVARIABLE_MAX)
+                fPosVarSpeed += fVARIABLE_INC * Time.deltaTime;
+        }
         else if (Input.GetKey(Backward))
-            fVertical = -1 * fPlayerBaseSpeed;
+        {
+            iLastDir = 2;
 
-        if (Input.GetKey(Left))
-            fHorizontal = -1 * fPlayerBaseSpeed / 100 * iPlayerSideSpeedPercent;
-        else if (Input.GetKey(Right))
-            fHorizontal = 1 * fPlayerBaseSpeed / 100 * iPlayerSideSpeedPercent;
+            fVertical = -(1f + fNegVarSpeed) * fPlayerBaseSpeed;
 
-        // Horizontal and vertical movement axes and speeds
-        /*fVertical = Input.GetAxis("Vertical") * fPlayerBaseSpeed;
-        fHorizontal = Input.GetAxis("Horizontal") * fPlayerBaseSpeed / 100 * iPlayerSideSpeedPercent;*/
+            if (fNegVarSpeed < fVARIABLE_MAX)
+                fNegVarSpeed += fVARIABLE_INC * Time.deltaTime;
+        }
 
         // If player moving backwards
         if (fVertical <= -0.1f)
@@ -150,6 +200,54 @@ public class PlayerMovementScript : MonoBehaviour
         ccPlayerController.Move(v3Velocity * Time.deltaTime);
     }
 
+    private void LastDirection(int _Dir)
+    {
+        if (fPosVarSpeed > 0f && ccPlayerController.isGrounded)
+            fPosVarSpeed -= fVARIABLE_DEC * Time.deltaTime;
+        else if (fPosVarSpeed > 0f)
+            fPosVarSpeed -= (fVARIABLE_DEC * 0.5f) * Time.deltaTime;
+
+        if (fNegVarSpeed > 0f && ccPlayerController.isGrounded)
+            fNegVarSpeed -= fVARIABLE_DEC * Time.deltaTime;
+        else if (fNegVarSpeed > 0f)
+            fNegVarSpeed -= (fVARIABLE_DEC * 0.5f) * Time.deltaTime;
+
+        if (fPosVarSpeed < 0f)
+        {
+            fPosVarSpeed = 0f;
+            return;
+        }
+        if (fNegVarSpeed < 0f)
+        {
+            fNegVarSpeed = 0f;
+            return;
+        }
+
+        float _v = 0f;
+        float _h = 0f;
+
+        if (iLastDir == 1)
+        {
+            _v = fPosVarSpeed * fPlayerBaseSpeed;
+        }
+        else if (iLastDir == 2)
+        {
+            _v = -fNegVarSpeed * fPlayerBaseSpeed;
+        }
+        else if (iLastDir == 3)
+        {
+            _h = -fNegVarSpeed * fPlayerBaseSpeed;
+        }
+        else if (iLastDir == 4)
+        {
+            _h = fPosVarSpeed * fPlayerBaseSpeed;
+        }
+
+        Vector3 _Velocity = new Vector3(_h, 0f, _v);
+        _Velocity = transform.rotation * _Velocity;
+        ccPlayerController.Move(_Velocity * Time.deltaTime);
+    }
+
     // Player jump button check function
     void PlayerJump()
     {
@@ -158,6 +256,8 @@ public class PlayerMovementScript : MonoBehaviour
         // Increases fall speed over time
         if (fVerticalVelocity <= 15f)
             fVerticalVelocity += fJumpGrav * Time.deltaTime;
+        /*else
+            fVerticalVelocity += fSPEED_INC * Time.deltaTime;*/
 
         // When spacebar and on floor is true
         if (Input.GetKey(Jump) && ccPlayerController.isGrounded && !bHasJumped)
@@ -177,7 +277,7 @@ public class PlayerMovementScript : MonoBehaviour
         else if (ccPlayerController.isGrounded)
         {
             bHasJumped = false;
-            fVerticalVelocity = fJumpGrav;
+            fVerticalVelocity = -1f;
         }
     }
 

@@ -28,6 +28,9 @@ public class PlayerShootLaser : MonoBehaviour {
 
     void Awake()
     {
+        if (!GameSettings.Instance)
+            return;
+
         Shoot = GameSettings.Instance.Fire;
     }
 
