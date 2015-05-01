@@ -55,19 +55,19 @@ public class AudioManagerEffects : MonoBehaviour {
                 _selected = Random.Range(0,3);
                 break;
             case Effects.Shoot:
-                _selected = 3;
+                _selected = Random.Range(3, 6);
                 break;
             case Effects.Countdown:
-                _selected = 4;
-                break;
-            case Effects.GameOneMin:
-                _selected = 5;
-                break;
-            case Effects.Jump:
                 _selected = 6;
                 break;
-            case Effects.UIDing:
+            case Effects.GameOneMin:
                 _selected = 7;
+                break;
+            case Effects.Jump:
+                _selected = 9;
+                break;
+            case Effects.UIDing:
+                _selected = 10;
                 break;
             case Effects.Woosh:
                 _selected = 8;

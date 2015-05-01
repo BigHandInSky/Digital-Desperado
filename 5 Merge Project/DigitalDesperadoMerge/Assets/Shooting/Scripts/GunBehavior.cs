@@ -16,9 +16,7 @@ public class GunBehavior : MonoBehaviour {
 
 	private float xAxis = 0;
 	private float yAxis = 0;
-
-    private float fMoveSinePower = 0.1f;
-
+    
     private KeyCode Shoot = KeyCode.Mouse0;
 
     private Vector3 ModelOrigin;
@@ -28,12 +26,13 @@ public class GunBehavior : MonoBehaviour {
 
     void Awake()
     {
+        moveScript = GameObject.FindObjectOfType<PlayerMovementScript>();
+        ModelOrigin = gunModel.transform.localPosition;
+
         if (!GameSettings.Instance)
             return;
 
         Shoot = GameSettings.Instance.Fire;
-        moveScript = GameObject.FindObjectOfType<PlayerMovementScript>();
-        ModelOrigin = gunModel.transform.localPosition;
     }
 
     void Update()
@@ -62,13 +61,21 @@ public class GunBehavior : MonoBehaviour {
 
 			if(gunModel.transform.localPosition.z >= 0)
                 CurrentState = BehaviourState.Other;
-		}
+        }
+        else if (moveScript.bHasJumped)
+        {
+            fGunSineChange.z = ModelOrigin.z;
+
+            fGunSineChange.x = ModelOrigin.x + Mathf.Sin(Time.realtimeSinceStartup * 0.1f) * 0.06f;
+            fGunSineChange.y = ModelOrigin.y + Mathf.Sin(Time.realtimeSinceStartup * 0.1f) * 0.04f;
+
+            gunModel.transform.localPosition = fGunSineChange;
+        }
         else if (moveScript.CurrSpeed.magnitude > 0f)
         {
-            fGunSineChange.y = ModelOrigin.y;
-
-            fGunSineChange.x = ModelOrigin.x + Mathf.Sin(Time.realtimeSinceStartup * Mathf.Abs(moveScript.CurrSpeed.x * 0.3f)) * fMoveSinePower;
-            fGunSineChange.z = ModelOrigin.z + Mathf.Sin(Time.realtimeSinceStartup * Mathf.Abs(moveScript.CurrSpeed.y * 0.3f)) * fMoveSinePower;
+            fGunSineChange.z = ModelOrigin.z + Mathf.Sin(Time.realtimeSinceStartup * Mathf.Abs(moveScript.CurrSpeed.y * 0.5f)) * 0.1f;
+            fGunSineChange.x = ModelOrigin.x + Mathf.Sin(Time.realtimeSinceStartup * Mathf.Abs(moveScript.CurrSpeed.x * 0.4f)) * 0.04f;
+            fGunSineChange.y = ModelOrigin.y + Mathf.Sin(Time.realtimeSinceStartup * 0.2f) * 0.04f;
 
             gunModel.transform.localPosition = fGunSineChange;
         }
@@ -77,7 +84,7 @@ public class GunBehavior : MonoBehaviour {
             fGunSineChange.x = ModelOrigin.x;
             fGunSineChange.z = ModelOrigin.z;
 
-            fGunSineChange.y = ModelOrigin.y + Mathf.Sin(Time.realtimeSinceStartup * 0.2f) * 0.05f;
+            fGunSineChange.y = ModelOrigin.y + Mathf.Sin(Time.realtimeSinceStartup * 0.2f) * 0.04f;
 
             gunModel.transform.localPosition = fGunSineChange;
         }
