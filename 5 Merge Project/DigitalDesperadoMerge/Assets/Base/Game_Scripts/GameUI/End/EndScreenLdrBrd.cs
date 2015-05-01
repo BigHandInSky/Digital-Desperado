@@ -11,6 +11,7 @@ public class EndScreenLdrBrd : MonoBehaviour {
 
     [SerializeField] private Color TimeUnBeaten;
     [SerializeField] private Color TimeBeaten;
+    [SerializeField] private Color TimeRanked;
 
     public struct LdrBrdStat
     {
@@ -71,12 +72,19 @@ public class EndScreenLdrBrd : MonoBehaviour {
         reader.Close();
 
         int _loop = 0;
+        int highestBeaten = Entries.Count;
         foreach(EndScreenLdrBrdEntry _entry in Entries)
         {
+            if (GameData.Instance.fTimeScsAndPenalty < Stats[_loop].Secs)
+                highestBeaten --;
+
             Stats[_loop].Beaten = (GameData.Instance.fTimeScsAndPenalty < Stats[_loop].Secs);
 
             _entry.SetData(Stats[_loop], TimeBeaten, TimeUnBeaten);
             _loop++;
         }
+
+        if (highestBeaten < Entries.Count)
+            Entries[highestBeaten].SetRanked(TimeRanked);
     }
 }

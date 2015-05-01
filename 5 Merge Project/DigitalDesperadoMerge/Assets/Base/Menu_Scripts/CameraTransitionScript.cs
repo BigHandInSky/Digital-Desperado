@@ -21,7 +21,7 @@ public class CameraTransitionScript : MonoBehaviour {
 	Quaternion qRotation;
 
 	//speed that the camera should do things
-    private float fTransitionSpeed = 7.0f;
+    private float fTransitionSpeed = 7.03f;
     private float fRotationSpeed = 36.0f;
     
 	void Update()

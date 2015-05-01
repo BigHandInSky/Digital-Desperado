@@ -53,6 +53,7 @@ public class RestartLevel : MonoBehaviour
     {
         goPlayer.transform.position = tPlayerStartPosition.position;
         goPlayer.transform.rotation = tPlayerStartPosition.rotation;
+        goPlayer.GetComponent<PlayerMovementScript>().Reset();
     }
     private void RestartTargets()
     {

@@ -57,6 +57,8 @@ public class GameData : MonoBehaviour {
         if (agoTargets == null)
             agoTargets = GameObject.FindGameObjectsWithTag("Target");
 
+        Debug.Log("startdata");
+
         m_TargetsTotl = agoTargets.Length;
         m_TargetsLeft = m_TargetsTotl;
         m_fTargetShaderIncrement = (100f / m_TargetsTotl);

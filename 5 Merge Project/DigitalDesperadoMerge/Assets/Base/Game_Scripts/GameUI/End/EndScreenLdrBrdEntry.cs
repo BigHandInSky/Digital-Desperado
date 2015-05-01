@@ -4,9 +4,6 @@ using System.Collections;
 
 public class EndScreenLdrBrdEntry : MonoBehaviour {
 
-    private Color TimeUnBeaten;
-    private Color TimeBeaten;
-
     [SerializeField] private Text Title;
     [SerializeField] private Text Tag;
     [SerializeField] private Text Sec;
@@ -15,9 +12,6 @@ public class EndScreenLdrBrdEntry : MonoBehaviour {
 
     public void SetData(EndScreenLdrBrd.LdrBrdStat _statData, Color _beat, Color _noBeat)
     {
-        TimeBeaten = _beat;
-        TimeUnBeaten = _noBeat;
-
         if(_statData.Tag.Contains(" "))
             Tag.text = _statData.Tag.Replace(' ', '_');
 
@@ -28,19 +22,27 @@ public class EndScreenLdrBrdEntry : MonoBehaviour {
 
         if(_statData.Beaten)
         {
-            Title.color = TimeBeaten;
-            Tag.GetComponentInParent<Image>().color = TimeBeaten;
-            Sec.GetComponentInParent<Image>().color = TimeBeaten;
-            Fra.GetComponentInParent<Image>().color = TimeBeaten;
-            Sht.GetComponentInParent<Image>().color = TimeBeaten;
+            Title.color = _beat;
+            Tag.GetComponentInParent<Image>().color = _beat;
+            Sec.GetComponentInParent<Image>().color = _beat;
+            Fra.GetComponentInParent<Image>().color = _beat;
+            Sht.GetComponentInParent<Image>().color = _beat;
         }
         else
         {
-            Title.color = TimeUnBeaten;
-            Tag.GetComponentInParent<Image>().color = TimeUnBeaten;
-            Sec.GetComponentInParent<Image>().color = TimeUnBeaten;
-            Fra.GetComponentInParent<Image>().color = TimeUnBeaten;
-            Sht.GetComponentInParent<Image>().color = TimeUnBeaten;
+            Title.color = _noBeat;
+            Tag.GetComponentInParent<Image>().color = _noBeat;
+            Sec.GetComponentInParent<Image>().color = _noBeat;
+            Fra.GetComponentInParent<Image>().color = _noBeat;
+            Sht.GetComponentInParent<Image>().color = _noBeat;
         }
+    }
+    public void SetRanked(Color _ranked)
+    {
+        Title.color = _ranked;
+        Tag.GetComponentInParent<Image>().color = _ranked;
+        Sec.GetComponentInParent<Image>().color = _ranked;
+        Fra.GetComponentInParent<Image>().color = _ranked;
+        Sht.GetComponentInParent<Image>().color = _ranked;
     }
 }
