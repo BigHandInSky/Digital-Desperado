@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LevelData>
   <Stats>
-    <Tags A="www" B="aaa" C="aaa" D="---" E="---" F="---" />
+    <Tags A="WWW" B="AAA" C="BBB" D="---" E="---" F="---" />
     <Secs A="49.73" B="51.26" C="51.44" D="999.99" E="999.99" F="999.99" />
     <Fras A="00323" B="00296" C="00315" D="99999" E="99999" F="99999" />
     <Shts A="006" B="002" C="004" D="999" E="999" F="999" />
@@ -159,11 +159,11 @@
       <Rotation>0.5893141</Rotation>
     </Target>
     <Target type="1">
-      <Position x="8.72" y="-6.12" z="13.21" />
+      <Position x="8" y="-6.12" z="13.21" />
       <Rotation>0.7830467</Rotation>
     </Target>
     <Target type="1">
-      <Position x="3.96" y="-6.12" z="9.66" />
+      <Position x="2" y="-6.12" z="9.66" />
       <Rotation>0.9598226</Rotation>
     </Target>
     <Target type="1">
