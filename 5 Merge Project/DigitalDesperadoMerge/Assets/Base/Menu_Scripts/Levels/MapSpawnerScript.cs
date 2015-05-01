@@ -36,7 +36,7 @@ public class MapSpawnerScript : MonoBehaviour {
     public void Create(Vector3 _pos, Vector3 _size, float _zRot)
     {
         if (EnumSetting == ObjType.Set)
-            vCreateMapUIObj(_pos, _zRot);
+            vCreateMapUIObj(_pos, _size, _zRot);
         else if (EnumSetting == ObjType.Scalable)
             vCreateMapUIObj(_pos, _size, _zRot);
     }

@@ -117,27 +117,7 @@ public class LoadedLevels : MonoBehaviour
     //placeholder, currently gives map a random set of coordinates to use
     private void vGetNewMapData()
     {
-        m_MapObject.vClearMap();
-
-        List<MenuLoadLevelsFromXML.MenuLoadXMLMapData> _mapList = MenuLoadLevelsFromXML.Instance.GetLevelObjs(iCurrentLvl);
-
-        foreach(MenuLoadLevelsFromXML.MenuLoadXMLMapData obj in _mapList)
-        {
-            if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Play)
-                m_MapObject.vSetupMapUIPlayer(obj.Position, obj.Rotation.y);
-
-            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Targ)
-                m_MapObject.vSetupMapUITarget(obj.Position, obj.Rotation.y);
-
-            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Levl)
-                m_MapObject.vSetupMapUILevel(obj.Position, obj.Scale, obj.Rotation.y);
-
-            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Towr)
-                m_MapObject.vSetupMapUITower(obj.Position, obj.Scale, obj.Rotation.y);
-
-            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.EndT)
-                m_MapObject.vSetupMapUIEndTower(obj.Position, obj.Rotation.y);
-        }
+        m_MapObject.Setup();
     }
 
     public void vResetToZero()
