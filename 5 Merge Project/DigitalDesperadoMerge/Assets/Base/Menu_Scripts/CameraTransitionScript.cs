@@ -48,6 +48,10 @@ public class CameraTransitionScript : MonoBehaviour {
 		qRotation = _rotation;
 
         int _num = 0;
+
+        if (iTransToMenuNum == iPreviousNum)
+            return;
+
         foreach(GameObject _obj in Canvii)
         {
             if (iTransToMenuNum == _num)
