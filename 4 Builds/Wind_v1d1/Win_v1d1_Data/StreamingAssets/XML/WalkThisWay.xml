@@ -1,0 +1,75 @@
+<LevelData>
+  <Stats>
+    <Tags A="PET" B="TST" C="adF" D="---" E="---" F="---" />
+    <Secs A="04.41" B="07.69" C="07.71" D="999.99" E="999.99" F="999.99" />
+    <Fras A="00257" B="00102" C="00103" D="99999" E="99999" F="99999" />
+    <Shts A="003" B="000" C="000" D="999" E="999" F="999" />
+  </Stats>
+  <PlayerStart>
+    <Position x="0" y="1.5" z="25" />
+    <Rotation>0</Rotation>
+  </PlayerStart>
+  <Goal>
+    <Position x="-20" y="0" z="25" />
+    <Rotation>0</Rotation>
+    <Scale x="3" y="100" z="3" />
+  </Goal>
+  <Platforms>
+    <Platform level="1">
+      <Position x="0" y="0" z="25" />
+      <Rotation>0</Rotation>
+      <Scale x="10" y="1" z="10" />
+    </Platform>
+    <Platform level="1">
+      <Position x="0" y="0" z="10" />
+      <Rotation>0</Rotation>
+      <Scale x="3" y="1" z="20" />
+    </Platform>
+    <Platform level="1">
+      <Position x="-8.5" y="0" z="-1.5" />
+      <Rotation>0</Rotation>
+      <Scale x="20" y="1" z="3" />
+    </Platform>
+    <Platform level="1">
+      <Position x="-20" y="0" z="10" />
+      <Rotation>0</Rotation>
+      <Scale x="3" y="1" z="26" />
+    </Platform>
+    <Platform level="1">
+      <Position x="-20" y="0" z="25" />
+      <Rotation>0</Rotation>
+      <Scale x="1" y="1" z="1" />
+    </Platform>
+  </Platforms>
+  <Towers>
+    <Tower type="1">
+      <Position x="0" y="0" z="-10" />
+      <Rotation>0</Rotation>
+      <Scale x="3" y="2" z="3" />
+    </Tower>
+    <Tower type="1">
+      <Position x="-10" y="0" z="15" />
+      <Rotation>0</Rotation>
+      <Scale x="3" y="2" z="3" />
+    </Tower>
+    <Tower type="1">
+      <Position x="-30" y="0" z="2.5" />
+      <Rotation>0</Rotation>
+      <Scale x="3" y="2" z="3" />
+    </Tower>
+  </Towers>
+  <Targets>
+    <Target type="1">
+      <Position x="0" y="2" z="-10" />
+      <Rotation>0</Rotation>
+    </Target>
+    <Target type="1">
+      <Position x="-10" y="2" z="15" />
+      <Rotation>0</Rotation>
+    </Target>
+    <Target type="1">
+      <Position x="-30" y="2" z="2.5" />
+      <Rotation>0</Rotation>
+    </Target>
+  </Targets>
+</LevelData>
