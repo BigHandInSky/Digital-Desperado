@@ -1,0 +1,50 @@
+Initialize engine version: 5.0.1f1 (5a2e8fe35a68)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon(TM) R7 Graphics (ID=0x1309)
+    Vendor:   ATI
+    VRAM:     3028 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wind_v1d1\Win_v1d1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wind_v1d1\Win_v1d1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wind_v1d1\Win_v1d1_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wind_v1d1\Win_v1d1_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wind_v1d1\Win_v1d1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wind_v1d1\Win_v1d1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wind_v1d1\Win_v1d1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wind_v1d1\Win_v1d1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.103 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wind_v1d1\Win_v1d1_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wind_v1d1\Win_v1d1_Data\Managed\System.Xml.dll (this message is harmless)
+Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wind_v1d1\Win_v1d1_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2420 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.601975 ms
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2020.
+Total: 1.757237 ms (FindLiveObjects: 0.162680 ms CreateObjectMapping: 0.082072 ms MarkObjects: 1.489523 ms  DeleteObjects: 0.022472 ms)
+
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.161322 ms
+
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2105.
+Total: 1.158789 ms (FindLiveObjects: 0.194922 ms CreateObjectMapping: 0.099659 ms MarkObjects: 0.774806 ms  DeleteObjects: 0.087935 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.572175 ms
+
+Unloading 492 unused Assets to reduce memory usage. Loaded Objects now: 2021.
+Total: 3.724542 ms (FindLiveObjects: 0.317543 ms CreateObjectMapping: 0.231074 ms MarkObjects: 2.581385 ms  DeleteObjects: 0.591608 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.301476 ms
+
+Unloading 77 unused Assets to reduce memory usage. Loaded Objects now: 1947.
+Total: 1.752352 ms (FindLiveObjects: 0.175381 ms CreateObjectMapping: 0.105033 ms MarkObjects: 1.379116 ms  DeleteObjects: 0.091354 ms)
+
