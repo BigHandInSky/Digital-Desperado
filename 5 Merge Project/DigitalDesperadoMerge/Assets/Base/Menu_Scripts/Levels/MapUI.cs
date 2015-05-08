@@ -12,17 +12,23 @@ public class MapUI : MonoBehaviour {
     [SerializeField] private MapSpawnerScript PlatformSpawner;
     [SerializeField] private MapSpawnerScript TowerSpawner;
 
+    [SerializeField] private MinimapGetTargNum TargetNumberObj;
+
     private float MapPosScale = 0.9f;
     public float PosScale { get { return MapPosScale; } }
     private float MapSizeScale = 0.10f;
     public float SizeScale { get { return MapSizeScale; } }
 
-    float PrefabScale = 1.30f;
+    float PlayerScale = 1.4f;
+    float TargScale = 1.35f;
+    float EndScale = 1.50f;
     float GeneraScale = 0.5f;
     Vector3 Offset = new Vector3();
 
     public void Setup()
     {
+        int _targets = 0;
+
         vClearMap();
 
         List<MenuLoadLevelsFromXML.MenuLoadXMLMapData> _mapList = MenuLoadLevelsFromXML.Instance.GetLevelObjs(LoadedLevels.Instance.iCurrentLvl);
@@ -34,25 +40,6 @@ public class MapUI : MonoBehaviour {
 
         foreach (MenuLoadLevelsFromXML.MenuLoadXMLMapData obj in _mapList)
         {
-
-            Offset = new Vector3((xMin + xMax) / 2, 0f, (zMin + zMax) / 2);
-            Offset *= 1.1f;
-
-            if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Play)
-                vSetupMapUIPlayer(obj.Position, obj.Rotation.y);
-
-            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Targ)
-                vSetupMapUITarget(obj.Position, obj.Rotation.y);
-
-            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Levl)
-                vSetupMapUILevel(obj.Position, obj.Scale, obj.Rotation.y);
-
-            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Towr)
-                vSetupMapUITower(obj.Position, obj.Scale, obj.Rotation.y);
-
-            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.EndT)
-                vSetupMapUIEndTower(obj.Position, obj.Rotation.y);
-
             if (obj.Position.x >= xMax)
                 xMax = obj.Position.x;
             if (obj.Position.x <= xMin)
@@ -63,6 +50,32 @@ public class MapUI : MonoBehaviour {
             if (obj.Position.z <= zMin)
                 zMin = obj.Position.z;
         }
+
+        Offset = new Vector3((xMin + xMax) / 2, 0f, (zMin + zMax) / 2);
+        Offset *= 1.1f;
+
+        foreach (MenuLoadLevelsFromXML.MenuLoadXMLMapData obj in _mapList)
+        {
+            if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Play)
+                vSetupMapUIPlayer(obj.Position, obj.Rotation.y);
+
+            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Targ)
+            {
+                _targets++;
+                vSetupMapUITarget(obj.Position, obj.Rotation.y);
+            }
+
+            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Levl)
+                vSetupMapUILevel(obj.Position, obj.Scale, obj.Rotation.y);
+
+            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Towr)
+                vSetupMapUITower(obj.Position, obj.Scale, obj.Rotation.y);
+
+            else if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.EndT)
+                vSetupMapUIEndTower(obj.Position, obj.Rotation.y);
+        }
+
+        TargetNumberObj.SetNum(_targets);
     }
 
     public void vClearMap()
@@ -76,15 +89,15 @@ public class MapUI : MonoBehaviour {
     
     public void vSetupMapUIPlayer(Vector3 _Pos, float _yAxisRot)
     {
-        PlayerSpawner.vCreateMapUIObj(_Pos - Offset, Vector3.one * PrefabScale, _yAxisRot);
+        PlayerSpawner.vCreateMapUIObj(_Pos - Offset, Vector3.one * PlayerScale, _yAxisRot);
     }
     public void vSetupMapUIEndTower(Vector3 _Pos, float _yAxisRot)
     {
-        EndLvlSpawner.vCreateMapUIObj(_Pos - Offset, Vector3.one, _yAxisRot);
+        EndLvlSpawner.vCreateMapUIObj(_Pos - Offset, Vector3.one * EndScale, _yAxisRot);
     }
     public void vSetupMapUITarget(Vector3 _Pos, float _yAxisRot)
     {
-        TargetSpawner.vCreateMapUIObj(_Pos - Offset, Vector3.one * PrefabScale, _yAxisRot);
+        TargetSpawner.vCreateMapUIObj(_Pos - Offset, Vector3.one * TargScale, _yAxisRot);
     }
     public void vSetupMapUILevel(Vector3 _Pos, Vector3 _Scale, float _yAxisRot)
     {

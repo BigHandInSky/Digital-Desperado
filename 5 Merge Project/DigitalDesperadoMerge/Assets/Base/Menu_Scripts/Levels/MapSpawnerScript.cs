@@ -45,15 +45,3 @@ public class MapSpawnerScript : MonoBehaviour {
 		Objects.Add(mapUIImg);
 	}
 }
-
-/*GameObject mapUIImg = (GameObject)Instantiate(ObjToSpawn, gameObject.transform.position, gameObject.transform.rotation);
-mapUIImg.GetComponent<RectTransform>().SetParent(gameObject.transform);
-
-Vector3 _temp = new Vector3(1 * _scale.x, 1 * _scale.z, 1f);
-//print(_temp);
-mapUIImg.GetComponent<RectTransform>().localScale = _temp;
-Vector2 _spawn = new Vector2(_pos.x, _pos.z);
-mapUIImg.GetComponent<RectTransform>().localPosition = _spawn * PosScal;
-mapUIImg.GetComponent<RectTransform>().Rotate(0f, 0f, _zAxisRot);
-
-Objects.Add(mapUIImg);*/
