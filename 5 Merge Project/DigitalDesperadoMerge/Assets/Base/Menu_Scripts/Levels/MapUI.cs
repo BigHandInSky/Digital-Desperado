@@ -12,13 +12,13 @@ public class MapUI : MonoBehaviour {
     [SerializeField] private MapSpawnerScript PlatformSpawner;
     [SerializeField] private MapSpawnerScript TowerSpawner;
 
-    [SerializeField] private float MapPosScale = 5f;
+    private float MapPosScale = 0.9f;
     public float PosScale { get { return MapPosScale; } }
-    [SerializeField] private float MapSizeScale = 0.20f;
+    private float MapSizeScale = 0.10f;
     public float SizeScale { get { return MapSizeScale; } }
 
-    float PrefabScale = 1.29f;
-    float GeneraScale = 0.52f;
+    float PrefabScale = 1.30f;
+    float GeneraScale = 0.5f;
     Vector3 Offset = new Vector3();
 
     public void Setup()
@@ -34,6 +34,10 @@ public class MapUI : MonoBehaviour {
 
         foreach (MenuLoadLevelsFromXML.MenuLoadXMLMapData obj in _mapList)
         {
+
+            Offset = new Vector3((xMin + xMax) / 2, 0f, (zMin + zMax) / 2);
+            Offset *= 1.1f;
+
             if (obj.Type == MenuLoadLevelsFromXML.MapDataObjType.Play)
                 vSetupMapUIPlayer(obj.Position, obj.Rotation.y);
 
@@ -59,9 +63,6 @@ public class MapUI : MonoBehaviour {
             if (obj.Position.z <= zMin)
                 zMin = obj.Position.z;
         }
-
-        Offset = new Vector3((xMin + xMax) / 2, 0f, (zMin + zMax) / 2);
-        Offset *= 1.1f;
     }
 
     public void vClearMap()
@@ -75,22 +76,22 @@ public class MapUI : MonoBehaviour {
     
     public void vSetupMapUIPlayer(Vector3 _Pos, float _yAxisRot)
     {
-        PlayerSpawner.Create(_Pos - Offset, Vector3.one * PrefabScale, _yAxisRot);
+        PlayerSpawner.vCreateMapUIObj(_Pos - Offset, Vector3.one * PrefabScale, _yAxisRot);
     }
     public void vSetupMapUIEndTower(Vector3 _Pos, float _yAxisRot)
     {
-        EndLvlSpawner.Create(_Pos - Offset, Vector3.one, _yAxisRot);
+        EndLvlSpawner.vCreateMapUIObj(_Pos - Offset, Vector3.one, _yAxisRot);
     }
     public void vSetupMapUITarget(Vector3 _Pos, float _yAxisRot)
     {
-        TargetSpawner.Create(_Pos - Offset, Vector3.one * PrefabScale, _yAxisRot);
+        TargetSpawner.vCreateMapUIObj(_Pos - Offset, Vector3.one * PrefabScale, _yAxisRot);
     }
     public void vSetupMapUILevel(Vector3 _Pos, Vector3 _Scale, float _yAxisRot)
     {
-        PlatformSpawner.Create(_Pos - Offset, _Scale * GeneraScale, _yAxisRot);
+        PlatformSpawner.vCreateMapUIObj(_Pos - Offset, _Scale * GeneraScale, _yAxisRot);
     }
     public void vSetupMapUITower(Vector3 _Pos, Vector3 _Scale, float _yAxisRot)
     {
-        TowerSpawner.Create(_Pos - Offset, _Scale * GeneraScale, _yAxisRot);
+        TowerSpawner.vCreateMapUIObj(_Pos - Offset, _Scale * GeneraScale, _yAxisRot);
     }
 }

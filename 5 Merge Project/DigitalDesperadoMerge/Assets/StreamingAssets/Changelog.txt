@@ -1,0 +1,12 @@
+/////DIGITAL DESPERADO/////
+////////CHANGELOG////////
+
+///Version 1d2
+- Original Gamejolt/Itchi Release
+
+///Version 1d3
+- Fallen Targets will reset to their normal positions
+- Double-Clicking a menu button will no longer make that menu side dissappear
+- End Tower now has an outline through objects
+- Main Menu Minimap displays map in centre of area
+- Main Menu Minimap displays map to correct size
