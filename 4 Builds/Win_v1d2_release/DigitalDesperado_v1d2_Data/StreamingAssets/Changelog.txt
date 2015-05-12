@@ -10,3 +10,4 @@
 - End Tower now has an outline through objects
 - Main Menu Minimap displays map in centre of area
 - Main Menu Minimap now shows how many targets in a level
+- Updated Credits

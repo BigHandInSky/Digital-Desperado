@@ -14,7 +14,7 @@ Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Wi
 Loading C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v03\Win_v03_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v03\Win_v03_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v03\Win_v03_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.113 seconds
+- Completed reload, in  0.192 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -22,13 +22,13 @@ desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v03\Win_v03_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v03\Win_v03_Data\Managed\System.Xml.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: cf4 -> priority: 1 
+  Thread -> id: 1078 -> priority: 1 
 Platform assembly: C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v03\Win_v03_Data\Managed\System.dll (this message is harmless)
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.759661 ms
+UnloadTime: 0.774317 ms
 
 Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1426.
-Total: 1.797296 ms (FindLiveObjects: 0.196388 ms CreateObjectMapping: 0.082072 ms MarkObjects: 1.489523 ms  DeleteObjects: 0.027357 ms)
+Total: 1.454838 ms (FindLiveObjects: 0.199319 ms CreateObjectMapping: 0.066439 ms MarkObjects: 1.168071 ms  DeleteObjects: 0.018564 ms)
 
 DirectoryNotFoundException: Directory 'C:\Users\Peter\Documents\GitHub\Digital-Desperado\4 Builds\Win_v03\Win_v03_Data\XML' not found.
   at System.IO.Directory.GetFileSystemEntries (System.String path, System.String searchPattern, FileAttributes mask, FileAttributes attrs) [0x00000] in <filename unknown>:0 
@@ -37,75 +37,6 @@ DirectoryNotFoundException: Directory 'C:\Users\Peter\Documents\GitHub\Digital-D
   at (wrapper remoting-invoke-with-check) System.IO.DirectoryInfo:GetFiles (string)
   at MenuLoadLevelsFromXML.GetFolder (System.String _folder) [0x00000] in <filename unknown>:0 
   at MenuLoadLevelsFromXML.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-ArgumentOutOfRangeException: Argument is out of range.
-Parameter name: index
-  at System.Collections.Generic.List`1[System.String].get_Item (Int32 index) [0x00000] in <filename unknown>:0 
-  at LoadedLevels.sGetCurrUrlName (Int32 _valueMod) [0x00000] in <filename unknown>:0 
-  at LevelsNameUI.vGetText () [0x00000] in <filename unknown>:0 
-UnityEngine.Component:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.Component:SendMessage(String)
-LoadedLevels:vUpdateData()
-LoadedLevels:vChangeCurrentLevel(Int32)
-<DoAction>c__Iterator8:MoveNext()
- 
-(Filename:  Line: -1)
-
-ArgumentOutOfRangeException: Argument is out of range.
-Parameter name: index
-  at System.Collections.Generic.List`1[System.String].get_Item (Int32 index) [0x00000] in <filename unknown>:0 
-  at MenuLoadLevelsFromXML.GetLevelStats (Int32 _levelUrlNum, StatsType _statName) [0x00000] in <filename unknown>:0 
-  at LoadedLevels.vGetNewLevelStats () [0x00000] in <filename unknown>:0 
-  at LoadedLevels.vUpdateData () [0x00000] in <filename unknown>:0 
-  at LoadedLevels.vChangeCurrentLevel (Int32 _changeByValue) [0x00000] in <filename unknown>:0 
-  at TransitionPointScript+<DoAction>c__Iterator8.MoveNext () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-8
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-ArgumentOutOfRangeException: Argument is out of range.
-Parameter name: index
-  at System.Collections.Generic.List`1[System.String].get_Item (Int32 index) [0x00000] in <filename unknown>:0 
-  at StatsScript.vUpdateTexts () [0x00000] in <filename unknown>:0 
-  at StatsScript.vRefresh () [0x00000] in <filename unknown>:0 
-  at StatsScript+<ieRotateStats>c__Iterator6.MoveNext () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.011833 ms
-
-Unloading 69 unused Assets to reduce memory usage. Loaded Objects now: 1177.
-Total: 1.554986 ms (FindLiveObjects: 0.157306 ms CreateObjectMapping: 0.115292 ms MarkObjects: 1.181262 ms  DeleteObjects: 0.099171 ms)
-
-IndexOutOfRangeException: Array index is out of range.
-  at GenerateLevel.LoadLevel () [0x00000] in <filename unknown>:0 
-  at GenerateLevel.Start () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
