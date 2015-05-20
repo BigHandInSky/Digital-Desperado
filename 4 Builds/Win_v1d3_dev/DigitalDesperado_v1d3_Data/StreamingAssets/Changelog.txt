@@ -1,0 +1,20 @@
+/////DIGITAL DESPERADO/////
+////////CHANGELOG////////
+
+///Version 1d1
+- Original Gamejolt/Itchi Release
+
+///Version 1d2
+- Fallen Targets will reset to their normal positions
+- Double-Clicking a menu button will no longer make that menu side dissappear
+- End Tower now has an outline through objects
+- Main Menu Minimap displays map in centre of area
+- Main Menu Minimap now shows how many targets in a level
+- Updated Credits
+
+///Version 1d3
+/ Graphics Setting now in options
+/ Fullscreen option
+/ Graphics option saved with other graphics options
+/ Game countdown no longer yackety sax speed
+/ Gun Movement no longer yackety sax speed
