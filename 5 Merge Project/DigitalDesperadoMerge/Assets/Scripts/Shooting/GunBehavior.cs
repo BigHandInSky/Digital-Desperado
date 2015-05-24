@@ -40,7 +40,7 @@ public class GunBehavior : MonoBehaviour {
 		xAxis += 1f * Time.deltaTime;
         yAxis += 1f * Time.deltaTime;
 
-		if (Camera.main.GetComponent<PlayerShootLaser> ().bCanShoot 
+        if (PlayerShootLaser.bCanShoot 
             && Input.GetKey(Shoot) 
             && Camera.main.GetComponent<PlayerShootLaser> ().fShootTimer <= 0) 
         {

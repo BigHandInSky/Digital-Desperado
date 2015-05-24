@@ -1,0 +1,23 @@
+/////DIGITAL DESPERADO/////
+////////TODO////////
+
+/ add leaderboard invalid tag details - less than 3 characters for example
+/ allow exit from leaderboard without entering tag - don't save
+
+/ gun will 'lean' a little based on vertical aim
+/ make single menu theme
+/ have prompt showing target has reset to original position
+/ jump height control
+/ floaty movement
+/ abrupt when stopping or changing direction
+/ 3 second start is annoying
+/ target physics is annoying
+/ scoreboard legend or more understandable layout
+/ large bullets
+/ lasers still fuck up somehow
+/ more tutorial-like levels
+/ alternate target/materials, such as one which blocks shooting through it
+/ jumping a bit more
+/ crosshair UI elements are a little intrusive
+/ End Tower needs to stand out
+/ UI tweaks here and there

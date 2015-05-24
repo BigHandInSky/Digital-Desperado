@@ -4,7 +4,8 @@ using System.Collections;
 public class PlayerShootLaser : MonoBehaviour {
 
     //bool called by GUI to enable/disable shooting as needed
-    public bool bCanShoot = false;
+    public static bool bCanShoot = false;
+
 	//Prefabs of the laser object
 	public GameObject prefabLaser;
     public GameObject gunMuzzle;

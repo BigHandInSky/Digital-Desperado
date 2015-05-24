@@ -3,21 +3,15 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class MenuButtonFunctions : MonoBehaviour 
-{
-    //Unity's UI let's us use functions from an attached script to the UI button
-    //hence all the functions for the generic buttons are contained in here
-    
-    [SerializeField]
-    private string sCameraTag = "";
+{    
+    private const string sCameraTag = "MainCamera";
 
     public void vChangeLevel(string _levelName)
     {
-        //print("vChangeLevel called");
         Application.LoadLevel(_levelName);
     }
     public void vExitApp()
     {
-        //print("vExitApp called");
         Application.Quit();
     }
     public void vSetCamMenuNum(int _menutogoto)
@@ -28,5 +22,19 @@ public class MenuButtonFunctions : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag(sCameraTag).GetComponent<CameraTransitionScript>()
             .vTransition(goPointToGoto.transform.position, goPointToGoto.transform.rotation);
+    }
+    public void CloseExitPrompt()
+    {
+        PlayerShootLaser.bCanShoot = true;
+        PlayerMovementScript.SetControls = true;
+
+        if (Application.loadedLevelName.Contains("Game"))
+            GameData.Instance.PauseTime = false;
+
+        if (!Application.loadedLevelName.Contains("Main"))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 }

@@ -32,7 +32,7 @@ public class GameEndLvl : MonoBehaviour {
             GeneralControlKeys.Instance.bCanRestartOrMenu = false;
 
             PlayerControlObj.AllowControls(false, false);
-            PlayerShootObj.bCanShoot = false;
+            PlayerShootLaser.bCanShoot = false;
             bCanEnd = false;
 
             GameData.Instance.vStopCounting();

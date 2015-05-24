@@ -101,6 +101,7 @@ public class GameSettings : MonoBehaviour {
         data.Keys = m_KeySettings;
         data.Fullscreen = bFullscreen;
         data.Quality = iQualityIndex;
+        data.Tag = sPreviousTag;
 
 		bf.Serialize (file, data);
 		file.Close ();
@@ -139,6 +140,11 @@ public class GameSettings : MonoBehaviour {
 			Effects = data.Effects;
 			Music = data.Music;
 
+            if (data.Tag != null)
+                sPreviousTag = data.Tag;
+            else
+                sPreviousTag = "---";
+
             ApplySettings();
 		}
 	}
@@ -162,9 +168,9 @@ public class GameSettings : MonoBehaviour {
     #region Graphics
     private bool bFullscreen = false;
     public bool Fullscreen { get { return bFullscreen; } set { bFullscreen = value; } }
-    private int iResWidth = 800;
+    private int iResWidth = 1280;
     public int RWidth { get { return iResWidth; } }
-    private int iResHeight = 600;
+    private int iResHeight = 720;
     public int RHeight { get { return iResHeight; } }
     private int iQualityIndex = 0;
     public int Quality { get { return iQualityIndex; } set { iQualityIndex = value; } }
@@ -260,7 +266,7 @@ public class GameSettings : MonoBehaviour {
         Screen.SetResolution(iResWidth, iResHeight, bFullscreen);
 
         if (AudioManagerMusic.Instance)
-            AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Menus);
+            AudioManagerMusic.Instance.SetVolume();
 
         SaveData();
     }
@@ -289,6 +295,7 @@ class PlayerData
     public int Quality;
     public bool Fullscreen;
     public List<KeyCode> Keys;
+    public string Tag;
 }
 
 

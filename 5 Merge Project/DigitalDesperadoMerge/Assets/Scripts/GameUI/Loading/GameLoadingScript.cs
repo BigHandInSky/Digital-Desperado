@@ -20,6 +20,7 @@ public class GameLoadingScript : MonoBehaviour {
 
     void Start()
     {
+        GeneralControlKeys.Instance.bCanExit = false;
         AudioManagerMusic.Instance.SetMusic(AudioManagerMusic.MusicType.Other);
         StartCoroutine("Switch");
     }
@@ -46,7 +47,7 @@ public class GameLoadingScript : MonoBehaviour {
         PlayerControlObj.AllowControls(false, true);
         StopCoroutine(Switch());
         ObjToActivateWhenComplete.SetActive(true);
-        ReadyBtn.StartCountdown();
+        //ReadyBtn.StartCountdown();
         ObjToDeActivateWhenComplete.SetActive(false);
     }
 }

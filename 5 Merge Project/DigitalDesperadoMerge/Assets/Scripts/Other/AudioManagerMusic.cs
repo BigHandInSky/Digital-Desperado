@@ -51,6 +51,16 @@ public class AudioManagerMusic : MonoBehaviour
         
         StartCoroutine(PlayMusic(_type, 0.5f));
     }
+    public void SetVolume()
+    {
+        if (GameSettings.Instance == null)
+        {
+            Debug.LogError("AudioManager: No Game Settings");
+            return;
+        }
+        else if (gameObject.GetComponent<AudioSource>().volume != GameSettings.Instance.MusVolume)
+            gameObject.GetComponent<AudioSource>().volume = GameSettings.Instance.MusVolume;
+    }
 
     IEnumerator PlayMusic(MusicType _type, float _length)
     {

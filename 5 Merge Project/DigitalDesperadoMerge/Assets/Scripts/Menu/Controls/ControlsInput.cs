@@ -34,6 +34,15 @@ public class ControlsInput : MonoBehaviour {
                 m_BtnToSetPostChange.SetKey(m_BtnToSetPostChange.CurrKey);
                 m_HelpText.text = m_StrCancel;
                 m_Listen = false;
+                GeneralControlKeys.Instance.bCanExit = true;
+            }
+            else if (Input.GetKey(KeyCode.Escape))
+            {
+                m_ImgToSet.sprite = m_Unselected;
+                m_BtnToSetPostChange.SetKey(m_BtnToSetPostChange.CurrKey);
+                m_HelpText.text = m_StrCancel;
+                m_Listen = false;
+                GeneralControlKeys.Instance.bCanExit = true;
             }
             else if (FetchKey() != KeyCode.None)
             {
@@ -46,12 +55,12 @@ public class ControlsInput : MonoBehaviour {
             }
             else if (Input.GetKey(KeyCode.Mouse1))
             {
-                m_LastInput = KeyCode.Mouse0;
+                m_LastInput = KeyCode.Mouse1;
                 SetKeyVal(m_LastInput);
             }
             else if (Input.GetKey(KeyCode.Mouse2))
             {
-                m_LastInput = KeyCode.Mouse0;
+                m_LastInput = KeyCode.Mouse2;
                 SetKeyVal(m_LastInput);
             }
         }
@@ -63,6 +72,7 @@ public class ControlsInput : MonoBehaviour {
     }
     public void Activate(ControlsBtn _btnCalled)
     {
+        GeneralControlKeys.Instance.bCanExit = false;
         m_HelpText.text = m_StrSelected;
         m_BtnToSetPostChange = _btnCalled;
         m_Listen = true;
@@ -94,5 +104,7 @@ public class ControlsInput : MonoBehaviour {
         m_Listen = false;
         m_ImgToSet.sprite = m_Unselected;
         m_HelpText.text = m_StrInputDetect;
+
+        GeneralControlKeys.Instance.bCanExit = true;
     }
 }

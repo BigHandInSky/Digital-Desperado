@@ -21,8 +21,16 @@ public class PlayerMovementScript : MonoBehaviour
     private int iLastDir = -1;
 
     // Movement/Camera Enabled bools
-    private bool bIsMovementEnabled = true;
-    private bool bIsCameraEnabled = true;
+    private static bool bIsMovementEnabled = true;
+    private static bool bIsCameraEnabled = true;
+    public static bool SetControls
+    {
+        set
+        {
+            bIsMovementEnabled = value;
+            bIsCameraEnabled = value;
+        }
+    }
 
     // Axes float
     private float fHorizontal;
@@ -30,8 +38,8 @@ public class PlayerMovementScript : MonoBehaviour
     public Vector2 CurrSpeed { get { return new Vector2(fHorizontal, fVertical); } }
 
     // Mouse settings
-    private float fMouseSensitivity = 5;
-    private float fMouseClampRange = 59;
+    private float fMouseSensitivity = 5f;
+    private float fMouseClampRange = 85f;
 
     // Jumping floats
     private float fJumpHeight = 13f;

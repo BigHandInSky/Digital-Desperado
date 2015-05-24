@@ -45,7 +45,7 @@ public class LoadedLevels : MonoBehaviour
         Application.LoadLevel(sSceneToLoad);
     }
     //get name
-    public string sGetCurrUrlName(int _valueMod)
+    public string sGetCurrUrlName(int _valueMod = 0)
     {
         if ( (m_CurrLvlUrl + _valueMod) < 0 )
         {
@@ -81,6 +81,20 @@ public class LoadedLevels : MonoBehaviour
         else
         {
             m_CurrLvlUrl += _changeByValue;
+        }
+
+        vUpdateData();
+    }
+    public void vSelectLevelByNum(int _arrayValue)
+    {
+        if (_arrayValue  > m_LevelsCount - 1
+            || _arrayValue < 0)
+        {
+            m_CurrLvlUrl = 0;
+        }
+        else
+        {
+            m_CurrLvlUrl = _arrayValue;
         }
 
         vUpdateData();

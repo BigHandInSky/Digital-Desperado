@@ -20,3 +20,23 @@
 - Main menu no longer interactable when on a different menu side
 - Game countdown no longer yackety sax speed
 - Gun Movement no longer yackety sax speed
+
+///Version 1d4
+- Changed default resolution to 1280x720
+- When changing music volume keep current track
+- Exiting game with Escape now brings up a prompt before quitting
+- Uou can no longer enter escape as a valid rebind key
+- Escape cancels rebinding alongside backspace
+- Exit prompt not called when setting controls, or during game countdown
+- Platfrms > Platforms
+- Last entered Tag is now saved
+- When starting a level countdown begins after clicking ready
+- Restarting mid-level now has normal 10 second countdown with skip
+- Countdown now has text showing you can speed countdown with any key
+- Countdown ui moved downwards
+- Game crosshairs have been moved a little to be less intrusive
+- Increase aim amount
+- Target weight increased slightly
+- Level side now allows selection of single level from entire list when clicking on number
+- Leaderboard now has legend for rank colours
+- Leaderboard now shows normal time, and time with penalty

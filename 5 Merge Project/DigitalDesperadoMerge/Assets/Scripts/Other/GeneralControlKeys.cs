@@ -18,19 +18,31 @@ public class GeneralControlKeys : MonoBehaviour
     }
 
     public bool bCanRestartOrMenu = true;
+    public bool bCanExit = true;
 
 	void Update () 
     {
-	    if(Input.GetKey(KeyCode.Escape))
+        if (bCanExit && Input.GetKeyDown(GameSettings.Instance.HARD_EXIT)
+            && !Application.loadedLevelName.Contains("First"))
         {
-            Application.Quit();
+            PlayerShootLaser.bCanShoot = false;
+            PlayerMovementScript.SetControls = false;
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+            if (Application.loadedLevelName.Contains("Game"))
+                GameData.Instance.PauseTime = true;
+
+            GameObject.FindGameObjectWithTag("Prompt").transform.GetChild(0).gameObject.SetActive(true);
+            GameObject.FindGameObjectWithTag("Prompt").transform.GetChild(1).gameObject.SetActive(true);
         }
-        else if (Input.GetKey(GameSettings.Instance.Menu) && !Application.loadedLevelName.Contains("Main")
+        else if (Input.GetKeyDown(GameSettings.Instance.Menu) && !Application.loadedLevelName.Contains("Main")
             && bCanRestartOrMenu)
         {
             Application.LoadLevel("Main");
         }
-        else if (Input.GetKey(GameSettings.Instance.Rset) && Application.loadedLevelName.Contains("Game")
+        else if (Input.GetKeyDown(GameSettings.Instance.Rset) && Application.loadedLevelName.Contains("Game")
             && bCanRestartOrMenu)
         {
             GameObject.FindGameObjectWithTag("GameController").GetComponent<RestartLevel>().DoRestart();

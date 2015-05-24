@@ -24,7 +24,7 @@ public class RestartLevel : MonoBehaviour
 
         GameData.Instance.Restart();
         PlayerControlObj.AllowControls(false, true);
-        PlayerShootObj.bCanShoot = false;
+        PlayerShootLaser.bCanShoot = false;
 
         FindLevelObjects();
         RestartPlayer();

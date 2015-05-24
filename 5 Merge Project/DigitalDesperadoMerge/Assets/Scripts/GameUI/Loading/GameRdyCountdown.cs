@@ -7,17 +7,18 @@ public class GameRdyCountdown : MonoBehaviour {
 
     [SerializeField] private RectTransform ObjToScale;
     [SerializeField] private Text ObjTextToSet;
-    //player controls script
 
     [SerializeField] private List<GameObject> ObjsToActivateWhenComplete;
     [SerializeField] private List<GameObject> ObjsToDeActivateWhenComplete;
+    [SerializeField] private GameObject SpeedUpTextObj;
 
     [SerializeField] private PlayerMovementScript PlayerControlObj;
-    [SerializeField] private PlayerShootLaser PlayerShootObj;
     [SerializeField] private GameEndLvl EndTrigger;
 
     public void StartCountdown()
     {
+        SpeedUpTextObj.SetActive(true);
+
         StartCoroutine("Countdown");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -38,7 +39,7 @@ public class GameRdyCountdown : MonoBehaviour {
 
         while (_Count > 0)
         {
-            if (Input.anyKey && _Count > 3)
+            if (Input.anyKey && !Input.GetKey(GameSettings.Instance.Rset) && _Count > 3)
             {
                 AudioManagerEffects.Instance.PlaySound(AudioManagerEffects.Effects.Countdown);
 
@@ -50,6 +51,7 @@ public class GameRdyCountdown : MonoBehaviour {
                 _Count = 3;
                 ObjTextToSet.text = _Count.ToString();
 
+                SpeedUpTextObj.SetActive(false);
                 continue;
             }
             else if (_Timer < 0.15f)
@@ -78,20 +80,25 @@ public class GameRdyCountdown : MonoBehaviour {
             {
                 EndTrigger.bCanEnd = true;
             }
-
             
             yield return new WaitForEndOfFrame();
         }
 
+        Finished();
+    }
+
+    private void Finished()
+    {
+
         PlayerControlObj.AllowControls(true, true);
-        PlayerShootObj.bCanShoot = true;
+        PlayerShootLaser.bCanShoot = true;
         //EndTrigger.bCanEnd = true;
 
         foreach (GameObject obj in ObjsToActivateWhenComplete)
         {
             obj.SetActive(true);
 
-            if(obj.GetComponent<GameUIArrowScript>()
+            if (obj.GetComponent<GameUIArrowScript>()
                 || obj.GetComponent<GameUITextScript>()
                 || obj.GetComponent<GameUIEnabledAbility>())
             {
@@ -103,5 +110,7 @@ public class GameRdyCountdown : MonoBehaviour {
 
         foreach (GameObject obj in ObjsToDeActivateWhenComplete)
             obj.SetActive(false);
+
+        GeneralControlKeys.Instance.bCanExit = true;
     }
 }

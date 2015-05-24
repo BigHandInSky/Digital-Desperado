@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LevelData>
   <Stats>
-    <Tags A="www" B="pet" C="TST" D="PET" E="TTT" F="---" />
-    <Secs A="09.29" B="10.01" C="13.84" D="16.80" E="18.36" F="999.99" />
-    <Fras A="00316" B="00546" C="00346" D="00377" E="00366" F="99999" />
-    <Shts A="007" B="010" C="004" D="007" E="005" F="999" />
+    <Tags A="www" B="pet" C="BHS" D="BHS" E="TST" F="PET" />
+    <Secs A="09.29" B="10.01" C="10.27" D="10.61" E="13.84" F="16.80" />
+    <Fras A="00316" B="00546" C="00586" D="00655" E="00346" F="00377" />
+    <Shts A="007" B="010" C="008" D="006" E="004" F="007" />
   </Stats>
   <PlayerStart>
     <Position x="0" y="1.5" z="50" />

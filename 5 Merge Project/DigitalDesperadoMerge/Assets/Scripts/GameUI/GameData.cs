@@ -12,6 +12,8 @@ public class GameData : MonoBehaviour {
 			}
 		}
 
+    public bool PauseTime = false;
+
     private float m_fTimePenaltyPerTarget = 2f;
 
     [SerializeField] private Transform m_Camera;
@@ -69,10 +71,13 @@ public class GameData : MonoBehaviour {
     {
         while(true)
         {
-            m_TimeFrames++;
-            m_TimeSecs += Time.deltaTime;
-            if (m_TimeSecs % 60f == 0)
-                AudioManagerEffects.Instance.PlaySound(AudioManagerEffects.Effects.GameOneMin);
+            if(!PauseTime)
+            {
+                m_TimeFrames++;
+                m_TimeSecs += Time.deltaTime;
+                if (m_TimeSecs % 60f == 0)
+                    AudioManagerEffects.Instance.PlaySound(AudioManagerEffects.Effects.GameOneMin);
+            }
             yield return new WaitForEndOfFrame();
         }
     }
